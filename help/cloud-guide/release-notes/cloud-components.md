@@ -3,9 +3,9 @@ title: Commerce용 클라우드 구성 요소
 description: 클라우드 구성 요소 패키지에 대한 최신 개선 사항 목록을 참조하십시오.
 recommendations: noDisplay, catalog
 exl-id: b4e2508a-3558-4fa8-bae0-3eb76c7b2775
-source-git-commit: f9edcc85c14354a2eddacbc5219557e107a367cb
+source-git-commit: c02dfd2709cdc63ac1630edaa8c89cad5f737ea1
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '560'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,13 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v1.0.13 {#latest}
+## v1.0.14 {#latest}
+
+릴리스 날짜: 2024년 4월 8일
+
+- ![새 아이콘](../../assets/new.svg) **PHP** — PHP 8.3에 대한 지원이 추가되었습니다.
+
+## v1.0.13
 
 릴리스 날짜: 2023년 3월 10일
 

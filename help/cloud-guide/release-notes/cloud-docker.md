@@ -3,11 +3,11 @@ title: Cloud Docker 패키지
 description: Cloud Docker 패키지에 대한 최신 개선 사항 목록을 참조하십시오.
 feature: Cloud, Docker, Release Notes
 recommendations: noDisplay, catalog
-last-substantial-update: 2023-07-31T00:00:00Z
+last-substantial-update: 2024-04-08T00:00:00Z
 exl-id: 907d977f-2e9c-4553-a46b-000bc6a57b28
-source-git-commit: 21754f2ee3df586cd03d57210741b36409ad2b36
+source-git-commit: bc76cba0219f16fd055c20289811b51c35c9b026
 workflow-type: tm+mt
-source-wordcount: '3620'
+source-wordcount: '3662'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,16 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v1.3.6 {#latest}
+## v1.3.7 {#latest}
+
+릴리스 날짜: 2024년 4월 8일
+
+- ![새 아이콘](../../assets/new.svg) **PHP** — PHP 8.3 및 PHP 8.3 이미지에 대한 지원을 추가했습니다.
+- ![새 아이콘](../../assets/new.svg) **Ngix** — 이미지 nginx v. 1.24가 추가되었습니다.
+- ![새 아이콘](../../assets/new.svg) **Opensearch** - 추가된 이미지 OpenSearch v. 2.12, 1.3.
+- ![새 아이콘](../../assets/new.svg) **작성기** - 작성기 버전이 2.2.23으로 업데이트되었습니다.
+
+## v1.3.6
 
 릴리스 날짜: 2023년 7월 31일
 
