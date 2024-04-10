@@ -3,9 +3,9 @@ title: PHP 설정
 description: 클라우드 인프라에서 Commerce 애플리케이션 구성에 대한 최적의 PHP 설정에 대해 알아봅니다.
 feature: Cloud, Configuration, Extensions
 exl-id: b4180265-f7a1-48e4-8c23-27835253e171
-source-git-commit: 9b3772cf640ebc56063434e1aa8acb1ec51dc63c
+source-git-commit: 94c1e16a07567471d446478e3bd2a33977247ef3
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '536'
 ht-degree: 0%
 
 ---
@@ -110,9 +110,7 @@ php -m
 
 다음 표에서는 Adobe Commerce을 클라우드 플랫폼에 배포할 때 지원되는 PHP 확장을 보여 줍니다.
 
-| 기본 확장 | 설치된 확장<br>제거할 수 없습니다. | 설치할 수 있는 확장<br>필요에 따라 제거됨 |
-| ------------------ | --------------------- | --------------------- |
-| `bcmath`<br>`bz2`<br>`calendar`<br>`exif`<br>`gd`<br>`gettext`<br> `intl`<br> `mysqli`<br> `openswoole`<br> `pcntl`<br> `pdo_mysql`<br> `soap`<br> `sockets`<br>  `sysvmsg`<br> `sysvsem`<br> `sysvshm`<br> `opcache`<br> `zip` | `ctype`<br> `curl`<br>`date`<br> `dom`<br> `fileinfo`<br> `filter`<br> `ftp`<br> `hash`<br> `iconv`<br> `json`<br> `mbstring`<br> `mysqlnd`<br> `openssl`<br> `pcre`<br> `pdo`<br> `pdo_sqlite`<br> `phar`<br>`posix`<br> `readline`<br> `session`<br> `sqlite3`<br> `tokenizer`<br> `xml`<br> `xmlreader`<br> `xmlwriter`<br> | `geoip`<br>`gmp`<br> `igbinary`<br> `imagick`<br> `imap`<br> `ioncube` <br>`ldap`<br> `mailparse`<br> `mcrypt`<br> `msgpack`<br> `mysqli`<br> `oauth`<br> `pdo_mysql`<br> `propro`<br> `pspell`<br> `raphf`<br> `recode`<br> `redis`<br> `shmop` `sockets`<br> `sodium`<br> `ssh2`<br>`tidy`<br> `xdebug`<br> `xmlrpc`<br> `xsl`<br> `yaml` |
+{{$include /help/_includes/templated/php-extensions-cloud.md}}
 
 PHP 모듈 요구 사항은 Adobe Commerce 버전에 연결되어 있습니다. 다음을 참조하십시오 [PHP 요구 사항](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html).
 

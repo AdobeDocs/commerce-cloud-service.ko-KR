@@ -3,9 +3,9 @@ user-guide-title: 클라우드 인프라의 Commerce 안내서
 user-guide-description: 클라우드 인프라에서 Adobe Commerce 애플리케이션을 관리하는 방법에 대해 알아봅니다.
 product: magento
 feature: Cloud
-source-git-commit: 615a6525597c62cb6f151cc26ea2bdded3229350
+source-git-commit: ebd434e488b666d34df9562825a612b33495e44d
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '353'
 ht-degree: 7%
 
 ---
@@ -31,7 +31,6 @@ ht-degree: 7%
    + [Cloud Docker 패키지](release-notes/cloud-docker.md)
    + [클라우드 구성 요소](release-notes/cloud-components.md)
    + [클라우드 패키지](release-notes/cloud-packages.md)
-   + [클라우드 패키지(베타)](release-notes/cloud-packages-beta.md)
    + [이전 버전과 호환 불가능한 변경 사항](release-notes/backward-incompatible-changes.md)
    + [릴리스 정보 아카이브](release-notes/cloud-release-archive.md)
 + 클라우드 프로젝트 {#project}

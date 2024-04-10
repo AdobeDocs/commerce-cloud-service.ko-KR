@@ -3,7 +3,7 @@ title: Commerce 버전 업그레이드
 description: 클라우드 인프라 프로젝트에서 Adobe Commerce 버전을 업그레이드하는 방법에 대해 알아봅니다.
 feature: Cloud, Upgrade
 exl-id: 87821007-4979-4a20-940b-aa3c82c192d8
-source-git-commit: 745a9f08353bd5dfbb871ca88947157c145c7c70
+source-git-commit: 99272d08a11f850a79e8e24857b7072d1946f374
 workflow-type: tm+mt
 source-wordcount: '1439'
 ht-degree: 0%
@@ -124,7 +124,7 @@ Adobe Commerce 코드 베이스를 최신 버전으로 업그레이드할 수 �
 
 ### .magento.app.yaml
 
-항상 다음에 포함된 값 검토 [.magento.app.yaml](../application/configure-app-yaml.md) 애플리케이션이 클라우드 인프라에 빌드하고 배포하는 방식을 제어하기 때문에 설치된 버전에 대한 파일입니다. 다음 예제는 버전 2.4.6용이며 Composer 2.2.21을 사용합니다. 다음 `build: flavor:` 속성은 Composer 2.x에 사용되지 않습니다. 참조 [Composer 2 설치 및 사용](../application/properties.md#installing-and-using-composer-2).
+항상 다음에 포함된 값 검토 [.magento.app.yaml](../application/configure-app-yaml.md) 애플리케이션이 클라우드 인프라에 빌드하고 배포하는 방식을 제어하기 때문에 설치된 버전에 대한 파일입니다. 다음 예제는 버전 2.4.7용이며 Composer 2.7.2를 사용합니다. 다음 `build: flavor:` 속성은 Composer 2.x에 사용되지 않습니다. 참조 [Composer 2 설치 및 사용](../application/properties.md#installing-and-using-composer-2).
 
 **를 업데이트하려면 `.magento.app.yaml` 파일**:
 
@@ -135,13 +135,13 @@ Adobe Commerce 코드 베이스를 최신 버전으로 업그레이드할 수 �
 1. PHP 옵션을 업데이트합니다.
 
    ```yaml
-   type: php:8.2
+   type: php:8.3
    
    build:
        flavor: none
    dependencies:
        php:
-           composer/composer: '2.2.21'
+           composer/composer: '2.7.2'
    ```
 
 1. 수정 `hooks` 속성 `build` 및 `deploy` 명령입니다.

@@ -3,7 +3,7 @@ title: 속성
 description: 를 구성할 때 속성 목록을 참조로 사용 [!DNL Commerce] 클라우드 인프라에 빌드 및 배포하기 위한 애플리케이션입니다.
 feature: Cloud, Configuration, Build, Deploy, Roles/Permissions, Storage
 exl-id: 58a86136-a9f9-4519-af27-2f8fa4018038
-source-git-commit: eace5d84fa0915489bf562ccf79fde04f6b9d083
+source-git-commit: 99272d08a11f850a79e8e24857b7072d1946f374
 workflow-type: tm+mt
 source-wordcount: '797'
 ht-degree: 0%
@@ -26,7 +26,7 @@ ht-degree: 0%
 | [`name`](#name) | 응용 프로그램 이름 정의 | `mymagento` | 예 |
 | [`relationships`](#relationships) | 맵 서비스 | 서비스:<ul><li>`database: "mysql:mysql"`</li><li>`redis: "redis:redis"`</li><li>`opensearch: "opensearch:opensearch"`</li></ul> | 아니요 |
 | [`runtime`](#runtime) | 런타임 속성에는 [!DNL Commerce] 응용 프로그램. | 확장:<ul><li>`xsl`</li><li>`newrelic`</li><li>`sodium`</li></ul> | 예 |
-| [`type`](#type-and-build) | 기본 컨테이너 이미지 설정 | `php:8.1` | 예 |
+| [`type`](#type-and-build) | 기본 컨테이너 이미지 설정 | `php:8.3` | 예 |
 | [`variables`](variables-property.md) | 특정 상거래 버전에 대한 환경 변수 적용 | — | 아니요 |
 | [`web`](web-property.md) | 외부 요청 처리 | — | 예 |
 | [`workers`](workers-property.md) | 외부 요청 처리 | — | 예, 웹 속성을 사용하지 않는 경우 |
@@ -55,13 +55,13 @@ type: php:<version>
 
 ```yaml
 # The toolstack used to build the application.
-type: php:8.1
+type: php:8.3
 build:
     flavor: none
 
 dependencies:
     php:
-        composer/composer: '2.2.4'
+        composer/composer: '2.7.2'
 ```
 
 ### Composer 2 설치 및 사용

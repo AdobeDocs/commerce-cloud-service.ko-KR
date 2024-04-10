@@ -3,7 +3,7 @@ title: ECE-Tools를 사용하도록 프로젝트 업그레이드
 description: ECE-Tools 패키지를 사용하고 최신 수정 사항 및 기능을 활용하기 위해 Adobe Commerce on cloud infrastructure 프로젝트를 업그레이드하는 방법에 대해 알아봅니다.
 feature: Cloud, Install
 exl-id: 820cca84-2817-4881-829f-ebb78400d8c7
-source-git-commit: eace5d84fa0915489bf562ccf79fde04f6b9d083
+source-git-commit: bcdb59f0d2a17e55e8b0479ee69fac06c710638f
 workflow-type: tm+mt
 source-wordcount: '365'
 ht-degree: 0%
@@ -44,11 +44,11 @@ Adobe Commerce을 설치하려면 `2.3.5-p2`, 설정됨 `current_version` 끝 `2
 
 항상 다음에서 최신 메타패키지 제약 조건을 찾을 수 있습니다 [`magento-cloud` 템플릿](https://github.com/magento/magento-cloud/blob/master/composer.json).
 
-다음 예제에서는 Adobe Commerce on cloud infrastructure 메타패키지에 대해 현재 버전 2.4.5보다 크거나 같고 다음 버전 2.4.6보다 작은 버전을 제한합니다.
+다음 예제에서는 Adobe Commerce on cloud infrastructure 메타패키지에 대해 현재 버전 2.4.7보다 크거나 같고 다음 버전 2.4.8보다 작은 버전을 제한합니다.
 
 ```json
 "require": {
-    "magento/magento-cloud-metapackage": ">=2.4.5 <2.4.6"
+    "magento/magento-cloud-metapackage": ">=2.4.7 <2.4.8"
 },
 ```
 
@@ -61,7 +61,7 @@ Adobe Commerce을 설치하려면 `2.3.5-p2`, 설정됨 `current_version` 끝 `2
 1. 업데이트 `magento/magento-cloud-metapackage` 의 버전 제한 `composer.json` 파일.
 
    ```bash
-   composer require "magento/magento-cloud-metapackage":">=2.4.5 <2.4.6" --no-update
+   composer require "magento/magento-cloud-metapackage":">=2.4.7 <2.4.8" --no-update
    ```
 
 1. 메타패키지를 업데이트합니다.

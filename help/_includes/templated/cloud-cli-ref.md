@@ -1,7 +1,7 @@
 ---
-source-git-commit: c160be020d855983eaf7a06d04cee6e27819b2a0
+source-git-commit: 99272d08a11f850a79e8e24857b7072d1946f374
 workflow-type: tm+mt
-source-wordcount: '21467'
+source-wordcount: '21442'
 ht-degree: 0%
 
 ---
@@ -6138,7 +6138,7 @@ magento-cloud dir [<subdir>]
 
 ## `metrics:all`
 
-\&lt;fg white=&quot;&quot; bg=&quot;red&quot;> BETA \&lt;/> 환경에 대한 CPU, 디스크 및 메모리 지표 표시
+환경에 대한 CPU, 디스크 및 메모리 지표 표시
 
 ```bash
 magento-cloud metrics [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
@@ -6268,7 +6268,7 @@ magento-cloud metrics [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [
 
 ## `metrics:cpu`
 
-\&lt;fg white=&quot;&quot; bg=&quot;red&quot;> BETA \&lt;/> 환경의 CPU 사용량 표시
+환경의 CPU 사용량 표시
 
 ```bash
 magento-cloud cpu [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
@@ -6528,7 +6528,7 @@ magento-cloud disk [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--t
 
 ## `metrics:memory`
 
-\&lt;fg white=&quot;&quot; bg=&quot;red&quot;> BETA \&lt;/> 환경의 메모리 사용량 표시
+환경의 메모리 사용량 표시
 
 ```bash
 magento-cloud mem [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
@@ -7136,7 +7136,7 @@ magento-cloud mount:upload [--source SOURCE] [-m|--mount MOUNT] [--delete] [--ex
 
 ## `operation:list`
 
-\&lt;fg white=&quot;&quot; bg=&quot;red&quot;> BETA \&lt;/> 환경에 대한 런타임 작업 나열
+환경에 대한 런타임 작업 나열
 
 ```bash
 magento-cloud ops [--full] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
@@ -7232,7 +7232,7 @@ magento-cloud ops [--full] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
 
 ## `operation:run`
 
-\&lt;fg white=&quot;&quot; bg=&quot;red&quot;> BETA \&lt;/> 환경에서 작업 실행
+환경에서 작업 실행
 
 ```bash
 magento-cloud operation:run [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-W|--no-wait] [--wait] [--] [<operation>]

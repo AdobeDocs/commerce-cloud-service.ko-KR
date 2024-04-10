@@ -6,7 +6,7 @@ feature: Cloud, Install
 topic: Development
 last-substantial-update: 2024-02-06T00:00:00Z
 exl-id: d4452d7d-d3dc-4f8d-8bd7-76f05d89f545
-source-git-commit: abe9aa36b907be8bdfdf42e6f28f1e1eac68fecf
+source-git-commit: 99272d08a11f850a79e8e24857b7072d1946f374
 workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## 필수 패키지
 
-클라우드 인프라의 Adobe Commerce은 Composer를 사용하여 프로젝트에 대한 종속성 및 업그레이드를 관리합니다. 로컬 개발을 위해 클라우드 프로젝트와 호환되는 PHP 및 Composer 버전을 설치해야 합니다. 예를 들어 [!DNL Commerce] 2.4.6 클라우드 템플릿에서 [`.magento.app.yaml`](https://github.com/magento/magento-cloud/blob/2.4.6/.magento.app.yaml) 구성 파일이 **PHP 8.2** 및 **Composer 2.2.21**.
+클라우드 인프라의 Adobe Commerce은 Composer를 사용하여 프로젝트에 대한 종속성 및 업그레이드를 관리합니다. 로컬 개발을 위해 클라우드 프로젝트와 호환되는 PHP 및 Composer 버전을 설치해야 합니다. 예를 들어 [!DNL Commerce] 2.4.7 클라우드 템플릿에서 [`.magento.app.yaml`](https://github.com/magento/magento-cloud/blob/2.4.7/.magento.app.yaml) 구성 파일이 **PHP 8.3** 및 **Composer 2.7.2**.
 
 Composer는 프로젝트에 필요한 라이브러리 및 종속성을 `vendor` 디렉토리. 다음 필수 Composer 파일은 프로젝트 루트 디렉토리에 있습니다.
 
@@ -47,10 +47,10 @@ Composer는 프로젝트에 필요한 라이브러리 및 종속성을 `vendor` 
 >=current_version <next_version
 ```
 
-예를 들어 최신 Adobe Commerce 버전 2.4.5를 사용하려면 을 설정합니다. `2.4.5` 를 &quot;현재&quot; 버전으로 `2.4.6` 에서 &quot;다음&quot; 버전으로 `composer.json` 파일:
+예를 들어 최신 Adobe Commerce 버전 2.4.7을 사용하려면 을 설정합니다. `2.4.7` 를 &quot;현재&quot; 버전으로 `2.4.8` 에서 &quot;다음&quot; 버전으로 `composer.json` 파일:
 
 ```text
-"magento/magento-cloud-metapackage": ">=2.4.5 <2.4.6"
+"magento/magento-cloud-metapackage": ">=2.4.7 <2.4.8"
 ```
 
 이 메타패키지의 기본 패키지는 다음과 같습니다.
