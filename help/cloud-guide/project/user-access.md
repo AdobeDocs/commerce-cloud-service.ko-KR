@@ -6,9 +6,9 @@ feature: Cloud, Roles/Permissions
 last-substantial-update: 2023-06-27T00:00:00Z
 topic: Security
 exl-id: 3357a3ea-bf86-4a65-95d1-6b24f1152248
-source-git-commit: 13e76d3e9829155995acbb72d947be3041579298
+source-git-commit: b85a163ff62f8a63430dff7c96b5cf391cf38d79
 workflow-type: tm+mt
-source-wordcount: '1441'
+source-wordcount: '1454'
 ht-degree: 0%
 
 ---
@@ -161,7 +161,11 @@ magento-cloud user:update alice@example.com -r production:a
 
 1. 클릭 **[!UICONTROL Add User]**.
 
-1. 사용자를 추가한 후 모든 환경을 재배포하여 변경 사항을 적용합니다. 사용자를 추가해도 배포가 자동으로 트리거되지 않습니다. 재배포는 사용자가 SSH를 사용하여 환경에 액세스할 수 있도록 하는 중요한 단계입니다.
+   >[!IMPORTANT]
+   >
+   >사용자를 추가해도 배포가 자동으로 트리거되지 않습니다.
+
+1. 사용자를 추가한 후 모든 환경을 재배포하여 변경 사항을 적용합니다. 사용자를 추가해도 배포가 자동으로 트리거되지 않습니다. 재배포는 사용자가 SSH를 사용하여 환경에 액세스하거나 관리자 작업을 수행할 수 있도록 하는 중요한 단계입니다.
 
 사용자를 추가하면 Adobe은 클라우드 인프라 프로젝트에서 Adobe Commerce에 액세스하기 위한 지침과 함께 지정된 주소로 이메일을 전송합니다.
 
