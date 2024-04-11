@@ -5,7 +5,7 @@ feature: Cloud, Configuration, Cache, Deploy, SCD, Storage, Search
 recommendations: noDisplay, catalog
 role: Developer
 exl-id: 673880b5-830b-4837-ac0c-5fa5643ae34c
-source-git-commit: 8a0523f1714b6ea41887e99b5c31294cf5e5255e
+source-git-commit: b7307faf046884c13cba852df69d4fa9977e9a17
 workflow-type: tm+mt
 source-wordcount: '2185'
 ht-degree: 0%
@@ -613,12 +613,12 @@ Elasticsearch 구성:
 ```yaml
 stage:
   deploy:
-   SEARCH_CONFIGURATION:
-     engine: elasticsearch
-     elasticsearch_server_hostname: http://elasticsearch.internal
-     elasticsearch_server_port: '9200'
-     elasticsearch_index_prefix: magento2
-     elasticsearch_server_timeout: '15'
+    SEARCH_CONFIGURATION:
+      engine: elasticsearch
+      elasticsearch_server_hostname: http://elasticsearch.internal
+      elasticsearch_server_port: '9200'
+      elasticsearch_index_prefix: magento2
+      elasticsearch_server_timeout: '15'
 ```
 
 OpenSearch 구성(Commerce 2.4.6 이상용):
@@ -626,12 +626,12 @@ OpenSearch 구성(Commerce 2.4.6 이상용):
 ```yaml
 stage:
   deploy:
-   SEARCH_CONFIGURATION:
-     engine: opensearch
-     opensearch_server_hostname: 'http://opensearch.internal'
-     opensearch_server_port: '9200'
-     opensearch_index_prefix: 'magento2'
-     opensearch_server_timeout: '15'
+    SEARCH_CONFIGURATION:
+      engine: opensearch
+      opensearch_server_hostname: 'http://opensearch.internal'
+      opensearch_server_port: '9200'
+      opensearch_index_prefix: 'magento2'
+      opensearch_server_timeout: '15'
 ```
 
 {{merge-options}}
