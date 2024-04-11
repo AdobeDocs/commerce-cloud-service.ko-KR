@@ -1,14 +1,14 @@
 ---
-source-git-commit: 28aaae20fa03f31107bcd3fb569350a68842b152
+source-git-commit: 78e19b0cb274caf3799882d1f5d8242225c936ad
 workflow-type: tm+mt
-source-wordcount: '3125'
+source-wordcount: '4098'
 ht-degree: 0%
 
 ---
 # ece-tools
 
 <!-- The template to render with above values -->
-**버전**: 2002.1.14
+**버전**: 2002.1.18
 
 이 참조에는 `ece-tools` 명령줄 도구입니다.
 초기 목록은 다음을 사용하여 자동으로 생성됩니다. `ece-tools list` cloud infrastructure의 Adobe Commerce 명령.
@@ -17,17 +17,48 @@ ht-degree: 0%
 >
 >이 참조는 응용 프로그램 코드베이스에서 생성됩니다. 콘텐츠를 변경하기 위해에서 해당 명령 구현에 대한 소스 코드를 업데이트할 수 있습니다 [코드베이스](https://github.com/magento/magento-cloud-cli) 검토를 위해 변경 사항을 보관하고 제출합니다. 다른 방법은 _피드백 제공_ (오른쪽 상단에서 링크를 찾습니다.). 기여도 가이드라인은 를 참조하십시오. [코드 기여](https://developer.adobe.com/commerce/contributor/guides/code-contributions/).
 
-## `build`
+## `_complete`
 
-응용 프로그램을 빌드합니다.
+셸 완료 제안을 제공하는 내부 명령
 
 ```bash
-ece-tools build
+ece-tools _complete [-s|--shell SHELL] [-i|--input INPUT] [-c|--current CURRENT] [-a|--api-version API-VERSION] [-S|--symfony SYMFONY]
 ```
+
+### `--shell`, `-s`
+
+껍질 유형(&quot;bash&quot;, &quot;fish&quot;, &quot;zsh&quot;)
+
+- 값 필요
+
+### `--input`, `-i`
+
+입력 토큰의 배열(예: COMP_WORDS 또는 argv)
+
+- 기본값: `[]`
+- 값 필요
+
+### `--current`, `-c`
+
+커서가 있는 &quot;입력&quot; 배열의 인덱스(예: COMP_CWORD)
+
+- 값 필요
+
+### `--api-version`, `-a`
+
+완료 스크립트의 API 버전
+
+- 값 필요
+
+### `--symfony`, `-S`
+
+더 이상 사용되지 않음
+
+- 값 필요
 
 ### `--help`, `-h`
 
-이 도움말 메시지 표시
+해당 명령에 대한 도움말을 표시합니다. 명령을 지정하지 않으면 다음에 대한 도움말을 표시합니다.&lt;info>list\&lt;/info> 명령
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -55,14 +86,140 @@ ece-tools build
 
 ### `--ansi`
 
-ANSI 출력 강제 실행
+ANSI 출력 강제(또는 비활성화 —no-ansi)
 
-- 기본값: `false`
 - 값을 수락하지 않음
 
 ### `--no-ansi`
 
-ANSI 출력 비활성화
+&quot;—ansi&quot; 옵션 무시
+
+- 기본값: `false`
+- 값을 수락하지 않음
+
+### `--no-interaction`, `-n`
+
+대화식 질문하지 않음
+
+- 기본값: `false`
+- 값을 수락하지 않음
+
+
+## `build`
+
+응용 프로그램을 빌드합니다.
+
+```bash
+ece-tools build
+```
+
+### `--help`, `-h`
+
+해당 명령에 대한 도움말을 표시합니다. 명령을 지정하지 않으면 다음에 대한 도움말을 표시합니다.&lt;info>list\&lt;/info> 명령
+
+- 기본값: `false`
+- 값을 수락하지 않음
+
+### `--quiet`, `-q`
+
+메시지 출력 안 함
+
+- 기본값: `false`
+- 값을 수락하지 않음
+
+### `--verbose`, `-v|-vv|-vvv`
+
+메시지의 자세한 정도를 증가시킵니다. 일반 출력의 경우 1, 자세한 출력의 경우 2, 디버그의 경우 3
+
+- 기본값: `false`
+- 값을 수락하지 않음
+
+### `--version`, `-V`
+
+이 응용 프로그램 버전 표시
+
+- 기본값: `false`
+- 값을 수락하지 않음
+
+### `--ansi`
+
+ANSI 출력 강제(또는 비활성화 —no-ansi)
+
+- 값을 수락하지 않음
+
+### `--no-ansi`
+
+&quot;—ansi&quot; 옵션 무시
+
+- 기본값: `false`
+- 값을 수락하지 않음
+
+### `--no-interaction`, `-n`
+
+대화식 질문하지 않음
+
+- 기본값: `false`
+- 값을 수락하지 않음
+
+
+## `completion`
+
+셸 완료 스크립트 덤프
+
+```bash
+ece-tools completion [--debug] [--] [<shell>]
+```
+
+
+### `shell`
+
+셸 유형(예: &quot;bash&quot;), &quot;$SHELL&quot; 환경 변수 값이 제공되지 않으면 사용됩니다.
+
+
+### `--debug`
+
+완료 디버그 로그 추적
+
+- 기본값: `false`
+- 값을 수락하지 않음
+
+### `--help`, `-h`
+
+해당 명령에 대한 도움말을 표시합니다. 명령을 지정하지 않으면 다음에 대한 도움말을 표시합니다.&lt;info>list\&lt;/info> 명령
+
+- 기본값: `false`
+- 값을 수락하지 않음
+
+### `--quiet`, `-q`
+
+메시지 출력 안 함
+
+- 기본값: `false`
+- 값을 수락하지 않음
+
+### `--verbose`, `-v|-vv|-vvv`
+
+메시지의 자세한 정도를 증가시킵니다. 일반 출력의 경우 1, 자세한 출력의 경우 2, 디버그의 경우 3
+
+- 기본값: `false`
+- 값을 수락하지 않음
+
+### `--version`, `-V`
+
+이 응용 프로그램 버전 표시
+
+- 기본값: `false`
+- 값을 수락하지 않음
+
+### `--ansi`
+
+ANSI 출력 강제(또는 비활성화 —no-ansi)
+
+- 값을 수락하지 않음
+
+### `--no-ansi`
+
+&quot;—ansi&quot; 옵션 무시
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -107,7 +264,7 @@ ece-tools db-dump [-d|--remove-definers] [-a|--dump-directory DUMP-DIRECTORY] [-
 
 ### `--help`, `-h`
 
-이 도움말 메시지 표시
+해당 명령에 대한 도움말을 표시합니다. 명령을 지정하지 않으면 다음에 대한 도움말을 표시합니다.&lt;info>list\&lt;/info> 명령
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -135,14 +292,13 @@ ece-tools db-dump [-d|--remove-definers] [-a|--dump-directory DUMP-DIRECTORY] [-
 
 ### `--ansi`
 
-ANSI 출력 강제 실행
+ANSI 출력 강제(또는 비활성화 —no-ansi)
 
-- 기본값: `false`
 - 값을 수락하지 않음
 
 ### `--no-ansi`
 
-ANSI 출력 비활성화
+&quot;—ansi&quot; 옵션 무시
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -165,7 +321,7 @@ ece-tools deploy
 
 ### `--help`, `-h`
 
-이 도움말 메시지 표시
+해당 명령에 대한 도움말을 표시합니다. 명령을 지정하지 않으면 다음에 대한 도움말을 표시합니다.&lt;info>list\&lt;/info> 명령
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -193,14 +349,13 @@ ece-tools deploy
 
 ### `--ansi`
 
-ANSI 출력 강제 실행
+ANSI 출력 강제(또는 비활성화 —no-ansi)
 
-- 기본값: `false`
 - 값을 수락하지 않음
 
 ### `--no-ansi`
 
-ANSI 출력 비활성화
+&quot;—ansi&quot; 옵션 무시
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -245,7 +400,7 @@ ece-tools help [--format FORMAT] [--raw] [--] [<command_name>]
 
 ### `--help`, `-h`
 
-이 도움말 메시지 표시
+해당 명령에 대한 도움말을 표시합니다. 명령을 지정하지 않으면 다음에 대한 도움말을 표시합니다.&lt;info>list\&lt;/info> 명령
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -273,14 +428,13 @@ ece-tools help [--format FORMAT] [--raw] [--] [<command_name>]
 
 ### `--ansi`
 
-ANSI 출력 강제 실행
+ANSI 출력 강제(또는 비활성화 —no-ansi)
 
-- 기본값: `false`
 - 값을 수락하지 않음
 
 ### `--no-ansi`
 
-ANSI 출력 비활성화
+&quot;—ansi&quot; 옵션 무시
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -298,7 +452,7 @@ ANSI 출력 비활성화
 목록 명령
 
 ```bash
-ece-tools list [--raw] [--format FORMAT] [--] [<namespace>]
+ece-tools list [--raw] [--format FORMAT] [--short] [--] [<namespace>]
 ```
 
 
@@ -321,18 +475,16 @@ ece-tools list [--raw] [--format FORMAT] [--] [<namespace>]
 - 기본값: `txt`
 - 값 필요
 
+### `--short`
 
-## `patch`
+명령의 인수 설명을 건너뛰려면
 
-사용자 지정 패치를 적용합니다.
-
-```bash
-ece-tools patch
-```
+- 기본값: `false`
+- 값을 수락하지 않음
 
 ### `--help`, `-h`
 
-이 도움말 메시지 표시
+해당 명령에 대한 도움말을 표시합니다. 명령을 지정하지 않으면 다음에 대한 도움말을 표시합니다.&lt;info>list\&lt;/info> 명령
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -360,14 +512,70 @@ ece-tools patch
 
 ### `--ansi`
 
-ANSI 출력 강제 실행
+ANSI 출력 강제(또는 비활성화 —no-ansi)
 
-- 기본값: `false`
 - 값을 수락하지 않음
 
 ### `--no-ansi`
 
-ANSI 출력 비활성화
+&quot;—ansi&quot; 옵션 무시
+
+- 기본값: `false`
+- 값을 수락하지 않음
+
+### `--no-interaction`, `-n`
+
+대화식 질문하지 않음
+
+- 기본값: `false`
+- 값을 수락하지 않음
+
+
+## `patch`
+
+사용자 지정 패치를 적용합니다.
+
+```bash
+ece-tools patch
+```
+
+### `--help`, `-h`
+
+해당 명령에 대한 도움말을 표시합니다. 명령을 지정하지 않으면 다음에 대한 도움말을 표시합니다.&lt;info>list\&lt;/info> 명령
+
+- 기본값: `false`
+- 값을 수락하지 않음
+
+### `--quiet`, `-q`
+
+메시지 출력 안 함
+
+- 기본값: `false`
+- 값을 수락하지 않음
+
+### `--verbose`, `-v|-vv|-vvv`
+
+메시지의 자세한 정도를 증가시킵니다. 일반 출력의 경우 1, 자세한 출력의 경우 2, 디버그의 경우 3
+
+- 기본값: `false`
+- 값을 수락하지 않음
+
+### `--version`, `-V`
+
+이 응용 프로그램 버전 표시
+
+- 기본값: `false`
+- 값을 수락하지 않음
+
+### `--ansi`
+
+ANSI 출력 강제(또는 비활성화 —no-ansi)
+
+- 값을 수락하지 않음
+
+### `--no-ansi`
+
+&quot;—ansi&quot; 옵션 무시
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -390,7 +598,7 @@ ece-tools post-deploy
 
 ### `--help`, `-h`
 
-이 도움말 메시지 표시
+해당 명령에 대한 도움말을 표시합니다. 명령을 지정하지 않으면 다음에 대한 도움말을 표시합니다.&lt;info>list\&lt;/info> 명령
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -418,14 +626,13 @@ ece-tools post-deploy
 
 ### `--ansi`
 
-ANSI 출력 강제 실행
+ANSI 출력 강제(또는 비활성화 —no-ansi)
 
-- 기본값: `false`
 - 값을 수락하지 않음
 
 ### `--no-ansi`
 
-ANSI 출력 비활성화
+&quot;—ansi&quot; 옵션 무시
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -458,7 +665,7 @@ ece-tools run <scenario>...
 
 ### `--help`, `-h`
 
-이 도움말 메시지 표시
+해당 명령에 대한 도움말을 표시합니다. 명령을 지정하지 않으면 다음에 대한 도움말을 표시합니다.&lt;info>list\&lt;/info> 명령
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -486,14 +693,13 @@ ece-tools run <scenario>...
 
 ### `--ansi`
 
-ANSI 출력 강제 실행
+ANSI 출력 강제(또는 비활성화 —no-ansi)
 
-- 기본값: `false`
 - 값을 수락하지 않음
 
 ### `--no-ansi`
 
-ANSI 출력 비활성화
+&quot;—ansi&quot; 옵션 무시
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -516,7 +722,7 @@ ece-tools backup:list
 
 ### `--help`, `-h`
 
-이 도움말 메시지 표시
+해당 명령에 대한 도움말을 표시합니다. 명령을 지정하지 않으면 다음에 대한 도움말을 표시합니다.&lt;info>list\&lt;/info> 명령
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -544,14 +750,13 @@ ece-tools backup:list
 
 ### `--ansi`
 
-ANSI 출력 강제 실행
+ANSI 출력 강제(또는 비활성화 —no-ansi)
 
-- 기본값: `false`
 - 값을 수락하지 않음
 
 ### `--no-ansi`
 
-ANSI 출력 비활성화
+&quot;—ansi&quot; 옵션 무시
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -587,7 +792,7 @@ ece-tools backup:restore [-f|--force] [--file [FILE]]
 
 ### `--help`, `-h`
 
-이 도움말 메시지 표시
+해당 명령에 대한 도움말을 표시합니다. 명령을 지정하지 않으면 다음에 대한 도움말을 표시합니다.&lt;info>list\&lt;/info> 명령
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -615,14 +820,13 @@ ece-tools backup:restore [-f|--force] [--file [FILE]]
 
 ### `--ansi`
 
-ANSI 출력 강제 실행
+ANSI 출력 강제(또는 비활성화 —no-ansi)
 
-- 기본값: `false`
 - 값을 수락하지 않음
 
 ### `--no-ansi`
 
-ANSI 출력 비활성화
+&quot;—ansi&quot; 옵션 무시
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -645,7 +849,7 @@ ece-tools build:generate
 
 ### `--help`, `-h`
 
-이 도움말 메시지 표시
+해당 명령에 대한 도움말을 표시합니다. 명령을 지정하지 않으면 다음에 대한 도움말을 표시합니다.&lt;info>list\&lt;/info> 명령
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -673,14 +877,13 @@ ece-tools build:generate
 
 ### `--ansi`
 
-ANSI 출력 강제 실행
+ANSI 출력 강제(또는 비활성화 —no-ansi)
 
-- 기본값: `false`
 - 값을 수락하지 않음
 
 ### `--no-ansi`
 
-ANSI 출력 비활성화
+&quot;—ansi&quot; 옵션 무시
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -703,7 +906,7 @@ ece-tools build:transfer
 
 ### `--help`, `-h`
 
-이 도움말 메시지 표시
+해당 명령에 대한 도움말을 표시합니다. 명령을 지정하지 않으면 다음에 대한 도움말을 표시합니다.&lt;info>list\&lt;/info> 명령
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -731,14 +934,13 @@ ece-tools build:transfer
 
 ### `--ansi`
 
-ANSI 출력 강제 실행
+ANSI 출력 강제(또는 비활성화 —no-ansi)
 
-- 기본값: `false`
 - 값을 수락하지 않음
 
 ### `--no-ansi`
 
-ANSI 출력 비활성화
+&quot;—ansi&quot; 옵션 무시
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -768,7 +970,7 @@ JSON 형식의 구성
 
 ### `--help`, `-h`
 
-이 도움말 메시지 표시
+해당 명령에 대한 도움말을 표시합니다. 명령을 지정하지 않으면 다음에 대한 도움말을 표시합니다.&lt;info>list\&lt;/info> 명령
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -796,14 +998,13 @@ JSON 형식의 구성
 
 ### `--ansi`
 
-ANSI 출력 강제 실행
+ANSI 출력 강제(또는 비활성화 —no-ansi)
 
-- 기본값: `false`
 - 값을 수락하지 않음
 
 ### `--no-ansi`
 
-ANSI 출력 비활성화
+&quot;—ansi&quot; 옵션 무시
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -833,7 +1034,7 @@ JSON 형식의 구성
 
 ### `--help`, `-h`
 
-이 도움말 메시지 표시
+해당 명령에 대한 도움말을 표시합니다. 명령을 지정하지 않으면 다음에 대한 도움말을 표시합니다.&lt;info>list\&lt;/info> 명령
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -861,14 +1062,13 @@ JSON 형식의 구성
 
 ### `--ansi`
 
-ANSI 출력 강제 실행
+ANSI 출력 강제(또는 비활성화 —no-ansi)
 
-- 기본값: `false`
 - 값을 수락하지 않음
 
 ### `--no-ansi`
 
-ANSI 출력 비활성화
+&quot;—ansi&quot; 옵션 무시
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -891,7 +1091,7 @@ ece-tools cloud:config:validate
 
 ### `--help`, `-h`
 
-이 도움말 메시지 표시
+해당 명령에 대한 도움말을 표시합니다. 명령을 지정하지 않으면 다음에 대한 도움말을 표시합니다.&lt;info>list\&lt;/info> 명령
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -919,14 +1119,13 @@ ece-tools cloud:config:validate
 
 ### `--ansi`
 
-ANSI 출력 강제 실행
+ANSI 출력 강제(또는 비활성화 —no-ansi)
 
-- 기본값: `false`
 - 값을 수락하지 않음
 
 ### `--no-ansi`
 
-ANSI 출력 비활성화
+&quot;—ansi&quot; 옵션 무시
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -954,7 +1153,7 @@ ece-tools dump
 
 ### `--help`, `-h`
 
-이 도움말 메시지 표시
+해당 명령에 대한 도움말을 표시합니다. 명령을 지정하지 않으면 다음에 대한 도움말을 표시합니다.&lt;info>list\&lt;/info> 명령
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -982,14 +1181,13 @@ ece-tools dump
 
 ### `--ansi`
 
-ANSI 출력 강제 실행
+ANSI 출력 강제(또는 비활성화 —no-ansi)
 
-- 기본값: `false`
 - 값을 수락하지 않음
 
 ### `--no-ansi`
 
-ANSI 출력 비활성화
+&quot;—ansi&quot; 옵션 무시
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1012,7 +1210,7 @@ ece-tools cron:disable
 
 ### `--help`, `-h`
 
-이 도움말 메시지 표시
+해당 명령에 대한 도움말을 표시합니다. 명령을 지정하지 않으면 다음에 대한 도움말을 표시합니다.&lt;info>list\&lt;/info> 명령
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1040,14 +1238,13 @@ ece-tools cron:disable
 
 ### `--ansi`
 
-ANSI 출력 강제 실행
+ANSI 출력 강제(또는 비활성화 —no-ansi)
 
-- 기본값: `false`
 - 값을 수락하지 않음
 
 ### `--no-ansi`
 
-ANSI 출력 비활성화
+&quot;—ansi&quot; 옵션 무시
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1070,7 +1267,7 @@ ece-tools cron:enable
 
 ### `--help`, `-h`
 
-이 도움말 메시지 표시
+해당 명령에 대한 도움말을 표시합니다. 명령을 지정하지 않으면 다음에 대한 도움말을 표시합니다.&lt;info>list\&lt;/info> 명령
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1098,14 +1295,13 @@ ece-tools cron:enable
 
 ### `--ansi`
 
-ANSI 출력 강제 실행
+ANSI 출력 강제(또는 비활성화 —no-ansi)
 
-- 기본값: `false`
 - 값을 수락하지 않음
 
 ### `--no-ansi`
 
-ANSI 출력 비활성화
+&quot;—ansi&quot; 옵션 무시
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1128,7 +1324,7 @@ ece-tools cron:kill
 
 ### `--help`, `-h`
 
-이 도움말 메시지 표시
+해당 명령에 대한 도움말을 표시합니다. 명령을 지정하지 않으면 다음에 대한 도움말을 표시합니다.&lt;info>list\&lt;/info> 명령
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1156,14 +1352,13 @@ ece-tools cron:kill
 
 ### `--ansi`
 
-ANSI 출력 강제 실행
+ANSI 출력 강제(또는 비활성화 —no-ansi)
 
-- 기본값: `false`
 - 값을 수락하지 않음
 
 ### `--no-ansi`
 
-ANSI 출력 비활성화
+&quot;—ansi&quot; 옵션 무시
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1193,7 +1388,7 @@ ece-tools cron:unlock [--job-code [JOB-CODE]]
 
 ### `--help`, `-h`
 
-이 도움말 메시지 표시
+해당 명령에 대한 도움말을 표시합니다. 명령을 지정하지 않으면 다음에 대한 도움말을 표시합니다.&lt;info>list\&lt;/info> 명령
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1221,14 +1416,13 @@ ece-tools cron:unlock [--job-code [JOB-CODE]]
 
 ### `--ansi`
 
-ANSI 출력 강제 실행
+ANSI 출력 강제(또는 비활성화 —no-ansi)
 
-- 기본값: `false`
 - 값을 수락하지 않음
 
 ### `--no-ansi`
 
-ANSI 출력 비활성화
+&quot;—ansi&quot; 옵션 무시
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1251,7 +1445,7 @@ ece-tools dev:generate:schema-error
 
 ### `--help`, `-h`
 
-이 도움말 메시지 표시
+해당 명령에 대한 도움말을 표시합니다. 명령을 지정하지 않으면 다음에 대한 도움말을 표시합니다.&lt;info>list\&lt;/info> 명령
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1279,14 +1473,13 @@ ece-tools dev:generate:schema-error
 
 ### `--ansi`
 
-ANSI 출력 강제 실행
+ANSI 출력 강제(또는 비활성화 —no-ansi)
 
-- 기본값: `false`
 - 값을 수락하지 않음
 
 ### `--no-ansi`
 
-ANSI 출력 비활성화
+&quot;—ansi&quot; 옵션 무시
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1309,7 +1502,7 @@ ece-tools dev:git:update-composer
 
 ### `--help`, `-h`
 
-이 도움말 메시지 표시
+해당 명령에 대한 도움말을 표시합니다. 명령을 지정하지 않으면 다음에 대한 도움말을 표시합니다.&lt;info>list\&lt;/info> 명령
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1337,14 +1530,13 @@ ece-tools dev:git:update-composer
 
 ### `--ansi`
 
-ANSI 출력 강제 실행
+ANSI 출력 강제(또는 비활성화 —no-ansi)
 
-- 기본값: `false`
 - 값을 수락하지 않음
 
 ### `--no-ansi`
 
-ANSI 출력 비활성화
+&quot;—ansi&quot; 옵션 무시
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1376,7 +1568,7 @@ ece-tools env:config:show [<variable>...]
 
 ### `--help`, `-h`
 
-이 도움말 메시지 표시
+해당 명령에 대한 도움말을 표시합니다. 명령을 지정하지 않으면 다음에 대한 도움말을 표시합니다.&lt;info>list\&lt;/info> 명령
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1404,14 +1596,13 @@ ece-tools env:config:show [<variable>...]
 
 ### `--ansi`
 
-ANSI 출력 강제 실행
+ANSI 출력 강제(또는 비활성화 —no-ansi)
 
-- 기본값: `false`
 - 값을 수락하지 않음
 
 ### `--no-ansi`
 
-ANSI 출력 비활성화
+&quot;—ansi&quot; 옵션 무시
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1447,7 +1638,7 @@ JSON 형식의 결과 가져오기에 사용됨
 
 ### `--help`, `-h`
 
-이 도움말 메시지 표시
+해당 명령에 대한 도움말을 표시합니다. 명령을 지정하지 않으면 다음에 대한 도움말을 표시합니다.&lt;info>list\&lt;/info> 명령
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1475,14 +1666,13 @@ JSON 형식의 결과 가져오기에 사용됨
 
 ### `--ansi`
 
-ANSI 출력 강제 실행
+ANSI 출력 강제(또는 비활성화 —no-ansi)
 
-- 기본값: `false`
 - 값을 수락하지 않음
 
 ### `--no-ansi`
 
-ANSI 출력 비활성화
+&quot;—ansi&quot; 옵션 무시
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1505,7 +1695,7 @@ ece-tools module:refresh
 
 ### `--help`, `-h`
 
-이 도움말 메시지 표시
+해당 명령에 대한 도움말을 표시합니다. 명령을 지정하지 않으면 다음에 대한 도움말을 표시합니다.&lt;info>list\&lt;/info> 명령
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1533,14 +1723,13 @@ ece-tools module:refresh
 
 ### `--ansi`
 
-ANSI 출력 강제 실행
+ANSI 출력 강제(또는 비활성화 —no-ansi)
 
-- 기본값: `false`
 - 값을 수락하지 않음
 
 ### `--no-ansi`
 
-ANSI 출력 비활성화
+&quot;—ansi&quot; 옵션 무시
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1563,7 +1752,7 @@ ece-tools schema:generate
 
 ### `--help`, `-h`
 
-이 도움말 메시지 표시
+해당 명령에 대한 도움말을 표시합니다. 명령을 지정하지 않으면 다음에 대한 도움말을 표시합니다.&lt;info>list\&lt;/info> 명령
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1591,14 +1780,13 @@ ece-tools schema:generate
 
 ### `--ansi`
 
-ANSI 출력 강제 실행
+ANSI 출력 강제(또는 비활성화 —no-ansi)
 
-- 기본값: `false`
 - 값을 수락하지 않음
 
 ### `--no-ansi`
 
-ANSI 출력 비활성화
+&quot;—ansi&quot; 옵션 무시
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1621,7 +1809,7 @@ ece-tools wizard:ideal-state
 
 ### `--help`, `-h`
 
-이 도움말 메시지 표시
+해당 명령에 대한 도움말을 표시합니다. 명령을 지정하지 않으면 다음에 대한 도움말을 표시합니다.&lt;info>list\&lt;/info> 명령
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1649,14 +1837,13 @@ ece-tools wizard:ideal-state
 
 ### `--ansi`
 
-ANSI 출력 강제 실행
+ANSI 출력 강제(또는 비활성화 —no-ansi)
 
-- 기본값: `false`
 - 값을 수락하지 않음
 
 ### `--no-ansi`
 
-ANSI 출력 비활성화
+&quot;—ansi&quot; 옵션 무시
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1679,7 +1866,7 @@ ece-tools wizard:master-slave
 
 ### `--help`, `-h`
 
-이 도움말 메시지 표시
+해당 명령에 대한 도움말을 표시합니다. 명령을 지정하지 않으면 다음에 대한 도움말을 표시합니다.&lt;info>list\&lt;/info> 명령
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1707,14 +1894,13 @@ ece-tools wizard:master-slave
 
 ### `--ansi`
 
-ANSI 출력 강제 실행
+ANSI 출력 강제(또는 비활성화 —no-ansi)
 
-- 기본값: `false`
 - 값을 수락하지 않음
 
 ### `--no-ansi`
 
-ANSI 출력 비활성화
+&quot;—ansi&quot; 옵션 무시
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1737,7 +1923,7 @@ ece-tools wizard:scd-on-build
 
 ### `--help`, `-h`
 
-이 도움말 메시지 표시
+해당 명령에 대한 도움말을 표시합니다. 명령을 지정하지 않으면 다음에 대한 도움말을 표시합니다.&lt;info>list\&lt;/info> 명령
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1765,14 +1951,13 @@ ece-tools wizard:scd-on-build
 
 ### `--ansi`
 
-ANSI 출력 강제 실행
+ANSI 출력 강제(또는 비활성화 —no-ansi)
 
-- 기본값: `false`
 - 값을 수락하지 않음
 
 ### `--no-ansi`
 
-ANSI 출력 비활성화
+&quot;—ansi&quot; 옵션 무시
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1795,7 +1980,7 @@ ece-tools wizard:scd-on-demand
 
 ### `--help`, `-h`
 
-이 도움말 메시지 표시
+해당 명령에 대한 도움말을 표시합니다. 명령을 지정하지 않으면 다음에 대한 도움말을 표시합니다.&lt;info>list\&lt;/info> 명령
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1823,14 +2008,13 @@ ece-tools wizard:scd-on-demand
 
 ### `--ansi`
 
-ANSI 출력 강제 실행
+ANSI 출력 강제(또는 비활성화 —no-ansi)
 
-- 기본값: `false`
 - 값을 수락하지 않음
 
 ### `--no-ansi`
 
-ANSI 출력 비활성화
+&quot;—ansi&quot; 옵션 무시
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1853,7 +2037,7 @@ ece-tools wizard:scd-on-deploy
 
 ### `--help`, `-h`
 
-이 도움말 메시지 표시
+해당 명령에 대한 도움말을 표시합니다. 명령을 지정하지 않으면 다음에 대한 도움말을 표시합니다.&lt;info>list\&lt;/info> 명령
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1881,14 +2065,13 @@ ece-tools wizard:scd-on-deploy
 
 ### `--ansi`
 
-ANSI 출력 강제 실행
+ANSI 출력 강제(또는 비활성화 —no-ansi)
 
-- 기본값: `false`
 - 값을 수락하지 않음
 
 ### `--no-ansi`
 
-ANSI 출력 비활성화
+&quot;—ansi&quot; 옵션 무시
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1911,7 +2094,7 @@ ece-tools wizard:split-db-state
 
 ### `--help`, `-h`
 
-이 도움말 메시지 표시
+해당 명령에 대한 도움말을 표시합니다. 명령을 지정하지 않으면 다음에 대한 도움말을 표시합니다.&lt;info>list\&lt;/info> 명령
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1939,14 +2122,13 @@ ece-tools wizard:split-db-state
 
 ### `--ansi`
 
-ANSI 출력 강제 실행
+ANSI 출력 강제(또는 비활성화 —no-ansi)
 
-- 기본값: `false`
 - 값을 수락하지 않음
 
 ### `--no-ansi`
 
-ANSI 출력 비활성화
+&quot;—ansi&quot; 옵션 무시
 
 - 기본값: `false`
 - 값을 수락하지 않음
