@@ -3,9 +3,9 @@ title: 백업 관리
 description: Adobe Commerce on cloud infrastructure 프로젝트에 대한 백업을 수동으로 만들고 복원하는 방법에 대해 알아봅니다.
 feature: Cloud, Paas, Snapshots, Storage
 exl-id: 1cb00db7-2375-4761-9c07-1e20a74859e0
-source-git-commit: 1d8ffabb9f903e89495d11c973a9f0a5a8dd1d43
+source-git-commit: 069cbc233492d22932e8dce5bf0426dce8459727
 workflow-type: tm+mt
-source-wordcount: '682'
+source-wordcount: '685'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 백업 또는 _스냅샷_ 는 실행 중인 서비스(MySQL 데이터베이스)의 모든 영구 데이터와 마운트된 볼륨(var, pub/media, app/etc)에 저장된 모든 파일을 포함하는 환경 데이터의 전체 백업입니다. 스냅샷은 _아님_ 코드가 Git 기반 저장소에 이미 저장되어 있으므로 코드를 포함합니다. 스냅샷의 사본은 다운로드할 수 없습니다.
 
-백업 기능은 다음과 같습니다 **아님** pro 환경에 적용합니다. Pro Staging 및 Production 환경은 기본적으로 재해 복구 목적으로 일반 백업을 받습니다. 다음을 참조하십시오. [Pro 백업 및 재해 복구](../architecture/pro-architecture.md#backup-and-disaster-recovery). Pro 스테이징 및 프로덕션 환경의 자동 라이브 백업과 달리 백업은 **아님** 자동. 다음과 같습니다. _본인_ 수동으로 백업을 만들거나 cron 작업을 설정하여 Starter 또는 Pro 통합 환경의 백업을 정기적으로 만들 책임.
+백업/스냅샷 기능은 **아님** 기본적으로 재해 복구를 위해 정기적인 백업을 수신하는 Pro Staging 및 운영 환경에 적용됩니다. 을(를) 참조하십시오 [Pro 백업 및 재해 복구](../architecture/pro-architecture.md#backup-and-disaster-recovery) 추가 정보. Pro 스테이징 및 프로덕션 환경의 자동 라이브 백업과 달리 백업은 **아님** 자동. 다음과 같습니다. _본인_ 수동으로 백업을 만들거나 cron 작업을 설정하여 Starter 또는 Pro 통합 환경의 백업을 정기적으로 만들 책임.
 
 ## 수동 백업 만들기
 
