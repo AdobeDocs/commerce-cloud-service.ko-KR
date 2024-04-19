@@ -1,7 +1,7 @@
 ---
-source-git-commit: 99272d08a11f850a79e8e24857b7072d1946f374
+source-git-commit: 6d8c082d78259f8f7adb0fb7f11ff4fcdb234124
 workflow-type: tm+mt
-source-wordcount: '21442'
+source-wordcount: '21171'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ magento-cloud cc
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -112,7 +112,7 @@ magento-cloud decode [-P|--property PROPERTY] [--] <value>
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -178,7 +178,7 @@ URL을 stdout으로 출력합니다.
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -244,7 +244,7 @@ magento-cloud help [--format FORMAT] [--raw] [--] [<command_name>]
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -321,7 +321,7 @@ magento-cloud list [--raw] [--format FORMAT] [--all] [--] [<namespace>]
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -402,7 +402,7 @@ magento-cloud multi [-p|--projects PROJECTS] [--continue] [--sort SORT] [--rever
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -471,7 +471,7 @@ URL을 stdout으로 출력합니다.
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -554,7 +554,7 @@ magento-cloud activity:cancel [-t|--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] 
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -609,7 +609,7 @@ magento-cloud activity:get [-P|--property PROPERTY] [-t|--type TYPE] [-x|--exclu
 
 ### `--incomplete`, `-i`
 
-완료되지 않은 활동만 포함합니다(기본 활동을 선택할 때). 이는 의 약어입니다.&lt;info>—state=in_progress,pending\&lt;/info>
+완료되지 않은 활동만 포함합니다(기본 활동을 선택할 때). —state=in_progress,pending의 줄임표입니다.
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -691,7 +691,7 @@ magento-cloud activity:get [-P|--property PROPERTY] [-t|--type TYPE] [-x|--exclu
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -829,7 +829,7 @@ magento-cloud activities [-t|--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--li
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -892,7 +892,7 @@ magento-cloud activity:log [--refresh REFRESH] [-t|--timestamps] [--type TYPE] [
 
 ### `--incomplete`, `-i`
 
-완료되지 않은 활동만 포함합니다(기본 활동을 선택할 때). 이는 의 약어입니다.&lt;info>—state=in_progress,pending\&lt;/info>
+완료되지 않은 활동만 포함합니다(기본 활동을 선택할 때). —state=in_progress,pending의 줄임표입니다.
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -953,7 +953,7 @@ magento-cloud activity:log [--refresh REFRESH] [-t|--timestamps] [--type TYPE] [
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1034,7 +1034,7 @@ magento-cloud app:config-get [-P|--property PROPERTY] [--refresh] [-p|--project 
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1125,7 +1125,7 @@ magento-cloud apps [--refresh] [--pipe] [-p|--project PROJECT] [-e|--environment
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1169,7 +1169,7 @@ magento-cloud auth:api-token-login
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1233,7 +1233,7 @@ URL을 stdout으로 출력합니다.
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1324,7 +1324,7 @@ magento-cloud auth:info [--no-auto-login] [-P|--property PROPERTY] [--refresh] [
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1382,7 +1382,7 @@ magento-cloud logout [-a|--all] [--other]
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1458,7 +1458,7 @@ magento-cloud blackfire:setup [--server_id SERVER_ID] [--server_token SERVER_TOK
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1541,7 +1541,7 @@ magento-cloud certificate:add [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--pr
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1612,7 +1612,7 @@ magento-cloud certificate:delete [-p|--project PROJECT] [-W|--no-wait] [--wait] 
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1682,7 +1682,7 @@ magento-cloud certificate:get [-P|--property PROPERTY] [--date-fmt DATE-FMT] [-p
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1820,7 +1820,7 @@ magento-cloud certificates [--domain DOMAIN] [--exclude-domain EXCLUDE-DOMAIN] [
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1897,7 +1897,7 @@ magento-cloud commit:get [-P|--property PROPERTY] [-p|--project PROJECT] [-e|--e
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -1994,7 +1994,7 @@ Git 커밋 SHA를 시작하는 중입니다. 상위 커밋에 대해 &quot;HEAD&
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -2134,7 +2134,7 @@ gzip을 사용하여 덤프 압축
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -2243,7 +2243,7 @@ magento-cloud db:size [-B|--bytes] [-C|--cleanup] [-p|--project PROJECT] [-e|--e
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -2336,7 +2336,7 @@ magento-cloud sql [--raw] [--schema SCHEMA] [-p|--project PROJECT] [-e|--environ
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -2438,7 +2438,7 @@ magento-cloud domain:add [--cert CERT] [--key KEY] [--chain CHAIN] [--attach ATT
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -2515,7 +2515,7 @@ magento-cloud domain:delete [-p|--project PROJECT] [-e|--environment ENVIRONMENT
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -2611,7 +2611,7 @@ magento-cloud domain:get [-P|--property PROPERTY] [--format FORMAT] [-c|--column
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -2688,7 +2688,7 @@ magento-cloud domains [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -2784,7 +2784,7 @@ magento-cloud domain:update [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--proj
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -2869,7 +2869,7 @@ magento-cloud environment:activate [--parent PARENT] [-p|--project PROJECT] [-e|
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -2969,7 +2969,7 @@ magento-cloud branch [--title TITLE] [--type TYPE] [--no-clone-parent] [-p|--pro
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -3025,7 +3025,7 @@ magento-cloud checkout [-i|--identity-file IDENTITY-FILE] [--] [<id>]
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -3167,7 +3167,7 @@ Git 분기(비활성 환경)를 삭제하지 마십시오
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -3257,7 +3257,7 @@ magento-cloud httpaccess [--access ACCESS] [--auth AUTH] [--enabled ENABLED] [-p
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -3373,7 +3373,7 @@ magento-cloud environment:info [--refresh] [--date-fmt DATE-FMT] [--format FORMA
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -3456,7 +3456,7 @@ Git 저장소의 URL
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -3569,7 +3569,7 @@ magento-cloud environments [-I|--no-inactive] [--pipe] [--refresh REFRESH] [--so
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -3663,7 +3663,7 @@ magento-cloud log [--lines LINES] [--tail] [-p|--project PROJECT] [-e|--environm
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -3739,7 +3739,7 @@ magento-cloud merge [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -3809,7 +3809,7 @@ magento-cloud environment:pause [-p|--project PROJECT] [-e|--environment ENVIRON
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -3946,7 +3946,7 @@ magento-cloud push [--target TARGET] [-f|--force] [--force-with-lease] [-u|--set
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -4016,7 +4016,7 @@ magento-cloud redeploy [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -4103,7 +4103,7 @@ magento-cloud relationships [-P|--property PROPERTY] [--refresh] [-p|--project P
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -4173,7 +4173,7 @@ magento-cloud environment:resume [-p|--project PROJECT] [-e|--environment ENVIRO
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -4269,7 +4269,7 @@ magento-cloud scp [-r|--recursive] [-p|--project PROJECT] [-e|--environment ENVI
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -4372,7 +4372,7 @@ SSH URL만 출력합니다.
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -4458,7 +4458,7 @@ magento-cloud sync [--rebase] [-p|--project PROJECT] [-e|--environment ENVIRONME
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -4534,7 +4534,7 @@ URL을 stdout으로 출력합니다.
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -4621,7 +4621,7 @@ magento-cloud xdebug [--port PORT] [-p|--project PROJECT] [-e|--environment ENVI
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -4722,7 +4722,7 @@ magento-cloud integration:activity:get [-P|--property PROPERTY] [-p|--project PR
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -4859,7 +4859,7 @@ magento-cloud int:act [--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--limit LI
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -4940,7 +4940,7 @@ magento-cloud integration:activity:log [-t|--timestamps] [--date-fmt DATE-FMT] [
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -5289,7 +5289,7 @@ POST 요청에 사용할 HTTP 헤더입니다. 콜론(:)으로 이름과 값을 
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -5359,7 +5359,7 @@ magento-cloud integration:delete [-p|--project PROJECT] [-W|--no-wait] [--wait] 
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -5442,7 +5442,7 @@ magento-cloud integration:get [-P|--property [PROPERTY]] [--format FORMAT] [-c|-
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -5513,7 +5513,7 @@ magento-cloud integrations [--format FORMAT] [-c|--columns COLUMNS] [--no-header
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -5868,7 +5868,7 @@ POST 요청에 사용할 HTTP 헤더입니다. 콜론(:)으로 이름과 값을 
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -5924,7 +5924,7 @@ magento-cloud integration:validate [-p|--project PROJECT] [--] [<id>]
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -6080,7 +6080,7 @@ Drush: 잠금 파일 만들기 또는 업데이트(Drush 버전 7 이상에서�
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -6130,7 +6130,7 @@ magento-cloud dir [<subdir>]
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -6138,7 +6138,7 @@ magento-cloud dir [<subdir>]
 
 ## `metrics:all`
 
-환경에 대한 CPU, 디스크 및 메모리 지표 표시
+BETA 환경에 대한 CPU, 디스크 및 메모리 지표 표시
 
 ```bash
 magento-cloud metrics [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
@@ -6153,13 +6153,13 @@ magento-cloud metrics [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [
 
 ### `--range`, `-r`
 
-시간 범위입니다. 이 기간 동안 종료 시간(-to)까지 지표가 로드됩니다. 시간(h), 분(m) 또는 초(s)와 같은 단위를 지정할 수 있습니다. 최소 \&lt;comment>5분\&lt;/comment>, 최대 \&lt;comment>8시간\&lt;/comment> 이상(프로젝트에 따라 다름), 기본값 \&lt;comment>10m\&lt;/comment>.
+시간 범위입니다. 이 기간 동안 종료 시간(-to)까지 지표가 로드됩니다. 시간(h), 분(m) 또는 초(s)와 같은 단위를 지정할 수 있습니다. 최소 5m, 최대 8시간 이상(프로젝트에 따라 다름), 기본 10m.
 
 - 값 필요
 
 ### `--interval`, `-i`
 
-시간 간격입니다. 기본값은 범위의 분할입니다. 시간(h), 분(m) 또는 초(s)와 같은 단위를 지정할 수 있습니다. 최소 \&lt;comment>1분\&lt;/comment>.
+시간 간격입니다. 기본값은 범위의 분할입니다. 시간(h), 분(m) 또는 초(s)와 같은 단위를 지정할 수 있습니다. 최소 1m.
 
 - 값 필요
 
@@ -6260,7 +6260,7 @@ magento-cloud metrics [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -6268,7 +6268,7 @@ magento-cloud metrics [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [
 
 ## `metrics:cpu`
 
-환경의 CPU 사용량 표시
+BETA 환경의 CPU 사용량 표시
 
 ```bash
 magento-cloud cpu [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
@@ -6276,13 +6276,13 @@ magento-cloud cpu [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--la
 
 ### `--range`, `-r`
 
-시간 범위입니다. 이 기간 동안 종료 시간(-to)까지 지표가 로드됩니다. 시간(h), 분(m) 또는 초(s)와 같은 단위를 지정할 수 있습니다. 최소 \&lt;comment>5분\&lt;/comment>, 최대 \&lt;comment>8시간\&lt;/comment> 이상(프로젝트에 따라 다름), 기본값 \&lt;comment>10m\&lt;/comment>.
+시간 범위입니다. 이 기간 동안 종료 시간(-to)까지 지표가 로드됩니다. 시간(h), 분(m) 또는 초(s)와 같은 단위를 지정할 수 있습니다. 최소 5m, 최대 8시간 이상(프로젝트에 따라 다름), 기본 10m.
 
 - 값 필요
 
 ### `--interval`, `-i`
 
-시간 간격입니다. 기본값은 범위의 분할입니다. 시간(h), 분(m) 또는 초(s)와 같은 단위를 지정할 수 있습니다. 최소 \&lt;comment>1분\&lt;/comment>.
+시간 간격입니다. 기본값은 범위의 분할입니다. 시간(h), 분(m) 또는 초(s)와 같은 단위를 지정할 수 있습니다. 최소 1m.
 
 - 값 필요
 
@@ -6383,7 +6383,7 @@ magento-cloud cpu [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--la
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -6406,13 +6406,13 @@ magento-cloud disk [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--t
 
 ### `--range`, `-r`
 
-시간 범위입니다. 이 기간 동안 종료 시간(-to)까지 지표가 로드됩니다. 시간(h), 분(m) 또는 초(s)와 같은 단위를 지정할 수 있습니다. 최소 \&lt;comment>5분\&lt;/comment>, 최대 \&lt;comment>8시간\&lt;/comment> 이상(프로젝트에 따라 다름), 기본값 \&lt;comment>10m\&lt;/comment>.
+시간 범위입니다. 이 기간 동안 종료 시간(-to)까지 지표가 로드됩니다. 시간(h), 분(m) 또는 초(s)와 같은 단위를 지정할 수 있습니다. 최소 5m, 최대 8시간 이상(프로젝트에 따라 다름), 기본 10m.
 
 - 값 필요
 
 ### `--interval`, `-i`
 
-시간 간격입니다. 기본값은 범위의 분할입니다. 시간(h), 분(m) 또는 초(s)와 같은 단위를 지정할 수 있습니다. 최소 \&lt;comment>1분\&lt;/comment>.
+시간 간격입니다. 기본값은 범위의 분할입니다. 시간(h), 분(m) 또는 초(s)와 같은 단위를 지정할 수 있습니다. 최소 1m.
 
 - 값 필요
 
@@ -6520,7 +6520,7 @@ magento-cloud disk [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--t
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -6528,7 +6528,7 @@ magento-cloud disk [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--t
 
 ## `metrics:memory`
 
-환경의 메모리 사용량 표시
+BETA 환경의 메모리 사용량 표시
 
 ```bash
 magento-cloud mem [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
@@ -6543,13 +6543,13 @@ magento-cloud mem [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to
 
 ### `--range`, `-r`
 
-시간 범위입니다. 이 기간 동안 종료 시간(-to)까지 지표가 로드됩니다. 시간(h), 분(m) 또는 초(s)와 같은 단위를 지정할 수 있습니다. 최소 \&lt;comment>5분\&lt;/comment>, 최대 \&lt;comment>8시간\&lt;/comment> 이상(프로젝트에 따라 다름), 기본값 \&lt;comment>10m\&lt;/comment>.
+시간 범위입니다. 이 기간 동안 종료 시간(-to)까지 지표가 로드됩니다. 시간(h), 분(m) 또는 초(s)와 같은 단위를 지정할 수 있습니다. 최소 5m, 최대 8시간 이상(프로젝트에 따라 다름), 기본 10m.
 
 - 값 필요
 
 ### `--interval`, `-i`
 
-시간 간격입니다. 기본값은 범위의 분할입니다. 시간(h), 분(m) 또는 초(s)와 같은 단위를 지정할 수 있습니다. 최소 \&lt;comment>1분\&lt;/comment>.
+시간 간격입니다. 기본값은 범위의 분할입니다. 시간(h), 분(m) 또는 초(s)와 같은 단위를 지정할 수 있습니다. 최소 1m.
 
 - 값 필요
 
@@ -6650,7 +6650,7 @@ magento-cloud mem [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -6784,7 +6784,7 @@ magento-cloud mount:download [-a|--all] [-m|--mount MOUNT] [--target TARGET] [--
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -6893,7 +6893,7 @@ magento-cloud mounts [--paths] [--refresh] [--format FORMAT] [-c|--columns COLUM
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -7008,7 +7008,7 @@ magento-cloud mount:size [-B|--bytes] [--refresh] [--format FORMAT] [-c|--column
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -7128,7 +7128,7 @@ magento-cloud mount:upload [--source SOURCE] [-m|--mount MOUNT] [--delete] [--ex
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -7136,7 +7136,7 @@ magento-cloud mount:upload [--source SOURCE] [-m|--mount MOUNT] [--delete] [--ex
 
 ## `operation:list`
 
-환경에 대한 런타임 작업 나열
+환경에서 BETA 목록 런타임 작업
 
 ```bash
 magento-cloud ops [--full] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
@@ -7224,7 +7224,7 @@ magento-cloud ops [--full] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -7232,7 +7232,7 @@ magento-cloud ops [--full] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
 
 ## `operation:run`
 
-환경에서 작업 실행
+BETA 환경에서 작업 실행
 
 ```bash
 magento-cloud operation:run [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-W|--no-wait] [--wait] [--] [<operation>]
@@ -7312,7 +7312,7 @@ magento-cloud operation:run [-p|--project PROJECT] [-e|--environment ENVIRONMENT
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -7362,7 +7362,7 @@ magento-cloud project:clear-build-cache [-p|--project PROJECT]
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -7448,7 +7448,7 @@ magento-cloud get [-e|--environment ENVIRONMENT] [--depth DEPTH] [--build] [-p|-
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -7558,7 +7558,7 @@ magento-cloud project:info [--refresh] [--date-fmt DATE-FMT] [--format FORMAT] [
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -7689,7 +7689,7 @@ magento-cloud projects [--pipe] [--region REGION] [--title TITLE] [--my] [--refr
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -7739,7 +7739,7 @@ magento-cloud set-remote [<project>]
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -7808,7 +7808,7 @@ magento-cloud repo:cat [-c|--commit COMMIT] [-p|--project PROJECT] [-e|--environ
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -7897,7 +7897,7 @@ magento-cloud repo:ls [-d|--directories] [-f|--files] [--git-style] [-c|--commit
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -7965,7 +7965,7 @@ magento-cloud read [-c|--commit COMMIT] [-p|--project PROJECT] [-e|--environment
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -8072,7 +8072,7 @@ magento-cloud route:get [--id ID] [-1|--primary] [-P|--property PROPERTY] [--ref
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -8162,7 +8162,7 @@ magento-cloud routes [--refresh] [--format FORMAT] [-c|--columns COLUMNS] [--no-
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -8212,7 +8212,7 @@ magento-cloud self:install [--shell-type SHELL-TYPE]
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -8289,7 +8289,7 @@ magento-cloud update [--no-major] [--unstable] [--manifest MANIFEST] [--current-
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -8380,7 +8380,7 @@ magento-cloud services [--refresh] [--pipe] [-p|--project PROJECT] [-e|--environ
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -8474,7 +8474,7 @@ gzip을 사용하여 덤프 압축
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -8574,7 +8574,7 @@ magento-cloud mongoexport [-c|--collection COLLECTION] [--jsonArray] [--type TYP
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -8654,7 +8654,7 @@ magento-cloud mongorestore [-c|--collection COLLECTION] [-r|--relationship RELAT
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -8734,7 +8734,7 @@ magento-cloud mongo [--eval EVAL] [-r|--relationship RELATIONSHIP] [-i|--identit
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -8814,7 +8814,7 @@ Redis 명령에 추가할 인수
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -8897,7 +8897,7 @@ magento-cloud backup [--live] [-p|--project PROJECT] [-e|--environment ENVIRONME
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -8973,7 +8973,7 @@ magento-cloud snapshot:delete [-p|--project PROJECT] [-e|--environment ENVIRONME
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -9048,7 +9048,7 @@ magento-cloud snapshot:get [-P|--property PROPERTY] [-p|--project PROJECT] [-e|-
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -9132,7 +9132,7 @@ magento-cloud snapshots [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -9220,7 +9220,7 @@ magento-cloud snapshot:restore [--target TARGET] [--branch-from BRANCH-FROM] [-p
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -9304,7 +9304,7 @@ magento-cloud source-ops [--full] [-p|--project PROJECT] [-e|--environment ENVIR
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -9326,7 +9326,7 @@ magento-cloud source-operation:run [--variable VARIABLE] [-p|--project PROJECT] 
 
 ### `--variable`
 
-작업 중에 설정할 변수(\&lt;info>type:name=value\&lt;/info>
+작업 중에 설정할 변수(type:name=value 형식)
 
 - 기본값: `[]`
 - 값 필요
@@ -9387,7 +9387,7 @@ magento-cloud source-operation:run [--variable VARIABLE] [-p|--project PROJECT] 
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -9452,7 +9452,7 @@ magento-cloud ssh-cert:load [--refresh-only] [--new] [--new-key]
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -9508,7 +9508,7 @@ magento-cloud ssh-key:add [--name NAME] [--] [<path>]
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -9558,7 +9558,7 @@ magento-cloud ssh-key:delete [<id>]
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -9623,7 +9623,7 @@ magento-cloud ssh-keys [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -9718,7 +9718,7 @@ magento-cloud subscription:info [-s|--id ID] [--date-fmt DATE-FMT] [--format FOR
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -9787,7 +9787,7 @@ magento-cloud tunnel:close [-a|--all] [-p|--project PROJECT] [-e|--environment E
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -9862,7 +9862,7 @@ base64 인코딩 JSON으로 출력
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -9952,7 +9952,7 @@ magento-cloud tunnels [-a|--all] [-p|--project PROJECT] [-e|--environment ENVIRO
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -10027,7 +10027,7 @@ magento-cloud tunnel:open [-g|--gateway-ports] [-p|--project PROJECT] [-e|--envi
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -10114,7 +10114,7 @@ magento-cloud tunnel:single [--port PORT] [-g|--gateway-ports] [-p|--project PRO
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -10198,7 +10198,7 @@ magento-cloud user:add [-r|--role ROLE] [--force-invite] [-p|--project PROJECT] 
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -10269,7 +10269,7 @@ magento-cloud user:delete [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] <e
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -10364,7 +10364,7 @@ magento-cloud user:get [-l|--level LEVEL] [--pipe] [-p|--project PROJECT] [-e|--
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -10435,7 +10435,7 @@ magento-cloud users [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|-
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -10512,7 +10512,7 @@ magento-cloud user:update [-r|--role ROLE] [-p|--project PROJECT] [-W|--no-wait]
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -10661,7 +10661,7 @@ magento-cloud variable:create [-u|--update] [-l|--level LEVEL] [--name NAME] [--
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -10744,7 +10744,7 @@ magento-cloud variable:delete [-l|--level LEVEL] [-p|--project PROJECT] [-e|--en
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -10846,7 +10846,7 @@ magento-cloud vget [-P|--property PROPERTY] [-l|--level LEVEL] [--format FORMAT]
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -10929,7 +10929,7 @@ magento-cloud variables [-l|--level LEVEL] [--format FORMAT] [-c|--columns COLUM
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -11066,7 +11066,7 @@ magento-cloud variable:update [--allow-no-change] [-l|--level LEVEL] [--value VA
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -11157,7 +11157,7 @@ magento-cloud workers [--refresh] [--pipe] [-p|--project PROJECT] [-e|--environm
 
 ### `--no-interaction`
 
-대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수 사용과 같습니다. \&lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+대화식 질문을 하지 말고 기본값을 그대로 사용하십시오. 환경 변수를 사용하는 것과 같습니다. MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 기본값: `false`
 - 값을 수락하지 않음
