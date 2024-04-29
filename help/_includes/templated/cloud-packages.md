@@ -1,7 +1,7 @@
 ---
-source-git-commit: ab9e2c8ca8c9a9c527aaa8b4cd5e2c2bc35bb718
+source-git-commit: 74ce2b69c1d4f9412f9eac98dfea93cc08f737b6
 workflow-type: tm+mt
-source-wordcount: '2184'
+source-wordcount: '2180'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 클라우드 인프라의 Adobe Commerce은 Composer를 사용하여 PHP 패키지를 관리합니다.
 
-다음 `composer.json` 파일은 패키지 목록을 선언하지만 `composer.lock` 파일에는 Adobe Commerce 또는 Magento Open Source 설치를 빌드하는 데 사용되는 패키지의 전체 목록(각 패키지 및 해당 종속 항목의 전체 버전)이 저장됩니다.
+다음 `composer.json` 파일은 패키지 목록을 선언하지만 `composer.lock` 파일에는 Adobe Commerce 설치를 빌드하는 데 사용되는 패키지의 전체 목록(각 패키지 및 해당 종속 항목의 전체 버전)이 저장됩니다.
 
 다음 참조 설명서는 `composer.lock` 파일 및 이 패키지는 Adobe Commerce on cloud infrastructure 2.4.7에 포함된 필수 패키지를 다룹니다.
 
