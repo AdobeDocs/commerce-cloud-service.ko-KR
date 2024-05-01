@@ -4,7 +4,7 @@ description: Pro 아키텍처에서 지원하는 환경에 대해 알아봅니�
 feature: Cloud, Auto Scaling, Iaas, Paas, Storage
 topic: Architecture
 exl-id: d10d5760-44da-4ffe-b4b7-093406d8b702
-source-git-commit: 6807b572366d28fd54fbec89e7c119ec158b5e10
+source-git-commit: 95b033ba430cb5dc74fa654b9d519dfcd5b6d319
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 0%
@@ -34,7 +34,7 @@ Adobe Commerce on cloud infrastructure Pro 아키텍처는 스토어를 개발, 
 
 >[!NOTE]
 >
->Adobe은 Adobe Commerce 프로젝트를 개발 및 테스트할 수 있도록 로컬 Cloud Docker 환경에 배포할 Cloud Docker for Commerce 도구를 제공합니다. 다음을 참조하십시오 [도커 개발](../dev-tools/cloud-docker.md).
+>Adobe은 Adobe Commerce 프로젝트를 개발 및 테스트할 수 있도록 로컬 Cloud Docker 환경에 배포할 Commerce용 Cloud Docker 도구를 제공합니다. 다음을 참조하십시오 [도커 개발](../dev-tools/cloud-docker.md).
 
 ## 환경 아키텍처
 
@@ -196,12 +196,10 @@ RTO는 스토리지 크기에 따라 다릅니다. 대용량 EBS 볼륨은 리�
 - 중간 데이터베이스(150GB)는 2시간 30분 정도 소요될 수 있습니다
 - 소규모 데이터베이스(60GB)는 1시간 소요
 
-{{pro-backups}}
-
 ## Pro 클러스터 확장
 
 Pro 클러스터 크기 조정 및 _compute_ 구성은 선택한 클라우드 공급자(AWS, Azure), 지역 및 서비스 종속성에 따라 다릅니다. Adobe 클라우드 인프라는 수요 변화에 따라 트래픽 기대치 및 서비스 요구 사항을 수용할 수 있도록 Pro 클러스터를 확장할 수 있습니다.
 
 중복 아키텍처는 Adobe 클라우드 인프라를 가동 중지 시간 없이 확장할 수 있도록 지원합니다. 세 가지 인스턴스는 사이트 운영에 영향을 주지 않고 용량을 업그레이드하기 위해 각각 회전합니다. 예를 들어, 제한이 데이터베이스 수준이 아닌 PHP 수준에 있는 경우 기존 클러스터에 웹 서버를 추가할 수 있습니다. 다음이 제공됩니다. _가로 크기 조절_ 데이터베이스 수준에서 추가 CPU가 제공하는 수직 확장을 보완합니다. 다음을 참조하십시오 [확장 아키텍처](scaled-architecture.md).
 
-이벤트나 기타 이유로 트래픽이 크게 증가할 것으로 예상되면 일시적으로 용량을 증가하도록 요청할 수 있습니다. 다음을 참조하십시오 [임시 업사이징을 요청하는 방법](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize.html) 다음에서 _상거래 도움말 센터_.
+이벤트나 기타 이유로 트래픽이 크게 증가할 것으로 예상되면 일시적으로 용량을 증가하도록 요청할 수 있습니다. 다음을 참조하십시오 [임시 업사이징을 요청하는 방법](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize.html) 다음에서 _Commerce 도움말 센터_.
