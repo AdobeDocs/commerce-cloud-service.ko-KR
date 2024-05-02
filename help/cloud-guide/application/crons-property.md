@@ -3,9 +3,9 @@ title: Crons 속성
 description: 에서 'crons' 속성을 구성하는 방법에 대한 예를 참조하십시오. [!DNL Commerce] 응용 프로그램 구성 파일입니다.
 feature: Cloud, Configuration
 exl-id: 67d592c1-2933-4cdf-b4f6-d73cd44b9f59
-source-git-commit: eace5d84fa0915489bf562ccf79fde04f6b9d083
+source-git-commit: 1c0e05c3d8461bea473bcf6ec35162d65ef2774f
 workflow-type: tm+mt
-source-wordcount: '1063'
+source-wordcount: '1069'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,7 @@ Adobe Commerce은 셀프서비스를 지원하기 위해 Pro 프로젝트에만 
 
    >[!NOTE]
    >
-   >다음과 같은 경우 `crontab -l` 명령이 `Command not found` 오류, 다음을 수행해야 합니다. [Adobe Commerce 지원 티켓 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) pro 프로젝트에서 auto-crons 셀프 서비스 구성 옵션을 활성화하려면 다음을 수행하십시오.
+   >다음과 같은 경우 `crontab -l` 명령이 `Command not found` 오류(Pro 스테이징 및 프로덕션 환경에만 해당), 다음 작업을 수행해야 합니다 [Adobe Commerce 지원 티켓 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) 프로젝트에서 auto-crons 셀프 서비스 구성 옵션을 활성화하려면 다음을 따르십시오.
 
 다음 예제는 `crontab` 기본값만 있는 환경용 출력 `crons` 구성:
 
