@@ -2,11 +2,11 @@
 title: Commerce용 클라우드 패치
 description: Cloud Patches 패키지에 대한 최신 개선 사항 목록을 참조하십시오.
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-04-08T00:00:00Z
+last-substantial-update: 2024-05-21T00:00:00Z
 exl-id: ae6b511b-a37d-4776-9a5e-ad7d9f9f6611
-source-git-commit: d5ab7c4f1d2edbd85eab5a4ca098b3d156e562e5
+source-git-commit: 61c42a1bd1d5a28f90b8756032ee6f45be4565b2
 workflow-type: tm+mt
-source-wordcount: '2187'
+source-wordcount: '2208'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 다음 [클라우드 패치](https://github.com/magento/magento-cloud-patches) 패키지는 모든 Adobe Commerce 버전과 클라우드 환경의 통합을 향상하고 중요한 수정 사항의 빠른 전달을 지원하는 필수 패치 집합을 제공합니다.
 
-Cloud Patches for Commerce 패키지는 ECE-Tools 패키지에 종속되며 ECE-Tools 패키지를 설치하거나 업데이트할 때 설치 및 업데이트됩니다. 또한 Commerce용 클라우드 패치를 독립형 패키지로 사용 및 관리하여 클라우드 플랫폼에 없는 Adobe Commerce 프로젝트에 패치를 적용할 수도 있습니다. 이 릴리스 노트는 이 패키지에 대한 최신 개선 사항을 설명합니다.
+Commerce용 클라우드 패치 패키지는 ECE-Tools 패키지에 종속되며 ECE-Tools 패키지를 설치하거나 업데이트할 때 설치 및 업데이트됩니다. 또한 Commerce용 클라우드 패치를 독립형 패키지로 사용 및 관리하여 클라우드 플랫폼에 없는 Adobe Commerce 프로젝트에 패치를 적용할 수도 있습니다. 이 릴리스 노트는 이 패키지에 대한 최신 개선 사항을 설명합니다.
 
 >[!TIP]
 >
@@ -29,7 +29,13 @@ Cloud Patches for Commerce 패키지는 ECE-Tools 패키지에 종속되며 ECE-
 
 <!--Add release notes below-->
 
-## v1.0.26 {#latest}
+## v1.0.27 {#latest}
+
+릴리스 날짜: 2024년 5월 21일
+
+- **PHP 8.3 지원**- 이 패치는 php 8.3과 composer 패키지 버전 간의 호환성 오류를 해결합니다.
+
+## v1.0.26
 
 릴리스 날짜: 2024년 4월 8일
 
@@ -210,7 +216,7 @@ Adobe Commerce 2.4.3 및 2.3.7-p1용 중요 패치:
 
 - **Redis 성능 향상**- Adobe Commerce 버전 2.3.3 및 2.3.4에 Redis 최적화 기능을 추가합니다. 이러한 수정 사항은 Adobe Commerce 버전 2.3.5 릴리스에 포함되어 있습니다. 다음을 참조하십시오 [성능 향상](https://devdocs.magento.com/guides/v2.3/release-notes/release-notes-2-3-5-commerce.html#performance-boosts) 다음에서 _Adobe Commerce 2.3.5 릴리스 노트_.<!--MCLOUD-5771-->
 
-- **New Relic 로그 보강**—Commerce 버전 1.0.4의 Cloud Components에 도입된 New Relic 로깅 기능에 대한 개선 사항을 지원하는 데 필요한 Monolog ProcessorInterface를 추가합니다. 이 패치는 Adobe Commerce 2.1.x를 배포하는 데 필요합니다. 패치가 적용되지 않으면 다음 작업 중에 빌드가 실패합니다. `di:compile` 프로세스.<!--MCLOUD-6029-->
+- **New Relic 로그 보강**—Commerce 버전 1.0.4의 클라우드 구성 요소에 도입된 New Relic 로깅 기능에 대한 개선 사항을 지원하는 데 필요한 Monolog ProcessorInterface를 추가합니다. 이 패치는 Adobe Commerce 2.1.x를 배포하는 데 필요합니다. 패치가 적용되지 않으면 다음 작업 중에 빌드가 실패합니다. `di:compile` 프로세스.<!--MCLOUD-6029-->
 
 ## v1.0.4
 
@@ -272,7 +278,7 @@ magento/magento-cloud-patches v1.0.1 릴리스의 소프트웨어 다운로드 �
 
 - **Elasticsearch 카탈로그 페이지 매김 수정** —magento/magento-cloud-patches v1.0에 제공된 Elasticsearch 카탈로그 페이지 매김 패치를 보다 효과적인 수정 사항으로 교체했습니다.<!--MAGECLOUD-4847-->
 
-- **페이지 빌더 패치**—Commerce 1.0.0용 Cloud Patches에서 Page Builder 패치를 번들로 제공하여 알려진 Page Builder RCE(원격 코드 실행) 취약점을 해결하기 위해 Adobe Commerce 2.3.3을 기반으로 초기 수정 작업을 수행했습니다. Adobe Commerce 2.3.4.를 기반으로 하는 보다 안정적인 구현으로 이러한 패치를 업데이트했습니다. 이 패치에는 문제 해결을 위한 여러 최적화가 포함됩니다.<!--MAGECLOUD-4884-->
+- **페이지 빌더 패치**—Commerce 1.0.0용 Cloud Patches에서 Page Builder 패치를 번들로 제공하여 알려진 Page Builder RCE(원격 코드 실행) 취약점을 해결했습니다. 초기 수정 기능은 Adobe Commerce 2.3.3을 기반으로 합니다. Adobe Commerce 2.3.4.를 기반으로 하는 보다 안정적인 구현으로 이러한 패치를 업데이트했습니다. 이 패치에는 문제 해결을 위한 여러 최적화가 포함됩니다.<!--MAGECLOUD-4884-->
 
   magento/magento-cloud-patches 1.0.0 패키지가 있는 경우 여전히 Page Builder RCE 취약성 문제로부터 보호됩니다. 1.0.1 이상으로 업데이트하면 동일한 수정 사항을 더 잘 구현할 수 있습니다.
 

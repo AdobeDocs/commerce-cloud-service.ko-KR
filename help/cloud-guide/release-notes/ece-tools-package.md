@@ -2,11 +2,11 @@
 title: ECE-Tools 릴리스 노트
 description: ECE-Tools 패키지에 대한 최신 개선 사항 목록을 참조하십시오.
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-04-08T00:00:00Z
+last-substantial-update: 2024-05-21T00:00:00Z
 exl-id: a464b940-c56e-4a7c-9948-559539e25361
-source-git-commit: e21f21e34f89b62842bd22c99ff5705f984898e0
+source-git-commit: 923e2114270df22e134e0676ac97f84d770bb226
 workflow-type: tm+mt
-source-wordcount: '2905'
+source-wordcount: '2929'
 ht-degree: 0%
 
 ---
@@ -28,8 +28,14 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
+## v2002.1.19 {#latest}
 
-## v2002.1.18 {#latest}
+릴리스 날짜: 2024년 5월 21일
+
+- ![새 아이콘](../../assets/new.svg) **루아**- CACHE_CONFIGURATION 옵션 useLua가 추가되었습니다.
+- ![고정 아이콘](../../assets/fix.svg) **검사기**- 새로운 버전의 Redis 및 RabbitMQ에 대한 유효성 검사기를 업데이트했습니다.
+
+## v2002.1.18
 
 릴리스 날짜: 2024년 4월 8일
 
@@ -47,7 +53,7 @@ ht-degree: 0%
 
 릴리스 날짜: 2023년 10월 16일
 
-- ![새 아이콘](../../assets/new.svg) **ENABLE_WEBHOOKS 전역 환경 변수**- 를 추가했습니다. [ENABLE_WEBHOOKS](../environment/variables-global.md#enable_webhooks) 외부 엔드포인트(예: App Builder 런타임 작업 또는 서드파티 인벤토리 관리 시스템)에 연결하기 위해 Commerce 웹후크와 함께 사용할 전역 변수입니다.
+- ![새 아이콘](../../assets/new.svg) **ENABLE_WEBHOOKS 전역 환경 변수**- 를 추가했습니다. [ENABLE_WEBHOOKS](../environment/variables-global.md#enable_webhooks) App Builder 런타임 작업 또는 타사 재고 관리 시스템과 같은 외부 엔드포인트에 연결하기 위해 Commerce 웹후크와 함께 사용하는 전역 변수입니다.
 
 ## v2002.1.15
 
@@ -63,14 +69,14 @@ ht-degree: 0%
 릴리스 날짜: 2023년 3월 10일
 
 - ![새 아이콘](../../assets/new.svg) **PHP**- PHP 8.2에 대한 지원을 추가했습니다.
-- ![새 아이콘](../../assets/new.svg) **서비스용 유효성 검사기**—MariaDB 10.6, Redis 7.0, PHP 8.2, OpenSearch 2.x 및 RabbitMQ 3.9와 같은 Commerce 2.4.6 필수 서비스의 유효성 검사기를 업데이트했습니다.
+- ![새 아이콘](../../assets/new.svg) **서비스용 유효성 검사기**—Commerce 2.4.6 필수 서비스인 MariaDB 10.6, Redis 7.0, PHP 8.2, OpenSearch 2.x 및 RabbitMQ 3.9의 유효성 검사기를 업데이트했습니다.
 - ![고정 아이콘](../../assets/fix.svg) **ece-tools db-dump**—다음을 발생시킨 문제가 해결되었습니다. `db-dump` 작업이 너무 빨리 중지되었습니다.
 
 ## v2002.1.13
 
 릴리스 날짜: 2022년 10월 27일
 
-- ![새 아이콘](../../assets/new.svg) **Adobe Commerce에 대한 이벤트 Adobe I/O 지원이 추가되었습니다**. 이제 확장 개발자가 [Adobe I/O 이벤트](https://developer.adobe.com/events/docs/) 클라우드 인스턴스의 상거래 이벤트 정보를 용으로 작성된 해당 애플리케이션으로 전송하는 프레임워크 [Adobe 앱 빌더](https://developer.adobe.com/app-builder/docs/overview/). Adobe Commerce에 대한 Adobe I/O 이벤트는 Partner Preview에 있습니다.<!-- CEXT-932 -->
+- ![새 아이콘](../../assets/new.svg) **Adobe Commerce에 대한 이벤트 Adobe I/O 지원이 추가되었습니다**. 이제 확장 개발자가 [Adobe I/O 이벤트](https://developer.adobe.com/events/docs/) Commerce 이벤트 정보를 클라우드 인스턴스에서 용으로 작성된 애플리케이션으로 전송하는 프레임워크 [Adobe 앱 빌더](https://developer.adobe.com/app-builder/docs/overview/). Adobe Commerce에 대한 Adobe I/O 이벤트는 Partner Preview에 있습니다.<!-- CEXT-932 -->
 - ![새 아이콘](../../assets/new.svg) **OPcache 구성 유효성 검사기**- 제외된 경로에 대한 OPcache 구성을 확인하는 유효성 검사기를 추가했습니다.<!-- MCLOUD-9485 -->
 - ![고정 아이콘](../../assets/fix.svg) **GraphQL 캐시 구성 문제를 해결했습니다**—이제 ECE-Tools가 GraphQL을 유지 `id_salt` 값: `cache` 에서 구성 `app/etc/env.php` 파일.<!-- MCLOUD-9486 -->
 
@@ -209,7 +215,7 @@ ht-degree: 0%
 
 **환경 변수 업데이트**—
 
-- ![새 아이콘](../../assets/new.svg) 을(를) 추가함 [SKIP_COMPOSER_DUMP_AUTOLOAD](../environment/variables-build.md#skip_composer_dump_autoload) 변수를 빌드합니다. 변수 설정 `true` 응용 프로그램 실행 중지 `composer dump-autoload` commerce용 Cloud Docker 설치 시 명령 변수는 쓰기 가능한 파일 시스템(을 사용하여 테스트 및 개발을 위해 생성됨)이 있는 Commerce용 Cloud Docker 컨테이너에만 관련이 있습니다. `./vendor/bin/ece-docker build:compose --with-test`). 이러한 설치를 사용하면 `composer dump-autoload` 명령은 삭제된 파일의 파일에 액세스하려는 다른 명령을 실행할 때 오류를 방지합니다 `generated` 디렉토리.<!--MCLOUD-6939-->
+- ![새 아이콘](../../assets/new.svg) 을(를) 추가함 [SKIP_COMPOSER_DUMP_AUTOLOAD](../environment/variables-build.md#skip_composer_dump_autoload) 변수를 빌드합니다. 변수 설정 `true` 응용 프로그램 실행 중지 `composer dump-autoload` Commerce용 Cloud Docker 설치 시 명령 변수는 쓰기 가능한 파일 시스템(을 사용하여 테스트 및 개발을 위해 생성됨)이 있는 Commerce 컨테이너용 Cloud Docker에만 관련이 있습니다 `./vendor/bin/ece-docker build:compose --with-test`). 이러한 설치를 사용하면 `composer dump-autoload` 명령은 삭제된 파일의 파일에 액세스하려는 다른 명령을 실행할 때 오류를 방지합니다 `generated` 디렉토리.<!--MCLOUD-6939-->
 
 ## v2002.1.2
 
@@ -217,7 +223,7 @@ ht-degree: 0%
 
 **유효성 검사 및 로그 개선 사항**—
 
-- ![새 아이콘](../../assets/new.svg) 을(를) 추가함 `schema.error.yaml` 빌드, 배포 및 배포 후 프로세스 중에 발생할 수 있는 모든 오류 및 경고 알림과 오류 해결을 위한 제안 사항이 포함된 파일입니다. 이 파일의 정보는 _Commerce용 Cloud 안내서_. 다음을 참조하십시오 [ece-tools에 대한 오류 메시지 참조](../dev-tools/error-reference.md).<!--MCLOUD-5878-->
+- ![새 아이콘](../../assets/new.svg) 을(를) 추가함 `schema.error.yaml` 빌드, 배포 및 배포 후 프로세스 중에 발생할 수 있는 모든 오류 및 경고 알림과 오류 해결을 위한 제안 사항이 포함된 파일입니다. 이 파일의 정보는 _Commerce용 클라우드 안내서_. 다음을 참조하십시오 [ece-tools에 대한 오류 메시지 참조](../dev-tools/error-reference.md).<!--MCLOUD-5878-->
 
 - ![새 아이콘](../../assets/new.svg) 클라우드 오류 로그를 변경했습니다(`/var/log/cloud.error.log`) 로그를 프로그래밍 방식으로 더 쉽게 구문 분석할 수 있도록 JSON 형식에 대한 항목을 추가했습니다.<!--MCLOUD-5879-->
 
@@ -313,7 +319,7 @@ ht-degree: 0%
 
 - ![새 아이콘](../../assets/new.svg) **인프라 업데이트**—
 
-   - ![새 아이콘](../../assets/new.svg) **Cloud Docker for Commerce에 별도의 패키지를 추가했습니다.**- Docker 패키지를 `ece-tools` 코드 품질을 유지하고 독립 릴리스를 제공하기 위한 패키지입니다. 관련 업데이트 및 수정 사항 `ece-tools` 에서 관리됩니다. [magento-cloud-docker](https://github.com/magento/magento-cloud-docker) GitHub 리포지토리.<!--MAGECLOUD-2927-->
+   - ![새 아이콘](../../assets/new.svg) **Commerce용 Cloud Docker에 대한 별도의 패키지를 추가했습니다.**- Docker 패키지를 `ece-tools` 코드 품질을 유지하고 독립 릴리스를 제공하기 위한 패키지입니다. 관련 업데이트 및 수정 사항 `ece-tools` 에서 관리됩니다. [magento-cloud-docker](https://github.com/magento/magento-cloud-docker) GitHub 리포지토리.<!--MAGECLOUD-2927-->
 
    - ![새 아이콘](../../assets/new.svg) **업데이트된 패치 기능**- ECE-Tools 패키지에서 별도의 패키지로 패치 기능을 이동했습니다. [magento-cloud-패치](https://github.com/magento/magento-cloud-patches) 패키지. 배포 중, `ece-tools` 는 새 패키지를 사용하여 패치를 적용합니다. 다음을 참조하십시오 [Cloud 패치 릴리스 정보](cloud-patches.md).<!--MAGECLOUD-4567-->
 
