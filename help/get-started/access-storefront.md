@@ -3,9 +3,9 @@ title: Commerce 관리 패널 액세스
 description: Commerce 관리 패널에 액세스하는 방법을 알아봅니다.
 recommendations: noDisplay, catalog
 exl-id: 9a8a0a49-b108-48bd-b413-ec9431370c06
-source-git-commit: 85ff1283f773823ff2c6e6ab8f391fd5b4aa00e4
+source-git-commit: 3ca09243dc0a714c1d86cccf9f0620a8a39fd1e1
 workflow-type: tm+mt
-source-wordcount: '228'
+source-wordcount: '323'
 ht-degree: 0%
 
 ---
@@ -27,3 +27,7 @@ Commerce 관리 패널에 대한 관리 액세스 권한이 있는 사용자는 
 >[!TIP]
 >
 >암호 재설정에 실패하거나 관리 패널에 로그인할 수 없는 경우 관리자 액세스 권한을 가진 사용자는 SSH를 사용하여 프로젝트에 연결할 수 있고 `admin:user:create` CLI 명령입니다. 다음을 참조하십시오 [관리자 계정 만들기, 편집 또는 잠금 해제](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/admin.html) 다음에서 _설치 안내서_.
+
+## 사이트 상태 모니터링
+
+다음 [사이트 전체 분석 도구](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/site-wide-analysis-tool/intro) 는 Adobe Commerce 설치의 보안 및 운영을 보장하기 위한 자세한 시스템 통찰력과 권장 사항이 포함된 사전 예방적 셀프서비스 도구이자 중앙 저장소입니다. 24시간 연중무휴 실시간 성능 모니터링, 보고서 및 조언을 제공하여 잠재적인 문제를 식별하고 사이트 상태, 안전 및 애플리케이션 구성에 대한 가시성을 향상시킵니다. 이는 해결 시간을 줄이고 사이트 안정성과 성능을 개선하는 데 도움이 됩니다. 에서 바로 사이트 전체 분석 도구에 액세스할 수 있습니다. [관리 패널](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/site-wide-analysis-tool/access#option-2-logging-in-to-your-site-wide-analysis-tool-dashboard-from-your-stores-admin-panel) 또는 [전용 도메인](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/site-wide-analysis-tool/access#option-1-logging-in-to-your-site-wide-analysis-tool-dashboard-directly-from-the-site-wide-analysis-tool-domain-for-adobe-commerce-on-cloud-infrastructure-only) (클라우드 인프라 프로젝트의 Adobe Commerce 전용)
