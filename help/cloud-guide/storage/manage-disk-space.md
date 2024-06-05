@@ -3,9 +3,9 @@ title: 디스크 공간 관리
 description: 명령줄 인터페이스를 사용하여 디스크 공간을 관리하는 방법에 대해 알아봅니다.
 feature: Cloud, Storage
 exl-id: 480cb33b-ac83-441d-946e-5b4de09ad84e
-source-git-commit: 1253d8357fd2554050d1775fefbc420a2097db5f
+source-git-commit: 8b40397796ee865aefbf8a7948cc9a3aceb1d35c
 workflow-type: tm+mt
-source-wordcount: '693'
+source-wordcount: '714'
 ht-degree: 0%
 
 ---
@@ -132,7 +132,7 @@ Filesystem                                    Size  Used Avail Use% Mounted on
 
 >[!IMPORTANT]
 >
->Pro 프로덕션 및 스테이징 환경의 경우 [Adobe Commerce 지원 티켓 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) 디스크 공간 할당을 변경합니다. Pro 프로덕션 및 스테이징 환경의 크기 증가는 특정 간격으로만 이루어질 수 있으므로 현재 디스크 공간 사용량에 따라 디스크 공간 할당을 최소 10GB 늘리는 것이 좋습니다. 할당되면 Pro 스테이징 및 프로덕션에 대한 스토리지 증가는 되돌릴 수 없습니다.
+>Pro 프로덕션 및 스테이징 환경의 경우 [Adobe Commerce 지원 티켓 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) 디스크 공간 할당을 변경합니다. Pro 프로덕션 및 스테이징 환경의 크기 증가는 특정 간격으로만 이루어질 수 있으므로 현재 디스크 공간 사용량에 따라 디스크 공간 할당을 최소 10GB 늘리는 것이 좋습니다. 할당되면 Pro 스테이징 및 프로덕션에 대한 스토리지 증가는 되돌릴 수 없습니다. 리소스 간에 스토리지를 재할당하거나 재배포할 수 없습니다. 파일 저장 공간을 더 추가하려면 MySQL에 할당된 디스크 공간을 줄이십시오.
 
 ### 응용 프로그램 디스크 공간
 
