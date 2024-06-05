@@ -3,9 +3,9 @@ title: RabbitMQ 서비스 설정
 description: RabbitMQ 서비스를 사용하여 클라우드 인프라에서 Adobe Commerce에 대한 메시지 대기열을 관리하는 방법을 알아봅니다.
 feature: Cloud, Services
 exl-id: 85794b8f-2260-4a6e-b5a6-a1b4c356594e
-source-git-commit: d4c36b084094846cfad69adc2bffd567a58fab26
+source-git-commit: adcfbb7217c70122a4003a66d1bec1a623fbf11a
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '399'
 ht-degree: 0%
 
 ---
@@ -114,7 +114,7 @@ MQF는 [RabbitMQ](https://www.rabbitmq.com/) 는 메시지를 보내고 받는 �
    }
    ```
 
-1. RabbitMQ으로 로컬 포트 전달을 활성화합니다.
+1. RabbitMQ으로 로컬 포트 전달을 활성화합니다(프로젝트가 US-3, EU-5 또는 AP-3 지역과 같은 다른 지역에 있는 경우 대용). ``us-3``/``eu-5``/``ap-3`` 대상 ``us``)
 
    ```bash
    ssh -L <port-number>:rabbitmq.internal:<port-number> <project-ID>-<branch-ID>@ssh.us.magentosite.cloud
