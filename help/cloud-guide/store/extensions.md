@@ -3,9 +3,9 @@ title: 확장 관리
 description: 클라우드 인프라의 Adobe Commerce에서 확장을 설치하고 관리하는 방법을 알아봅니다.
 feature: Cloud, Extensions, Upgrade
 exl-id: 9c6e98ca-85da-4342-8402-d576eb382ba2
-source-git-commit: bb7a866b1896a8a43d01ad3f83dc655bcf383374
+source-git-commit: f8fb9d4d43c85f91ff87686160bcddb7cd417635
 workflow-type: tm+mt
-source-wordcount: '626'
+source-wordcount: '646'
 ht-degree: 0%
 
 ---
@@ -13,6 +13,10 @@ ht-degree: 0%
 # 확장 관리
 
 에서 확장을 추가하여 Adobe Commerce 애플리케이션 기능을 확장할 수 있습니다. [Commerce Marketplace](https://marketplace.magento.com). 예를 들어 테마를 추가하여 Storefront의 모양과 느낌을 변경하거나 언어 패키지를 추가하여 Storefront 및 관리자를 현지화할 수 있습니다.
+
+>[!NOTE]
+>
+>설치 문제를 방지하려면 클라우드 프로젝트를 소유한 동일한 계정(MAGEID)을 사용하여 모든 Marketplace 구매를 완료해야 합니다.
 
 ## 확장의 작성기 이름
 
