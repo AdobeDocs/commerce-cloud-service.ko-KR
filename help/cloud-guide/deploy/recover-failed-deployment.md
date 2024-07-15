@@ -21,9 +21,9 @@ ht-degree: 0%
 
 ## 정리, 제거 및 재배포
 
-이전 배포에서 정리하려면 추가되거나 업데이트된 구성 요소를 식별한 다음 제거합니다. 먼저 원격 환경에 로그인하고 의 내용을 수동으로 지웁니다. `var` 디렉토리. 그런 다음 `composer.json` 파일을 만들고 환경을 다시 배포합니다.
+이전 배포에서 정리하려면 추가되거나 업데이트된 구성 요소를 식별한 다음 제거합니다. 먼저 원격 환경에 로그인하고 `var` 디렉터리의 내용을 수동으로 지웁니다. 그런 다음 `composer.json` 파일에서 구성 요소를 제거하고 환경을 다시 배포합니다.
 
-**을(를) 청소하려면 `var` 디렉터리**:
+**`var` 디렉터리를 정리하려면**:
 
 1. 로컬 워크스테이션에서 프로젝트 디렉터리로 변경합니다.
 
@@ -33,7 +33,7 @@ ht-degree: 0%
    magento-cloud ssh
    ```
 
-1. 지우기 `var` 디렉토리.
+1. `var` 디렉터리를 지웁니다.
 
    ```shell
    rm -rf var/*
@@ -51,7 +51,7 @@ ht-degree: 0%
    composer clear-cache
    ```
 
-1. 에서 구성 요소 제거 `composer.json` 파일.
+1. `composer.json` 파일에서 구성 요소를 제거합니다.
 
    ```bash
    composer remove <component-name>:<version>
@@ -81,6 +81,6 @@ ht-degree: 0%
 
 {{redeploy-warning}}
 
-에서 백업 없이 환경을 복원하는 방법에 대해 자세히 알아보십시오. [환경 복원](../development/restore-environment.md).
+[환경 복원](../development/restore-environment.md)에서 백업 없이 환경을 복원하는 방법에 대해 자세히 알아보세요.
 
 {{stuck-deployment-tip}}

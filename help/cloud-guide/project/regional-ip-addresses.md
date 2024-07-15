@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # 지역 IP 주소
 
-다음 표에는 클라우드 인프라에서 Adobe Commerce이 사용하는 수신 및 발신 IP 주소가 나열되어 있습니다 [통합 환경](../architecture/pro-architecture.md#integration-environment). 이러한 IP 주소는 안정적이지만 변경될 수 있습니다. Adobe은 IP 주소를 변경하기 전에 고객에게 알립니다.
+다음 표에는 클라우드 인프라 [통합 환경](../architecture/pro-architecture.md#integration-environment)에서 Adobe Commerce이 사용하는 수신 및 발신 IP 주소가 나와 있습니다. 이러한 IP 주소는 안정적이지만 변경될 수 있습니다. Adobe은 IP 주소를 변경하기 전에 고객에게 알립니다.
 
 통합 환경 주소 지정을 위한 구문은 다음과 같습니다.
 
@@ -19,11 +19,11 @@ ht-degree: 0%
 <branch>-<unique-ID>-<project-ID>.<region>.magentosite.cloud
 ```
 
-- **고유 ID** = 7개의 임의의 영숫자 문자
+- **고유 ID** = 임의의 영숫자 문자 7개
 - **프로젝트 ID** = 13자 프로젝트 ID
 - **지역** = AWS 또는 Azure 지역 이름
 
-다음을 사용할 수 있습니다. `ping` 들어오는 IP 주소를 검색하는 명령:
+`ping` 명령을 사용하여 들어오는 IP 주소를 검색할 수 있습니다.
 
 ```bash
 ping integration-abcd123-abcd78910.us-3.magentosite.cloud

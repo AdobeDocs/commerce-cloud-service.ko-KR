@@ -26,31 +26,31 @@ ht-degree: 0%
             <td>
                 bcmath<br>
                 bz2<br>
-                달력<br>
+                캘린더<br>
                 exif<br>
                 gd<br>
                 gettext<br>
-                국제<br>
+                intl<br>
                 libxml<br>
                 mysqli<br>
                 opcache<br>
-                오픈스우울<br>
+                openswool<br>
                 pcntl<br>
                 pdo_mysql<br>
-                반사<br>
-                비누<br>
+                리플렉션<br>
+                soap<br>
                 소켓<br>
                 SPL<br>
-                표준<br>
+                standard<br>
                 sysvmsg<br>
                 sysvsem<br>
                 sysvshm<br>
                 zip<br>
-                즐리브<br>
+                zlib<br>
             </td>
             <td>
                 ctype<br>
-                컬<br>
+                curl<br>
                 날짜<br>
                 dba<br>
                 dom<br>
@@ -66,10 +66,10 @@ ht-degree: 0%
                 pcre<br>
                 pdo<br>
                 pdo_sqlite<br>
-                파르<br>
+                phar<br>
                 posix<br>
                 readline<br>
-                session<br>
+                세션<br>
                 sqlite3<br>
                 토큰화기<br>
                 xml<br>
@@ -89,15 +89,15 @@ ht-degree: 0%
                 mysqli<br>
                 oauth<br>
                 pdo_mysql<br>
-                프로프로<br>
-                주문<br>
+                propro<br>
+                pspell<br>
                 raphf<br>
                 기록<br>
-                레디스<br>
+                redis<br>
                 shmop 소켓<br>
                 나트륨<br>
                 ssh2<br>
-                단정해<br>
+                깔끔함<br>
                 xdebug<br>
                 xmlrpc<br>
                 xsl<br>

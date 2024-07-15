@@ -11,9 +11,9 @@ ht-degree: 7%
 ---
 
 
-# 클라우드 인프라의 상거래 {#user-guide}
+# 클라우드 인프라의 Commerce {#user-guide}
 
-+ [상거래](overview.md)
++ [Commerce](overview.md)
 + 아키텍처 {#architecture}
    + [클라우드 인프라](architecture/cloud-architecture.md)
    + [기술 스택](architecture/tech-stack.md)
@@ -66,7 +66,7 @@ ht-degree: 7%
    + [인증 키](development/authentication-keys.md)
    + [CLI 분기 관리](development/cli-branches.md)
    + [보안 연결](development/secure-connections.md)
-   + 배포 {#deploy}
+   + {#deploy} 배포
       + [배포 프로세스](deploy/process.md)
       + [최적화](deploy/optimization.md)
       + [우수 사례](deploy/best-practices.md)
@@ -76,7 +76,7 @@ ht-degree: 7%
       + [스마트 마법사](deploy/smart-wizards.md)
       + [스테이징 및 프로덕션에 배포](deploy/staging-production.md)
       + [구성 요소 장애 복구](deploy/recover-failed-deployment.md)
-   + 테스트 {#test}
+   + {#test} 테스트
       + [테스트 지침](test/guidance.md)
       + [로그](test/log-locations.md)
       + [Xdebug](test/debug.md)
@@ -85,7 +85,7 @@ ht-degree: 7%
    + [PrivateLink 서비스](development/privatelink-service.md)
    + [보호 블럭](development/protective-block.md)
    + [환경 복원](development/restore-environment.md)
-   + 스토리지 {#storage}
+   + 저장소 {#storage}
       + [디스크 공간 관리](storage/manage-disk-space.md)
       + [프로필 데이터베이스 쿼리](storage/profile-database-queries.md)
       + [데이터베이스 백업](storage/database-dump.md)
@@ -96,7 +96,7 @@ ht-degree: 7%
       + [패치 적용](development/apply-patches.md)
 + 구성 {#configure}
    + [개요](environment/overview.md)
-   + 애플리케이션 {#app}
+   + 응용 프로그램 {#app}
       + [애플리케이션 배포 구성](application/configure-app-yaml.md)
       + [PHP 설정](application/php-settings.md)
       + 속성 {#properties}
@@ -111,14 +111,14 @@ ht-degree: 7%
    + 환경 {#env}
       + [환경 배포 구성](environment/configure-env-yaml.md)
       + [변수 수준 및 옵션](environment/variable-levels.md)
-      + 변수 재정의 {#stage}
+      + 변수 {#stage} 재정의
          + [환경 변수](environment/variables-intro.md)
          + [관리자](environment/variables-admin.md)
          + [클라우드 변수](environment/variables-cloud.md)
          + [글로벌](environment/variables-global.md)
          + [빌드](environment/variables-build.md)
          + [배포](environment/variables-deploy.md)
-         + [Post-deploy](environment/variables-post-deploy.md)
+         + [Post 배포](environment/variables-post-deploy.md)
       + 알림 구성 {#log}
          + [알림](environment/set-up-notifications.md)
          + [로그 핸들러](environment/log-handlers.md)
@@ -142,15 +142,15 @@ ht-degree: 7%
       + [오류 및 유지 관리 페이지 사용자 지정](cdn/fastly-custom-response.md)
    + [웹 애플리케이션 방화벽](cdn/fastly-waf-service.md)
    + [이미지 최적화](cdn/fastly-image-optimization.md)
-   + VCL로 사용자정의 {#custom-vcl-snippets}
-      + [시작](cdn/fastly-vcl-custom-snippets.md)
+   + VCL {#custom-vcl-snippets}(으)로 사용자 지정
+      + [시작하기](cdn/fastly-vcl-custom-snippets.md)
       + [CMS 백엔드로 요청 재라우팅](cdn/fastly-vcl-wordpress.md)
       + [참조 스팸 차단](cdn/fastly-vcl-badreferer.md)
       + [IP 허용 목록](cdn/fastly-vcl-allowlist.md)
       + [IP 차단 목록](cdn/fastly-vcl-blocking.md)
       + [Fastly 캐시 우회](cdn/fastly-vcl-bypass-to-origin.md)
    + [Fastly 문제 해결](cdn/fastly-troubleshooting.md)
-+ 스토어 설정 {#configure-store}
++ 저장소 설정 {#configure-store}
    + [개요](store/overview.md)
    + [우수 사례](store/best-practices.md)
    + [사용자 정의 테마](store/custom-theme.md)
@@ -160,11 +160,11 @@ ht-degree: 7%
    + [사이트 맵 및 검색 엔진 로봇](store/robots-sitemap.md)
    + [PayPal 결제 방법](store/paypal.md)
    + [구성 관리](store/store-settings.md)
-+ 시작 사이트 {#launch}
++ 사이트 {#launch} 시작
    + [개요](launch/overview.md)
    + [시작 체크리스트](launch/checklist.md)
    + [시작 단계](launch/steps.md)
-+ 사이트 모니터링 {#monitor}
++ 사이트 {#monitor} 모니터링
    + [성능](monitor/performance.md)
    + New Relic 서비스 {#new-relic}
       + [New Relic 개요](monitor/new-relic-service.md)

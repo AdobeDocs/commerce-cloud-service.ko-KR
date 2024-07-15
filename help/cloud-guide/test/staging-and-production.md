@@ -15,11 +15,11 @@ ht-degree: 0%
 
 ## 로그 파일
 
-테스트할 때 배포 시 오류 또는 기타 문제가 발생하는 경우 로그 파일을 확인하십시오. 로그 파일은 `var/log` 디렉토리.
+테스트할 때 배포 시 오류 또는 기타 문제가 발생하는 경우 로그 파일을 확인하십시오. 로그 파일이 `var/log` 디렉터리에 있습니다.
 
-배포 로그가 로그인되었습니다. `/var/log/platform/<prodject-ID>/deploy.log`. 값: `<project-ID>` 프로젝트 ID와 환경이 스테이징인지 아니면 프로덕션인지에 따라 다릅니다. 예를 들어 의 프로젝트 ID를 사용하는 경우 `yw1unoukjcawe`, 스테이징 사용자는 `yw1unoukjcawe_stg` 및 프로덕션 사용자는 `yw1unoukjcawe`.
+배포 로그가 `/var/log/platform/<prodject-ID>/deploy.log`에 있습니다. `<project-ID>` 값은 프로젝트 ID와 환경이 스테이징인지 아니면 프로덕션인지에 따라 다릅니다. 예를 들어 프로젝트 ID가 `yw1unoukjcawe`인 경우 스테이징 사용자는 `yw1unoukjcawe_stg`이고 프로덕션 사용자는 `yw1unoukjcawe`입니다.
 
-프로덕션 또는 스테이징 환경에서 로그에 액세스할 때 SSH를 사용하여 세 노드에 각각 로그인하여 로그를 찾습니다. 또는 다음을 사용할 수 있습니다 [New Relic 로그 관리](../monitor/log-management.md) 모든 노드에서 집계된 로그 데이터를 보고 쿼리합니다. 다음을 참조하십시오 [로그 보기](log-locations.md#application-logs).
+프로덕션 또는 스테이징 환경에서 로그에 액세스할 때 SSH를 사용하여 세 노드에 각각 로그인하여 로그를 찾습니다. 또는 [New Relic 로그 관리](../monitor/log-management.md)를 사용하여 모든 노드에서 집계된 로그 데이터를 보고 쿼리할 수 있습니다. [로그 보기](log-locations.md#application-logs)를 참조하세요.
 
 ## 코드 베이스 확인
 
@@ -27,52 +27,52 @@ ht-degree: 0%
 
 ## 구성 설정 확인
 
-기본 URL, 기본 관리 URL, 다중 사이트 설정 등이 포함된 구성 설정은 관리 패널을 통해 확인하십시오. 추가로 변경해야 하는 경우 로컬 Git 분기에서 편집을 완료하고 로 푸시합니다. `master` 통합, 스테이징 및 프로덕션의 지점.
+기본 URL, 기본 관리 URL, 다중 사이트 설정 등이 포함된 구성 설정은 관리 패널을 통해 확인하십시오. 추가로 변경해야 하는 경우 로컬 Git 분기에서 편집을 완료하고 통합, 스테이징 및 프로덕션의 `master` 분기로 푸시합니다.
 
 ## Fastly 캐싱 확인
 
-[Fastly 구성](../cdn/fastly-configuration.md) 올바른 Fastly 서비스 ID 및 Fastly API 토큰 자격 증명을 사용하고, Fastly VCL 코드를 업로드하고, DNS 구성을 업데이트하고, 환경에 SSL/TLS 인증서를 적용하는 등 세부 사항에 주의해야 합니다. 이러한 설정 작업을 완료한 후 스테이징 및 프로덕션 환경에서 Fastly 캐싱을 확인할 수 있습니다.
+[Fastly를 구성하려면](../cdn/fastly-configuration.md)을(를) 자세히 확인해야 합니다. 올바른 Fastly 서비스 ID 및 Fastly API 토큰 자격 증명을 사용하고, Fastly VCL 코드를 업로드하고, DNS 구성을 업데이트하고, 환경에 SSL/TLS 인증서를 적용합니다. 이러한 설정 작업을 완료한 후 스테이징 및 프로덕션 환경에서 Fastly 캐싱을 확인할 수 있습니다.
 
 **Fastly 서비스 구성을 확인하려면**:
 
-1. 다음 URL을 사용하여 스테이징 및 프로덕션용 관리자에 로그인합니다. `/admin`또는 [업데이트된 관리자 URL](../environment/variables-admin.md#admin-url).
+1. `/admin`이(가) 있는 URL 또는 [업데이트된 관리자 URL](../environment/variables-admin.md#admin-url)을 사용하여 스테이징 및 프로덕션 관리자에 로그인합니다.
 
-1. 다음으로 이동 **스토어** > **설정** > **구성** > **고급** > **시스템**. 스크롤하고 클릭 **전체 페이지 캐시**.
+1. **스토어** > **설정** > **구성** > **고급** > **시스템**&#x200B;으로 이동합니다. 스크롤하여 **전체 페이지 캐시**&#x200B;를 클릭합니다.
 
-1. 다음을 확인합니다. **캐싱 응용 프로그램** 값이 (으)로 설정됨 _Fastly CDN_ .
+1. **Caching application** 값이 _Fastly CDN_(으)로 설정되어 있는지 확인하십시오.
 
 1. Fastly 자격 증명을 테스트합니다.
 
-   - 클릭 **Fastly 구성**.
+   - **빠른 구성**&#x200B;을 클릭합니다.
 
-   - Fastly 서비스 ID 및 Fastly API 토큰 자격 증명의 값을 확인합니다. 다음을 참조하십시오 [Fastly 자격 증명 가져오기](/help/cloud-guide/cdn/fastly-configuration.md#get-fastly-credentials).
+   - Fastly 서비스 ID 및 Fastly API 토큰 자격 증명의 값을 확인합니다. [Fastly 자격 증명 가져오기](/help/cloud-guide/cdn/fastly-configuration.md#get-fastly-credentials)를 참조하십시오.
 
-   - 클릭 **자격 증명 테스트**.
+   - **자격 증명 테스트**&#x200B;를 클릭합니다.
 
    >[!WARNING]
    >
    >스테이징 및 프로덕션 환경에서 올바른 Fastly 서비스 ID 및 API 토큰을 입력했는지 확인하십시오. Fastly 자격 증명은 서비스 환경별로 생성 및 매핑됩니다. 프로덕션 환경에서 스테이징 자격 증명을 입력할 경우 VCL 조각을 업로드할 수 없고 캐싱이 제대로 작동하지 않으며 캐싱 구성이 잘못된 서버 및 스토어를 가리킵니다.
 
-**Fastly 캐싱 동작을 확인하려면**:
+**가장 빠른 캐싱 동작을 확인하려면**:
 
-1. 다음을 사용하여 헤더 확인 `dig` 명령줄 유틸리티를 사용하여 사이트 구성에 대한 정보를 얻을 수 있습니다.
+1. 사이트 구성에 대한 정보를 보려면 `dig` 명령줄 유틸리티를 사용하여 헤더를 확인하십시오.
 
-   를 사용하는 모든 URL을 사용할 수 있습니다 `dig` 명령입니다. 다음 예제에서는 Pro URL을 사용합니다.
+   `dig` 명령을 사용하여 모든 URL을 사용할 수 있습니다. 다음 예제에서는 Pro URL을 사용합니다.
 
-   - 스테이징: `dig https://mcstaging.<your-domain>.com`
+   - 준비 중: `dig https://mcstaging.<your-domain>.com`
    - 프로덕션: `dig https://mcprod.<your-domain>.com`
 
-   추가 `dig` 테스트, Fastly 참조 [DNS 변경 전 테스트](https://docs.fastly.com/en/guides/working-with-domains).
+   추가 `dig` 테스트는 DNS를 변경하기 전에 Fastly의 [테스트](https://docs.fastly.com/en/guides/working-with-domains)를 참조하십시오.
 
-1. 사용 `cURL` 응답 헤더 정보를 확인합니다.
+1. `cURL`을(를) 사용하여 응답 헤더 정보를 확인합니다.
 
    ```bash
    curl https://mcstaging.<your-domain>.com -H "host: mcstaging.<your-domain.com>" -k -vo /dev/null -H Fastly-Debug:1
    ```
 
-   다음을 참조하십시오 [응답 헤더 확인](../cdn/fastly-troubleshooting.md#check-cache-hit-and-miss-response-headers) 헤더 확인에 대한 자세한 내용.
+   헤더 확인에 대한 자세한 내용은 [응답 헤더 확인](../cdn/fastly-troubleshooting.md#check-cache-hit-and-miss-response-headers)을 참조하십시오.
 
-1. 라이브 상태가 되면 다음을 사용합니다. `cURL` 을 클릭하여 라이브 사이트를 확인합니다.
+1. 라이브 상태가 되면 `cURL`을(를) 사용하여 라이브 사이트를 확인하세요.
 
    ```bash
    curl https://<your-domain> -k -vo /dev/null -H Fastly-Debug:1
@@ -198,20 +198,20 @@ ht-degree: 0%
 
 테스트를 시작하기 전에 테스트 중인 환경, 사용 중인 도구 및 기간에 대한 지원을 제공하는 티켓을 입력합니다. 성과 추적을 위해 결과와 정보로 티켓을 업데이트합니다. 테스트를 완료하면 업데이트된 결과를 추가하고 티켓 테스트가 완료되고 날짜 및 타임스탬프가 포함된 메모를 보내십시오.
 
-리뷰 [성능 툴킷](https://github.com/magento/magento2/tree/2.4/setup/performance-toolkit) 사전 실행 준비 프로세스의 일부인 옵션입니다.
+출시 전 준비 프로세스의 일부로 [성능 도구 키트](https://github.com/magento/magento2/tree/2.4/setup/performance-toolkit) 옵션을 검토하십시오.
 
 최상의 결과를 얻으려면 다음 도구를 사용하십시오.
 
-- [응용 프로그램 성능 테스트](../environment/variables-post-deploy.md#ttfb_tested_pages)—다음을 구성하여 애플리케이션 성능 테스트 `TTFB_TESTED_PAGES` 사이트 응답 시간을 테스트하기 위한 환경 변수입니다.
-- [공성전](https://www.joedog.org/siege-home/)—트래픽 셰이핑 및 테스트 소프트웨어를 통해 스토어를 최대 한도로 늘릴 수 있습니다. 구성 가능한 수의 시뮬레이션된 클라이언트를 사용하여 사이트를 테스트합니다. Siege는 기본 인증, 쿠키, HTTP, HTTPS 및 FTP 프로토콜을 지원합니다.
-- [Jmeter](https://jmeter.apache.org)—플래시 판매와 같은 급격한 트래픽에 대한 성능을 측정하는 데 도움이 되는 탁월한 부하 테스트입니다. 사이트에 대해 실행할 사용자 지정 테스트를 만듭니다.
-- [New Relic](../monitor/new-relic-service.md) (제공)—데이터, 쿼리, Redis 등의 전송과 같은 작업당 추적된 시간을 통해 성능이 저하되는 사이트의 프로세스 및 영역을 찾는 데 도움이 됩니다.
-- [웹 페이지 테스트](https://www.webpagetest.org) 및 [핑돔](https://www.pingdom.com)- 서로 다른 원본 위치를 사용하여 사이트 페이지 로드 시간을 실시간으로 분석합니다. 핑돔(Pingdom)은 추가 요금이 부과될 수 있습니다. WebPageTest는 무료 도구입니다.
+- [응용 프로그램 성능 테스트](../environment/variables-post-deploy.md#ttfb_tested_pages)—사이트 응답 시간을 테스트하도록 `TTFB_TESTED_PAGES` 환경 변수를 구성하여 응용 프로그램 성능을 테스트합니다.
+- [Siege](https://www.joedog.org/siege-home/) - 스토어를 한계까지 밀어내는 트래픽 셰이핑 및 테스트 소프트웨어입니다. 구성 가능한 수의 시뮬레이션된 클라이언트를 사용하여 사이트를 테스트합니다. Siege는 기본 인증, 쿠키, HTTP, HTTPS 및 FTP 프로토콜을 지원합니다.
+- [Jmeter](https://jmeter.apache.org)—플래시 판매와 같은 스파이크 트래픽의 성능을 측정하는 데 도움이 되는 뛰어난 부하 테스트입니다. 사이트에 대해 실행할 사용자 지정 테스트를 만듭니다.
+- [New Relic](../monitor/new-relic-service.md)(제공됨) - 데이터, 쿼리, Redis 등의 전송과 같은 작업당 추적된 시간을 사용하여 느린 성능을 유발하는 사이트의 프로세스 및 영역을 찾는 데 도움이 됩니다.
+- [WebPageTest](https://www.webpagetest.org) 및 [Pingdom](https://www.pingdom.com)—원본 위치가 다른 사이트 페이지 로드 시간의 실시간 분석. 핑돔(Pingdom)은 추가 요금이 부과될 수 있습니다. WebPageTest는 무료 도구입니다.
 
 ## 기능 테스트
 
-MFTF(Magento 기능 테스트 프레임워크)를 사용하여 Cloud Docker 환경에서 Adobe Commerce에 대한 기능 테스트를 완료할 수 있습니다. 다음을 참조하십시오 [애플리케이션 테스트](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing/) 다음에서 _Commerce용 Cloud Docker 안내서_.
+MFTF(Magento 기능 테스트 프레임워크)를 사용하여 Cloud Docker 환경에서 Adobe Commerce에 대한 기능 테스트를 완료할 수 있습니다. _Commerce용 Cloud Docker 안내서_&#x200B;에서 [응용 프로그램 테스트](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing/)를 참조하십시오.
 
 ## 보안 검색 도구 설정
 
-귀하의 사이트에 대 한 무료 보안 검색 도구가 있습니다. 사이트를 추가하고 도구를 실행하려면 를 참조하십시오. [보안 검색 도구](../launch/overview.md#set-up-the-security-scan-tool).
+귀하의 사이트에 대 한 무료 보안 검색 도구가 있습니다. 사이트를 추가하고 도구를 실행하려면 [보안 검사 도구](../launch/overview.md#set-up-the-security-scan-tool)를 참조하세요.

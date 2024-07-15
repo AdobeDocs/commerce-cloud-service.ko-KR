@@ -19,7 +19,7 @@ ht-degree: 0%
 
 다음 표의 ADMIN 변수를 사용하여 Commerce 설치 중에 관리자 사용자 자격 증명을 재정의할 수 있습니다.
 
-설치 후 값을 변경하려면 SSH를 사용하여 환경에 연결하고 Adobe Commerce CLI를 사용하십시오 [`admin:user` 명령](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/admin.html) 관리자 자격 증명을 만들거나 편집합니다.
+설치 후 값을 변경하려면 SSH를 사용하여 환경에 연결한 다음 Adobe Commerce CLI [`admin:user` 명령](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/admin.html)을 사용하여 관리자 자격 증명을 만들거나 편집하십시오.
 
 | 변수 | 기본값 | 설명 |
 | -------------- | --------------------------- | ----------- |
@@ -32,13 +32,13 @@ ht-degree: 0%
 
 관리 UI에 대한 액세스 보안을 유지하려면 다음 환경 변수를 사용하십시오. 지정하면 이 값이 설치 중에 기본 URL을 재정의합니다.
 
-`ADMIN_URL`- 관리 UI에 액세스할 수 있는 상대 URL입니다. 기본 URL은 `/admin`. 보안상의 이유로 Adobe은 기본값을 쉽게 추측할 수 없는 고유한 사용자 지정 관리자 URL로 변경할 것을 권장합니다.
+`ADMIN_URL` - 관리 UI에 액세스할 상대 URL입니다. 기본 URL은 `/admin`입니다. 보안상의 이유로 Adobe은 기본값을 쉽게 추측할 수 없는 고유한 사용자 지정 관리자 URL로 변경할 것을 권장합니다.
 
 ### 관리자 URL 변경
 
-Adobe은 설치 후 관리 URL에 대한 환경 수준 변수를 변경할 것을 권장합니다. 클론에서 분기하기 전에 보안상의 이유로 이 설정을 구성합니다. `master` 환경. 에서 생성된 모든 분기 `master` 분기는 환경 수준 변수와 해당 값을 상속합니다.
+Adobe은 설치 후 관리 URL에 대한 환경 수준 변수를 변경할 것을 권장합니다. 복제된 `master` 환경에서 분기하기 전에 보안상의 이유로 이 설정을 구성하십시오. `master` 분기에서 만든 모든 분기는 환경 수준 변수와 해당 값을 상속합니다.
 
-사용 `magento-cloud variable:update` 변수 값을 업데이트하는 명령입니다. (다음 `variable:set` 명령이 더 이상 사용되지 않으며 사용할 수 없습니다.) 다음 예제에서는 ADMIN_URL을 `newAdmin_A8v10`:
+`magento-cloud variable:update` 명령을 사용하여 변수 값을 업데이트하십시오. `variable:set` 명령은 더 이상 사용되지 않으며 사용할 수 없습니다. 다음 예제에서는 ADMIN_URL을 `newAdmin_A8v10`(으)로 업데이트합니다.
 
 ```bash
 magento-cloud variable:update ADMIN_URL --value newAdmin_A8v10 -e master
@@ -46,27 +46,27 @@ magento-cloud variable:update ADMIN_URL --value newAdmin_A8v10 -e master
 
 >[!NOTE]
 >
->다음 `ADMIN_URL` 값은 사용자 지정 관리자 경로에 대해 문자(a-z 또는 A-Z), 숫자(0-9) 및 밑줄 문자(_)를 허용합니다. 공백 또는 기타 문자는 다음과 같습니다 **아님** 수락됨.
+>`ADMIN_URL` 값은 사용자 지정 관리자 경로에 대해 문자(a-z 또는 A-Z), 숫자(0-9) 및 밑줄(_)을 허용합니다. 공백이나 다른 문자는 **허용되지 않습니다**.
 
-**를 사용하여 URL을 변경하려면[!DNL Cloud Console]**:
+**[!DNL Cloud Console]**&#x200B;을(를) 사용하여 URL을 변경하려면:
 
-1. 에 로그인합니다 [[!DNL Cloud Console]](https://console.adobecommerce.com).
+1. [[!DNL Cloud Console]](https://console.adobecommerce.com)에 로그인합니다.
 
-1. 다음에서 프로젝트 선택 _모든 프로젝트_ 목록을 표시합니다.
+1. _모든 프로젝트_ 목록에서 프로젝트를 선택하십시오.
 
 1. 프로젝트 개요에서 환경을 선택하고 구성 아이콘을 클릭합니다.
 
    ![프로젝트 구성](../../assets/icon-configure.png){width="36"}
 
-1. 다음 항목 선택 **변수** 탭.
+1. **변수** 탭을 선택합니다.
 
-1. 클릭 **변수 만들기**.
+1. **변수 만들기**&#x200B;를 클릭합니다.
 
 1. 다음을 입력합니다.
 
    - **변수 이름** = `ADMIN_URL`
-   - **값** = 새 URL. 예를 들어 관리자 URL을 로 설정합니다. `magento_A8v10`.
+   - **값** = 새 URL. 예를 들어 관리자 URL을 `magento_A8v10`(으)로 설정합니다.
 
-   기본적으로, `Available during runtime` 및 `Make inheritable` 이(가) 선택되어 있습니다.
+   기본적으로 `Available during runtime` 및 `Make inheritable`이(가) 선택됩니다.
 
-1. 클릭 **변수 만들기** 배포가 완료될 때까지 기다립니다. 이 단추는 필수 필드에 값이 포함된 경우에만 표시됩니다.
+1. **변수 만들기**&#x200B;를 클릭하고 배포가 완료될 때까지 기다립니다. 이 단추는 필수 필드에 값이 포함된 경우에만 표시됩니다.

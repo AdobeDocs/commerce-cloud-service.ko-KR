@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # OpenSearch 서비스 설정
 
-다음 [OpenSearch](https://www.opensearch.org) 서비스는 Elasticsearch에 대한 라이선스 변경 후 Elasticsearch 7.10.2의 오픈 소스 포크입니다. 다음을 참조하십시오. [OpenSource 프로젝트](https://github.com/opensearch-project) GitHub에서.
+[OpenSearch](https://www.opensearch.org) 서비스는 Elasticsearch에 대한 라이선스 변경 후 Elasticsearch 7.10.2의 오픈 소스 포크입니다. GitHub에서 [OpenSource 프로젝트](https://github.com/opensearch-project)를 참조하십시오.
 
 {{elasticsearch-support}}
 
@@ -31,7 +31,7 @@ OpenSearch를 사용하면 모든 소스, 모든 형식에서 데이터를 가�
 
 **OpenSearch를 사용하려면**:
 
-1. Starter 및 Pro 통합 환경의 경우 `opensearch` 에 대한 서비스 `.magento/services.yaml` 적절한 버전과 할당된 디스크 공간(MB)을 가진 파일. 이 경우 버전 2가 적절합니다. 클라우드 인프라에서 최신 버전의 OpenSearch를 사용하기 때문에 부 버전은 필요하지 않습니다.
+1. Starter 및 Pro 통합 환경의 경우 적절한 버전과 할당된 디스크 공간(MB)을 사용하여 `opensearch` 서비스를 `.magento/services.yaml` 파일에 추가하십시오. 이 경우 버전 2가 적절합니다. 클라우드 인프라에서 최신 버전의 OpenSearch를 사용하기 때문에 부 버전은 필요하지 않습니다.
 
    ```yaml
    opensearch:
@@ -39,9 +39,9 @@ OpenSearch를 사용하면 모든 소스, 모든 형식에서 데이터를 가�
        disk: 1024
    ```
 
-   Pro 프로젝트의 경우 다음을 수행해야 합니다. [Adobe Commerce 지원 티켓 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) 를 사용하여 스테이징 및 프로덕션 환경에서 OpenSearch 버전을 변경할 수 있습니다.
+   Pro 프로젝트의 경우 스테이징 및 프로덕션 환경에서 OpenSearch 버전을 변경하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)해야 합니다.
 
-1. 설정 또는 확인 `relationships` 의 속성 `.magento.app.yaml` 파일.
+1. `.magento.app.yaml` 파일에서 `relationships` 속성을 설정하거나 확인하십시오.
 
    ```yaml
    relationships:
@@ -62,7 +62,7 @@ OpenSearch를 사용하면 모든 소스, 모든 형식에서 데이터를 가�
    git push origin <branch-name>
    ```
 
-   이러한 변경 사항이 환경에 미치는 영향에 대한 자세한 내용은 [서비스 구성](services-yaml.md).
+   이러한 변경 내용이 환경에 미치는 영향에 대한 자세한 내용은 [서비스 구성](services-yaml.md)을 참조하십시오.
 
 1. 배포 프로세스가 완료되면 SSH를 사용하여 원격 환경에 로그인합니다.
 
@@ -86,13 +86,13 @@ OpenSearch를 사용하면 모든 소스, 모든 형식에서 데이터를 가�
 
 ## OpenSearch 소프트웨어 호환성
 
-Adobe Commerce on cloud infrastructure 프로젝트를 설치하거나 업그레이드할 때 항상 OpenSearch 서비스 버전과 [오픈서치 PHP](https://github.com/opensearch-project/opensearch-php) Adobe Commerce용 클라이언트.
+클라우드 인프라 프로젝트에서 Adobe Commerce을 설치하거나 업그레이드할 때 항상 OpenSearch 서비스 버전과 Adobe Commerce용 [OpenSearch PHP](https://github.com/opensearch-project/opensearch-php) 클라이언트 간의 호환성을 확인하십시오.
 
-- **최초 설정**-에 OpenSearch 버전이 지정되었는지 확인합니다. `services.yaml` 파일은 Adobe Commerce용으로 구성된 OpenSearch PHP 클라이언트와 호환됩니다.
+- **처음 설치**-`services.yaml` 파일에 지정된 OpenSearch 버전이 Adobe Commerce용으로 구성된 OpenSearch PHP 클라이언트와 호환되는지 확인합니다.
 
-- **프로젝트 업그레이드**-새 애플리케이션 버전의 OpenSearch PHP 클라이언트가 클라우드 인프라에 설치된 OpenSearch 서비스 버전과 호환되는지 확인합니다.
+- **프로젝트 업그레이드**-새 응용 프로그램 버전의 OpenSearch PHP 클라이언트가 클라우드 인프라에 설치된 OpenSearch 서비스 버전과 호환되는지 확인하십시오.
 
-서비스 버전 및 호환성 지원은 Cloud 인프라에서 테스트하고 배포한 버전에 따라 결정되며 Adobe Commerce 온프레미스 배포에서 지원하는 버전과 다른 경우가 있습니다. 다음을 참조하십시오 [시스템 요구 사항](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) 다음에서 _설치 안내서_ 를 참조하십시오.
+서비스 버전 및 호환성 지원은 Cloud 인프라에서 테스트하고 배포한 버전에 따라 결정되며 Adobe Commerce 온프레미스 배포에서 지원하는 버전과 다른 경우가 있습니다. 지원되는 버전 목록은 _설치 가이드_&#x200B;의 [시스템 요구 사항](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)을 참조하십시오.
 
 **OpenSearch 소프트웨어 호환성을 확인하려면**:
 
@@ -140,7 +140,7 @@ Adobe Commerce on cloud infrastructure 프로젝트를 설치하거나 업그레
    | host_mapped                              | false                                                  |
    ```
 
-1. 설치된 OpenSearch 서비스 검색 `version:number` 서비스 끝점에서 가져왔습니다.
+1. 서비스 끝점에서 설치된 OpenSearch 서비스 `version:number`을(를) 검색합니다.
 
    ```bash
    curl -XGET <opensearch-service-endpoint-ip-address>:9200
@@ -174,13 +174,13 @@ OpenSearch 서비스를 다시 시작해야 하는 경우에는 Adobe Commerce �
 
 ## 추가 검색 구성
 
-- 기본적으로 클라우드 환경에 대한 검색 구성은 배포할 때마다 다시 생성됩니다. 다음을 사용할 수 있습니다. `SEARCH_CONFIGURATION` 변수를 배포하여 배포 간 사용자 지정 검색 설정을 유지합니다. 다음을 참조하십시오 [변수 배포](../environment/variables-deploy.md#search_configuration).
+- 기본적으로 클라우드 환경에 대한 검색 구성은 배포할 때마다 다시 생성됩니다. `SEARCH_CONFIGURATION` 배포 변수를 사용하여 배포 간에 사용자 지정 검색 설정을 유지할 수 있습니다. [변수 배포](../environment/variables-deploy.md#search_configuration)를 참조하세요.
 
 - 프로젝트에 대한 OpenSearch 서비스를 설정한 후 관리 UI를 사용하여 OpenSearch 연결을 테스트하고 Adobe Commerce에 대한 OpenSearch 설정을 사용자 지정합니다.
 
 ### OpenSearch에 대한 플러그인 추가
 
-필요한 경우 를 추가하여 OpenSearch에 대한 플러그인을 추가할 수 있습니다. `configuration:plugins` 섹션에 있는 OpenSearch 서비스에 대한 섹션을 추가했습니다. `.magento/services.yaml` 파일. 예를 들어 다음 코드는 ICU 분석 및 음성 분석 플러그인을 활성화합니다.
+필요한 경우 `.magento/services.yaml` 파일의 OpenSearch 서비스에 `configuration:plugins` 섹션을 추가하여 OpenSearch에 대한 플러그인을 추가할 수 있습니다. 예를 들어 다음 코드는 ICU 분석 및 음성 분석 플러그인을 활성화합니다.
 
 ```yaml
 opensearch:
@@ -192,15 +192,15 @@ opensearch:
             - analysis-phonetic
 ```
 
-다음을 참조하십시오. [OpenSearch 프로젝트](https://github.com/opensearch-project) 플러그인에 대한 자세한 정보입니다.
+플러그인에 대한 자세한 내용은 [OpenSearch 프로젝트](https://github.com/opensearch-project)를 참조하십시오.
 
 ### OpenSearch에 대한 플러그인 제거
 
-에서 플러그인 항목 제거 `opensearch:` 의 섹션 `.magento/services.yaml` 파일이 **아님** 서비스를 제거하거나 비활성화합니다. 서비스를 완전히 비활성화하려면 플러그인을 제거한 후 OpenSearch 데이터를 다시 인덱싱해야 합니다. `.magento/services.yaml` 파일. 이 설계는 이러한 플러그인에 의존하는 데이터의 가능한 손실 또는 손상을 방지합니다.
+`.magento/services.yaml` 파일의 `opensearch:` 섹션에서 플러그 인 항목을 제거하면 서비스를 제거하거나 사용하지 않도록 설정할 수 **없습니다**. 서비스를 완전히 사용하지 않도록 설정하려면 `.magento/services.yaml` 파일에서 플러그인을 제거한 후 OpenSearch 데이터를 다시 인덱싱해야 합니다. 이 설계는 이러한 플러그인에 의존하는 데이터의 가능한 손실 또는 손상을 방지합니다.
 
 **OpenSearch 플러그인을 제거하려면**:
 
-1. 에서 OpenSearch 플러그인 항목을 제거합니다 `.magento/services.yaml` 파일.
+1. `.magento/services.yaml` 파일에서 OpenSearch 플러그인 항목을 제거합니다.
 1. 코드 변경 사항을 추가, 커밋 및 푸시합니다.
 
    ```bash
@@ -215,7 +215,7 @@ opensearch:
    git push origin <branch-name>
    ```
 
-1. 커밋: `.magento/services.yaml` 클라우드 저장소에 대한 변경 사항입니다.
+1. 클라우드 저장소에 `.magento/services.yaml` 변경 내용을 커밋합니다.
 1. 카탈로그 검색 색인을 다시 색인화합니다.
 
    ```bash

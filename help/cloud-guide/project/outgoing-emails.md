@@ -11,41 +11,41 @@ ht-degree: 0%
 
 # 발신 이메일 구성
 
-에서 각 환경에 대해 발신 이메일을 활성화 및 비활성화할 수 있습니다. [!DNL Cloud Console] 또는 를 명령줄에서 선택할 수 있습니다. 통합 및 스테이징 환경에 대해 발신 이메일을 활성화하여 Cloud 프로젝트 사용자에 대해 이중 인증 또는 암호 재설정 이메일을 전송합니다.
+[!DNL Cloud Console] 또는 명령줄에서 각 환경에 대해 발신 전자 메일을 활성화 및 비활성화할 수 있습니다. 통합 및 스테이징 환경에 대해 발신 이메일을 활성화하여 Cloud 프로젝트 사용자에 대해 이중 인증 또는 암호 재설정 이메일을 전송합니다.
 
-기본적으로 발신 이메일은 프로덕션 및 스테이징 환경에서 활성화됩니다. 그러나 [!UICONTROL Enable outgoing emails] 을(를) 설정할 때까지 환경 설정에서 을(를) 비활성화할 수 있습니다. `enable_smtp` 속성을 통해 [명령줄](#enable-emails-in-the-cli) 또는 [클라우드 콘솔](outgoing-emails.md#enable-emails-in-the-cloud-console).
+기본적으로 발신 이메일은 프로덕션 및 스테이징 환경에서 활성화됩니다. 그러나 [명령줄](#enable-emails-in-the-cli) 또는 [클라우드 콘솔](outgoing-emails.md#enable-emails-in-the-cloud-console)을 통해 `enable_smtp` 속성을 설정할 때까지 [!UICONTROL Enable outgoing emails]이(가) 환경 설정에서 비활성화되어 표시될 수 있습니다.
 
-업데이트 중 [!UICONTROL enable_smtp] 속성 값 기준 [명령줄](#enable-emails-in-the-cli) 또한 [!UICONTROL Enable outgoing emails] Cloud Console에서 이 환경에 대한 값 설정.
+[명령줄](#enable-emails-in-the-cli)에 의해 [!UICONTROL enable_smtp] 속성 값을 업데이트하면 클라우드 콘솔에서 이 환경에 대한 [!UICONTROL Enable outgoing emails] 설정 값도 변경됩니다.
 
 {{redeploy-warning}}
 
 ## Cloud Console에서 이메일 활성화
 
-사용 **[!UICONTROL Outgoing emails]** 에서 전환 _환경 구성_ 이메일 지원을 활성화하거나 비활성화하려면 을(를) 봅니다.
+_환경 구성_ 보기에서 **[!UICONTROL Outgoing emails]** 토글을 사용하여 전자 메일 지원을 활성화하거나 비활성화합니다.
 
-Pro 프로덕션 또는 스테이징 환경에서 발신 이메일을 비활성화하거나 다시 활성화해야 하는 경우 [Adobe Commerce 지원 티켓](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide).
+Pro 프로덕션 또는 스테이징 환경에서 발신 이메일을 사용하지 않도록 설정하거나 다시 사용하도록 설정해야 하는 경우 [Adobe Commerce 지원 티켓](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide)을 제출할 수 있습니다.
 
 >[!TIP]
 >
->발신 이메일 상태가 Cloud Console의 Pro 환경에 반영되지 않을 수 있습니다. 대신 [명령줄](#enable-emails-in-the-cli) 발신 이메일을 활성화하고 테스트하기 위해.
+>발신 이메일 상태가 Cloud Console의 Pro 환경에 반영되지 않을 수 있습니다. 대신 보내는 전자 메일을 사용 및 테스트하려면 [명령줄](#enable-emails-in-the-cli)을 사용하십시오.
 
-**에서 이메일 지원을 관리하려면[!DNL Cloud Console]**:
+**[!DNL Cloud Console]**&#x200B;에서 전자 메일 지원을 관리하려면:
 
-1. 에 로그인합니다 [[!DNL Cloud Console]](https://console.adobecommerce.com).
-1. 다음에서 프로젝트 선택 _모든 프로젝트_ 목록을 표시합니다.
+1. [[!DNL Cloud Console]](https://console.adobecommerce.com)에 로그인합니다.
+1. _모든 프로젝트_ 목록에서 프로젝트를 선택하십시오.
 1. 프로젝트 대시보드에서 오른쪽 상단의 구성 아이콘을 클릭합니다.
-1. 클릭 **[!UICONTROL Environments]** 목록에서 특정 환경을 선택합니다.
-1. 발신 이메일을 활성화하거나 비활성화하려면 _발신 이메일 활성화_ **날짜** 또는 **끔**.
+1. **[!UICONTROL Environments]**&#x200B;을(를) 클릭하고 목록에서 특정 환경을 선택합니다.
+1. 발신 전자 메일을 활성화하거나 비활성화하려면 _발신 전자 메일 활성화_ **켜기** 또는 **끄기**&#x200B;를 전환하십시오.
 
-   ![발신 이메일 구성 활성화](../../assets/outgoing-emails.png)
+   ![발신 전자 메일 구성 사용](../../assets/outgoing-emails.png)
 
 설정을 변경하면 환경이 빌드되고 새 구성으로 배포됩니다.
 
 ## CLI에서 이메일 활성화
 
-를 사용하여 활성 환경에 대한 이메일 구성을 변경할 수 있습니다. `magento-cloud` CLI `environment:info` 를 설정하는 명령 `enable_smtp` 속성. SMTP 업데이트 사용 `MAGENTO_CLOUD_SMTP_HOST` 메일을 보낼 SMTP 호스트의 IP 주소가 있는 환경 변수입니다.
+`magento-cloud` CLI `environment:info` 명령을 사용하여 `enable_smtp` 속성을 설정하는 활성 환경에 대한 전자 메일 구성을 변경할 수 있습니다. SMTP를 사용하면 메일을 보낼 SMTP 호스트의 IP 주소로 `MAGENTO_CLOUD_SMTP_HOST` 환경 변수를 업데이트합니다.
 
-**명령줄에서 이메일 지원을 관리하려면**:
+**명령줄에서 전자 메일 지원을 관리하려면**:
 
 1. 로컬 워크스테이션에서 프로젝트 디렉터리로 변경합니다.
 
@@ -55,7 +55,7 @@ Pro 프로덕션 또는 스테이징 환경에서 발신 이메일을 비활성�
    magento-cloud environment:info -e <environment-id> | grep enable_smtp
    ```
 
-1. 다음을 설정하여 이메일 지원 구성 변경 `enable_smtp` 환경 변수 대상 `true` 또는 `false`.
+1. `enable_smtp` 환경 변수를 `true` 또는 `false`(으)로 설정하여 전자 메일 지원 구성을 변경합니다.
 
    ```bash
    magento-cloud environment:info --refresh -e <environment-id> enable_smtp true

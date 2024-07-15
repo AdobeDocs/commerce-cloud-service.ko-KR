@@ -10,12 +10,12 @@ ht-degree: 0%
 <!-- The template to render with above values -->
 **버전**: 1.46.1
 
-이 참조에는 다음을 통해 사용할 수 있는 119개의 명령이 포함되어 있습니다. `magento-cloud` 명령줄 도구입니다.
-초기 목록은 다음을 사용하여 자동으로 생성됩니다. `magento-cloud list` cloud infrastructure의 Adobe Commerce 명령.
+이 참조에는 `magento-cloud` 명령줄 도구를 통해 사용할 수 있는 119개의 명령이 포함되어 있습니다.
+클라우드 인프라의 Adobe Commerce에서 `magento-cloud list` 명령을 사용하여 초기 목록이 자동으로 생성됩니다.
 
 >[!NOTE]
 >
->이 참조는 응용 프로그램 코드베이스에서 생성됩니다. 콘텐츠를 변경하기 위해에서 해당 명령 구현에 대한 소스 코드를 업데이트할 수 있습니다 [코드베이스](https://github.com/magento/magento-cloud-cli) 검토를 위해 변경 사항을 보관하고 제출합니다. 다른 방법은 _피드백 제공_ (오른쪽 상단에서 링크를 찾습니다.). 기여도 가이드라인은 를 참조하십시오. [코드 기여](https://developer.adobe.com/commerce/contributor/guides/code-contributions/).
+>이 참조는 응용 프로그램 코드베이스에서 생성됩니다. 내용을 변경하려면 [codebase](https://github.com/magento/magento-cloud-cli) 리포지토리에서 해당 명령 구현의 소스 코드를 업데이트한 다음 변경 내용을 제출하여 검토할 수 있습니다. 다른 방법은 _피드백을 제공_&#x200B;하는 것입니다(오른쪽 상단에서 링크 찾기). 기여도 지침이 필요하면 [코드 기여도](https://developer.adobe.com/commerce/contributor/guides/code-contributions/)를 참조하십시오.
 
 ## `clear-cache`
 
@@ -5138,7 +5138,7 @@ Webhook: JWS 공유 암호 키
 
 ### `--from-address`
 
-[선택 사항] 경고 이메일에 대한 사용자 정의 보낸 사람 주소
+경고 전자 메일에 대한 [선택적] 사용자 지정 보낸 사람 주소
 
 - 값 필요
 
@@ -5717,7 +5717,7 @@ Webhook: JWS 공유 암호 키
 
 ### `--from-address`
 
-[선택 사항] 경고 이메일에 대한 사용자 정의 보낸 사람 주소
+경고 전자 메일에 대한 [선택적] 사용자 지정 보낸 사람 주소
 
 - 값 필요
 
@@ -6138,7 +6138,7 @@ magento-cloud dir [<subdir>]
 
 ## `metrics:all`
 
-BETA 환경에 대한 CPU, 디스크 및 메모리 지표 표시
+BETA 환경에 대한 CPU, 디스크 및 메모리 측정 단위 표시
 
 ```bash
 magento-cloud metrics [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
@@ -7136,7 +7136,7 @@ magento-cloud mount:upload [--source SOURCE] [-m|--mount MOUNT] [--delete] [--ex
 
 ## `operation:list`
 
-환경에서 BETA 목록 런타임 작업
+환경에 대한 Beta 목록 런타임 작업
 
 ```bash
 magento-cloud ops [--full] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
@@ -9417,7 +9417,7 @@ magento-cloud ssh-cert:load [--refresh-only] [--new] [--new-key]
 
 ### `--new-key`
 
-[더 이상 사용되지 않음] 대신 —new 를 사용합니다.
+[사용하지 않음] 대신 —new 사용
 
 - 기본값: `false`
 - 값을 수락하지 않음
@@ -10330,7 +10330,7 @@ magento-cloud user:get [-l|--level LEVEL] [--pipe] [-p|--project PROJECT] [-e|--
 
 ### `--role`, `-r`
 
-[더 이상 사용되지 않는 기능: user:update를 사용하여 사용자의 역할 변경]
+[사용하지 않음: user:update를 사용하여 사용자의 역할을 변경합니다]
 
 - 값 필요
 
@@ -10811,7 +10811,7 @@ magento-cloud vget [-P|--property PROPERTY] [-l|--level LEVEL] [--format FORMAT]
 
 ### `--pipe`
 
-[사용되지 않는 옵션] 변수 값만 출력
+[사용되지 않는 옵션] 변수 값만 출력합니다.
 
 - 기본값: `false`
 - 값을 수락하지 않음

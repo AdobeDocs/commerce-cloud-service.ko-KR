@@ -52,11 +52,11 @@ magento-cloud integration:list
 
 >[!TAB 콘솔]
 
-**을 사용하여 통합을 추가하려면[!DNL Cloud Console]**:
+**[!DNL Cloud Console]**&#x200B;을(를) 사용하여 통합을 추가하려면:
 
-1. 위치 _프로젝트 설정_, 클릭 **[!UICONTROL Integrations]**.
+1. _프로젝트 설정_&#x200B;에서 **[!UICONTROL Integrations]**&#x200B;을(를) 클릭합니다.
 
-1. 통합 유형을 클릭하거나 **[!UICONTROL Add integration]**.
+1. 통합 유형을 클릭하거나 **[!UICONTROL Add integration]**&#x200B;을(를) 클릭합니다.
 
 1. 통합 유형 선택 및 구성 단계를 단계별로 안내합니다.
 
@@ -64,26 +64,26 @@ magento-cloud integration:list
 
 >[!ENDTABS]
 
-## Commerce 웹 후크
+## Commerce webhooks
 
-를 사용하여 클라우드 프로젝트에서 Commerce 웹후크를 구성할 수 있습니다. [ENABLE_WEBHOOKS 전역 변수](../environment/variables-global.md#enable_webhooks). Commerce 웹후크는 Commerce에서 생성한 이벤트에 대한 응답으로 외부 서버에 요청을 보냅니다. 다음 [_Webhooks 안내서_](https://developer.adobe.com/commerce/extensibility/webhooks) 에서는 이 기능에 대해 자세히 설명합니다.
+[ENABLE_WEBHOOKS 전역 변수](../environment/variables-global.md#enable_webhooks)을(를) 사용하여 클라우드 프로젝트에서 Commerce 웹후크를 구성할 수 있습니다. Commerce 웹후크는 Commerce에서 생성한 이벤트에 대한 응답으로 외부 서버에 요청을 보냅니다. [_Webhooks 안내서_](https://developer.adobe.com/commerce/extensibility/webhooks)에서는 이 기능에 대해 자세히 설명합니다.
 
 ## 일반 웹후크
 
-사용자 지정 Webhook 통합을 사용하여 Cloud 인프라 및 저장소 이벤트를 캡처하고 보고하여 `POST` 에 대한 JSON 메시지 _웹후크_ URL.
+_webhook_ URL에 대한 `POST` JSON 메시지에 사용자 지정 Webhook 통합을 사용하여 Cloud 인프라 및 저장소 이벤트를 캡처하고 보고할 수 있습니다.
 
-**웹후크 URL을 추가하려면 다음 구문을 사용합니다**:
+**웹후크 URL을 추가하려면 다음 구문을 사용합니다**.
 
 ```bash
 magento-cloud integration:add --type=webhook --url=https://hook-url.example.com
 ```
 
-- `type`- 다음을 지정합니다. `webhook` 통합 유형.
-- `url`—JSON 메시지를 수신할 수 있는 웹후크 URL을 제공합니다.
+- `type` - `webhook` 통합 유형을 지정합니다.
+- `url`—JSON 메시지를 받을 수 있는 웹후크 URL을 제공합니다.
 
 샘플 응답에는 통합을 사용자 지정할 수 있는 기회를 제공하는 일련의 프롬프트가 표시됩니다. 기본(빈) 응답을 사용하면 프로젝트의 모든 환경에 있는 모든 이벤트에 대한 메시지를 보냅니다.
 
-보고서 고유의 통합을 사용자 지정할 수 있습니다 [events](#events-to-report)(예: 코드를 분기로 푸시) 예를 들어 `environment.push` 사용자가 코드를 분기로 푸시할 때 메시지를 보내는 이벤트:
+코드를 분기로 푸시하는 것과 같이, 특정 [이벤트](#events-to-report)를 보고하도록 통합을 사용자 지정할 수 있습니다. 예를 들어 사용자가 코드를 분기로 푸시할 때 메시지를 보내는 `environment.push` 이벤트를 지정할 수 있습니다.
 
 ```terminal
 Events to report (--events)
@@ -93,7 +93,7 @@ Enter comma-separated values (or leave this blank)
 >
 ```
 
-에서 이벤트를 보고하도록 선택할 수 있습니다. `pending`, `in_progress`, 또는 `complete` 상태:
+`pending`, `in_progress` 또는 `complete` 상태의 이벤트를 보고하도록 선택할 수 있습니다.
 
 ```terminal
 States to report (--states)
@@ -103,7 +103,7 @@ Enter comma-separated values (or leave this blank)
 >
 ```
 
-다음을 수행할 수 있습니다. _include_ 또는 _제외_ 특정 환경을 위한 메시지:
+특정 환경에 대해 _포함_ 또는 _제외_ 메시지를 사용할 수 있습니다.
 
 ```terminal
 Included environments (--environments)
@@ -137,7 +137,7 @@ Created integration integration-ID (type: webhook)
 
 ### 기존 통합 업데이트
 
-기존 통합을 업데이트할 수 있습니다. 예를 들어에서 상태를 변경합니다. `complete` 끝 `pending` 다음을 사용합니다.
+기존 통합을 업데이트할 수 있습니다. 예를 들어 다음을 사용하여 상태를 `complete`에서 `pending`(으)로 변경합니다.
 
 ```bash
 magento-cloud integration:update --states=pending <int-id>
@@ -171,14 +171,14 @@ Integration integration-ID (webhook) updated
 | `environment.branch` | Management Console을 사용하여 분기가 생성되었습니다 |
 | `environment.deactivate` | 분기가 &quot;비활성화되었습니다.&quot; 코드는 그대로 있지만 환경은 파괴되었습니다 |
 | `environment.delete` | 분기가 삭제되었습니다. |
-| `environment.initialize` | 다음 `master` 첫 번째 커밋으로 초기화된 프로젝트의 분기 |
+| `environment.initialize` | 첫 번째 커밋으로 초기화된 프로젝트의 `master` 분기 |
 | `environment.merge` | 활성 분기가 관리 콘솔 또는 API를 사용하여 병합되었습니다. |
 | `environment.push` | 사용자가 코드를 분기로 푸시함 |
 | `environment.restore` | 사용자가 스냅샷을 복원했습니다. |
 | `environment.route.create` | 관리 콘솔을 사용하여 경로를 만들었습니다. |
 | `environment.route.delete` | 관리 콘솔을 사용하여 경로가 삭제되었습니다. |
 | `environment.route.update` | 관리 콘솔을 사용하여 경로가 수정되었습니다. |
-| `environment.subscription.update` | 다음 `master` 구독이 변경되어 환경 크기가 조정되었지만 콘텐츠 변경 사항은 없습니다. |
+| `environment.subscription.update` | 구독이 변경되어 `master` 환경의 크기가 조정되었지만 콘텐츠 변경 내용은 없습니다 |
 | `environment.synchronize` | 환경에 상위 환경에서 데이터 또는 코드가 다시 복사되었습니다. |
 | `environment.update.http_access` | 환경에 대한 HTTP 액세스 규칙이 수정되었습니다. |
 | `environment.update.restrict_robots` | 모든 로봇 차단 기능이 활성화되었거나 비활성화되었습니다. |

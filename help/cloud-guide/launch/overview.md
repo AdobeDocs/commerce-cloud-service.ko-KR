@@ -25,7 +25,7 @@ ht-degree: 0%
 
 - 통합 환경은 Fastly 및 New Relic과 같은 스테이징 및 프로덕션에서 사용할 수 있는 일부 서비스를 지원하지 않습니다.
 
-- [전체 테스트](../test/guidance.md) 로드, 스트레스, 성능 및 사이트 에셋에 대한 스테이징에서 다양한 도구를 사용하는 사이트
+- 부하, 스트레스, 성능 및 사이트 자산에 대한 스테이징에서 다양한 도구를 사용하여 사이트를 [완전히 테스트](../test/guidance.md)합니다.
 
 - 통합 환경에는 프로덕션 유사 환경과 일치하지 않고 테스트 데이터로 채워진 데이터베이스만 있을 수 있으므로 스테이징 또는 프로덕션 환경에서 테스트할 때 추가 오류 또는 예기치 않은 동작이 발견될 수 있습니다.
 
@@ -39,11 +39,11 @@ ht-degree: 0%
 
 - SSL/TLS 인증서
 
-Adobe Commerce on cloud infrastructure 구독의 일부로, Adobe은 Let&#39;s Encrypt에서 발급한 도메인 확인 SSL/TLS 인증서를 제공합니다. 각 프로프로덕션, 스테이징 및 스타터 프로덕션(`master`) 환경에는 해당 환경의 모든 도메인 및 하위 도메인을 포함하는 고유한 인증서가 있습니다. 이러한 인증서는 개발 및 프로덕션을 위해 DNS 구성을 업데이트하면 자동으로 프로비저닝되고 사이트에 업로드됩니다. 다음을 참조하십시오 [SSL/TLS 인증서 프로비저닝](../cdn/fastly-configuration.md#provision-ssltls-certificates).
+Adobe Commerce on cloud infrastructure 구독의 일부로, Adobe은 Let&#39;s Encrypt에서 발급한 도메인 확인 SSL/TLS 인증서를 제공합니다. 각 Pro Production, Staging 및 Starter Production(`master`) 환경에는 해당 환경의 모든 도메인 및 하위 도메인을 포함하는 고유한 인증서가 있습니다. 이러한 인증서는 개발 및 프로덕션을 위해 DNS 구성을 업데이트하면 자동으로 프로비저닝되고 사이트에 업로드됩니다. [SSL/TLS 인증서 제공](../cdn/fastly-configuration.md#provision-ssltls-certificates)을 참조하십시오.
 
 >[!NOTE]
 >
->Let&#39;s Encrypt 인증서를 사용하는 대신 회사에 대해 고유한 확장 유효성 검사 SSL 인증서를 배포하려면 CTA에 문의하거나 [Adobe Commerce 지원 티켓 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket).
+>Let&#39;s Encrypt 인증서를 사용하는 대신 회사에 대해 고유한 확장 유효성 검사 SSL 인증서를 배포하려면 CTA에 문의하거나 [Adobe Commerce 지원 티켓 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)하십시오.
 
 ## 보안 검색 도구 설정
 
@@ -59,13 +59,13 @@ Adobe Commerce on cloud infrastructure 구독의 일부로, Adobe은 Let&#39;s E
 >
 >허용 목록에 추가하다 네트워크 방화벽 규칙에 이러한 IP 주소를 추가하여 도구를 통해 사이트를 스캔할 수 있습니다. 이 도구는 포트 80 및 443에만 요청을 게시합니다.
 
-Security Scan Tool을 사용하면 스토어 웹 사이트를 정기적으로 모니터링하고 알려진 보안 위험, 맬웨어 및 오래된 소프트웨어에 대한 업데이트를 받을 수 있습니다. 이 도구는 클라우드 인프라의 모든 Adobe Commerce 구현 및 버전에서 사용할 수 있는 무료 서비스입니다. 다음을 통해 도구에 액세스합니다. [Commerce Marketplace 계정](https://account.magento.com/customer/account/login).
+Security Scan Tool을 사용하면 스토어 웹 사이트를 정기적으로 모니터링하고 알려진 보안 위험, 맬웨어 및 오래된 소프트웨어에 대한 업데이트를 받을 수 있습니다. 이 도구는 클라우드 인프라의 모든 Adobe Commerce 구현 및 버전에서 사용할 수 있는 무료 서비스입니다. [Commerce Marketplace 계정](https://account.magento.com/customer/account/login)을 통해 도구에 액세스합니다.
 
 - 사이트 보안 상태 및 적용된 보안 업데이트 모니터링
 
 - 보안 업데이트 및 사이트별 알림 수신
 
-다음을 참조하십시오. [사용 안내서](https://docs.magento.com/user-guide/magento/security-scan.html) 보안 검색 도구 설정 및 사용에 대한 자세한 내용 일반적으로 UAT(사용자 승인 테스트)를 시작할 때 이 도구를 사용하기 시작합니다.
+보안 검색 도구 설정 및 사용에 대한 자세한 내용은 [사용 안내서](https://docs.magento.com/user-guide/magento/security-scan.html)를 참조하세요. 일반적으로 UAT(사용자 승인 테스트)를 시작할 때 이 도구를 사용하기 시작합니다.
 
 검색하는 각 사이트는 Security Scan 탭을 통해 등록해야 합니다. 등록 프로세스 중에 면책조항에 동의해야 스캔을 시작할 수 있습니다. 각 검사가 완료되면 사용자에게 알림을 수신하도록 예약과 인증을 모두 제어합니다. 특정 반복 날짜 및 시간에 대한 검사를 예약하거나 필요에 따라 요청 시 검사를 실행할 수 있습니다.
 
@@ -80,17 +80,17 @@ Visbot/2.0 (+http://www.visvo.com/en/webmasters.jsp;bot@visvo.com)
 
 ## 사이트 검사
 
-1. 액세스 권한 [Commerce Marketplace 계정](https://account.magento.com/customer/account/login).
+1. [Commerce Marketplace 계정](https://account.magento.com/customer/account/login)에 액세스하세요.
 
-1. Security Scan 탭을 클릭하고 다음을 선택합니다 **보안 검색으로 이동**.
+1. 보안 검사 탭을 클릭하고 **보안 검사로 이동**&#x200B;을 선택합니다.
 
-1. 다음에서 _작업_ 사이트 열에서 **검사 실행**. 알림 상태가 예약된 검사를 표시합니다.
+1. 사이트에 대한 _작업_ 열에서 **검사 실행**&#x200B;을 선택합니다. 알림 상태가 예약된 검사를 표시합니다.
 
 ### 보고서를 검토하려면
 
 1. 보고서가 완료되면 알림이 표시됩니다.
 
-1. 사이트 행에서 보려는 보고서를 선택합니다. **보고서** 열. 그 주문은 최근에서 가장 오래된 것이다.
+1. 사이트 행의 **보고서** 열에서 보려는 보고서를 선택합니다. 그 주문은 최근에서 가장 오래된 것이다.
 
 보고서에는 검사 실패, 미확인 결과 및 검사 성공 등의 문제가 나열됩니다. 각 항목에서는 검사에 대한 자세한 정보, 조사할 문제 목록, 수행할 작업을 제공합니다. 이러한 작업 중 일부는 보안 패치를 다운로드하고 설치해야 할 수 있습니다. 필요한 패치를 프로덕션 분기에 추가하기 전에 로컬 워크스테이션의 개발 분기에 추가합니다.
 

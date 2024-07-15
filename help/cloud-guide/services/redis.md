@@ -12,29 +12,29 @@ ht-degree: 0%
 
 # Redis 서비스 설정
 
-[레디스](https://redis.io) 는 Adobe Commerce에서 기본적으로 사용하는 Zend 프레임워크 Zend_Cache_Backend_File을 대체하는 선택적 백엔드 캐시 솔루션입니다.
+[Redis](https://redis.io)은(는) Adobe Commerce에서 기본적으로 사용하는 Zend 프레임워크 Zend_Cache_Backend_File을 대체하는 선택적 백엔드 캐시 솔루션입니다.
 
-다음을 참조하십시오 [Redis 구성](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/redis/config-redis.html) 다음에서 _구성 안내서_.
+_구성 가이드_&#x200B;에서 [Redis 구성](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/redis/config-redis.html)을 참조하십시오.
 
 {{service-instruction}}
 
 **Redis를 사용하려면**:
 
-1. 필요한 이름과 유형을 `.magento/services.yaml` 파일.
+1. `.magento/services.yaml` 파일에 필요한 이름과 형식을 추가합니다.
 
    ```yaml
    myredis:
        type: redis:<version>
    ```
 
-   고유한 Redis 구성을 제공하려면 `core_config` 의 키 `.magento/services.yaml` 파일:
+   고유한 Redis 구성을 제공하려면 `.magento/services.yaml` 파일에 `core_config` 키를 추가하십시오.
 
    ```yaml
    cache:
        type: redis:<version>
    ```
 
-1. 에서 관계 구성 `.magento.app.yaml` 파일.
+1. `.magento.app.yaml` 파일에서 관계를 구성합니다.
 
    ```yaml
    runtime:
@@ -51,13 +51,13 @@ ht-degree: 0%
    git add .magento/services.yaml .magento.app.yaml && git commit -m "Enable redis service" && git push origin <branch-name>
    ```
 
-1. [서비스 관계 확인](services-yaml.md#service-relationships).
+1. [서비스 관계를 확인](services-yaml.md#service-relationships)합니다.
 
 {{service-change-tip}}
 
 ## Redis CLI 사용
 
-Redis 관계의 이름이 다음과 같다고 가정합니다. `redis`, 다음을 사용하여 액세스할 수 있습니다. `redis-cli` 도구.
+Redis 관계의 이름이 `redis`이라고 가정하면 `redis-cli` 도구를 사용하여 액세스할 수 있습니다.
 
 1. SSH를 사용하여 Redis가 설치 및 구성된 통합 환경에 연결합니다.
 
@@ -84,7 +84,7 @@ gcc_version:8.3.0
 
 ### Pro 스테이징 및 프로덕션에 있는 Redis
 
-스테이징 또는 프로덕션 환경에 Redis 버전을 설치하려면 `redis-server` 명령:
+스테이징 또는 프로덕션 환경에 Redis 버전을 설치하려면 `redis-server` 명령을 사용합니다.
 
 ```bash
 redis-server -v
@@ -129,9 +129,9 @@ echo $MAGENTO_CLOUD_RELATIONSHIPS | base64 -d | json_pp
 
 Redis 문제 해결에 대한 도움말은 다음 Adobe Commerce 지원 문서를 참조하십시오.
 
-- [Redis 문제 지연 관리자 로그인 또는 체크아웃](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/redis-issue-delay-magento-admin-login-or-checkout.html)
+- [문제 지연 관리자 로그인 또는 체크 아웃](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/redis-issue-delay-magento-admin-login-or-checkout.html)
 - [확장된 Redis 캐시 구현 Adobe Commerce 2.3.5+](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-service-configuration.html)
-- [MDVA-30102: Redis 캐시가 꽉 찼습니다.](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/patches/v1-0-6/mdva-30102-magento-patch-redis-cache-getting-full.html)
-- [Adobe Commerce에 대한 관리 경고: Redis 메모리 경고 경고](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-on-magento-commerce-redis-memory-warning-alert.html)
-- [Adobe Commerce에 대한 관리 경고: Redis 메모리 위험 경고](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-on-magento-commerce-redis-memory-critical-alert.html)
+- [MDVA-30102: Redis 캐시가 가득 참](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/patches/v1-0-6/mdva-30102-magento-patch-redis-cache-getting-full.html)
+- [Adobe Commerce에 대한 관리 경고: 메모리 경고 Redis](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-on-magento-commerce-redis-memory-warning-alert.html)
+- [Adobe Commerce에 대한 관리 경고: 메모리 위험 경고 준비](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-on-magento-commerce-redis-memory-critical-alert.html)
 - [Redis 문제 해결사](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/redis-troubleshooter.html)

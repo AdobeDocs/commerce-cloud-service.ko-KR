@@ -21,13 +21,13 @@ ht-degree: 0%
 
 클라우드 인프라의 Adobe Commerce은 Composer를 사용하여 PHP 패키지를 관리합니다.
 
-다음 `composer.json` 파일은 패키지 목록을 선언하지만 `composer.lock` 파일에는 Adobe Commerce 설치를 빌드하는 데 사용되는 패키지의 전체 목록(각 패키지 및 해당 종속 항목의 전체 버전)이 저장됩니다.
+`composer.json` 파일은 패키지 목록을 선언하지만, `composer.lock` 파일은 Adobe Commerce 설치를 빌드하는 데 사용되는 패키지의 전체 목록(각 패키지 및 해당 종속 항목의 전체 버전)을 저장합니다.
 
-다음 참조 설명서는 `composer.lock` 파일 및 이 패키지는 Adobe Commerce on cloud infrastructure 2.4.7에 포함된 필수 패키지를 다룹니다.
+다음 참조 설명서는 `composer.lock` 파일에서 생성되며 클라우드 인프라 2.4.7의 Adobe Commerce에 포함된 필수 패키지에 대해 설명합니다.
 
 ## 종속성
 
-`magento/magento-cloud-metapackage 2.4.7` 에는 다음과 같은 종속성이 있습니다.
+`magento/magento-cloud-metapackage 2.4.7`에 다음 종속성이 있습니다.
 
 ```config
 fastly/magento2: ^1.2.34
@@ -198,28 +198,28 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-captcha.git">라미나스/라미나스-캡차</a>
+      <a href="https://github.com/laminas/laminas-captcha.git">laminas/laminas-captcha</a>
     </td>
     <td>라이브러리</td>
     <td>Figlet, 이미지, ReCaptcha 등을 사용하여 CAPTCHA를 생성하고 확인합니다.</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-code.git">라미나스/라미나스 코드</a>
+      <a href="https://github.com/laminas/laminas-code.git">laminas/laminas-code</a>
     </td>
     <td>라이브러리</td>
     <td>PHP Reflection API, 정적 코드 스캔 및 코드 생성에 대한 확장</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-config.git">라미나스/라미나스-config</a>
+      <a href="https://github.com/laminas/laminas-config.git">laminas/laminas-config</a>
     </td>
     <td>라이브러리</td>
     <td>는 응용 프로그램 코드 내에서 이 구성 데이터에 액세스하기 위한 중첩된 개체 속성 기반 사용자 인터페이스를 제공합니다</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-crypt.git">라미나스/라미나스 크립트</a>
+      <a href="https://github.com/laminas/laminas-crypt.git">laminas/laminas-crypt</a>
     </td>
     <td>라이브러리</td>
     <td>강력한 암호화 도구 및 암호 해싱</td>
@@ -233,17 +233,17 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-di.git">라미나스/라미나스</a>
+      <a href="https://github.com/laminas/laminas-di.git">laminas/laminas-di</a>
     </td>
     <td>라이브러리</td>
     <td>PSR-11 컨테이너에 대한 자동 종속성 삽입</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-escaper.git">라미나스/라미나스 탈진기</a>
+      <a href="https://github.com/laminas/laminas-escaper.git">laminas/laminas-escaper</a>
     </td>
     <td>라이브러리</td>
-    <td>HTML, HTML 속성, JavaScript, CSS 및 URL을 안전하고 안전하게 이스케이프 처리합니다.</td>
+    <td>HTML, HTML 속성, JavaScript, CSS 및 URL을 안전하고 안전하게 이스케이프 처리</td>
   </tr>
   <tr>
     <td>
@@ -254,21 +254,21 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-feed.git">라미나스/라미나스 공급</a>
+      <a href="https://github.com/laminas/laminas-feed.git">라미나/라미나 피드</a>
     </td>
     <td>라이브러리</td>
     <td>에서는 RSS 및 Atom 피드를 만들고 소비하는 기능을 제공합니다.</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-file.git">라미나스/라미나스 파일</a>
+      <a href="https://github.com/laminas/laminas-file.git">laminas/laminas-file</a>
     </td>
     <td>라이브러리</td>
     <td>PHP 클래스 파일 찾기</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-filter.git">라미나스/라미나스 필터</a>
+      <a href="https://github.com/laminas/laminas-filter.git">laminas/laminas-filter</a>
     </td>
     <td>라이브러리</td>
     <td>프로그래밍 방식으로 데이터 및 파일 필터링 및 정규화</td>
@@ -282,7 +282,7 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-i18n.git">라미나스/라미나스-i18n</a>
+      <a href="https://github.com/laminas/laminas-i18n.git">laminas/laminas-i18n</a>
     </td>
     <td>라이브러리</td>
     <td>애플리케이션에 대한 번역을 제공하고 국제화된 값을 필터링하고 검증합니다.</td>
@@ -296,21 +296,21 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-loader.git">라미나스/라미나스 로더</a>
+      <a href="https://github.com/laminas/laminas-loader.git">laminas/laminas-loader</a>
     </td>
     <td>라이브러리</td>
     <td>자동 로드 및 플러그인 로드 전략</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-mail.git">라미나스/라미나스 메일</a>
+      <a href="https://github.com/laminas/laminas-mail.git">laminas/laminas-mail</a>
     </td>
     <td>라이브러리</td>
     <td>텍스트 및 MIME 호환 다중 파트 전자 메일 메시지를 모두 작성하고 전송하는 일반 기능을 제공합니다.</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-math.git">라미나스/라미나스-수학</a>
+      <a href="https://github.com/laminas/laminas-math.git">laminas/laminas-math</a>
     </td>
     <td>라이브러리</td>
     <td>암호학적으로 안전한 의사 난수를 만들고 큰 정수를 관리합니다.</td>
@@ -331,7 +331,7 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-mvc.git">라미나스/라미나스-mvc</a>
+      <a href="https://github.com/laminas/laminas-mvc.git">laminas/laminas-mvc</a>
     </td>
     <td>라이브러리</td>
     <td>MVC 응용 프로그램, 컨트롤러 및 플러그인을 포함한 Laminas의 이벤트 기반 MVC 계층</td>
@@ -359,14 +359,14 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-router.git">라미나스/라미나스 라우터</a>
+      <a href="https://github.com/laminas/laminas-router.git">laminas/laminas-router</a>
     </td>
     <td>라이브러리</td>
     <td>HTTP 및 콘솔 애플리케이션을 위한 유연한 라우팅 시스템</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-server.git">라미나스/라미나스 서버</a>
+      <a href="https://github.com/laminas/laminas-server.git">laminas/laminas-server</a>
     </td>
     <td>라이브러리</td>
     <td>리플렉션 기반 RPC 서버 만들기</td>
@@ -380,14 +380,14 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-session.git">라미나스/라미나스-세션</a>
+      <a href="https://github.com/laminas/laminas-session.git">laminas/laminas-session</a>
     </td>
     <td>라이브러리</td>
     <td>PHP 세션 및 스토리지에 대한 객체 지향 인터페이스</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-soap.git">라미나스/라미나스 비누</a>
+      <a href="https://github.com/laminas/laminas-soap.git">laminas/laminas-soap</a>
     </td>
     <td>라이브러리</td>
     <td></td>
@@ -401,7 +401,7 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-text.git">라미나스/라미나스 텍스트</a>
+      <a href="https://github.com/laminas/laminas-text.git">laminas/laminas-text</a>
     </td>
     <td>라이브러리</td>
     <td>FIGlets 및 텍스트 기반 표 만들기</td>
@@ -422,7 +422,7 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-view.git">라미나스/라미나스 뷰</a>
+      <a href="https://github.com/laminas/laminas-view.git">laminas/laminas-view</a>
     </td>
     <td>라이브러리</td>
     <td>여러 보기 레이어, 도우미 등을 지원하고 제공하는 유연한 보기 레이어</td>
@@ -485,7 +485,7 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   <tbody>
   <tr>
     <td>
-      <a href="https://github.com/paragonie/sodium_compat.git">파라고니/나트륨 콤파트</a>
+      <a href="https://github.com/paragonie/sodium_compat.git">파라고니/나트륨_호환</a>
     </td>
     <td>라이브러리</td>
     <td>libsodium의 순수 PHP 구현; 존재하는 경우 PHP 확장을 사용합니다.</td>
@@ -506,7 +506,7 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   <tbody>
   <tr>
     <td>
-      <a href="https://github.com/ezyang/htmlpurifier.git">에즈양/htmlclearer</a>
+      <a href="https://github.com/ezyang/htmlpurifier.git">ezyang/htmlclearer</a>
     </td>
     <td>라이브러리</td>
     <td>PHP로 작성된 표준 준수 HTML 필터</td>
@@ -555,14 +555,14 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/CarbonPHP/carbon-doctrine-types.git">카보닐/탄소-도트린-타입</a>
+      <a href="https://github.com/CarbonPHP/carbon-doctrine-types.git">carbonphp/carbon-doctrine-types</a>
     </td>
     <td>라이브러리</td>
     <td>탄소의 원리 사용 유형</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/ChristianRiesen/base32.git">크리스티안 리센/base32</a>
+      <a href="https://github.com/ChristianRiesen/base32.git">christian-riesen/base32</a>
     </td>
     <td>라이브러리</td>
     <td>RFC 4648에 따른 Base32 인코더/디코더</td>
@@ -590,7 +590,7 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/composer/composer.git">작곡가/작곡가</a>
+      <a href="https://github.com/composer/composer.git">작성기/작성기</a>
     </td>
     <td>라이브러리</td>
     <td>Composer를 사용하면 PHP 프로젝트의 종속성을 선언하고, 관리하고, 설치할 수 있습니다. 어디에나 올바른 스택을 유지할 수 있습니다.</td>
@@ -611,42 +611,42 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/composer/semver.git">작곡가/semver</a>
+      <a href="https://github.com/composer/semver.git">작성기/semver</a>
     </td>
     <td>라이브러리</td>
     <td>유틸리티, 버전 제약 조건 구문 분석 및 유효성 검사를 제공하는 Semver 라이브러리입니다.</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/composer/spdx-licenses.git">composer/spdx-licenses</a>
+      <a href="https://github.com/composer/spdx-licenses.git">작성기/spdx 라이선스</a>
     </td>
     <td>라이브러리</td>
     <td>SPDX 라이선스 목록 및 유효성 검사 라이브러리.</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/composer/xdebug-handler.git">composer/xdebug-handler</a>
+      <a href="https://github.com/composer/xdebug-handler.git">작성기/xdebug-handler</a>
     </td>
     <td>라이브러리</td>
     <td>Xdebug 없이 프로세스를 다시 시작합니다.</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/endroid/qr-code.git">엔드로이드/qr-코드</a>
+      <a href="https://github.com/endroid/qr-code.git">endroid/qr-code</a>
     </td>
     <td>라이브러리</td>
     <td>엔드로이드 QR 코드</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/ezimuel/guzzlestreams.git">이지무엘/거즐스트림</a>
+      <a href="https://github.com/ezimuel/guzzlestreams.git">ezimuel/guzzlestreams</a>
     </td>
     <td>라이브러리</td>
     <td>elasticsearch-php와 함께 사용할 구글/스트림 (중단됨)의 포크</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/ezimuel/ringphp.git">이지무엘/링php</a>
+      <a href="https://github.com/ezimuel/ringphp.git">ezimuel/ringphp</a>
     </td>
     <td>라이브러리</td>
     <td>Elasticsearch-php와 함께 사용할 Guzzle/RingPHP (포크)</td>
@@ -702,14 +702,14 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/illuminate/contracts.git">정보 제공/계약</a>
+      <a href="https://github.com/illuminate/contracts.git">설정/계약</a>
     </td>
     <td>라이브러리</td>
     <td>조명 컨트랙트 패키지.</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/illuminate/macroable.git">조명/거시 가능</a>
+      <a href="https://github.com/illuminate/macroable.git">조명/매크로 가능</a>
     </td>
     <td>라이브러리</td>
     <td>조명 마크로블 패키지.</td>
@@ -737,14 +737,14 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/thephpleague/mime-type-detection.git">league/mime-type-탐지</a>
+      <a href="https://github.com/thephpleague/mime-type-detection.git">league/mime-type-detection</a>
     </td>
     <td>라이브러리</td>
     <td>Flysystem에 대한 MIME 유형 감지</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/Seldaek/monolog.git">독백/독백</a>
+      <a href="https://github.com/Seldaek/monolog.git">모노로그/모노로그</a>
     </td>
     <td>라이브러리</td>
     <td>파일, 소켓, 받은 편지함, 데이터베이스 및 다양한 웹 서비스에 로그를 보냅니다.</td>
@@ -765,21 +765,21 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/paragonie/constant_time_encoding.git">단락/constant_time_encoding</a>
+      <a href="https://github.com/paragonie/constant_time_encoding.git">paragonie/constant_time_encoding</a>
     </td>
     <td>라이브러리</td>
     <td>RFC 4648 인코딩의 일정 시간 구현(Base-64, Base-32, Base-16)</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/paragonie/random_compat.git">단락/random_compat</a>
+      <a href="https://github.com/paragonie/random_compat.git">paragonie/random_compat</a>
     </td>
     <td>라이브러리</td>
     <td>PHP 7의 random_bytes() 및 random_int()에 대한 PHP 5.x polyfill</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/MyIntervals/emogrifier.git">펠라고/이모그리퍼</a>
+      <a href="https://github.com/MyIntervals/emogrifier.git">pelago/emogrifier</a>
     </td>
     <td>라이브러리</td>
     <td>CSS 스타일을 HTML 코드의 인라인 스타일 속성으로 변환합니다.</td>
@@ -884,21 +884,21 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/ralouphie/getallheaders.git">레이아웃/getallheaders</a>
+      <a href="https://github.com/ralouphie/getallheaders.git">롤루피/getallheaders</a>
     </td>
     <td>라이브러리</td>
     <td>getallheaders에 대한 폴리필.</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/ramsey/collection.git">램지/컬렉션</a>
+      <a href="https://github.com/ramsey/collection.git">ramsey/collection</a>
     </td>
     <td>라이브러리</td>
     <td>컬렉션을 나타내고 조작하기 위한 PHP 라이브러리입니다.</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/ramsey/uuid.git">램지/uuid</a>
+      <a href="https://github.com/ramsey/uuid.git">ramsey/uuid</a>
     </td>
     <td>라이브러리</td>
     <td>UUID(범용 고유 식별자)를 생성하고 사용하기 위한 PHP 라이브러리입니다.</td>
@@ -968,7 +968,7 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/console.git">교감/콘솔</a>
+      <a href="https://github.com/symfony/console.git">심포니/콘솔</a>
     </td>
     <td>라이브러리</td>
     <td>아름답고 테스트 가능한 명령줄 인터페이스 생성 용이</td>
@@ -982,14 +982,14 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/dependency-injection.git">교감/의존-주입</a>
+      <a href="https://github.com/symfony/dependency-injection.git">symfony/dependency-injection</a>
     </td>
     <td>라이브러리</td>
     <td>애플리케이션에서 객체가 구성되는 방식을 표준화하고 중앙 집중화할 수 있습니다</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/deprecation-contracts.git">동조화/사용 중지 계약</a>
+      <a href="https://github.com/symfony/deprecation-contracts.git">교감/사용 중단 계약</a>
     </td>
     <td>라이브러리</td>
     <td>사용 중단 알림을 트리거하는 일반 함수 및 규칙</td>
@@ -1031,14 +1031,14 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/http-client.git">symfony/http 클라이언트</a>
+      <a href="https://github.com/symfony/http-client.git">symfony/http-client</a>
     </td>
     <td>라이브러리</td>
     <td>HTTP 리소스를 동기식으로 또는 비동기식으로 가져오는 강력한 방법 제공</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/http-client-contracts.git">symfony/http-client-contract</a>
+      <a href="https://github.com/symfony/http-client-contracts.git">symfony/http-client-contracts</a>
     </td>
     <td>라이브러리</td>
     <td>HTTP 클라이언트와 관련된 일반 추상화</td>
@@ -1052,21 +1052,21 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/http-kernel.git">symfony/http 커널</a>
+      <a href="https://github.com/symfony/http-kernel.git">symfony/http-kernel</a>
     </td>
     <td>라이브러리</td>
     <td>요청을 응답으로 변환하는 구조화된 프로세스를 제공합니다.</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/intl.git">교감/국제</a>
+      <a href="https://github.com/symfony/intl.git">symfony/intl</a>
     </td>
     <td>라이브러리</td>
     <td>ICU 라이브러리의 로컬라이제이션 데이터에 대한 액세스를 제공합니다.</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/polyfill-ctype.git">symfony/polyfill-type</a>
+      <a href="https://github.com/symfony/polyfill-ctype.git">symfony/polyfill-ctype</a>
     </td>
     <td>라이브러리</td>
     <td>ctype 함수에 대한 교감 폴리필</td>
@@ -1087,7 +1087,7 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/polyfill-intl-normalizer.git">교감/폴리필-국제-정규화기</a>
+      <a href="https://github.com/symfony/polyfill-intl-normalizer.git">교감/폴리필-intl-normalizer</a>
     </td>
     <td>라이브러리</td>
     <td>국제 표준화 클래스 및 관련 함수에 대한 Symfony polyfill</td>
@@ -1136,7 +1136,7 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/process.git">교감/과정</a>
+      <a href="https://github.com/symfony/process.git">심포니/프로세스</a>
     </td>
     <td>라이브러리</td>
     <td>하위 프로세스에서 명령 실행</td>
@@ -1150,14 +1150,14 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/serializer.git">친숙한/직렬 변환기</a>
+      <a href="https://github.com/symfony/serializer.git">심포니/직렬 변환기</a>
     </td>
     <td>라이브러리</td>
     <td>개체 그래프를 포함한 데이터 구조를 배열 구조나 XML 및 JSON과 같은 다른 형식으로 serialize 및 deserialize하는 작업을 처리합니다.</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/service-contracts.git">교감/서비스 계약</a>
+      <a href="https://github.com/symfony/service-contracts.git">심포니/서비스 계약</a>
     </td>
     <td>라이브러리</td>
     <td>쓰기 서비스와 관련된 일반적인 추상화</td>
@@ -1171,14 +1171,14 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/translation.git">교감/번역</a>
+      <a href="https://github.com/symfony/translation.git">심포니/번역</a>
     </td>
     <td>라이브러리</td>
     <td>애플리케이션을 국제화하기 위한 툴 제공</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/translation-contracts.git">동종/번역 계약</a>
+      <a href="https://github.com/symfony/translation-contracts.git">심포니/번역 계약</a>
     </td>
     <td>라이브러리</td>
     <td>번역과 관련된 일반 요약</td>
@@ -1199,14 +1199,14 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/yaml.git">교감/yaml</a>
+      <a href="https://github.com/symfony/yaml.git">symfony/yaml</a>
     </td>
     <td>라이브러리</td>
     <td>YAML 파일을 로드하고 덤프합니다</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/web-token/jwt-framework.git">web-token/jwt-framework</a>
+      <a href="https://github.com/web-token/jwt-framework.git">웹 토큰/jwt 프레임워크</a>
     </td>
     <td>교향다발</td>
     <td>PHP 및 Symfony 번들을 위한 JSON 개체 서명 및 암호화 라이브러리입니다.</td>
@@ -1227,7 +1227,7 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/zordius/lightncandy.git">조르디우스/라이트캔디</a>
+      <a href="https://github.com/zordius/lightncandy.git">조르디우스/lightncandy</a>
     </td>
     <td>라이브러리</td>
     <td>Handlebars ( http://handlebarsjs.com/ )와 mustache ( http://mustache.github.io/ )의 매우 빠른 PHP 구현입니다.</td>

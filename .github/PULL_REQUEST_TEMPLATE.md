@@ -15,7 +15,7 @@ ht-degree: 0%
 
 - ...
 
-## 상거래 코드에 대한 링크
+## Commerce 코드 링크
 
 <!--  OPTIONAL - REMOVE THIS SECTION IF NOT USED.
 If this pull request references a file in a Magento Open Source or Adobe Commerce codebase repository, add the link here. -->

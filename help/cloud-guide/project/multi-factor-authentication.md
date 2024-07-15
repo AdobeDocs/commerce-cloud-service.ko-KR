@@ -19,40 +19,40 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->MFA는 기본적으로 클라우드 프로젝트에서 활성화되지 않습니다. Adobe Commerce on cloud infrastructure 프로젝트의 계정 소유자는 [Adobe Commerce 지원 티켓 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) 활성화하기 위해. MFA가 활성화되면 프로젝트 환경에 대한 SSH 액세스를 위해 모든 사용자는 Adobe Commerce on cloud infrastructure 계정에서 TFA(2단계 인증)가 활성화되어 있어야 합니다.
+>MFA는 기본적으로 클라우드 프로젝트에서 활성화되지 않습니다. 클라우드 인프라 프로젝트의 Adobe Commerce 계정 소유자가 활성화하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)해야 합니다. MFA가 활성화되면 프로젝트 환경에 대한 SSH 액세스를 위해 모든 사용자는 Adobe Commerce on cloud infrastructure 계정에서 TFA(2단계 인증)가 활성화되어 있어야 합니다.
 
 ## SSH 액세스용 인증서
 
 MFA를 통해 사용자는 OAUTH 액세스 토큰을 Adobe 클라우드 인증자 API에서 생성된 단기 SSH 인증서와 교환할 수 있습니다. 사용자에게 관리자 또는 기여자 역할, 유효한 SSH 키 및 유효한 TFA 코드나 API 토큰이 있는 경우, 클라우드 인프라의 Adobe Commerce은 이러한 자격 증명을 사용하여 임시 SSH 인증서를 생성합니다. 인증서 만료는 1시간으로 설정되지만 현재 세션 중에 자동으로 새로 고쳐집니다.
 
-MFA를 사용하여 프로젝트에 로그인한 후 사용자는 `magento-cloud` SSH 인증서를 생성하는 CLI:
+MFA를 사용하여 프로젝트에 로그인한 후 사용자는 `magento-cloud` CLI를 사용하여 SSH 인증서를 생성해야 합니다.
 
 ```bash
 magento-cloud ssh-cert:load
 ```
 
-다음 `ssh-cert:load` 명령은 SSH 인증서를 생성하고 로컬 사용자의 SSH 에이전트에 설치합니다.
+`ssh-cert:load` 명령은 SSH 인증서를 생성하여 로컬 사용자의 SSH 에이전트에 설치합니다.
 
 ### 로그인 시 인증서 자동 생성
 
-에 인증할 때 SSH 인증서를 자동으로 생성하도록 로컬 환경을 구성할 수 있습니다. `magento-cloud` CLI.
+`magento-cloud` CLI에 인증할 때 SSH 인증서를 자동으로 생성하도록 로컬 환경을 구성할 수 있습니다.
 
-**SSH 인증서 자동 생성을 `magento-cloud` CLI 구성**:
+**SSH 인증서 자동 생성을 `magento-cloud` CLI 구성에 추가하려면**:
 
-1. 로컬 워크스테이션에서 이라는 파일을 만듭니다. `config.yaml` 다음에서 `.magento-cloud` 폴더가 없는 경우 홈 디렉토리에 있는 폴더입니다.
+1. 로컬 워크스테이션에서 홈 디렉터리의 `.magento-cloud` 폴더에 이름이 `config.yaml`인 파일이 없는 경우 만듭니다.
 
    ```bash
    touch ~/.magento-cloud/config.yaml
    ```
 
-1. 에 다음 구성 추가 `config.yaml` 파일.
+1. `config.yaml` 파일에 다음 구성을 추가합니다.
 
    ```yaml
    api:
       auto_load_ssh_cert: true
    ```
 
-1. 사용 `magento-cloud` 다시 인증할 CLI:
+1. `magento-cloud` CLI를 사용하여 다시 인증하십시오.
 
    >로그아웃:
 
@@ -89,11 +89,11 @@ magento-cloud ssh-cert:load
 
 ## TFA와 함께 SSH를 사용하여 환경에 연결
 
-프로젝트에서 MFA가 활성화되어 있으면 SSH를 사용하여 원격 환경에 연결하려면 먼저 계정에서 TFA가 활성화되어 있어야 합니다. 다음을 참조하십시오 [TFA 활성화](user-access.md#enable-tfa-for-cloud-accounts).
+프로젝트에서 MFA가 활성화되어 있으면 SSH를 사용하여 원격 환경에 연결하려면 먼저 계정에서 TFA가 활성화되어 있어야 합니다. [TFA 사용](user-access.md#enable-tfa-for-cloud-accounts)을 참조하십시오.
 
 >[!BEGINSHADEBOX]
 
-**사전 요구 사항:**
+**필수 구성 요소:**
 
 MFA 적용으로 활성화된 프로젝트의 경우 SSH 액세스를 사용하려면 다음 권한 및 계정 설정이 필요합니다.
 
@@ -105,9 +105,9 @@ MFA 적용으로 활성화된 프로젝트의 경우 SSH 액세스를 사용하�
 
 **TFA 사용자 계정 자격 증명과 함께 SSH를 사용하여 연결하려면**:
 
-1. 에 로그인 [내 계정](https://console.adobecommerce.com).
+1. [계정](https://console.adobecommerce.com)에 로그인합니다.
 
-1. 로컬 워크스테이션에서 `magento-cloud` SSH 인증서를 생성하는 CLI입니다.
+1. 로컬 워크스테이션에서 `magento-cloud` CLI를 사용하여 SSH 인증서를 생성합니다.
 
    ```bash
    magento-cloud ssh-cert:load
@@ -153,13 +153,13 @@ MFA 적용으로 활성화된 프로젝트의 경우 SSH 액세스를 사용하�
 
 **TFA 사용자 계정 자격 증명과 함께 SSH를 사용하여 연결하려면**:
 
-1. 에 로그인 [내 계정](https://console.adobecommerce.com) TFA를 사용하여 인증합니다.
+1. [계정](https://console.adobecommerce.com)에 로그인하고 TFA를 사용하여 인증합니다.
 
    >[!NOTE]
    >
-   >계정에 TFA가 활성화되지 않은 경우 활성화해야 합니다. 다음을 참조하십시오 [클라우드 계정에서 TFA 활성화](user-access.md#enable-tfa-for-cloud-accounts).
+   >계정에 TFA가 활성화되지 않은 경우 활성화해야 합니다. [클라우드 계정에서 TFA 사용](user-access.md#enable-tfa-for-cloud-accounts)을 참조하십시오.
 
-1. 로컬 워크스테이션에서 `magento-cloud` SSH 인증서를 생성하는 CLI입니다.
+1. 로컬 워크스테이션에서 `magento-cloud` CLI를 사용하여 SSH 인증서를 생성합니다.
 
    ```bash
    magento-cloud ssh-cert:load
@@ -201,7 +201,7 @@ API 토큰으로 인증하려면 SSH 인증서를 생성해야 합니다. 자동
 
 >[!BEGINSHADEBOX]
 
-**사전 요구 사항:**
+**필수 구성 요소:**
 
 - [클라우드 인프라 환경의 Adobe Commerce에 대한 관리자 또는 기여자 액세스](user-access.md)
 - [계정에서 사용할 수 있는 유효한 API 토큰](user-access.md#create-an-api-token)
@@ -232,9 +232,9 @@ API 토큰을 저장하는 두 가지 옵션이 있습니다.
 
 >[!NOTE]
 >
->API 토큰이 저장되는 경우 `magento-cloud` CLI 가 자동으로 인증되므로 `magento-cloud login` 명령입니다.
+>API 토큰이 저장된 경우 `magento-cloud` CLI가 자동으로 인증되며 `magento-cloud login` 명령을 수행할 필요가 없습니다.
 
-**옵션 1**: API 토큰을 저장할 환경 변수를 만듭니다
+**옵션 1**: API 토큰을 저장할 환경 변수를 만듭니다.
 
 bash_profile에 토큰 작성
 
@@ -242,15 +242,15 @@ bash_profile에 토큰 작성
 echo "export MAGENTO_CLOUD_CLI_TOKEN=<your api token>" >> ~/.bash_profile
 ```
 
-**옵션 2**: 토큰을에 추가 `config.yaml` 파일
+**옵션 2**: 토큰을 `config.yaml` 파일에 추가
 
-1. 로컬 워크스테이션에서 이라는 파일을 만듭니다. `config.yaml` 다음에서 `.magento-cloud` 폴더가 없는 경우 홈 디렉토리에 있는 폴더입니다.
+1. 로컬 워크스테이션에서 홈 디렉터리의 `.magento-cloud` 폴더에 이름이 `config.yaml`인 파일이 없는 경우 만듭니다.
 
    ```bash
    touch ~/.magento-cloud/config.yaml
    ```
 
-1. 에 다음 구성 추가 `config.yaml` 파일.
+1. `config.yaml` 파일에 다음 구성을 추가합니다.
 
    ```yaml
    api:
@@ -267,7 +267,7 @@ ssh abcdef7uyxabce-master-7rqtabc--mymagento@ssh.us-3.magento.cloud "tail -n 10 
 
 ## 문제 해결
 
-다음 정보를 사용하여 다음과 같은 인증 오류로 인한 SSH 연결 요청 실패를 해결하십시오. `access requires MFA` 또는 `permission denied`.
+`access requires MFA` 또는 `permission denied`과(와) 같은 인증 오류로 인해 SSH 연결 요청 오류를 해결하려면 다음 정보를 사용하십시오.
 
 ### 요청이 올바른 인증서를 제공하지 않습니다.
 
@@ -286,21 +286,21 @@ authenticated, but could not connect to service abcdef7uyxabce-master-7rqtabc--m
 
 **TFA 구성 및 인증을 확인하려면**:
 
-1. 에 로그인 [내 계정](https://console.adobecommerce.com).
+1. [계정](https://console.adobecommerce.com)에 로그인합니다.
 
-1. 오른쪽 위 계정 메뉴에서 **[!UICONTROL My Profile]**.
+1. 오른쪽 위 계정 메뉴에서 **[!UICONTROL My Profile]**&#x200B;을(를) 클릭합니다.
 
-1. 다음에서 _내 프로필_ 페이지를 클릭하고 **[!UICONTROL Security]** 탭.
+1. _내 프로필_ 페이지에서 **[!UICONTROL Security]** 탭을 클릭합니다.
 
    TFA가 활성화된 경우 보안 섹션에서 TFA 구성을 관리할 수 있는 옵션을 제공합니다.
 
-1. TFA가 설정되지 않은 경우 **[!UICONTROL Set up application]** 지침에 따라 활성화합니다. 다음을 참조하십시오 [TFA 활성화](user-access.md#enable-tfa-for-cloud-accounts).
+1. TFA가 설정되지 않은 경우 **[!UICONTROL Set up application]**&#x200B;을(를) 클릭하고 지침에 따라 활성화하십시오. [TFA 사용](user-access.md#enable-tfa-for-cloud-accounts)을 참조하십시오.
 
 1. TFA가 구성된 경우 인증을 다시 시도하십시오.
 
 **SSH 인증서를 인증하고 다시 로드하려면**:
 
-1. 사용 `magento-cloud` 다시 인증할 CLI:
+1. `magento-cloud` CLI를 사용하여 다시 인증하십시오.
 
    ```bash
    magento-cloud logout
@@ -318,14 +318,14 @@ authenticated, but could not connect to service abcdef7uyxabce-master-7rqtabc--m
 
 ### 권한 거부됨
 
-SSH 키가 없거나 유효하지 않은 경우 SSH 연결 요청은 `Permission denied (publickey)` 오류.
+SSH 키가 없거나 잘못된 경우 SSH 연결 요청이 `Permission denied (publickey)` 오류를 반환합니다.
 
 ```terminal
 Hello user-test (UUID: abaacca12-5cd1-4b123-9096-411add578998), you successfully authenticated, but could not connect to service oh2wi6klp5ytk-mc-35985-integration-nnulm4a--mymagento (reason: service doesn't exist or you do not have access to it)
 oh2wi6klp5ytk-mc-35985-integration-nnulm4a--mymagento@ssh.eu-3.magento.cloud: Permission denied (publickey).
 ```
 
-문제를 해결하려면 현재 세션에 SSH 키를 추가하거나 SSH 구성 파일을 업데이트하여 SSH 키를 자동으로 로드합니다. 다음을 참조하십시오 [공개 SSH 키 추가](../development/secure-connections.md#add-an-ssh-public-key-to-your-account).
+문제를 해결하려면 현재 세션에 SSH 키를 추가하거나 SSH 구성 파일을 업데이트하여 SSH 키를 자동으로 로드합니다. [공개 SSH 키 추가](../development/secure-connections.md#add-an-ssh-public-key-to-your-account)를 참조하십시오.
 
 ### MFA가 없는 프로젝트에 액세스할 수 없음
 
@@ -341,17 +341,17 @@ ssh abcdef7uyxabce-master-7rqtabc--mymagento@ssh.us-3.magento.cloud
 abcdef7uyxabce-master-7rqtabc--mymagento@ssh.us-3.magento.cloud: Permission denied (publickey).
 ```
 
-SSH 인증서 생성 중에 `magento-cloud` CLI는 로컬 환경에 추가 SSH 키를 추가합니다. 로컬 SSH 구성에 프로젝트 액세스용 SSH 키가 포함되지 않은 경우 기본적으로 이 키가 사용됩니다.
+SSH 인증서를 생성하는 동안 `magento-cloud` CLI는 로컬 환경에 추가 SSH 키를 추가합니다. 로컬 SSH 구성에 프로젝트 액세스용 SSH 키가 포함되지 않은 경우 기본적으로 이 키가 사용됩니다.
 
 **로컬 구성에 SSH 키를 추가하려면**:
 
-1. 만들기 `config` 파일이 없는 경우 삭제합니다.
+1. `config` 파일이 없으면 만듭니다.
 
    ```bash
    touch ~/.ssh/config
    ```
 
-1. 추가 `IdentityFile` 구성.
+1. `IdentityFile` 구성을 추가합니다.
 
    ```yaml
    Host *
@@ -360,4 +360,4 @@ SSH 인증서 생성 중에 `magento-cloud` CLI는 로컬 환경에 추가 SSH �
 
 >[!NOTE]
 >
->여러 개의 SSH 키를 추가하여 지정할 수 있습니다 `IdentityFile` 구성에 대한 항목입니다.
+>구성에 여러 `IdentityFile` 항목을 추가하여 여러 SSH 키를 지정할 수 있습니다.

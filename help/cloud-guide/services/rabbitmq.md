@@ -10,21 +10,21 @@ ht-degree: 0%
 
 ---
 
-# 설정 [!DNL RabbitMQ] 서비스
+# [!DNL RabbitMQ] 서비스 설정
 
-다음 [MQF(메시지 큐 프레임워크)](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html) 는 을 허용하는 Adobe Commerce 내의 시스템입니다. [모듈](https://glossary.magento.com/module) 메시지를 대기열에 게시합니다. 또한 비동기적으로 메시지를 수신하는 소비자도 정의합니다.
+[MQF(메시지 큐 프레임워크)](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html)은(는) [모듈](https://glossary.magento.com/module)이(가) 메시지를 큐에 게시할 수 있도록 하는 Adobe Commerce 내의 시스템입니다. 또한 비동기적으로 메시지를 수신하는 소비자도 정의합니다.
 
-MQF는 [RabbitMQ](https://www.rabbitmq.com/) 는 메시지를 보내고 받는 확장 가능한 플랫폼을 제공하는 메시징 브로커입니다. 게재되지 않은 메시지를 저장하는 메커니즘도 포함됩니다. [!DNL RabbitMQ] 는 AMQP(고급 메시지 대기열 프로토콜) 0.9.1 사양을 기반으로 합니다.
+MQF는 [RabbitMQ](https://www.rabbitmq.com/)을(를) 메시징 브로커로 사용하여 메시지를 보내고 받는 확장 가능한 플랫폼을 제공합니다. 게재되지 않은 메시지를 저장하는 메커니즘도 포함됩니다. [!DNL RabbitMQ]은(는) AMQP(고급 메시지 대기열 프로토콜) 0.9.1 사양을 기반으로 합니다.
 
 >[!WARNING]
 >
->다음과 같이 기존 AMQP 기반 서비스를 사용하는 것이 좋습니다. [!DNL RabbitMQ], Adobe Commerce on cloud infrastructure를 사용하여 자동으로 만드는 대신 [`QUEUE_CONFIGURATION`](../environment/variables-deploy.md#queue_configuration) 사이트에 연결하기 위한 환경 변수입니다.
+>[!DNL RabbitMQ]과(와) 같은 기존 AMQP 기반 서비스를 사용하는 경우 클라우드 인프라의 Adobe Commerce을 사용하여 서비스를 만드는 대신 [`QUEUE_CONFIGURATION`](../environment/variables-deploy.md#queue_configuration) 환경 변수를 사용하여 사이트에 연결합니다.
 
 {{service-instruction}}
 
-**RabbitMQ을 활성화하려면**:
+**RabbitMQ을 사용하려면**:
 
-1. 필요한 이름, 유형 및 디스크 값(MB)을 `.magento/services.yaml` 설치된 RabbitMQ 버전과 함께 파일입니다.
+1. 설치된 RabbitMQ 버전과 함께 필요한 이름, 유형 및 디스크 값(MB)을 `.magento/services.yaml` 파일에 추가합니다.
 
    ```yaml
    rabbitmq:
@@ -32,7 +32,7 @@ MQF는 [RabbitMQ](https://www.rabbitmq.com/) 는 메시지를 보내고 받는 �
        disk: 1024
    ```
 
-1. 에서 관계 구성 `.magento.app.yaml` 파일.
+1. `.magento.app.yaml` 파일에서 관계를 구성합니다.
 
    ```yaml
    relationships:
@@ -53,7 +53,7 @@ MQF는 [RabbitMQ](https://www.rabbitmq.com/) 는 메시지를 보내고 받는 �
    git push origin <branch-name>
    ```
 
-1. [서비스 관계 확인](services-yaml.md#service-relationships).
+1. [서비스 관계를 확인](services-yaml.md#service-relationships)합니다.
 
 {{service-change-tip}}
 
@@ -67,7 +67,7 @@ MQF는 [RabbitMQ](https://www.rabbitmq.com/) 는 메시지를 보내고 받는 �
 
 ### 로컬 개발 환경에서 연결
 
-1. 에 로그인합니다 `magento-cloud` CLI 및 프로젝트:
+1. `magento-cloud` CLI 및 프로젝트에 로그인합니다.
 
    ```bash
    magento-cloud login
@@ -85,7 +85,7 @@ MQF는 [RabbitMQ](https://www.rabbitmq.com/) 는 메시지를 보내고 받는 �
    magento-cloud ssh
    ```
 
-1. 에서 RabbitMQ 연결 세부 정보 및 로그인 자격 증명을 검색합니다. [$MAGENTO_클라우드_관계](../application/properties.md#relationships) 변수:
+1. [$CLOUD_RELATIONSHIPS](../application/properties.md#relationships) 변수에서 RabbitMQ MAGENTO 연결 세부 정보 및 로그인 자격 증명을 검색합니다.
 
    ```bash
    echo $MAGENTO_CLOUD_RELATIONSHIPS | base64 -d | json_pp
@@ -114,23 +114,23 @@ MQF는 [RabbitMQ](https://www.rabbitmq.com/) 는 메시지를 보내고 받는 �
    }
    ```
 
-1. RabbitMQ으로 로컬 포트 전달을 활성화합니다(프로젝트가 US-3, EU-5 또는 AP-3 지역과 같은 다른 지역에 있는 경우 대용). ``us-3``/``eu-5``/``ap-3`` 대상 ``us``)
+1. RabbitMQ으로 로컬 포트 전달을 활성화합니다(프로젝트가 US-3, EU-5 또는 AP-3 지역과 같은 다른 지역에 있는 경우 ``us``을(를) ``us-3``/``eu-5``/``ap-3``(으)로 대체)
 
    ```bash
    ssh -L <port-number>:rabbitmq.internal:<port-number> <project-ID>-<branch-ID>@ssh.us.magentosite.cloud
    ```
 
-   다음 위치에서 RabbitMQ 관리 웹 인터페이스에 액세스하는 예제 `http://localhost:15672` 은(는)
+   `http://localhost:15672`에서 RabbitMQ 관리 웹 인터페이스에 액세스하는 예는 다음과 같습니다.
 
    ```bash
    ssh -L 15672:rabbitmq.internal:15672 <project-ID>-<branch-ID>@ssh.us.magentosite.cloud
    ```
 
-1. 세션이 열려 있는 동안 로컬 워크스테이션에서 원하는 RabbitMQ 클라이언트를 시작할 수 있습니다. 이 클라이언트은에 연결하도록 구성되어 있습니다. `localhost:<portnumber>` Magento_CLOUD_RELATIONSHIPS 변수의 포트 번호, 사용자 이름 및 암호 정보 사용.
+1. 세션이 열려 있는 동안 로컬 워크스테이션에서 원하는 RabbitMQ 클라이언트를 시작할 수 있습니다. MAGENTO_CLOUD_RELATIONSHIPS 변수의 포트 번호, 사용자 이름 및 암호 정보를 사용하여 `localhost:<portnumber>`에 연결하도록 구성되었습니다.
 
 ### 응용 프로그램에서 연결
 
-애플리케이션에서 실행 중인 RabbitMQ에 연결하려면 다음과 같은 클라이언트를 설치합니다. [amqp-utils](https://github.com/dougbarth/amqp-utils)를 프로젝트 종속성으로 사용 `.magento.app.yaml` 파일.
+응용 프로그램에서 실행 중인 RabbitMQ에 연결하려면 `.magento.app.yaml` 파일에 프로젝트 종속성으로 [amqp-utils](https://github.com/dougbarth/amqp-utils)과(와) 같은 클라이언트를 설치합니다.
 
 For example,
 
@@ -140,8 +140,8 @@ dependencies:
         amqp-utils: "0.5.1"
 ```
 
-PHP 컨테이너에 로그인하면 `amqp-` 대기열을 관리하는 데 사용할 수 있는 명령입니다.
+PHP 컨테이너에 로그인하면 대기열을 관리하는 데 사용할 수 있는 `amqp-` 명령을 입력합니다.
 
 ### PHP 응용 프로그램에서 연결
 
-PHP 응용 프로그램을 사용하여 RabbitMQ에 연결하려면 PHP를 추가합니다 [라이브러리](https://glossary.magento.com/library) 소스 트리에 연결합니다.
+PHP 응용 프로그램을 사용하여 RabbitMQ에 연결하려면 소스 트리에 PHP [라이브러리](https://glossary.magento.com/library)를 추가하십시오.

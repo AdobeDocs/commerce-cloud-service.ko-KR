@@ -14,24 +14,24 @@ ht-degree: 0%
 
 # 배포 추적
 
-New Relic을 활성화할 수 있습니다 _변경 내용 추적_ Commerce on cloud infrastructure 프로젝트에서 배포 이벤트를 모니터링하는 기능입니다.
+New Relic _변경 내용 추적_ 기능을 사용하여 Commerce on cloud infrastructure 프로젝트에서 배포 이벤트를 모니터링할 수 있습니다.
 
-배포 데이터 수집은 배포 변경이 CPU, 메모리, 응답 시간 등과 같은 전체 성능에 미치는 영향을 분석하는 데 도움이 됩니다. 다음을 참조하십시오 [NerdGraph를 사용하여 변경 내용 추적](https://docs.newrelic.com/docs/change-tracking/change-tracking-graphql/) 다음에서 _New Relic 설명서_.
+배포 데이터 수집은 배포 변경이 CPU, 메모리, 응답 시간 등과 같은 전체 성능에 미치는 영향을 분석하는 데 도움이 됩니다. _New Relic 설명서_&#x200B;에서 [NerdGraph를 사용하여 변경 내용 추적](https://docs.newrelic.com/docs/change-tracking/change-tracking-graphql/)을 참조하십시오.
 
 >[!PREREQUISITES]
 >
->- `NR_API_URL`: New Relic API 엔드포인트, 이 경우 NerdGraph API URL `https://api.newrelic.com/graphql`
->- `NR_API_KEY`: 사용자 키를 만듭니다. 다음을 참조하십시오. [New Relic API 키](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys) 다음에서 _New Relic_ 설명서를 참조하십시오.
->- `NR_APP_GUID`: New Relic에 데이터를 보고하는 엔티티에 고유 ID(GUID)가 있습니다. 예를 들어, 스테이징 환경에서 활성화하려면 스테이징 환경을 조정합니다 `NR_APP_GUID` 을 사용하는 클라우드 변수 _스테이징 엔티티 GUID_ New Relic에서. 다음을 참조하십시오. [New Relic 엔티티에 대해 알아보기](https://docs.newrelic.com/docs/new-relic-solutions/new-relic-one/core-concepts/what-entity-new-relic/) 및 [NerdGraph 자습서: 엔티티 데이터 보기](https://docs.newrelic.com/docs/apis/nerdgraph/examples/nerdgraph-entities-api-tutorial/) 다음에서 _New Relic_ 설명서를 참조하십시오.
+>- `NR_API_URL`: New Relic API 끝점(이 경우 NerdGraph API URL `https://api.newrelic.com/graphql`)
+>- `NR_API_KEY`: 사용자 키를 만듭니다. _New Relic_ 설명서에서 [New Relic API 키](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys)를 참조하십시오.
+>- `NR_APP_GUID`: New Relic에 데이터를 보고하는 엔터티에 고유 ID(GUID)가 있습니다. 예를 들어 스테이징 환경에서 활성화하려면 New Relic의 _스테이징 엔터티 GUID_&#x200B;를 사용하여 스테이징 환경 `NR_APP_GUID` 클라우드 변수를 조정하십시오. _New Relic_ 설명서에서 [New Relic 엔터티에 대해 알아보기](https://docs.newrelic.com/docs/new-relic-solutions/new-relic-one/core-concepts/what-entity-new-relic/) 및 [NerdGraph 자습서: 엔터티 데이터 보기](https://docs.newrelic.com/docs/apis/nerdgraph/examples/nerdgraph-entities-api-tutorial/)를 참조하십시오.
 
 ## 배포 추적 활성화
 
-다음을 만들어 New Relic에서 상거래 프로젝트 배포 이벤트 추적 _script_ 통합.
+_스크립트_ 통합을 만들어 New Relic에서 Commerce 프로젝트 배포 이벤트를 추적합니다.
 
-**추적 배포를 활성화하려면**:
+**추적 배포를 사용하려면**:
 
 1. 로컬 워크스테이션에서 프로젝트 디렉터리로 변경합니다.
-1. 만들기 `action-integration.js` 파일. 다음 코드를 복사하여 `action-integration.js` 파일 및 저장:
+1. `action-integration.js` 파일을 만듭니다. 다음 코드를 복사하여 `action-integration.js` 파일에 붙여 넣고 저장합니다.
 
    ```javascript
    function trackDeployments() {
@@ -91,7 +91,7 @@ New Relic을 활성화할 수 있습니다 _변경 내용 추적_ Commerce on cl
    trackDeployments();
    ```
 
-1. 만들기 _script_ 를 사용한 통합 `magento-cloud` CLI 명령 및 참조 `action-integration.js` 파일.
+1. `magento-cloud` CLI 명령을 사용하여 _script_ 통합을 만들고 `action-integration.js` 파일을 참조합니다.
 
    ```bash
    magento-cloud integration:add --type script --events='environment.restore, environment.push, environment.branch, environment.activate, environment.synchronize, environment.initialize, environment.merge, environment.redeploy, environment.variable.create, environment.variable.delete, environment.variable.update' --file ./action-integration.js --project=<YOUR_PROJECT_ID> --environments=<YOUR_ENVIRONMENT_ID>
@@ -191,7 +191,7 @@ New Relic을 활성화할 수 있습니다 _변경 내용 추적_ Commerce on cl
    Created integration 767u4hathojjw (type: script)
    ```
 
-   선택적으로 다음을 사용하여 통합을 확인하고 통합 ID를 확인할 수 있습니다. `magento-cloud integration:list`
+   필요한 경우 `magento-cloud integration:list`을(를) 사용하여 통합을 확인하고 통합 ID를 확인할 수 있습니다.
 
 1. 사전 요구 사항을 사용하여 환경 변수를 만듭니다.
 
@@ -220,10 +220,10 @@ New Relic을 활성화할 수 있습니다 _변경 내용 추적_ Commerce on cl
    {"data":{"changeTrackingCreateDeployment":{"deploymentId":"some-deployment-id","entityGuid":"SomeGUIDhere"}}}
    ```
 
-1. 에 로그인 [New Relic 계정](https://login.newrelic.com/login).
+1. [New Relic 계정](https://login.newrelic.com/login)에 로그인합니다.
 
-1. Explorer 탐색 메뉴에서 **[!UICONTROL APM & Services]**. 환경 선택 [!UICONTROL Name] 및 [!UICONTROL Account].
+1. Explorer 탐색 메뉴에서 **[!UICONTROL APM & Services]**&#x200B;을(를) 클릭합니다. 환경 [!UICONTROL Name] 및 [!UICONTROL Account]을(를) 선택하십시오.
 
-1. 아래 _이벤트_, 클릭 **[!UICONTROL Change tracking]**.
+1. _이벤트_&#x200B;에서 **[!UICONTROL Change tracking]**&#x200B;을(를) 클릭합니다.
 
    ![배포](../../assets/new-relic/deployments.png)

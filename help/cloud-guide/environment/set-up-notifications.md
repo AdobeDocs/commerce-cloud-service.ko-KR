@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 알림 설정
 
-기본적으로 클라우드 인프라의 Adobe Commerce은 빌드 및 배포 작업을 `app/var/log/cloud.log` Adobe Commerce 루트 응용 프로그램 디렉터리 내에 있는 파일입니다. 원할 경우 Slack 및 이메일과 같은 메시징 시스템에 로그를 전송하여 실시간 알림을 받을 수 있습니다.
+기본적으로 클라우드 인프라의 Adobe Commerce은 Adobe Commerce 루트 응용 프로그램 디렉터리 내의 `app/var/log/cloud.log` 파일에 빌드 및 배포 작업을 기록합니다. 원할 경우 Slack 및 이메일과 같은 메시징 시스템에 로그를 전송하여 실시간 알림을 받을 수 있습니다.
 
 예를 들어 Slack 메시지를 전송하여 배포가 실패할 때 그룹의 사용자에게 경고하고 무엇이 잘못되었는지 조사할 수 있습니다.
 
@@ -35,9 +35,9 @@ ht-degree: 0%
 알림을 구성하려면:
 
 1. 로컬 워크스테이션에서 프로젝트 디렉터리로 변경합니다.
-1. 다음에서 `.magento.env.yaml` 프로젝트 루트에 파일을 추가하고 기본 알림을 포함한 메시징 시스템 설정을 추가합니다. [로그 수준](log-handlers.md#log-levels).
+1. 프로젝트 루트의 `.magento.env.yaml` 파일에서 기본 알림 [로그 수준](log-handlers.md#log-levels)을(를) 포함한 메시징 시스템 설정을 추가합니다.
 
-   예를 들어 두 Slack 모두를 구성하려면 _및_ 이메일 구성에서 다음을 사용합니다.
+   예를 들어 Slack _과(와)_ 전자 메일 구성을 모두 구성하려면 다음을 사용하십시오.
 
    ```yaml
    log:
@@ -80,10 +80,10 @@ log:
     min_level: "info"
 ```
 
-- `token`- SLACK [사용자 토큰](https://api.slack.com/docs/token-types#user). 사용자 토큰은 클라우드 인프라의 Adobe Commerce에서 메시지를 보내도록 승인합니다.
-- `channel`—클라우드 인프라에서 알림을 보내는 Slack 채널 Adobe Commerce의 이름입니다.
-- `username`—Cloud Infrastructure의 사용자 이름 Adobe Commerce은 를 사용하여 Slack으로 알림 메시지를 보냅니다.
-- `min_level`—알림 메시지의 최소 로그 수준입니다. 다음을 사용하는 것이 좋습니다. `info`.
+- `token`—Slack [사용자 토큰](https://api.slack.com/docs/token-types#user). 사용자 토큰은 클라우드 인프라의 Adobe Commerce에서 메시지를 보내도록 승인합니다.
+- `channel` - 클라우드 인프라에서 알림을 보내는 Slack 채널 Adobe Commerce의 이름입니다.
+- `username` - Cloud Infrastructure의 사용자 이름 Adobe Commerce은 Slack에서 알림 메시지를 보내는 데 사용합니다.
+- `min_level`—알림 메시지의 최소 로그 수준입니다. `info`을(를) 사용하는 것이 좋습니다.
 
 ### 이메일 구성 예
 
@@ -102,7 +102,7 @@ log:
     min_level: "notice"
 ```
 
-- `to`—클라우드 인프라의 이메일 주소 Adobe Commerce에서 알림 메시지를 보냅니다.
-- `from`—수신자에게 알림 메시지를 보낼 이메일 주소입니다.
-- `subject`—이메일에 대한 설명입니다.
-- `min_level`—알림 메시지의 최소 로그 수준입니다. 다음을 사용하는 것이 좋습니다. `notice` 또는 `warning`.
+- `to` - 클라우드 인프라의 이메일 주소 Adobe Commerce에서 알림 메시지를 보냅니다.
+- `from` - 받는 사람에게 알림 메시지를 보낼 전자 메일 주소입니다.
+- `subject`—전자 메일에 대한 설명입니다.
+- `min_level`—알림 메시지의 최소 로그 수준입니다. `notice` 또는 `warning`을(를) 사용하는 것이 좋습니다.

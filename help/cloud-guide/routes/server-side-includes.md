@@ -12,9 +12,9 @@ ht-degree: 0%
 
 # 서버측 포함
 
-[서버측 포함](https://nginx.org/en/docs/http/ngx_http_ssi_module.html) (SSI)는 페이지가 렌더링되는 동안 서버에서 평가되는 HTML 페이지의 지시문입니다. SSI를 사용하면 전체 페이지를 제공하지 않고 동적으로 생성된 콘텐츠를 기존 HTML 페이지에 추가할 수 있습니다.
+[Server-side includes](https://nginx.org/en/docs/http/ngx_http_ssi_module.html)(SSI)는 페이지가 렌더링되는 동안 서버에서 평가되는 HTML 페이지의 지시문입니다. SSI를 사용하면 전체 페이지를 제공하지 않고 동적으로 생성된 콘텐츠를 기존 HTML 페이지에 추가할 수 있습니다.
 
-에서 경로별로 SSI를 활성화 또는 비활성화할 수 있습니다. `.magento/routes.yaml`; 예:
+`.magento/routes.yaml`에서 경로별로 SSI를 활성화하거나 비활성화할 수 있습니다. 예:
 
 ```yaml
     "http://{default}/":
@@ -31,18 +31,18 @@ ht-degree: 0%
             enabled: true
 ```
 
-SSI를 사용하면 서버가 기존의 모든 HTML을 기준으로 페이지의 일부를 채우도록 하는 HTML 응답 지시문에 을 포함할 수 있습니다 [캐싱 구성](caching.md).
+SSI를 사용하면 기존 [캐싱 구성](caching.md)을 기준으로 서버가 HTML의 일부를 채우도록 하는 HTML 응답 지시문에 을 포함할 수 있습니다.
 
 다음 예제에서는 동적 날짜 컨트롤을 페이지 맨 위에 삽입하고 600초마다 업데이트되는 다른 날짜 컨트롤을 맨 아래에 삽입하는 방법을 보여 줍니다.
 
-다음과 같이 페이지에 추가합니다. `/index.php`:
+`/index.php`과(와) 같은 페이지에 다음 내용을 추가하십시오.
 
 ```php?start_inline=1
 echo date(DATE_RFC2822);
 <!--#include virtual="time.php" -->
 ```
 
-다음에 추가 `time.php`:
+`time.php`에 다음 추가:
 
 ```php?start_inline=1
 header("Cache-Control: max-age=600");

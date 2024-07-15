@@ -12,39 +12,39 @@ ht-degree: 0%
 
 # 스타터 아키텍처
 
-Adobe Commerce on cloud infrastructure Starter 아키텍처는 최대 **4** 환경(다음 포함) `master` 초기 프로젝트 코드, 스테이징 환경 및 최대 2개의 통합 환경이 포함된 환경.
+Adobe Commerce on cloud infrastructure Starter 아키텍처는 초기 프로젝트 코드, 스테이징 환경 및 최대 2개의 통합 환경을 포함하는 `master` 환경을 포함하여 최대 **4개** 환경을 지원합니다.
 
 모든 환경은 PaaS(Platform as a Service) 컨테이너에 있습니다. 이러한 컨테이너는 서버 그리드의 매우 제한된 컨테이너 내에 배포됩니다. 이러한 환경은 로컬 작업 영역에서 푸시된 분기의 배포된 코드 변경 사항을 수락하는 읽기 전용입니다. 각 환경은 데이터베이스와 웹 서버를 제공합니다.
 
-원하는 개발 및 분기 방법을 사용할 수 있습니다. 프로젝트에 대한 초기 액세스 권한을 얻으면 `staging` 의 환경 `master` 환경. 그런 다음 `integration` 에서 분기하는 환경 `staging`.
+원하는 개발 및 분기 방법을 사용할 수 있습니다. 프로젝트에 처음 액세스하면 `master` 환경에서 `staging` 환경을 만듭니다. 그런 다음 `staging`에서 분기하여 `integration` 환경을 만듭니다.
 
 ## 초보자 환경 아키텍처
 
 다음 다이어그램은 Starter 환경의 계층적 관계를 보여 줍니다.
 
-![스타터 프로젝트에 대한 높은 수준 보기](../../assets/starter/architecture.png)
+![시작 프로젝트에 대한 높은 수준의 보기](../../assets/starter/architecture.png)
 
 ## 프로덕션 환경
 
-프로덕션 환경은 공개 대상 단일 및 다중 사이트 스토어를 실행하는 클라우드 인프라에 Adobe Commerce을 배포하기 위한 소스 코드를 제공합니다. 프로덕션 환경에서는 `master` 분기 를 사용하여 웹 서버, 데이터베이스, 구성된 서비스 및 애플리케이션 코드를 구성하고 활성화할 수 있습니다.
+프로덕션 환경은 공개 대상 단일 및 다중 사이트 스토어를 실행하는 클라우드 인프라에 Adobe Commerce을 배포하기 위한 소스 코드를 제공합니다. 프로덕션 환경에서는 `master` 분기의 코드를 사용하여 웹 서버, 데이터베이스, 구성된 서비스 및 응용 프로그램 코드를 구성하고 사용하도록 설정합니다.
 
-이유: `production` 환경은 읽기 전용입니다. `integration` 코드 변경을 수행할 환경에서 `integration` 끝 `staging`, 그리고 마지막으로 `production` 환경. 다음을 참조하십시오 [스토어 배포](../deploy/staging-production.md) 및 [사이트 시작](../launch/overview.md).
+`production` 환경은 읽기 전용이므로 `integration` 환경을 사용하여 코드를 변경하고, `integration`에서 `staging`(으)로, 그리고 마지막으로 `production` 환경으로 배포합니다. [스토어 배포](../deploy/staging-production.md) 및 [사이트 시작](../launch/overview.md)을 참조하세요.
 
-Adobe은 `staging` 로 푸시하기 전에 분기 `master` 분기: `production` 환경.
+Adobe은 `production` 환경에 배포되는 `master` 분기로 푸시하기 전에 `staging` 분기에서 완전히 테스트하는 것을 권장합니다.
 
 ## 스테이징 환경
 
-Adobe은 라는 분기를 만들 것을 권장합니다. `staging` 출처: `master`. 다음 `staging` branch는 스테이징 환경에 코드를 배포하여 코드, 모듈 및 확장, 결제 게이트웨이, 배송, 제품 데이터 등을 테스트하는 사전 프로덕션 환경을 제공합니다. 이 환경은 Fastly, New Relic APM 및 검색을 포함하여 프로덕션 환경에 맞게 모든 서비스를 구성할 수 있도록 제공합니다.
+Adobe은 `master`에서 `staging`(이)라는 분기를 만들 것을 권장합니다. `staging` 분기는 스테이징 환경에 코드를 배포하여 코드, 모듈 및 확장, 결제 게이트웨이, 배송, 제품 데이터 등을 테스트하는 사전 프로덕션 환경을 제공합니다. 이 환경은 Fastly, New Relic APM 및 검색을 포함하여 프로덕션 환경에 맞게 모든 서비스를 구성할 수 있도록 제공합니다.
 
 이 안내서의 추가 섹션에서는 보안 스테이징 환경에서 최종 코드 배포 및 프로덕션 수준 상호 작용을 테스트하는 방법에 대한 지침을 제공합니다. 최상의 성능 및 기능 테스트를 위해 데이터베이스를 스테이징 환경으로 복제하십시오.
 
 >[!WARNING]
 >
->Adobe은 프로덕션 환경에 배포하기 전에 스테이징 환경에서 모든 판매자와 고객 상호 작용을 테스트할 것을 권장합니다. 다음을 참조하십시오 [스토어 배포](../deploy/staging-production.md) 및 [배포 테스트](../test/staging-and-production.md).
+>Adobe은 프로덕션 환경에 배포하기 전에 스테이징 환경에서 모든 판매자와 고객 상호 작용을 테스트할 것을 권장합니다. [스토어 배포](../deploy/staging-production.md) 및 [배포 테스트](../test/staging-and-production.md)를 참조하세요.
 
 ## 통합 환경
 
-개발자는 `integration` 개발, 배포 및 테스트할 환경:
+개발자는 `integration` 환경을 사용하여 다음을 개발, 배포 및 테스트합니다.
 
 - Adobe Commerce 애플리케이션 코드
 
@@ -70,7 +70,7 @@ Adobe은 라는 분기를 만들 것을 권장합니다. `staging` 출처: `mast
 
 - cron 작업을 비활성화하고 필요에 따라 수동으로 실행
 
-최대 개의 **2** 활성 통합 환경. 에서 분기를 생성하여 통합 환경을 만듭니다. `staging` 분기입니다. 통합 환경을 만들 때 환경 이름이 분기 이름과 일치합니다. 통합 환경은 웹 서버와 데이터베이스를 포함한다. 모든 서비스가 포함되지 않습니다. 예를 들어 Fastly CDN 및 New Relic은 사용할 수 없습니다.
+최대 **2개**&#x200B;의 활성 통합 환경을 사용할 수 있습니다. `staging` 분기에서 분기를 만들어 통합 환경을 만듭니다. 통합 환경을 만들 때 환경 이름이 분기 이름과 일치합니다. 통합 환경은 웹 서버와 데이터베이스를 포함한다. 모든 서비스가 포함되지 않습니다. 예를 들어 Fastly CDN 및 New Relic은 사용할 수 없습니다.
 
 코드 스토리지에 대한 비활성 분기의 수는 제한이 없습니다. 비활성 분기에 액세스하고, 확인하고, 테스트하려면 해당 분기를 활성화해야 합니다
 
@@ -78,7 +78,7 @@ Adobe은 라는 분기를 만들 것을 권장합니다. `staging` 출처: `mast
 
 ## 프로덕션 및 스테이징 기술 스택
 
-프로덕션 및 스테이징 환경에는 다음 기술이 포함됩니다. 다음을 통해 이러한 기술을 수정하고 구성할 수 있습니다. [`.magento.app.yaml`](../application/configure-app-yaml.md) 파일.
+프로덕션 및 스테이징 환경에는 다음 기술이 포함됩니다. [`.magento.app.yaml`](../application/configure-app-yaml.md) 파일을 통해 이러한 기술을 수정하고 구성할 수 있습니다.
 
 - HTTP 캐싱 및 CDN용 Fastly
 - PHP-FPM과 대화하는 Nginx 웹 서버, 여러 작업자가 있는 하나의 인스턴스
@@ -89,7 +89,7 @@ Adobe은 라는 분기를 만들 것을 권장합니다. `staging` 출처: `mast
 
 ### 서비스
 
-클라우드 인프라의 Adobe Commerce은 현재 PHP, MySQL(MariaDB), Elasticsearch(Adobe Commerce 2.2 ~ 2.4.3-p2), OpenSearch(2.3.7-p3, 2.4.3-p2, 2.4.4 이상), Redis 및 [!DNL RabbitMQ].
+클라우드 인프라의 Adobe Commerce은 현재 PHP, MySQL(MariaDB), Elasticsearch(Adobe Commerce 2.2 ~ 2.4.3-p2), OpenSearch(2.3.7-p3, 2.4.3-p2, 2.4.4 이상), Redis 및 [!DNL RabbitMQ] 서비스를 지원합니다.
 
 각 서비스는 별도의 보안 컨테이너에서 실행됩니다. 컨테이너는 프로젝트에서 함께 관리됩니다. 다음과 같은 일부 서비스는 표준입니다.
 
@@ -117,7 +117,7 @@ Adobe은 라는 분기를 만들 것을 권장합니다. `staging` 출처: `mast
 
 - [OpenSearch](../services/opensearch.md)
 
-스테이징 및 프로덕션 환경에서는 CDN 및 캐싱에 Fastly를 사용합니다. Fastly CDN 확장의 최신 버전은 프로젝트의 초기 프로비저닝 중에 설치됩니다. 확장을 업그레이드하여 최신 버그 수정 및 개선 사항을 얻을 수 있습니다. 다음을 참조하십시오 [Magento 2용 Fastly CDN 모듈](https://github.com/fastly/fastly-magento2). 또한 다음에 대한 액세스 권한이 있습니다. [New Relic](../monitor/account-management.md) 성능 모니터링용.
+스테이징 및 프로덕션 환경에서는 CDN 및 캐싱에 Fastly를 사용합니다. Fastly CDN 확장의 최신 버전은 프로젝트의 초기 프로비저닝 중에 설치됩니다. 확장을 업그레이드하여 최신 버그 수정 및 개선 사항을 얻을 수 있습니다. Magento 2](https://github.com/fastly/fastly-magento2)에 대한 [Fastly CDN 모듈을 참조하십시오. 또한 성능 모니터링을 위해 [New Relic](../monitor/account-management.md)에 액세스할 수 있습니다.
 
 다음 파일을 사용하여 구현에 사용할 소프트웨어 버전을 구성합니다.
 
@@ -129,7 +129,7 @@ Adobe은 라는 분기를 만들 것을 권장합니다. `staging` 출처: `mast
 
 ### 백업 및 재해 복구
 
-다음을 사용하여 데이터베이스 및 파일 시스템의 백업을 만들 수 있습니다. [!DNL Cloud Console] 또는 CLI를 사용할 수 있습니다. 다음을 참조하십시오 [백업 관리](../storage/snapshots.md).
+[!DNL Cloud Console] 또는 CLI를 사용하여 데이터베이스 및 파일 시스템의 백업을 만들 수 있습니다. [백업 관리](../storage/snapshots.md)를 참조하십시오.
 
 ## 개발 준비
 
@@ -137,11 +137,11 @@ Adobe은 라는 분기를 만들 것을 권장합니다. `staging` 출처: `mast
 
 1. 로컬 환경 설정
 
-1. 복제 `master` 로컬 환경으로 분기
+1. 로컬 환경에 `master` 분기 복제
 
-1. 만들기 `staging` 에서 분기 `master`
+1. `master`에서 `staging` 분기 만들기
 
-1. 에서 개발을 위한 분기 만들기 `staging`
+1. `staging`에서 개발할 분기 만들기
 
 1. 테스트를 위해 환경에 빌드하고 배포하는 Git에 코드 푸시
 
@@ -149,7 +149,7 @@ Adobe은 라는 분기를 만들 것을 권장합니다. `staging` 출처: `mast
 
 - [초급 개발 및 배포 워크플로](starter-develop-deploy-workflow.md)
 
-- [도커 개발](../dev-tools/cloud-docker.md) (Cloud Docker for Commerce에서 사용할 수 있는 로컬 개발 환경)
+- [Docker 개발](../dev-tools/cloud-docker.md)(Commerce용 Cloud Docker에서 사용할 수 있는 로컬 개발 환경)
 
 - [분기 관리](../project/console-branches.md)
 
