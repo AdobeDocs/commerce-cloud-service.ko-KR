@@ -4,7 +4,7 @@ description: Adobe Commerce on cloud infrastructure 프로젝트를 GitHub와 �
 feature: Cloud, Integration
 last-substantial-update: 2023-05-25T00:00:00Z
 exl-id: 5305452f-4c8d-438c-ac78-e2e1ec2f8cd9
-source-git-commit: 4d32fc596064f01eaefe3ee509a655837fa846de
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '924'
 ht-degree: 0%
@@ -79,7 +79,7 @@ GitHub 개발자 설정에서 클래식 개인 액세스 토큰을 만듭니다.
 
    예상 응답:
 
-   ```terminal
+   ```
    origin git@github.com:<user-name>/<repo-name>.git (fetch)
    origin git@github.com:<user-name>/<repo-name>.git (push)
    ```
@@ -145,7 +145,7 @@ magento-cloud integration:add --help
 
 1. 반환 출력에서 표시되는 **페이로드 URL**&#x200B;을(를) 복사합니다.
 
-   ```terminal
+   ```
    Created integration <integration-ID> (type: github)
    Repository: myUserName/myrepo
    Build PRs: yes

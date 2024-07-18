@@ -3,7 +3,7 @@ title: Fastly 문제 해결
 description: Adobe Commerce용 Fastly CDN 모듈 및 서비스의 문제를 해결하고 관리하는 방법에 대해 알아봅니다.
 feature: Cloud, Configuration, Cache, Services
 exl-id: e4c47035-cbad-4838-8d44-fa5eaaac42d1
-source-git-commit: 1253d8357fd2554050d1775fefbc420a2097db5f
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '1834'
 ht-degree: 0%
@@ -184,7 +184,7 @@ VCL 코드 조각을 추가한 후 cURL 명령을 사용하여 지정된 IP 주�
 
 cURL 명령 출력에서 발췌한 다음 내용은 `Pragma`, `X-Magento-Tags` 및 `Fastly-Module-Enabled` 헤더에 대한 올바른 값을 보여 줍니다.
 
-```terminal
+```
 * STATE: INIT => CONNECT handle 0x600057800; line 1402 (connection #-5000)
 * Rebuilt URL to: https://www.mymagento.biz.c.sv7gVom4qrpek.ent.magento.cloud/
 * Added connection 0. The cache now contains 1 members

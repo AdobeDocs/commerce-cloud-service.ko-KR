@@ -3,7 +3,7 @@ title: 확장 관리
 description: 클라우드 인프라의 Adobe Commerce에서 확장을 설치하고 관리하는 방법을 알아봅니다.
 feature: Cloud, Extensions, Upgrade
 exl-id: 9c6e98ca-85da-4342-8402-d576eb382ba2
-source-git-commit: f8fb9d4d43c85f91ff87686160bcddb7cd417635
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '646'
 ht-degree: 0%
@@ -98,7 +98,7 @@ Adobe은 구현에 확장을 추가할 때 개발 분기에서 작업할 것을 
 
    샘플 응답:
 
-   ```terminal
+   ```
    Module is enabled
    ```
 

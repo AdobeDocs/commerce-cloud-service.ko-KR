@@ -3,7 +3,7 @@ title: Crons 속성
 description: ' [!DNL Commerce] 응용 프로그램 구성 파일에서 ''crons'' 속성을 구성하는 방법에 대한 예를 참조하십시오.'
 feature: Cloud, Configuration
 exl-id: 67d592c1-2933-4cdf-b4f6-d73cd44b9f59
-source-git-commit: 1c0e05c3d8461bea473bcf6ec35162d65ef2774f
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '1069'
 ht-degree: 0%
@@ -60,7 +60,7 @@ Adobe Commerce은 스테이징 및 프로덕션 환경에서 셀프서비스 `cr
 
 다음 예제에서는 기본 `crons` 구성만 있는 환경에 대한 `crontab` 출력을 보여 줍니다.
 
-```terminal
+```
 username@hostname:~$ crontab -l
 # Crontab is managed by the system, attempts to edit it directly will fail.
 SHELL=/etc/platform/6fck2obu3244c/cron-run

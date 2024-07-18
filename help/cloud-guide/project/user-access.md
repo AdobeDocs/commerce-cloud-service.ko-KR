@@ -6,7 +6,7 @@ feature: Cloud, Roles/Permissions
 last-substantial-update: 2023-06-27T00:00:00Z
 topic: Security
 exl-id: 3357a3ea-bf86-4a65-95d1-6b24f1152248
-source-git-commit: b85a163ff62f8a63430dff7c96b5cf391cf38d79
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '1454'
 ht-degree: 0%
@@ -72,7 +72,7 @@ ht-degree: 0%
 
    > 샘플 프롬프트
 
-   ```terminal
+   ```
    Enter the user's email address: alice@example.com
    
    Email address: alice@example.com
@@ -106,7 +106,7 @@ magento-cloud user:get alice@example.com
 
 >샘플 응답:
 
-```terminal
+```
 Current role(s) of User (alice@example.com) on Production (project_id):
   Project role: admin
 ```

@@ -3,7 +3,7 @@ title: 사이트 맵 및 검색 엔진 로봇 추가
 description: 클라우드 인프라의 Adobe Commerce에 사이트 맵 및 검색 엔진 로봇을 추가하는 방법을 알아봅니다.
 feature: Cloud, Configuration, Search, Site Navigation
 exl-id: b98f43fa-1878-466d-8ea0-1e7207af8b60
-source-git-commit: ee1db75c73c086e0ea54e1a7591ca7f2b4d2b36d
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 `sitemap.xml` 파일을 생성하여 루트 디렉터리에 쓰려고 하면 다음 오류가 발생합니다.
 
-```terminal
+```
 Please make sure that "/" is writable by the web-server.
 ```
 

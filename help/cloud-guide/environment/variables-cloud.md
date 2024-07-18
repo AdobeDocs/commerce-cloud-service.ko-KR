@@ -5,7 +5,7 @@ feature: Cloud, Configuration
 recommendations: noDisplay, catalog
 role: Developer
 exl-id: 84b7c0fc-f0b0-4ff5-9f33-9d17180a9306
-source-git-commit: 13e76d3e9829155995acbb72d947be3041579298
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '272'
 ht-degree: 0%
@@ -61,7 +61,7 @@ php ./vendor/bin/ece-tools env:config:show variables
 
 `variables` 옵션에 대한 샘플 출력:
 
-```terminal
+```
 Magento Cloud Environment Variables:
 +-----------------------------------+----------------------------------+
 | Variable name                     | Value                            |

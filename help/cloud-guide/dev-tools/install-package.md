@@ -3,7 +3,7 @@ title: ECE-Tools를 사용하도록 프로젝트 업그레이드
 description: ECE-Tools 패키지를 사용하고 최신 수정 사항 및 기능을 활용하기 위해 Adobe Commerce on cloud infrastructure 프로젝트를 업그레이드하는 방법에 대해 알아봅니다.
 feature: Cloud, Install
 exl-id: 820cca84-2817-4881-829f-ebb78400d8c7
-source-git-commit: bcdb59f0d2a17e55e8b0479ee69fac06c710638f
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '365'
 ht-degree: 0%
@@ -33,7 +33,7 @@ Adobe은 `ece-tools` 패키지를 위해 `magento/magento-cloud-configuration` �
 
 각 Adobe Commerce 버전에는 다음에 따라 다른 제한 사항이 필요합니다.
 
-```terminal
+```
 >=current_version <next_version
 ```
 
@@ -105,7 +105,7 @@ Adobe Commerce `2.3.5-p2`을(를) 설치하려면 `current_version`을(를) `2.3
 
 1. 코드 변경 사항을 추가하고 커밋합니다. 이 예에서는 다음 파일이 업데이트되었습니다.
 
-   ```terminal
+   ```
    .magento.app.yaml
    composer.json
    composer.lock

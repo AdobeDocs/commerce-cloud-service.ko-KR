@@ -2,7 +2,7 @@
 title: ' [!DNL Xdebug] 구성'
 description: 클라우드 인프라 프로젝트 개발에서 Adobe Commerce을 디버깅하기 위해 Xdebug 확장을 구성하는 방법을 알아봅니다.
 exl-id: bf2d32d8-fab7-439e-8df3-b039e53009d4
-source-git-commit: 751456f50e7b017b47c2ff43e008c2d04a558d96
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '1747'
 ht-degree: 0%
@@ -160,7 +160,7 @@ Starter 환경 및 Pro 통합 환경에 배포되면 이제 [!DNL Xdebug]을(를
 
    샘플 응답:
 
-   ```terminal
+   ```
    dd2q5ct7mhgus        5504  0.0  0.0  82612  3664 ?      S    18:45   0:00 sshd: dd2q5ct7mhgus@pts/0
    ```
 

@@ -5,7 +5,7 @@ feature: Cloud, Deploy, Observability
 topic: Performance
 last-substantial-update: 2023-10-12T00:00:00Z
 exl-id: 3d477a4b-ae5a-4c82-b71b-33ff24827b93
-source-git-commit: cd9b541bd5b2fa342b76c992ab85a5115368313b
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '283'
 ht-degree: 0%
@@ -99,7 +99,7 @@ _스크립트_ 통합을 만들어 New Relic에서 Commerce 프로젝트 배포 
 
    샘플 응답:
 
-   ```terminal
+   ```
    Created integration 767u4hathojjw (type: script)
    +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------+
    | Property              | Value                                                                                                                                   |
@@ -187,7 +187,7 @@ _스크립트_ 통합을 만들어 New Relic에서 Commerce 프로젝트 배포 
 
 1. 나중에 사용할 수 있도록 통합 ID를 메모해 두십시오. 이 예에서 ID는 다음과 같습니다.
 
-   ```terminal
+   ```
    Created integration 767u4hathojjw (type: script)
    ```
 
@@ -207,7 +207,7 @@ _스크립트_ 통합을 만들어 New Relic에서 Commerce 프로젝트 배포 
 
    응답:
 
-   ```terminal
+   ```
    Integration ID: 767u4hathojjw
    Activity ID: poxqidsfajkmg
    Type: integration.script

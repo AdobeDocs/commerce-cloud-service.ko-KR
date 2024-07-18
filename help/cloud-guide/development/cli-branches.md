@@ -4,7 +4,7 @@ description: Cloud CLI를 사용하여 클라우드 인프라에서 Adobe Commer
 role: Developer
 feature: Cloud, Install
 exl-id: a871c7e2-4506-4a05-8fc2-fc5ef2afe609
-source-git-commit: 13e76d3e9829155995acbb72d947be3041579298
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '676'
 ht-degree: 0%
@@ -164,14 +164,14 @@ ht-degree: 0%
 
 1. 프롬프트에 응답하여 로컬 환경과 해당 원격 환경을 삭제합니다.
 
-   ```terminal
+   ```
    The environment <environment-ID> is currently active: deleting it will delete all associated data.
    Are you sure you want to delete the environment <environment-ID>? [Y/n]
    ```
 
    환경을 삭제하면 _비활성_ 상태가 됩니다.
 
-   ```terminal
+   ```
    Delete the remote Git branch too? [Y/n]
    ```
 
@@ -179,7 +179,7 @@ ht-degree: 0%
 
 1. 환경이 삭제될 때까지 기다립니다.
 
-   ```terminal
+   ```
    Deleting environment <environment-ID>
    Waiting for the activity...
      Deleting environment <project-id>-<environment-ID>-xxxxxx

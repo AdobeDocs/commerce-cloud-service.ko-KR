@@ -3,7 +3,7 @@ title: 클라우드 인프라 프로젝트
 description: 클라우드 인프라의 Adobe Commerce에 대한 개요 [!DNL Cloud Console] 를 읽고 계정 설정에 액세스하는 방법을 알아보십시오.
 last-substantial-update: 2024-02-06T00:00:00Z
 exl-id: ae862898-9b4d-45ed-b370-e82cc6f99017
-source-git-commit: abe9aa36b907be8bdfdf42e6f28f1e1eac68fecf
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '987'
 ht-degree: 0%
@@ -81,7 +81,7 @@ _모든 프로젝트_ 목록에서 프로젝트를 선택하면 프로젝트 개
 
 웹 액세스 URL에는 다음이 포함될 수 있습니다.
 
-```terminal
+```
 https://<branch>-<unique-ID>-<project-ID>.<region>.magentosite.cloud/
 ```
 

@@ -3,7 +3,7 @@ title: Elasticsearch 서비스 설정
 description: 클라우드 인프라에서 Adobe Commerce에 대한 Elasticsearch 서비스를 활성화하는 방법을 알아봅니다.
 feature: Cloud, Search, Services
 exl-id: ac559cbb-342a-4756-ade5-49eba4827965
-source-git-commit: 8147b43b26370d9305c3c7dc47865ddcbae1904d
+source-git-commit: c39332d352f6dcb6f92c312a6ef1b74319d37aa3
 workflow-type: tm+mt
 source-wordcount: '798'
 ht-degree: 0%
@@ -110,7 +110,7 @@ Adobe Commerce 버전 2.4.4 이상은 [OpenSearch 서비스 설정](opensearch.m
 
    응답에서 `versions` 속성에 설치된 버전을 확인합니다.
 
-   ```terminal
+   ```
    name     : elasticsearch/elasticsearch
    descrip. : PHP Client for Elasticsearch
    keywords : client, elasticsearch, search
@@ -135,7 +135,7 @@ Adobe Commerce 버전 2.4.4 이상은 [OpenSearch 서비스 설정](opensearch.m
 
    응답에서 Elasticsearch 서비스 끝점의 IP 주소를 찾습니다.
 
-   ```terminal
+   ```
    | elasticsearch:                                                                                                  |
    +------------------------------------------+----------------------------------------------------------------------+
    | username                                 | null                                                                 |
@@ -162,7 +162,7 @@ Adobe Commerce 버전 2.4.4 이상은 [OpenSearch 서비스 설정](opensearch.m
    curl -XGET <elasticsearch-service-endpoint-ip-address>:9200/
    ```
 
-   ```terminal
+   ```json
    {
       "name" : "-AqGi9D",
       "cluster_name" : "elasticsearch",

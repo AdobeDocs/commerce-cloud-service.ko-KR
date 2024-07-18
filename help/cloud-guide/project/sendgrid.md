@@ -2,7 +2,7 @@
 title: SendGrid 이메일 서비스
 description: 클라우드 인프라의 Adobe Commerce용 SendGrid 이메일 서비스와 DNS 구성을 테스트하는 방법에 대해 알아봅니다.
 exl-id: 30d3c780-603d-4cde-ab65-44f73c04f34d
-source-git-commit: 2b106edcaaacb63c0e785f094b7e1b755885abd0
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '1090'
 ht-degree: 0%
@@ -104,7 +104,7 @@ m1._mydomain.com | TXT | k=rsa; t=s; p=<public-key>
 
 DNS 구성을 테스트하려면:
 
-```terminal
+```
 dig CNAME em.domain_name
 dig CNAME s1._domainkey.domain_name
 dig CNAME s2._domainkey.domain_name

@@ -3,7 +3,7 @@ title: 백업 관리
 description: Adobe Commerce on cloud infrastructure 프로젝트에 대한 백업을 수동으로 만들고 복원하는 방법에 대해 알아봅니다.
 feature: Cloud, Paas, Snapshots, Storage
 exl-id: 1cb00db7-2375-4761-9c07-1e20a74859e0
-source-git-commit: 4c3f3f2775e8327476233520e52b589f7264786f
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '711'
 ht-degree: 0%
@@ -51,7 +51,7 @@ ht-degree: 0%
 
    샘플 응답:
 
-   ```terminal
+   ```
    Creating a snapshot of develop-branch
    Waiting for the activity ID (User created a backup of develop-branch):
    
@@ -70,7 +70,7 @@ ht-degree: 0%
 
    목록에서는 스냅샷 상태에 대한 정보를 반환합니다.
 
-   ```terminal
+   ```
    Snapshots on the project (project-id), environment develop-branch (type: development):
    +---------------------------+----------------------+------------+
    | Created                   | Snapshot ID          | Restorable |
@@ -116,7 +116,7 @@ ht-degree: 0%
 
    목록에서는 사용 가능한 스냅샷에 대한 정보를 반환합니다.
 
-   ```terminal
+   ```
    Snapshots on the project (project-id), environment develop-branch (type: development):
    +---------------------------+----------------------+------------+
    | Created                   | Snapshot ID          | Restorable |

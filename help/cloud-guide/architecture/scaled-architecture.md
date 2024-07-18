@@ -3,7 +3,7 @@ title: 확장 아키텍처
 description: 분할 계층 아키텍처와 수요에 맞게 확장하는 방법에 대해 알아봅니다.
 feature: Cloud, Auto Scaling, Iaas, Logs
 exl-id: c54d8772-b6cc-41cc-b1ab-bef7d6f13bf2
-source-git-commit: 8a0523f1714b6ea41887e99b5c31294cf5e5255e
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '816'
 ht-degree: 0%
@@ -70,7 +70,7 @@ ssh <node>.<project-ID>-<environment>-<user-ID>@ssh.<region>.magento.com
 
 **서비스 노드**&#x200B;에 로그인할 때 예제 응답에 _통합_ 역할이 포함됩니다.
 
-```terminal
+```
  __  __                   _          ___ _             _
 |  \/  |__ _ __ _ ___ _ _| |_ ___   / __| |___ _  _ __| |
 | |\/| / _` / _` / -_) ' \  _/ _ \ | (__| / _ \ || / _` |
@@ -86,7 +86,7 @@ project-id@server-id:~$
 
 **웹 노드**&#x200B;에 로그인할 때 예제 응답에 _웹_ 역할이 포함됩니다.
 
-```terminal
+```
  __  __                   _          ___ _             _
 |  \/  |__ _ __ _ ___ _ _| |_ ___   / __| |___ _  _ __| |
 | |\/| / _` / _` / -_) ' \  _/ _ \ | (__| / _ \ || / _` |

@@ -5,7 +5,7 @@ feature: Cloud, Configuration, Cache, Deploy, SCD, Storage, Search
 recommendations: noDisplay, catalog
 role: Developer
 exl-id: 673880b5-830b-4837-ac0c-5fa5643ae34c
-source-git-commit: b7307faf046884c13cba852df69d4fa9977e9a17
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '2185'
 ht-degree: 0%
@@ -240,7 +240,7 @@ stage:
 
 샘플 출력:
 
-```terminal
+```
 MariaDB [main]> SHOW TABLES;
 +-------------------------------------+
 | Tables_in_main                      |

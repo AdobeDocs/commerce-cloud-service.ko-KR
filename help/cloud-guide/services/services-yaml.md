@@ -3,7 +3,7 @@ title: 서비스 구성
 description: 클라우드 인프라에서 Adobe Commerce에서 사용하는 서비스를 구성하는 방법에 대해 알아봅니다.
 feature: Cloud, Configuration, Services
 exl-id: 48091c10-c53f-4aad-afbe-b4516653bda1
-source-git-commit: 4d790bff2ba5d02ef10de5c36a2f0d140e31a407
+source-git-commit: c39332d352f6dcb6f92c312a6ef1b74319d37aa3
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 0%
@@ -129,7 +129,7 @@ mysql:
 
    >축약된 샘플 응답
 
-   ```terminal
+   ```yaml
    redis:
        -
    ...

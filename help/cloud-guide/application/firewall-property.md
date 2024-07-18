@@ -3,7 +3,7 @@ title: 방화벽 속성
 description: Commerce 애플리케이션 구성 파일에서 방화벽 속성을 구성하는 방법에 대한 예를 참조하십시오.
 feature: Cloud, Configuration, Security
 exl-id: f169c008-c62a-41b7-a98d-cccd81c7291a
-source-git-commit: 74d88560db3b65294673a1e1827f9cea098d707a
+source-git-commit: a8ecebc87bfae5deaf0fc7ff3e7dd3b255fe3f24
 workflow-type: tm+mt
 source-wordcount: '844'
 ht-degree: 0%
@@ -32,7 +32,7 @@ magento-cloud p:curl --project PROJECT_ID /settings | grep -i outbound
 
 정책에 대해 `deny`을(를) 요청하지 않은 경우 명령은 `allow`(으)로 설정된 정책을 표시해야 합니다.
 
-```terminal
+```json
 "outbound_restrictions_default_policy": "allow"
 ```
 
@@ -157,7 +157,7 @@ firewall:
 
 단일 IP 주소를 지정하려면 IP 주소 끝에 `/32` CIDR 접두사를 추가하십시오.
 
-```terminal
+```
 172.217.11.174/32  # google.com
 ```
 
@@ -189,7 +189,7 @@ awk '($5 ~/query/)' /var/log/dns.log | awk '{print $6}' | sort | uniq -c | sort 
 
 또한 이 명령은 이그레스 필터링 규칙에 의해 만들어졌지만 차단된 DNS 요청을 표시합니다. 차단된 도메인은 출력에서 표시되지 않고 해당 요청만 수행됩니다. 출력에는 IP 주소를 사용하여 수행한 요청이 표시되지 않습니다.
 
-```terminal
+```
 Example output:
 
 97 magento.com

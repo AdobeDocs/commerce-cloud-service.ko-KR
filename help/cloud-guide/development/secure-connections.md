@@ -5,7 +5,7 @@ role: Developer
 feature: Cloud, Security
 topic: Security
 exl-id: b5780e8e-e3da-4b10-8ca3-2778085acd4a
-source-git-commit: 13e76d3e9829155995acbb72d947be3041579298
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '976'
 ht-degree: 0%
@@ -196,7 +196,7 @@ magento-cloud tunnel:open -e sprint5 --app mymagento
 
 샘플 응답:
 
-```terminal
+```
 SSH tunnel opened on port 30004 to relationship: redis
 SSH tunnel opened on port 30005 to relationship: database
 Logs are written to: /home/magento_user/.magento/tunnels.log

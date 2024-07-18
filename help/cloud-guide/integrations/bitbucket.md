@@ -3,7 +3,7 @@ title: Bitbucket 통합
 description: Adobe Commerce on cloud infrastructure 프로젝트를 Bitbucket과 통합하는 방법에 대해 알아봅니다.
 feature: Cloud, Integration
 exl-id: cd3cffbe-268f-429b-a2ea-0306159f4a6b
-source-git-commit: 13e76d3e9829155995acbb72d947be3041579298
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '1020'
 ht-degree: 0%
@@ -62,7 +62,7 @@ ht-degree: 0%
 
    예상 응답:
 
-   ```terminal
+   ```
    origin git@bitbucket.org:<user-name>/<repo-name>.git (fetch)
    origin git@bitbucket.org:<user-name>/<repo-name>.git (push)
    ```
@@ -146,7 +146,7 @@ Bitbucket 통합에는 [OAuth 소비자](https://support.atlassian.com/bitbucket
    magento-cloud integrations -p <project-ID>
    ```
 
-   ```terminal
+   ```
    +----------+-----------+--------------------------------------------------------------------------------+
    | ID       | Type      | Summary                                                                        |
    +----------+-----------+--------------------------------------------------------------------------------+
@@ -220,7 +220,7 @@ Bitbucket 통합은 Adobe Commerce on cloud infrastructure 프로젝트에서 �
    magento-cloud environment:push from-bitbucket
    ```
 
-   ```terminal
+   ```
    Pushing from-bitbucket to the new environment from-bitbucket
    Activate from-bitbucket after pushing? [Y/n] y
    Parent environment [master]: integration
@@ -233,7 +233,7 @@ Bitbucket 통합은 Adobe Commerce on cloud infrastructure 프로젝트에서 �
    magento-cloud environment:list
    ```
 
-   ```terminal
+   ```
    Your environments are:
    +---------------------+----------------+--------+
    | ID                  | Name           | Status |

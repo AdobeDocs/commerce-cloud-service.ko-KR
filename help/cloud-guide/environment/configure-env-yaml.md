@@ -4,7 +4,7 @@ description: 환경 변수를 사용하여 Pro 스테이징 및 프로덕션을 
 feature: Cloud, Build, Configuration, Deploy, SCD
 role: Developer
 exl-id: 66e257e2-1eca-4af5-9b56-01348341400b
-source-git-commit: eace5d84fa0915489bf562ccf79fde04f6b9d083
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '697'
 ht-degree: 0%
@@ -42,7 +42,7 @@ ht-degree: 0%
 - [전역](variables-global.md)—변수는 빌드, 배포 및 배포 후 각 단계에서 작업을 제어합니다.
 - [빌드](variables-build.md)—변수가 빌드 작업을 제어합니다.
 - [배포](variables-deploy.md)—변수가 배포 작업을 제어합니다.
-- [Post-deploy](variables-post-deploy.md)—변수는 배포 후 작업을 제어합니다.
+- [사후 배포](variables-post-deploy.md)—변수는 배포 후 작업을 제어합니다.
 
 ### CLI에서 구성 파일 생성
 
@@ -103,7 +103,7 @@ php ./vendor/bin/ece-tools cloud:config:validate
 
 다음 샘플 응답은 수정할 항목 목록을 제공합니다.
 
-```terminal
+```
 Environment configuration is not valid. Correct the following items in your .magento.env.yaml file:
 The SCD_THREADS variable contains an invalid value of type string. Use the following type: integer.
 The SCD_STRATEGY variable contains an invalid value fast. Use one of the available value options: compact, quick, standard.
@@ -136,7 +136,7 @@ stage:
 
 `.magento.env.yaml` 구성 파일에 예기치 않은 값이 있어 오류가 발생하면 오류 메시지가 표시됩니다. 예를 들어, 다음 오류 메시지는 예기치 않은 값이 있는 각 항목에 대해 제안된 변경 사항 목록을 나타내며 경우에 따라 유효한 옵션을 제공합니다.
 
-```terminal
+```
 - Environment configuration is not valid. Please correct .magento.env.yaml file with next suggestions:
   Item CRON_CONSUMERS_RUNNER is not supposed to be in stage build. Please move it to one of possible stages: global, deploy
   Item SKIP_SCD has unexpected type string. Please use one of next types: boolean

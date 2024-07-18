@@ -3,7 +3,7 @@ title: Commerce 버전 업그레이드
 description: 클라우드 인프라 프로젝트에서 Adobe Commerce 버전을 업그레이드하는 방법에 대해 알아봅니다.
 feature: Cloud, Upgrade
 exl-id: 87821007-4979-4a20-940b-aa3c82c192d8
-source-git-commit: 99272d08a11f850a79e8e24857b7072d1946f374
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '1439'
 ht-degree: 0%
@@ -381,7 +381,7 @@ Adobe 사이트 시작 프로세스에서 업그레이드된 확장을 포함하
 
 업그레이드가 실패하는 경우 브라우저에 상점 또는 관리 패널에 액세스할 수 없다는 오류 메시지가 표시됩니다.
 
-```terminal
+```
 There has been an error processing your request
 Exception printing is disabled by default for security reasons.
   Error log record number: <error-number>

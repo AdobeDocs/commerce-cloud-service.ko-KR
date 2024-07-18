@@ -3,7 +3,7 @@ title: OpenSearch 서비스 설정
 description: 클라우드 인프라에서 Adobe Commerce용 OpenSearch 서비스를 활성화하는 방법을 알아봅니다.
 feature: Cloud, Search, Services
 exl-id: 10dc6367-3f90-4ab6-a84e-15e8c3b32a38
-source-git-commit: d4c36b084094846cfad69adc2bffd567a58fab26
+source-git-commit: c39332d352f6dcb6f92c312a6ef1b74319d37aa3
 workflow-type: tm+mt
 source-wordcount: '651'
 ht-degree: 0%
@@ -118,7 +118,7 @@ OpenSearch를 사용하면 모든 소스, 모든 형식에서 데이터를 가�
 
    응답에서 OpenSearch 서비스 끝점의 IP 주소와 포트를 찾습니다.
 
-   ```terminal
+   ```
    +------------------------------------------+--------------------------------------------------------+
    | opensearch:                                                                                       |
    +------------------------------------------+--------------------------------------------------------+
@@ -146,7 +146,7 @@ OpenSearch를 사용하면 모든 소스, 모든 형식에서 데이터를 가�
    curl -XGET <opensearch-service-endpoint-ip-address>:9200
    ```
 
-   ```terminal
+   ```json
    {
       "name" : "opensearch.0",
       "cluster_name" : "opensearch",

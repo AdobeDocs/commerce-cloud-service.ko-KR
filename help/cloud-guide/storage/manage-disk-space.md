@@ -3,7 +3,7 @@ title: 디스크 공간 관리
 description: 명령줄 인터페이스를 사용하여 디스크 공간을 관리하는 방법에 대해 알아봅니다.
 feature: Cloud, Storage
 exl-id: 480cb33b-ac83-441d-946e-5b4de09ad84e
-source-git-commit: 8b40397796ee865aefbf8a7948cc9a3aceb1d35c
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '714'
 ht-degree: 0%
@@ -20,7 +20,7 @@ magento-cloud subscription:info | grep storage
 
 샘플 응답:
 
-```terminal
+```
 | storage              | 51200
 ```
 
@@ -50,7 +50,7 @@ magento-cloud db:size
 
 샘플 응답:
 
-```terminal
+```
 Checking database service mysql...
 
 +----------------+-----------------+--------+
@@ -70,7 +70,7 @@ magento-cloud mount:size
 
 샘플 응답:
 
-```terminal
+```
 Checking disk usage for all mounts on <project>-<environment>-mymagento@ssh.us.magento.cloud...
 
 +------------+-----------+---------+-----------+-----------+--------+
@@ -95,7 +95,7 @@ df -h
 
 다음 샘플 응답에서 `/mnt/shared` 마운트는 미디어의 디스크 공간을 표시하고 `/data/mysql/` 마운트는 데이터베이스의 디스크 공간을 표시합니다.
 
-```terminal
+```
 Filesystem                                    Size  Used Avail Use% Mounted on
 udev                                           16G     0   16G   0% /dev
 tmpfs                                         3.2G  9.1M  3.2G   1% /run
@@ -121,7 +121,7 @@ df -h var/
 
 샘플 응답:
 
-```terminal
+```
 Filesystem                                    Size  Used Avail Use% Mounted on
 192.168.5.5:/shared/project/var         9.8G  591M  9.3G   6% /app/project/var
 ```

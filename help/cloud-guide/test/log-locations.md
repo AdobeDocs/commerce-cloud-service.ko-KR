@@ -3,7 +3,7 @@ title: 로그 보기 및 관리
 description: 클라우드 인프라에서 사용할 수 있는 로그 파일의 유형과 찾을 수 있는 위치를 파악합니다.
 last-substantial-update: 2023-05-23T00:00:00Z
 exl-id: d7f63dab-23bf-4b95-b58c-3ef9b46979d4
-source-git-commit: 86af69eed16e8fe464de93bd0f33cfbfd4ed8f49
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '1056'
 ht-degree: 0%
@@ -44,7 +44,7 @@ magento-cloud ssh -p <project-ID> -e <environment-ID> --all
 
 샘플 응답:
 
-```terminal
+```
 1.ent-project-environment-id@ssh.region.magento.cloud
 2.ent-project-environment-id@ssh.region.magento.cloud
 3.ent-project-environment-id@ssh.region.magento.cloud
@@ -84,7 +84,7 @@ ssh 1.ent-project-environment-id@ssh.region.magento.cloud "cat var/log/cron.log"
 
 로그 항목에 대한 타임스탬프를 확인하고 특정 배포에 대한 로그를 확인합니다. 다음은 문제 해결에 사용할 수 있는 로그 출력의 압축된 예입니다.
 
-```terminal
+```
 Re-deploying environment project-integration-ID
   Executing post deploy hook for service `mymagento`
     [2019-01-03 19:44:11] NOTICE: Starting post-deploy.
@@ -129,7 +129,7 @@ magento-cloud log -e <environment-ID> deploy
 
 샘플 응답:
 
-```terminal
+```
 Reading log file projectID-branchname-ID--mymagento@ssh.zone.magento.cloud:/var/log/'deploy.log'
 
 [2023-04-24 18:58:03.080678] Launching command 'b'php ./vendor/bin/ece-tools run scenario/deploy.xml\n''.
@@ -153,7 +153,7 @@ magento-cloud ssh -e <environment-ID> "./vendor/bin/ece-tools error:show"
 
 샘플 응답:
 
-```terminal
+```
 errorCode: 1001
 stage: build
 step: validate-config
@@ -187,19 +187,19 @@ type: warning
 | 로그 파일 | Starter 및 Pro 통합 | 설명 |
 | ------------------- | --------------------------- | ------------------------------------------------- |
 | **로그 배포** | `/var/log/deploy.log` | [배포 후크](../application/hooks-property.md)의 활동. |
-| **Post 배포 로그** | `/var/log/post_deploy.log` | [사후 배포 후크](../application/hooks-property.md)의 활동. |
+| **사후 배포 로그** | `/var/log/post_deploy.log` | [사후 배포 후크](../application/hooks-property.md)의 활동. |
 | **크론 로그** | `/var/log/cron.log` | cron 작업의 출력. |
 | **Nginx 액세스 로그** | `/var/log/access.log` | Nginx 시작 시 누락된 디렉터리 및 제외된 파일 유형에 대한 HTTP 오류가 발생합니다. |
 | **Nginx 오류 로그** | `/var/log/error.log` | Nginx와 관련된 구성 오류를 디버깅하는 데 유용한 시작 메시지입니다. |
 | **PHP 액세스 로그** | `/var/log/php.access.log` | PHP 서비스에 대한 요청입니다. |
 | **PHP FPM 로그** | `/var/log/app.log` | |
 
-Pro 스테이징 및 프로덕션 환경의 경우 배포, Post-배포 및 Cron 로그는 클러스터의 첫 번째 노드에서만 사용할 수 있습니다.
+Pro 스테이징 및 프로덕션 환경의 경우 배포, 사후 배포 및 Cron 로그는 클러스터의 첫 번째 노드에서만 사용할 수 있습니다.
 
 | 로그 파일 | Pro 스테이징 | 프로프로덕션 |
 | ------------------- | --------------------------------------------------- | ----------------------------------------------- |
 | **로그 배포** | 첫 번째 노드만:<br>`/var/log/platform/<project-ID>_stg/deploy.log` | 첫 번째 노드만:<br>`/var/log/platform/<project-ID>/deploy.log` |
-| **Post 배포 로그** | 첫 번째 노드만:<br>`/var/log/platform/<project-ID>_stg/post_deploy.log` | 첫 번째 노드만:<br>`/var/log/platform/<project-ID>/post_deploy.log` |
+| **사후 배포 로그** | 첫 번째 노드만:<br>`/var/log/platform/<project-ID>_stg/post_deploy.log` | 첫 번째 노드만:<br>`/var/log/platform/<project-ID>/post_deploy.log` |
 | **크론 로그** | 첫 번째 노드만:<br>`/var/log/platform/<project-ID>_stg/cron.log` | 첫 번째 노드만:<br>`/var/log/platform/<project-ID>/cron.log` |
 | **Nginx 액세스 로그** | `/var/log/platform/<project-ID>_stg/access.log` | `/var/log/platform/<project-ID>/access.log` |
 | **Nginx 오류 로그** | `/var/log/platform/<project-ID>_stg/error.log` | `/var/log/platform/<project-ID>/error.log` |
@@ -210,7 +210,7 @@ Pro 스테이징 및 프로덕션 환경의 경우 배포, Post-배포 및 Cron 
 
 애플리케이션 로그는 하루에 한 번 압축되고 아카이빙되며 1년 동안 보관됩니다. `Number of Days Ago + 1`에 해당하는 고유 ID를 사용하여 압축 로그 이름을 지정합니다. 예를 들어 Pro 프로덕션 환경에서는 과거 21일 동안의 PHP 액세스 로그가 다음과 같이 저장되고 이름이 지정됩니다.
 
-```terminal
+```
 /var/log/platform/<project-ID>/php.access.log.22.gz
 ```
 
@@ -218,7 +218,7 @@ Pro 스테이징 및 프로덕션 환경의 경우 배포, Post-배포 및 Cron 
 
 >[!NOTE]
 >
->**Deploy** 및 **Post-deploy** 로그 파일이 회전되고 보관되지 않습니다. 전체 배포 기록은 이러한 로그 파일 내에 기록됩니다.
+>**배포** 및 **사후 배포** 로그 파일이 회전되고 보관되지 않습니다. 전체 배포 기록은 이러한 로그 파일 내에 기록됩니다.
 
 ## 서비스 로그
 

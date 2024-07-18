@@ -3,7 +3,7 @@ title: 구성 요소 장애 복구
 description: 구성 요소가 클라우드 인프라의 Adobe Commerce에서 제대로 배포되지 않는 경우 복구하는 방법을 알아봅니다.
 feature: Cloud, Deploy
 exl-id: 4855be0c-6883-4ab1-a364-316d10e97250
-source-git-commit: b44d97f82ef09288807c648010202422c9ac04eb
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 0%
@@ -59,7 +59,7 @@ ht-degree: 0%
 
    다음 메시지가 표시되면 더 이상 작업을 수행하지 않아도 됩니다.
 
-   ```terminal
+   ```
    Package "<name>:<version>" listed for update is not installed. Ignoring.
    ```
 

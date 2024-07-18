@@ -2,7 +2,7 @@
 title: Cloud CLI
 description: magento-cloud CLI를 통해 Adobe Commerce on cloud infrastructure 프로젝트의 로컬 개발 환경을 관리하는 방법을 알아봅니다.
 exl-id: 70dddd62-0269-4af4-bd2a-1a4fbf11a131
-source-git-commit: 13e76d3e9829155995acbb72d947be3041579298
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '741'
 ht-degree: 0%
@@ -42,7 +42,7 @@ ht-degree: 0%
    magento-cloud
    ```
 
-   ```terminal
+   ```
    Welcome to Magento Cloud!
    Please log in using your Magento Cloud account.
    Your email address or username:
@@ -94,7 +94,7 @@ magento-cloud environment:redeploy
 
 샘플 응답:
 
-```terminal
+```
 Are you sure you want to redeploy the environment <environment-name>? [Y/n]
 ```
 
@@ -193,7 +193,7 @@ git commit --allow-empty -m "redeploy" && git push <branch-name>
 magento-cloud update
 ```
 
-```terminal
+```
 Checking for Magento Cloud CLI updates (current version: X.XX.X)
 No updates found
 ```

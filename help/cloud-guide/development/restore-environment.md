@@ -4,7 +4,7 @@ description: 클라우드 인프라 프로젝트에서 Adobe Commerce 애플리�
 role: Developer
 topic: Development
 exl-id: b76bd6c3-986e-4adc-abd0-5b27db0d8a3b
-source-git-commit: eace5d84fa0915489bf562ccf79fde04f6b9d083
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '480'
 ht-degree: 0%
@@ -38,7 +38,7 @@ Git 분기를 재설정하면 코드가 과거에 안정적인 상태로 되돌�
 
    샘플 응답:
 
-   ```terminal
+   ```
    6bf9f45 (HEAD -> master, magento/master, magento/develop, magento/HEAD, develop) Create composer.lock
    34d7434 2.4.6 upgrade
    b69803c Update composer.lock
@@ -106,7 +106,7 @@ Adobe Commerce 소프트웨어를 제거하면 데이터베이스가 삭제 및 
 
    성공적으로 제거되었음을 확인하는 메시지가 표시됩니다.
 
-   ```terminal
+   ```
    [SUCCESS]: Magento uninstallation complete.
    ```
 

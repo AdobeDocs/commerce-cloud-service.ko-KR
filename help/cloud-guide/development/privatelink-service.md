@@ -3,7 +3,7 @@ title: PrivateLink 서비스
 description: PrivateLink 서비스를 사용하여 동일한 지역에서 사설 클라우드와 Adobe Commerce 클라우드 플랫폼 간의 보안 연결을 설정하는 방법에 대해 알아봅니다.
 feature: Cloud, Iaas, Security
 exl-id: b25548b8-312b-4a74-b242-f4e2ac6cf945
-source-git-commit: 5b52157c6c623bb4c765a2d545919df79d81f1da
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '1609'
 ht-degree: 0%
@@ -157,20 +157,20 @@ Telnet 애플리케이션을 사용하여 VPC 엔드포인트 서비스에 대�
 
    예:
 
-   ```terminal
+   ```
    $ curl -v telnet://vpce-007ffnb9qkcnjgult-yfhmywqh.vpce-svc-083cqvm2ta3rxqat5v.us-east-1.vpce.amazonaws.com:80 -vvv
    ```
 
    샘플 성공 응답:
 
-   ```terminal
+   ```
    * Rebuilt URL to: telnet://vpce-007ffnb9qkcnjgult-yfhmywqh.vpce-svc-083cqvm2ta3rxqat5v.us-east-1.vpce.amazonaws.com:80
    * Connected to vpce-0088d56482571241d-yfhmywqh.vpce-svc-083cqvm2ta3rxqat5v.us-east-1.vpce. amazonaws.com (191.210.82.246) port 80 (#0)
    ```
 
    샘플 실패 응답:
 
-   ```terminal
+   ```
    Failed to connect to vpce-007ffnb9qkcnjgult-yfhmywqh.vpce-svc-083cqvm2ta3rxqat5v.ap-southeast-1.vpce.amazonaws.com port 80: Connection timed out
    * Closing connection 0
    ```

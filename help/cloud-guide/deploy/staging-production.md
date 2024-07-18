@@ -3,7 +3,7 @@ title: 스테이징 및 프로덕션에 배포
 description: 추가 테스트를 위해 클라우드 인프라 코드에서 Adobe Commerce을 스테이징 및 프로덕션 환경에 배포하는 방법에 대해 알아봅니다.
 feature: Cloud, Console, Deploy, SCD, Storage
 exl-id: 4b82289f-ee04-4b14-a0ed-7a8a19fc6a6a
-source-git-commit: 13e76d3e9829155995acbb72d947be3041579298
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '1289'
 ht-degree: 0%
@@ -152,7 +152,7 @@ magento-cloud mount:download
 
 샘플 응답:
 
-```terminal
+```
 Enter a number to choose a mount to download from:
   [0] app/etc
   [1] pub/static
@@ -176,7 +176,7 @@ magento-cloud mount:upload --source /path/to/project/pub/media/ --mount pub/medi
 
 샘플 응답:
 
-```terminal
+```
 Uploading files from pub/media to the remote mount pub/media
 
 Are you sure you want to continue? [Y/n] Y

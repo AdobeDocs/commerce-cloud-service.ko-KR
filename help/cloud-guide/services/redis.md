@@ -3,7 +3,7 @@ title: Redis 서비스 설정
 description: 클라우드 인프라에서 Adobe Commerce을 위한 백엔드 캐시 솔루션으로서 Redis를 설정하고 최적화하는 방법에 대해 알아봅니다.
 feature: Cloud, Cache, Services
 exl-id: d6971875-d302-495a-ad10-a81c507c2bc9
-source-git-commit: 1253d8357fd2554050d1775fefbc420a2097db5f
+source-git-commit: c39332d352f6dcb6f92c312a6ef1b74319d37aa3
 workflow-type: tm+mt
 source-wordcount: '255'
 ht-degree: 0%
@@ -77,7 +77,7 @@ redis-cli -h redis.internal info | grep version
 
 샘플 응답:
 
-```terminal
+```
 redis_version:7.0.5
 gcc_version:8.3.0
 ```
@@ -90,7 +90,7 @@ gcc_version:8.3.0
 redis-server -v
 ```
 
-```terminal
+```
 Redis server v=7.0.5 ...
 ```
 
@@ -102,7 +102,7 @@ echo $MAGENTO_CLOUD_RELATIONSHIPS | base64 -d | json_pp
 
 샘플 응답:
 
-```terminal
+```json
 "redis" : [
     {
         "cluster" : "project-master-123abc4",

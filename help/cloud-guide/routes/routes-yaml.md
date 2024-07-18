@@ -3,7 +3,7 @@ title: 경로 구성
 description: 클라우드 인프라 환경에서 Adobe Commerce에 대한 수신 HTTPS 요청의 경로를 정의하는 방법을 알아봅니다.
 feature: Cloud, Configuration, Routes
 exl-id: a33797e5-14cc-45eb-a048-96180b872a4a
-source-git-commit: 1253d8357fd2554050d1775fefbc420a2097db5f
+source-git-commit: c39332d352f6dcb6f92c312a6ef1b74319d37aa3
 workflow-type: tm+mt
 source-wordcount: '886'
 ht-degree: 0%
@@ -286,8 +286,8 @@ http://bar.add-theme-projectID.us.magentosite.cloud/
 
 환경에 대한 SSH 연결을 설정하고 `magento-cloud` CLI를 사용하여 경로를 나열하면 매핑되지 않은 도메인에 대한 경로 패턴을 볼 수 있습니다.
 
-```terminal
-web@mymagento.0:~$ vendor/bin/ece-tools env:config:show routes
+```bash
+vendor/bin/ece-tools env:config:show routes
 
 Magento Cloud Routes:
 +------------------------------------------+--------------------------------------------------------------+

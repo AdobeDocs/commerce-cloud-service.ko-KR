@@ -1,18 +1,18 @@
 ---
-title: Post-deploy 변수
+title: 사후 배포 변수
 description: Adobe Commerce on cloud infrastructure 배포 후 단계에서 작업을 제어하는 환경 변수 목록을 참조하십시오.
 feature: Cloud, Configuration, Cache
 recommendations: noDisplay, catalog
 role: Developer
 exl-id: e460335f-cd2b-4c98-b1ff-32504599b33d
-source-git-commit: 8b02757591c4e8f607e936de4eda74d76953d9b7
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '511'
 ht-degree: 0%
 
 ---
 
-# Post-deploy 변수
+# 사후 배포 변수
 
 다음 _사후 배포_ 변수는 사후 배포 단계에서 작업을 제어하며 [전역 변수](variables-global.md)에서 값을 상속하고 재정의할 수 있습니다. `.magento.env.yaml` 파일의 `post-deploy` 단계에 다음 변수를 삽입합니다.
 
@@ -45,7 +45,7 @@ stage:
 
 변경 사항을 테스트하고 커밋할 페이지를 지정한 후 배포 후 단계 동안 _첫 바이트에 대한 시간_ 테스트가 실행되고 각 경로의 결과를 클라우드 로그에 게시합니다.
 
-```terminal
+```
 [2019-06-20 20:42:22] INFO: TTFB test result: 0.313s {"url":"https://staging-tkyicst-xkmwgjkwmwfuk.us-4.magentosite.cloud/customer/account/create","status":200}
 [2019-06-20 20:42:22] INFO: TTFB test result: 0.408s {"url":"https://staging-tkyicst-xkmwgjkwmwfuk.us-4.magentosite.cloud/checkout/cart","status":200}
 ```
@@ -93,7 +93,7 @@ stage:
 
 - **여러 페이지** - 특정 정규 표현식 패턴에 따라 여러 페이지를 캐시하려면 다음 형식을 사용하십시오.
 
-  ```terminal
+  ```
   <entity_type>:<pattern|url|product_sku>:<store_id|store_code>
   ```
 

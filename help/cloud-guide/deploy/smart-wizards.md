@@ -3,7 +3,7 @@ title: 스마트 마법사
 description: 스마트 마법사를 사용하여 Adobe Commerce on cloud infrastructure 프로젝트가 배포 모범 사례를 준수하는지 평가하는 방법을 알아봅니다.
 feature: Cloud, Build, Deploy, SCD
 exl-id: eb79431c-8835-4ae4-b453-9c4932c5d5ac
-source-git-commit: 225fba1acfd8b3ce4d7ce989c7851e7b0b218680
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 0%
@@ -36,13 +36,13 @@ ht-degree: 0%
 
 성공적인 구성은 다음을 반환합니다.
 
-```terminal
+```
 SCD on-demand is enabled
 ```
 
 실패한 구성은 다음을 반환합니다.
 
-```terminal
+```
 SCD on-demand is disabled
 ```
 
@@ -50,7 +50,7 @@ SCD on-demand is disabled
 
 클라우드 프로젝트에 대한 _이상적인_ 구성은 사용자가 요청할 때 캐시를 예열하고 정적 콘텐츠를 생성하여 배포 중단 시간을 최소화하는 데 도움이 됩니다. 이 마법사는 배포 프로세스 중에 자동으로 실행됩니다. 클라우드가 이 _이상적인 상태_&#x200B;에 대해 구성되지 않은 경우 다음과 유사한 메시지가 표시됩니다.
 
-```terminal
+```
 - SCD on build is not configured
 - Post-deploy hook is not configured
 - Skip HTML minification is disabled
@@ -81,6 +81,6 @@ Ideal state is not configured
 
 1. 코드 변경 사항을 푸시하고 테스트를 다시 실행합니다. 구성이 _이상적_&#x200B;인 경우 다음 메시지가 표시됩니다.
 
-   ```terminal
+   ```
    Ideal state is configured
    ```

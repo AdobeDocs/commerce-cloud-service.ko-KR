@@ -5,7 +5,7 @@ role: Developer
 feature: Cloud, Integration
 last-substantial-update: 2024-02-06T00:00:00Z
 exl-id: 2dddba73-5b88-4b5d-a0e1-2f1c1f52354c
-source-git-commit: abe9aa36b907be8bdfdf42e6f28f1e1eac68fecf
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '564'
 ht-degree: 0%
@@ -38,7 +38,7 @@ magento-cloud integration:list
 
 샘플 응답:
 
-```terminal
+```
 +----------+--------------+---------------------------------------------------------------------------+
 | ID       | Type         | Summary                                                                   |
 +----------+--------------+---------------------------------------------------------------------------+
@@ -85,7 +85,7 @@ magento-cloud integration:add --type=webhook --url=https://hook-url.example.com
 
 코드를 분기로 푸시하는 것과 같이, 특정 [이벤트](#events-to-report)를 보고하도록 통합을 사용자 지정할 수 있습니다. 예를 들어 사용자가 코드를 분기로 푸시할 때 메시지를 보내는 `environment.push` 이벤트를 지정할 수 있습니다.
 
-```terminal
+```
 Events to report (--events)
 A list of events to report, e.g. environment.push
 Default: *
@@ -95,7 +95,7 @@ Enter comma-separated values (or leave this blank)
 
 `pending`, `in_progress` 또는 `complete` 상태의 이벤트를 보고하도록 선택할 수 있습니다.
 
-```terminal
+```
 States to report (--states)
 A list of states to report, e.g. pending, in_progress, complete
 Default: complete
@@ -105,7 +105,7 @@ Enter comma-separated values (or leave this blank)
 
 특정 환경에 대해 _포함_ 또는 _제외_ 메시지를 사용할 수 있습니다.
 
-```terminal
+```
 Included environments (--environments)
 The environment IDs to include
 Default: *
@@ -120,7 +120,7 @@ Enter comma-separated values (or leave this blank)
 
 통합이 완료되면 다음과 같은 값의 요약을 받게 됩니다.
 
-```terminal
+```
 Created integration integration-ID (type: webhook)
 +-----------------------+------------------------------+
 | Property              | Value                        |
@@ -145,7 +145,7 @@ magento-cloud integration:update --states=pending <int-id>
 
 샘플 응답:
 
-```terminal
+```
 Integration integration-ID (webhook) updated
 +-----------------------+------------------------------+
 | Property              | Value                        |

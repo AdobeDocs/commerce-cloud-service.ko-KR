@@ -3,7 +3,7 @@ title: 변수 수준 및 옵션
 description: 클라우드 인프라 프로젝트 런타임 환경에서 Adobe Commerce을 사용자 지정하는 데 사용되는 다양한 변수 수준 및 옵션에 대해 알아봅니다.
 feature: Cloud, Configuration, Security
 exl-id: 11aa0862-94c0-47fb-946a-0148f75cc24c
-source-git-commit: 13e76d3e9829155995acbb72d947be3041579298
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '446'
 ht-degree: 0%
@@ -93,7 +93,7 @@ Cloud CLI를 사용하여 기존 변수 목록을 볼 수 있습니다.
 magento-cloud variables
 ```
 
-```terminal
+```
 Variables on the project Project-Name (<project-id>), environment <environment-name>:
 +----------------------------+-------------+-------------------------------------------+
 | Name                       | Level       | Value                                     |

@@ -3,7 +3,7 @@ title: 저장소 구성 관리
 description: 클라우드 인프라 환경의 모든 Adobe Commerce에서 스토어 구성 설정을 관리하고 동기화하는 방법에 대해 알아봅니다.
 feature: Cloud, Configuration, SCD
 exl-id: f2dd876d-24ee-4d47-b9ac-44fcf77b61b5
-source-git-commit: 13e76d3e9829155995acbb72d947be3041579298
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '1439'
 ht-degree: 0%
@@ -162,7 +162,7 @@ SCD_* 변수를 빌드 단계로 이동합니다.
 
 배포 프로세스 중에 원본 `app/etc/env.php` 및 `app/etc/config.php` 파일의 복사본을 만들어 동일한 폴더에 저장했습니다. 다음은 동일한 `app/etc` 폴더에 있는 BAK(백업 파일)와 PHP(원본 파일)를 보여 줍니다.
 
-```terminal
+```
 ...
 config.php.bak
 di.xml
@@ -192,7 +192,7 @@ env.php
 
    샘플 응답:
 
-   ```terminal
+   ```
    The list of backup files:
    app/etc/env.php
    app/etc/config.php
