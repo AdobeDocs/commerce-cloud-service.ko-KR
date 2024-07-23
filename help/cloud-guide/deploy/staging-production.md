@@ -3,9 +3,9 @@ title: 스테이징 및 프로덕션에 배포
 description: 추가 테스트를 위해 클라우드 인프라 코드에서 Adobe Commerce을 스테이징 및 프로덕션 환경에 배포하는 방법에 대해 알아봅니다.
 feature: Cloud, Console, Deploy, SCD, Storage
 exl-id: 4b82289f-ee04-4b14-a0ed-7a8a19fc6a6a
-source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
+source-git-commit: ae7eb6a0c3de773377c8e1efb5ce2e92c06506bd
 workflow-type: tm+mt
-source-wordcount: '1289'
+source-wordcount: '1310'
 ht-degree: 0%
 
 ---
@@ -340,6 +340,8 @@ rsync -azvP <source> <destination>
    create database main;
    ```
 
+1. 데이터베이스를 가져옵니다.
+
    프로덕션용 가져오기:
 
    ```shell
@@ -351,3 +353,5 @@ rsync -azvP <source> <destination>
    ```shell
    zcat <cluster-ID_stg>.sql.gz | sed -e 's/DEFINER[ ]*=[ ]*[^*]*\*/\*/' | mysql -h 127.0.0.1 -p -u <database-username> <database-name>;
    ```
+
+   이 명령은 데이터베이스 덤프 파일의 압축을 풀고 `DEFINER` 문을 제거한 다음 지정한 자격 증명을 사용하여 데이터베이스를 가져옵니다.
