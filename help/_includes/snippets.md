@@ -1,7 +1,7 @@
 ---
-source-git-commit: b08443d937dfc18120daa0d6a1277b9c7bca67aa
+source-git-commit: 762ce3cb6268401b0f5fae5b2280a870aa9c83a5
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '857'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ ht-degree: 0%
 >
 >필요한 서비스 변경 사항을 표시하고 업데이트된 `.magento.app.yaml` 및 `services.yaml` 파일을 포함하고 티켓에 PHP 버전을 명시하십시오. PHP 버전, 확장, 환경 설정에 대한 셀프 서비스 변경 내용은 _응용 프로그램 구성_&#x200B;의 [PHP 설정](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/php-settings.html)을 참조하십시오.
 >
->_live_ 프로덕션 환경(**Pro만 해당**)을 변경하는 경우 클라우드 인프라 팀이 리소스를 마샬링하고 보안 업그레이드를 수행할 수 있는 충분한 시간을 허용하기 위해 최소 48시간 알림을 제공해야 합니다.
+>_live_ 프로덕션 환경(**Pro만 해당**)을 변경하는 경우 클라우드 인프라 팀이 리소스를 마샬링하고 보안 업그레이드를 수행할 수 있는 충분한 시간을 허용하기 위해 최소 48시간 알림을 제공해야 합니다. 고시 기간에는 주말이 포함되지 않습니다. 예를 들어, 월요일에 서비스 업그레이드를 수행하려면 이전 수요일까지 요청을 제출해야 합니다.
 
 ## Pro 백업 {#pro-backups}
 
