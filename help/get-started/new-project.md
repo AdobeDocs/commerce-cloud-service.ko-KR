@@ -4,7 +4,7 @@ description: 클라우드 인프라 프로젝트에서 Adobe Commerce을 프로�
 recommendations: noDisplay, catalog
 role: Admin
 exl-id: cfb354b0-c255-4b6e-94aa-c5a6bf7230d6
-source-git-commit: 374cbe4a119b43ab446905fd6b9e51840094ce61
+source-git-commit: da1dec76b9389244f9d5a65428e09f1bc897fa5f
 workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Pro 스테이징 및 프로덕션 환경에 대한 최상위 수준 도메인 �
 
 여러 도메인 또는 고유 도메인에 대한 자세한 지침은 _Cloud Infrastructure의 Commerce_ 안내서의 [여러 웹 사이트 또는 스토어 설정](../cloud-guide/store/multiple-sites.md)을 참조하십시오.
 
-Adobe Commerce 사이트에서 사용되는 동일한 apex 및 하위 도메인을 연결하는 기존 Fastly 계정이 있는 경우 [여러 Fastly 계정 및 할당된 도메인](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/cdn/fastly#multiple-fastly-accounts-and-assigned-domains)을 참조하십시오.
+Adobe Commerce 사이트에서 사용되는 동일한 apex 및 하위 도메인을 연결하는 기존 Fastly 계정이 있는 경우 [여러 Fastly 계정 및 할당된 도메인](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/cdn/fastly#multiple-fastly-accounts-and-assigned-domains){target="_blank"}을 참조하십시오.
 
 ## 트랜잭션 이메일 도메인
 
