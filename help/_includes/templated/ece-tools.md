@@ -1,14 +1,14 @@
 ---
-source-git-commit: 6d8c082d78259f8f7adb0fb7f11ff4fcdb234124
+source-git-commit: a58ad3254cb00a8fcafd11f1541f55ea86ad18eb
 workflow-type: tm+mt
-source-wordcount: '4030'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 # ece-tools
 
 <!-- The template to render with above values -->
-**버전**: 2002.1.18
+**버전**: 2002.1.19
 
 이 참조에는 `ece-tools` 명령줄 도구를 통해 사용할 수 있는 34개의 명령이 포함되어 있습니다.
 클라우드 인프라의 Adobe Commerce에서 `ece-tools list` 명령을 사용하여 초기 목록이 자동으로 생성됩니다.
@@ -33,7 +33,7 @@ ece-tools _complete [-s|--shell SHELL] [-i|--input INPUT] [-c|--current CURRENT]
 
 ### `--input`, `-i`
 
-입력 토큰 배열(예: COMP_WORDS 또는 argv)
+입력 토큰의 배열(예: COMP_WORDS 또는 argv)
 
 - 기본값: `[]`
 - 값 필요
