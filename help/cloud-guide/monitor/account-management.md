@@ -4,9 +4,9 @@ description: New Relic 계정에 액세스하고 Adobe Commerce on cloud infrast
 feature: Cloud, Observability
 role: Admin
 exl-id: ee639e2e-4074-4384-8f68-152bc3bac93b
-source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
+source-git-commit: 1fc488d7e13952ad70d4c864327899f38ea48af1
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '660'
 ht-degree: 0%
 
 ---
@@ -17,20 +17,9 @@ Adobe이 클라우드 인프라 프로젝트를 프로비저닝할 때 라이선
 
 ## 사용자 액세스 관리
 
-New Relic 계정에는 소유자 역할에 할당된 한 사람만 있을 수 있습니다. 계정 소유자를 변경해야 하는 경우 현재 소유자에게 관리자 역할을 할당한 다음 다른 사용자에게 소유자 역할을 할당합니다. 지침은 _New Relic 설명서_&#x200B;에서 [계정 소유자 업데이트](https://docs.newrelic.com/docs/accounts/original-accounts-billing/original-users-roles/users-roles-original-user-model/)를 참조하십시오.
-
-New Relic 액세스 관리 지침:
-
-- 프로젝트 소유자 및 관리자 사용자는 New Relic 계정에서 사용자를 추가하고 제거할 수 있습니다.
-- 5개 이상의 전체 액세스 **사용자**&#x200B;를 만들지 마십시오.
-- 전체 기능 세트에 대한 액세스를 엄격히 요구하는 사용자만 전체 액세스 권한을 부여합니다.
-- 무료 **제한된** 사용자에 대한 특정 지침이 없습니다.
-
->[!TIP]
+>[!NOTE]
 >
->사용자에게 소유자 역할을 할당하기 전에 사용자가 클라우드 인프라의 Adobe Commerce에 대한 New Relic 계정에 있는지 확인하십시오. 해당 계정에 Adobe을 추가해야 하는데 기존 계정 소유자 또는 관리자가 도움을 줄 수 없는 경우 New Relic용 [파트너 관계 소유자 계정](https://account.newrelic.com/accounts/1311131/users)에 대한 액세스 권한이 있는 모든 사용자가 고객을 대신하여 사용자를 추가할 수 있습니다.
-
-모든 액세스, 통합 및 도구 사용을 관리할 수 있는 **관리자** 사용자를 New Relic 계정에 한 명 이상 추가하십시오.
+>전체 기능 세트에 대한 액세스를 엄격히 요구하는 사용자만 전체 액세스 권한을 부여합니다.
 
 **New Relic에서 사용자 관리에 액세스하려면**:
 
