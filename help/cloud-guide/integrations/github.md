@@ -4,9 +4,9 @@ description: Adobe Commerce on cloud infrastructure 프로젝트를 GitHub와 �
 feature: Cloud, Integration
 last-substantial-update: 2023-05-25T00:00:00Z
 exl-id: 5305452f-4c8d-438c-ac78-e2e1ec2f8cd9
-source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
+source-git-commit: b162faadf114423a7da23ecf94c96eccbcaeb72b
 workflow-type: tm+mt
-source-wordcount: '924'
+source-wordcount: '949'
 ht-degree: 0%
 
 ---
@@ -108,7 +108,7 @@ GitHub 개발자 설정에서 클래식 개인 액세스 토큰을 만듭니다.
 
 | 옵션 | 필수? | 설명 |
 | ----------------------- | --------- | --------------------------------- |
-| `--base-url` | 예 | 서버 설치의 기본 URL입니다. `https://github.com/` 또는 사용자 지정일 수 있습니다. 저장소가 공용 Github로 호스팅되는 경우 이 옵션을 생략합니다. |
+| `--base-url` | 예 | 서버 설치의 기본 URL입니다. `https://github.com/` 또는 사용자 지정일 수 있습니다. 저장소가 공용 Github로 호스팅되거나 저장소가 개인 서버에서 호스팅되지 않는 경우 이 옵션을 생략합니다. 저장소 URL이 `https://github.com/{account}/{repository-name}`과(와) 유사한 경우 이 옵션을 생략합니다. 이로 인해 `Unable to connect to GitHub: repository not found`과(와) 같은 오류가 발생할 수 있습니다. |
 | `--token` | 예 | GitHub에 대해 생성한 개인 액세스 토큰 |
 | `--repository` | 예 | 저장소 이름: `owner-or-organisation/repository` |
 | `--build-pull-requests` | 선택 사항 | 끌어오기 요청을 병합한 후 배포하도록 클라우드 인프라의 Adobe Commerce에 지시합니다(기본적으로 `true`). |
