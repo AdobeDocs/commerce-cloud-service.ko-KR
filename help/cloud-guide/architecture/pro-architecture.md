@@ -4,9 +4,9 @@ description: Pro 아키텍처에서 지원하는 환경에 대해 알아봅니�
 feature: Cloud, Auto Scaling, Iaas, Paas, Storage
 topic: Architecture
 exl-id: d10d5760-44da-4ffe-b4b7-093406d8b702
-source-git-commit: eccf69d792f5f8bbd32fb24ac731fffa1eeb91ba
+source-git-commit: 66b1f86c8c674d0de4e2895e328a5a850eadf903
 workflow-type: tm+mt
-source-wordcount: '1511'
+source-wordcount: '1559'
 ht-degree: 0%
 
 ---
@@ -167,6 +167,10 @@ Adobe은 고유한 이중화 하드웨어로 인해 게이트웨이 서버를 3�
 Adobe Commerce on cloud infrastructure는 각 영역에 별도의 데이터 센터가 있는 세 개의 개별 AWS 또는 Azure Availability Zone에서 각 Pro 프로젝트를 복제하는 고가용성 아키텍처를 사용합니다. 이러한 중복성 외에도 Pro 스테이징 및 프로덕션 환경에는 _치명적인 오류_&#x200B;의 경우에 사용하도록 설계된 정기적인 라이브 백업이 제공됩니다.
 
 **자동 백업**&#x200B;에는 MySQL 데이터베이스 및 탑재된 볼륨에 저장된 파일과 같이 실행 중인 모든 서비스의 영구 데이터가 포함됩니다. 백업은 프로덕션 환경과 동일한 영역에 있는 암호화된 EBS(Elastic Block Storage)에 저장됩니다. 자동 백업은 별도의 시스템에 저장되므로 공개적으로 액세스할 수 없습니다.
+
+>[!NOTE]
+>
+>마운트된 볼륨에는 [쓰기 가능한 마운트](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/app/properties/properties#mounts)만 포함/참조되며 `app/` 디렉터리의 일부만 포함됩니다. 다른 파일의 경우 [빌드 및 배포 프로세스](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)에서 생성/생성되며 나머지 파일에 대해서도 Git 저장소를 확인해야 합니다.
 
 {{pro-backups}}
 
