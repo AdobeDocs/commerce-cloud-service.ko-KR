@@ -3,16 +3,21 @@ title: 서비스 구성
 description: 클라우드 인프라에서 Adobe Commerce에서 사용하는 서비스를 구성하는 방법에 대해 알아봅니다.
 feature: Cloud, Configuration, Services
 exl-id: 48091c10-c53f-4aad-afbe-b4516653bda1
-source-git-commit: c39332d352f6dcb6f92c312a6ef1b74319d37aa3
+source-git-commit: 0262fca6e94d9815e8af0fb0c026e36fecc1f939
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1046'
 ht-degree: 0%
 
 ---
 
 # 서비스 구성
 
-`services.yaml` 파일은 MySQL, Redis, Elasticsearch 또는 OpenSearch와 같은 클라우드 인프라에서 Adobe Commerce이 지원하고 사용하는 서비스를 정의합니다. 외부 서비스 공급자에 가입할 필요가 없습니다. 이 파일은 프로젝트의 `.magento` 디렉터리에 있습니다.
+`services.yaml` 파일은 MySQL, Redis, Elasticsearch 또는 OpenSearch와 같은 클라우드 인프라에서 Adobe Commerce이 지원하고 사용하는 서비스를 정의합니다. 외부 서비스 공급자에 가입할 필요가 없습니다.
+
+>[!NOTE]
+>
+>`.magento/services.yaml` 파일은 프로젝트의 `.magento` 디렉터리에서 로컬로 관리됩니다. 이 구성은 통합 환경에서 필요한 서비스 버전을 정의하기 위한 빌드 프로세스 중에만 액세스되며 배포가 완료되면 제거되므로 서버에서 찾을 수 없습니다.
+
 
 배포 스크립트는 `.magento` 디렉터리의 구성 파일을 사용하여 구성된 서비스로 환경을 프로비전합니다. 응용 프로그램이 `.magento.app.yaml` 파일의 [`relationships`](../application/properties.md#relationships) 속성에 포함된 경우 해당 응용 프로그램에서 서비스를 사용할 수 있게 됩니다. `services.yaml` 파일에 _type_ 및 _disk_ 값이 있습니다. 서비스 유형은 서비스 _name_ 및 _version_&#x200B;을(를) 정의합니다.
 
