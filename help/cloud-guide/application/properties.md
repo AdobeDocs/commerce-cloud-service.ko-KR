@@ -3,9 +3,9 @@ title: 속성
 description: 클라우드 인프라에 빌드 및 배포하기 위해  [!DNL Commerce] 응용 프로그램을 구성할 때 속성 목록을 참조로 사용하십시오.
 feature: Cloud, Configuration, Build, Deploy, Roles/Permissions, Storage
 exl-id: 58a86136-a9f9-4519-af27-2f8fa4018038
-source-git-commit: 99272d08a11f850a79e8e24857b7072d1946f374
+source-git-commit: 1d671d7d2b9ef8742f50b23aa56020d82c701fa4
 workflow-type: tm+mt
-source-wordcount: '797'
+source-wordcount: '816'
 ht-degree: 0%
 
 ---
@@ -141,6 +141,8 @@ disk: 5120
 >[!NOTE]
 >
 >Pro 스테이징 및 프로덕션 환경의 경우 응용 프로그램에 대한 `mounts` 및 `disk` 구성을 업데이트하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)해야 합니다. 티켓을 제출할 때 필요한 구성 변경 사항을 표시하고 업데이트된 `.magento.app.yaml` 파일 버전을 포함하십시오.
+>
+>스태이징 또는 프로덕션의 디스크 저장소를 일시적으로 늘릴 수는 없으며, 이 프로세스는 되돌릴 수 없습니다.
 
 ## `relationships`
 
