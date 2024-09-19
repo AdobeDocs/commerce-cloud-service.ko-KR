@@ -2,9 +2,9 @@
 title: SendGrid 이메일 서비스
 description: 클라우드 인프라의 Adobe Commerce용 SendGrid 이메일 서비스와 DNS 구성을 테스트하는 방법에 대해 알아봅니다.
 exl-id: 30d3c780-603d-4cde-ab65-44f73c04f34d
-source-git-commit: 1226be333deb1b1da402b4c0d2e141f9be1eb93b
+source-git-commit: b5c8dc062a940e9e202d9bd4cca6901b07109e07
 workflow-type: tm+mt
-source-wordcount: '1128'
+source-wordcount: '1273'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ DKIM은 인터넷 서비스 제공자(ISP)가 합법적인 발신자 주소와 �
 
 >[!WARNING]
 >
->SendGrid DKIM 서명 및 도메인 인증 지원은 Starter 프로젝트가 아닌 Pro 프로젝트에만 사용할 수 있습니다. 그 결과, 아웃바운드 트랜잭션 이메일은 스팸 필터에 의해 플래그가 지정될 수 있습니다. DKIM을 사용하면 인증된 이메일 발신자로서의 게재 속도가 향상됩니다. 메시지 게재 속도를 향상시키기 위해 Starter에서 Pro로 업그레이드하거나 자체 SMTP 서버 또는 이메일 게재 서비스 공급자를 사용할 수 있습니다. _관리 시스템 안내서_&#x200B;에서 [전자 메일 연결 구성](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/communications/email-communications)을 참조하십시오.
+>SendGrid DKIM 서명 및 도메인 인증 지원은 Pro 프로젝트의 프로덕션 및 스테이징 환경에서만 사용할 수 있고 모든 스타터 환경에는 사용할 수 없습니다. 그 결과, 아웃바운드 트랜잭션 이메일은 스팸 필터에 의해 플래그가 지정될 수 있습니다. DKIM을 사용하면 인증된 이메일 발신자로서의 게재 속도가 향상됩니다. 메시지 게재 속도를 향상시키기 위해 Starter에서 Pro로 업그레이드하거나 자체 SMTP 서버 또는 이메일 게재 서비스 공급자를 사용할 수 있습니다. _관리 시스템 안내서_&#x200B;에서 [전자 메일 연결 구성](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/communications/email-communications)을 참조하십시오.
 
 ### 보낸 사람 및 도메인 인증
 
@@ -137,3 +137,13 @@ dig CNAME s2._domainkey.domain_name
 ### 이메일 전송 신뢰도
 
 이메일 전송 신뢰도는 인터넷 서비스 공급자(ISP)가 이메일 메시지를 보내는 회사에 할당하는 점수입니다. 점수가 높을수록 ISP가 수신자의 받은 편지함에 메시지를 전달할 가능성이 높습니다. 점수가 특정 수준 아래로 떨어지면 ISP는 메시지를 수신자의 스팸 폴더로 라우팅하거나 메시지를 완전히 거부할 수도 있습니다. 신뢰도 점수는 다른 IP 주소와 비교하여 IP 주소 등급의 30일 평균 및 스팸 고객 불만 비율과 같은 몇 가지 요인에 의해 결정됩니다. 전자 메일 전송 평판을 확인하는 [8가지 방법](https://sendgrid.com/en-us/blog/5-ways-check-sending-reputation)을 참조하세요.
+
+### 이메일 비표시 목록
+
+이메일 억제 목록은 전송 평판과 게재 속도에 손상을 줄 수 있는 경우 이메일이 전송되지 않아야 하는 수신자 목록입니다. CAN-SPAM Act에서 이메일 보낸 사람이 이메일을 구독하지 않거나 스팸으로 표시한 수신자를 옵트아웃하는 방법을 갖도록 해야 합니다. 제외 목록은 바운스, 차단 또는 유효하지 않은 이메일도 수집합니다.
+
+이메일이 스팸 폴더로 전송되지 않도록 하려면 Sendgrid의 모범 사례 문서 [내 이메일이 스팸으로 이어지는 이유](https://sendgrid.com/en-us/blog/10-tips-to-keep-email-out-of-the-spam-folder)를 따르십시오.
+
+일부 받는 사람이 전자 메일을 받지 못하는 경우 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket)하여 금지 목록 검토를 요청하고 필요한 경우 받는 사람을 제거할 수 있습니다.
+
+자세한 내용은 [제외 목록이란?](https://sendgrid.com/en-us/blog/what-is-a-suppression-list)을 참조하세요.
