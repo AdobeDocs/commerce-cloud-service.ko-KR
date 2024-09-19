@@ -2,20 +2,20 @@
 title: 발신 이메일 구성
 description: 클라우드 인프라에서 Adobe Commerce에 대해 발신 이메일을 활성화하는 방법을 알아봅니다.
 exl-id: 814fe2a9-15bf-4bcb-a8de-ae288fd7f284
-source-git-commit: 59f82d891bb7b1953c1e19b4c1d0a272defb89c1
+source-git-commit: ec9192caa5daa1cd25a3eec6095c2c3cf8fbefb4
 workflow-type: tm+mt
-source-wordcount: '363'
+source-wordcount: '373'
 ht-degree: 0%
 
 ---
 
 # 발신 이메일 구성
 
-[!DNL Cloud Console] 또는 명령줄에서 각 환경에 대해 발신 전자 메일을 활성화 및 비활성화할 수 있습니다. 통합 및 스테이징 환경에 대해 발신 이메일을 활성화하여 Cloud 프로젝트 사용자에 대해 이중 인증 또는 암호 재설정 이메일을 전송합니다.
+[!DNL Cloud Console] 또는 명령줄에서 각 환경에 대해 발신 전자 메일을 활성화 및 비활성화할 수 있습니다. 통합(및 Starter 전용 스테이징) 환경을 위해 발신 이메일을 활성화하여 Cloud 프로젝트 사용자를 위한 이중 인증 또는 암호 재설정 이메일을 전송합니다.
 
-기본적으로 발신 이메일은 프로덕션 및 스테이징 환경에서 활성화됩니다. 그러나 [명령줄](#enable-emails-in-the-cli) 또는 [클라우드 콘솔](outgoing-emails.md#enable-emails-in-the-cloud-console)을 통해 `enable_smtp` 속성을 설정할 때까지 [!UICONTROL Enable outgoing emails]이(가) 환경 설정에서 비활성화되어 표시될 수 있습니다.
+기본적으로 발신 이메일은 프로덕션 및 스테이징(Pro 전용) 환경에서 활성화됩니다. 그러나 [명령줄](#enable-emails-in-the-cli) 또는 [클라우드 콘솔](outgoing-emails.md#enable-emails-in-the-cloud-console)을 통해 `enable_smtp` 속성을 설정할 때까지 상태에 관계없이 **[!UICONTROL Enable outgoing emails]** 설정이 환경 설정에서 비활성화되어 표시될 수 있습니다.
 
-[명령줄](#enable-emails-in-the-cli)에 의해 [!UICONTROL enable_smtp] 속성 값을 업데이트하면 클라우드 콘솔에서 이 환경에 대한 [!UICONTROL Enable outgoing emails] 설정 값도 변경됩니다.
+[명령줄](#enable-emails-in-the-cli)에 의해 `enable_smtp` 속성 값을 업데이트하면 클라우드 콘솔에서 이 환경에 대한 [!UICONTROL Enable outgoing emails] 설정 값도 변경됩니다.
 
 {{redeploy-warning}}
 
