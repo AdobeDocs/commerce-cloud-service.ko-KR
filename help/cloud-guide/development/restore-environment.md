@@ -4,16 +4,16 @@ description: 클라우드 인프라 프로젝트에서 Adobe Commerce 애플리�
 role: Developer
 topic: Development
 exl-id: b76bd6c3-986e-4adc-abd0-5b27db0d8a3b
-source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
+source-git-commit: 9e4e58d2470b73b221168c182c7d563ce6f6502f
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '493'
 ht-degree: 0%
 
 ---
 
 # 환경 복원
 
-통합 환경에서 문제가 발생하고 [유효한 백업](../storage/snapshots.md)이 없는 경우 다음 방법 중 하나를 사용하여 환경을 복원해 보십시오.
+통합 환경에서 문제가 발생하고 [유효한 백업](../storage/snapshots.md)이 없거나 환경을 빈 슬레이트로 재설정하려면 다음 방법 중 하나를 사용하여 환경을 복원/재설정할 수 있습니다.
 
 - Git 분기의 코드 재설정 또는 되돌리기
 - [!DNL Commerce] 응용 프로그램 제거
