@@ -3,7 +3,7 @@ title: Fastly 문제 해결
 description: Adobe Commerce용 Fastly CDN 모듈 및 서비스의 문제를 해결하고 관리하는 방법에 대해 알아봅니다.
 feature: Cloud, Configuration, Cache, Services
 exl-id: e4c47035-cbad-4838-8d44-fa5eaaac42d1
-source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
+source-git-commit: e066e9c7e1a6010c9d316f66f1632e28a0c40652
 workflow-type: tm+mt
 source-wordcount: '1834'
 ht-degree: 0%
@@ -119,7 +119,7 @@ Fastly가 503 시간 초과 오류를 반환하는 경우 오류 로그와 503 �
 
 클라우드 인프라 프로젝트의 Adobe Commerce에 대한 Apex 도메인 및 하위 도메인이 할당된 서비스 ID를 가진 기존 Fastly 계정과 이미 연결되어 있는 경우 Fastly 구성을 업데이트할 때까지 를 시작할 수 없습니다.
 
-- 기존 Fastly 계정에서 Apex 및 하위 도메인 구성을 업데이트합니다. [여러 Fastly 계정 및 할당된 도메인](fastly.md#domain)을 참조하세요.
+- 기존 Fastly 계정에서 Apex 및 하위 도메인 구성을 업데이트합니다. [여러 Fastly 계정 및 할당된 도메인](fastly.md#multiple-fastly-accounts-and-assigned-domains)을 참조하세요.
 
 - [Fastly 사용 및 구성](fastly-configuration.md#enable-fastly-caching) 및 [DNS 구성](../launch/checklist.md#update-dns-configuration-with-production-settings) 완료
 
