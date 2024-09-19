@@ -6,9 +6,9 @@ feature: Cloud, Roles/Permissions
 last-substantial-update: 2023-06-27T00:00:00Z
 topic: Security
 exl-id: 3357a3ea-bf86-4a65-95d1-6b24f1152248
-source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
+source-git-commit: 5e4be034a392716ea55e2878d336cb9ecac1e052
 workflow-type: tm+mt
-source-wordcount: '1454'
+source-wordcount: '1459'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 클라우드 인프라의 Adobe Commerce 프로젝트는 역할 기반 액세스를 사용합니다. 프로젝트 수준에서 사용할 수 있는 두 가지 역할이 있습니다.
 
-- **프로젝트 관리자** - 모든 프로젝트 환경에 대한 쓰기 액세스 권한으로 사용자, 푸시 코드 및 프로젝트 설정을 관리할 수 있습니다.
+- **프로젝트 관리자** - 모든 프로젝트 환경에 대한 쓰기 액세스 권한으로 사용자, 푸시 코드 및 프로젝트 설정을 관리할 수 있습니다. (이전 이름: **수퍼 관리자**)
 - **프로젝트 뷰어**—모든 프로젝트 환경에 대한 보기 전용 액세스 권한.
 
 프로젝트 뷰어는 환경에서 작업을 수행할 수 없지만 프로젝트 뷰어에게 특정 환경 유형에 대한 쓰기 액세스 권한을 부여할 수 있습니다.
