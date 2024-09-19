@@ -3,7 +3,7 @@ title: PHP 설정
 description: 클라우드 인프라에서 Commerce 애플리케이션 구성에 대한 최적의 PHP 설정에 대해 알아봅니다.
 feature: Cloud, Configuration, Extensions
 exl-id: b4180265-f7a1-48e4-8c23-27835253e171
-source-git-commit: 94c1e16a07567471d446478e3bd2a33977247ef3
+source-git-commit: 9d20cd11e541d343af158eb3eadcf641fb2751bd
 workflow-type: tm+mt
 source-wordcount: '536'
 ht-degree: 0%
@@ -118,6 +118,7 @@ PHP 모듈 요구 사항은 Adobe Commerce 버전에 연결되어 있습니다. 
 
 Pro 프로젝트의 경우 다음 확장을 설치하려면 추가 지원이 필요합니다.
 
+- `ioncube`
 - `sourceguardian`
 
 예를 들어, 모든 환경에서 SourceGuardian으로 보호된 스크립트만 실행하도록 PHP를 설정하려면 `php.ini` 파일에서 다음 옵션을 설정해야 합니다.
