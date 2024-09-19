@@ -3,9 +3,9 @@ title: 스타터 아키텍처
 description: Starter 아키텍처에서 지원하는 환경에 대해 알아봅니다.
 feature: Cloud, Paas
 exl-id: 03365d32-4eb4-42d4-82a7-771df5e7b3da
-source-git-commit: c61d711b1041ecf76ec6468cd225a34fd77c24b1
+source-git-commit: e5cb79cab4e22d1c787859ab98e6bab6cd2dc2eb
 workflow-type: tm+mt
-source-wordcount: '903'
+source-wordcount: '942'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,9 @@ Adobe은 `master`에서 `staging`(이)라는 분기를 만들 것을 권장합�
 
 통합 환경에서 최상의 성능을 얻으려면 다음 모범 사례를 따르십시오.
 
-- 카탈로그 크기 제한
+- 카탈로그 크기 제한 - 참고로 샘플 데이터에는 약 2,048개의 제품이 포함되어 있습니다. 카탈로그 크기를 약 4,000~5,000개의 제품으로 줄여 보십시오.
+
+- 고객 그룹 수 감소 - 고객 그룹이 너무 많으면 색인화 성능 및 전체 성능에 영향을 줄 수 있습니다.
 
 - 1명 또는 2명의 동시 사용자로 사용 제한
 
