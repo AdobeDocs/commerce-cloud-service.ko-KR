@@ -3,9 +3,9 @@ title: Fastly 서비스 개요
 description: 클라우드 인프라의 Adobe Commerce에 포함된 Fastly 서비스를 통해 Adobe Commerce 사이트의 컨텐츠 전달 작업을 최적화하고 보호하는 방법에 대해 알아봅니다.
 feature: Cloud, Configuration, Iaas, Paas, Cache, Security, Services
 exl-id: dc4500bf-f037-47f0-b7ec-5cd1291f73a1
-source-git-commit: 13e76d3e9829155995acbb72d947be3041579298
+source-git-commit: dc331df378074af8a8776a33784b73082a39cf10
 workflow-type: tm+mt
-source-wordcount: '1392'
+source-wordcount: '1426'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ Fastly는 클라우드 인프라 프로젝트에서 Adobe Commerce에 대한 콘
 
 - **보안**—Adobe Commerce 사이트에 대해 Fastly 서비스를 사용하도록 설정하면 사이트 및 네트워크를 보호하는 추가 보안 기능을 사용할 수 있습니다.
 
-   - [WAF(Web Application Firewall](fastly-waf-service.md)) - 클라우드 인프라 사이트 및 네트워크에서 프로덕션 Adobe Commerce을 손상시킬 수 있기 전에 악성 트래픽을 차단하기 위해 PCI 규격 보호 기능을 제공하는 관리되는 웹 응용 프로그램 방화벽 서비스입니다. WAF 서비스는 Pro 및 Starter 프로덕션 환경에서만 사용할 수 있습니다.
+   - [웹 응용 프로그램 방화벽](fastly-waf-service.md)(WAF) - 클라우드 인프라 사이트 및 네트워크에서 프로덕션 Adobe Commerce을 손상시킬 수 있기 전에 악성 트래픽을 차단하는 PCI 호환 보호 기능을 제공하는 관리되는 웹 응용 프로그램 방화벽 서비스입니다. WAF 서비스는 Pro 및 Starter 프로덕션 환경에서만 사용할 수 있습니다.
 
    - [DDoS(Distributed Denial of Service) 보호](#ddos-protection)—Ping of Death, Smurf 공격 및 기타 ICMP 기반 플러드 공격과 같은 일반적인 공격에 대한 기본 제공 DDoS 보호 기능.
 
@@ -42,7 +42,7 @@ Fastly는 클라우드 인프라 프로젝트에서 Adobe Commerce에 대한 콘
 
      Adobe Commerce은 각 스테이징 및 프로덕션 환경에 대해 도메인에 의해 검증된 Let&#39;s Encrypt SSL/TLS 인증서를 제공합니다. Adobe Commerce은 Fastly 설정 프로세스 중에 도메인 유효성 검사 및 인증서 프로비저닝을 완료합니다.
 
-- **원본 차단**—트래픽이 Fastly WAF를 우회하지 못하도록 하고 원본 서버의 IP 주소를 숨겨 직접 액세스 및 DDoS 공격으로부터 보호합니다.
+- **원본 차단**—트래픽이 Fastly WAF을 우회하지 못하도록 하고 원본 서버의 IP 주소를 숨겨 직접 액세스 및 DDoS 공격으로부터 보호합니다.
 
   원본 클로킹은 클라우드 인프라 Pro 프로덕션 프로젝트의 Adobe Commerce에서 기본적으로 활성화됩니다. 클라우드 인프라 스타터 프로덕션 프로젝트에서 Adobe Commerce의 원본 클로킹을 사용하려면 [Adobe Commerce 지원 티켓](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)을 제출하십시오. 캐싱이 필요하지 않은 트래픽이 있는 경우 Fastly 서비스 구성을 사용자 지정하여 [Fastly 캐시 우회](fastly-vcl-bypass-to-origin.md)를 요청할 수 있습니다.
 
@@ -58,7 +58,9 @@ Adobe Commerce 프로젝트의 초기 프로비저닝 또는 업그레이드 시
 
 ## 빠른 서비스 계정 및 자격 증명
 
-클라우드 인프라 프로젝트에 대한 Adobe 커머스는 전용 Fastly 계정이나 계정 소유자가 필요하지 않습니다. 대신, 각 스테이징 및 프로덕션 환경에는 관리자의 Fastly 서비스를 구성하고 관리할 수 있는 고유한 Fastly 자격 증명(API 토큰 및 서비스 ID)이 있습니다. 또한 Fastly API 요청을 제출하려면 자격 증명이 필요합니다.
+클라우드 인프라 프로젝트에 대한 Adobe Commerce에는 전용 Fastly 계정이 제공되지 않습니다. Fastly 서비스는 Adobe에 등록된 중앙 집중식 계정에서 관리되며 관리 대시보드는 클라우드 지원 팀에서만 액세스할 수 있습니다.
+
+대신, 각 스테이징 및 프로덕션 환경에는 Commerce 관리자의 Fastly 서비스를 구성하고 관리할 수 있는 고유한 Fastly 자격 증명(API 토큰 및 서비스 ID)이 있습니다. Fastly API는 Fastly 서비스의 고급 관리를 수행하는 데 사용할 수 있으며, 이러한 요청을 제출하려면 자격 증명이 필요합니다.
 
 프로젝트 프로비저닝 중에 Adobe은 클라우드 인프라의 Adobe Commerce에 대한 Fastly 서비스 계정에 프로젝트를 추가하고 스테이징 및 프로덕션 환경에 대한 구성에 Fastly 자격 증명을 추가합니다. [Fastly 자격 증명 가져오기](fastly-configuration.md#get-fastly-credentials)를 참조하십시오.
 
