@@ -3,9 +3,9 @@ title: 차단 요청에 대한 사용자 지정 VCL
 description: 사용자 지정 VCL 코드 조각과 함께 Edge ACL(액세스 제어 목록)을 사용하여 IP 주소별 수신 요청을 차단합니다.
 feature: Cloud, Configuration, Security
 exl-id: 1f637612-3858-49d0-91f7-9b8823933cc9
-source-git-commit: 0e9ace747cc56808108781e42b97c86756089818
+source-git-commit: 16c34b6c693c4d4d5c67b21c79e0cd5d198e047b
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '996'
 ht-degree: 0%
 
 ---
@@ -109,7 +109,15 @@ Edge ACL을 정의한 후 이 ACL을 사용하여 ACL에 지정된 IP 주소에 
 
 >[!WARNING]
 >
->이러한 예에서 VCL 코드는 파일에 저장하고 Fastly API 요청에 제출할 수 있는 JSON 페이로드로 포맷됩니다. Fastly API를 사용하여 [VCL 코드 조각을 관리자](#add-the-custom-vcl-snippet)에서 제출하거나 JSON 문자열로 제출할 수 있습니다. JSON 문자열과 함께 Fastly API를 사용할 때 유효성 검사를 방지하려면 백슬래시를 사용하여 특수 문자를 이스케이프 처리해야 합니다.
+>이러한 예에서 VCL 코드는 파일에 저장하고 Fastly API 요청에 제출할 수 있는 JSON 페이로드로 포맷됩니다. Fastly API를 사용하여 [VCL 코드 조각을 관리자](#add-the-custom-vcl-snippet)에서 제출하거나 JSON 문자열로 제출할 수 있습니다. JSON 문자열과 함께 Fastly API를 사용할 때 유효성 검사 오류를 방지하려면 백슬래시를 사용하여 특수 문자를 이스케이프 처리해야 합니다.
+
+>[!NOTE]
+>관리자에서 VCL 코드 조각을 제출하는 경우 샘플 VCL 코드에서 개별 값을 추출하여 해당 필드에 입력합니다. For example:
+>- 이름: `<name of the VCL>`
+>- 동적: `<0/1>`
+>- 유형: `<type>`
+>- 우선 순위: `<priority>`
+>- 콘텐츠: `<content>`
 
 Fastly VCL 설명서에서 [동적 VCL 조각 사용](https://docs.fastly.com/vcl/vcl-snippets/)을 참조하십시오.
 
