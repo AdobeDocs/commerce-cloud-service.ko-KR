@@ -2,9 +2,9 @@
 title: Cloud CLI
 description: magento-cloud CLI를 통해 Adobe Commerce on cloud infrastructure 프로젝트의 로컬 개발 환경을 관리하는 방법을 알아봅니다.
 exl-id: 70dddd62-0269-4af4-bd2a-1a4fbf11a131
-source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
+source-git-commit: f09c461c3b9cafd773cbed6c9dee1e514415bcde
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '782'
 ht-degree: 0%
 
 ---
@@ -12,11 +12,17 @@ ht-degree: 0%
 
 # Cloud CLI
 
-`magento-cloud` CLI 도구를 사용하여 개발자와 시스템 관리자는 클라우드 프로젝트 및 환경을 관리하고 루틴을 수행하며 자동화 작업을 실행할 수 있습니다. `magento-cloud` CLI는 [[!DNL Cloud Console]](../../get-started/cloud-console.md)의 기능을 확장합니다. 로컬 워크스테이션에 `magento-cloud` CLI를 설치한 후 이를 사용하여 클라우드 인프라 Starter 및 Pro 통합 환경에서 Adobe Commerce을 관리할 수 있습니다.
+`magento-cloud` CLI 도구를 사용하여 개발자와 시스템 관리자는 클라우드 프로젝트 및 환경을 관리하고 루틴을 수행하며 로컬에서 자동화 작업을 실행할 수 있습니다. `magento-cloud` CLI는 [[!DNL Cloud Console]](../../get-started/cloud-console.md)의 기능을 확장합니다. 로컬 워크스테이션에 `magento-cloud` CLI를 설치한 후 이를 사용하여 클라우드 인프라 Starter 및 Pro 통합 환경에서 Adobe Commerce을 관리할 수 있습니다.
+
+>[!NOTE]
+>
+>로컬 도구이며 이 방법을 사용하여 클라우드 환경(읽기 전용)에 설치할 수 없습니다. **배포 워크플로**&#x200B;를 통해서만 클라우드 환경에 모듈을 설치할 수 있습니다.
+>- [Pro 배포 워크플로](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)
+>- [스타터 배포 워크플로](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/architecture/starter-develop-deploy-workflow)
 
 **`magento-cloud` CLI를 설치하려면**:
 
-1. 로컬 워크스테이션에서 클라우드 프로젝트를 복제하려는 디렉터리와 [파일 시스템 소유자](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html)에게 _쓰기_ 액세스 권한이 있는 디렉터리로 변경합니다.
+1. _로컬 워크스테이션_&#x200B;에서 클라우드 프로젝트를 복제하려는 디렉터리와 [파일 시스템 소유자](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html)에게 _쓰기_ 액세스 권한이 있는 디렉터리로 변경합니다.
 
 1. `magento-cloud` CLI를 설치합니다.
 
