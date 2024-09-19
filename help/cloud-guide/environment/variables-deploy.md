@@ -5,9 +5,9 @@ feature: Cloud, Configuration, Cache, Deploy, SCD, Storage, Search
 recommendations: noDisplay, catalog
 role: Developer
 exl-id: 673880b5-830b-4837-ac0c-5fa5643ae34c
-source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
+source-git-commit: 7c09a0041f35890f34a00a8eea8f0154dc0f5dcd
 workflow-type: tm+mt
-source-wordcount: '2185'
+source-wordcount: '2209'
 ht-degree: 0%
 
 ---
@@ -275,6 +275,16 @@ stage:
         number_of_shards: 1
         number_of_replicas: 0
 ```
+
+>[!NOTE]
+>
+>세 개의 노드(또는 [크기 조정된 아키텍처](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/architecture/scaled-architecture#service-tier)에 세 개의 서비스 노드)가 있는 Pro Staging/Production 클러스터에서는 `indices_settings`을(를) 다음과 같이 설정해야 합니다.
+>
+>```yaml
+>           indices_settings:
+>               number_of_shards: 3
+>               number_of_replicas: 2
+>```
 
 {{merge-options}}
 
