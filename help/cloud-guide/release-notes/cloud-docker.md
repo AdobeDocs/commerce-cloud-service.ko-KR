@@ -3,11 +3,11 @@ title: Cloud Docker 패키지
 description: Cloud Docker 패키지에 대한 최신 개선 사항 목록을 참조하십시오.
 feature: Cloud, Docker, Release Notes
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-04-08T00:00:00Z
+last-substantial-update: 2024-10-07T00:00:00Z
 exl-id: 907d977f-2e9c-4553-a46b-000bc6a57b28
-source-git-commit: c39332d352f6dcb6f92c312a6ef1b74319d37aa3
+source-git-commit: fdb596430fbc532bed4a6b251872f44c5321d375
 workflow-type: tm+mt
-source-wordcount: '3662'
+source-wordcount: '3684'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,13 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v1.3.7 {#latest}
+## v1.4.0 {#latest}
+
+릴리스 날짜: 2024년 10월 7일
+
+- ![수정 아이콘](../../assets/fix.svg) **리팩터링된 코드**—이전 PHP 버전(7.4, 7.3, 7.2) 및 관련 라이브러리 및 이미지에 대한 지원이 제거되었습니다.
+
+## v1.3.7
 
 릴리스 날짜: 2024년 4월 8일
 

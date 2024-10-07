@@ -2,11 +2,11 @@
 title: Commerce용 클라우드 패치
 description: Cloud Patches 패키지에 대한 최신 개선 사항 목록을 참조하십시오.
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-05-21T00:00:00Z
+last-substantial-update: 2024-10-07T00:00:00Z
 exl-id: ae6b511b-a37d-4776-9a5e-ad7d9f9f6611
-source-git-commit: 61c42a1bd1d5a28f90b8756032ee6f45be4565b2
+source-git-commit: 30eafa856aaa57bb2fd2ce26e3be2a69aee726e2
 workflow-type: tm+mt
-source-wordcount: '2208'
+source-wordcount: '2275'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,15 @@ Commerce용 클라우드 패치 패키지는 ECE-Tools 패키지에 종속되며
 
 <!--Add release notes below-->
 
-## v1.0.27 {#latest}
+## v1.1.0 {#latest}
+
+릴리스 날짜: 2024년 10월 7일
+
+- ![수정 아이콘](../../assets/fix.svg) **리팩터링된 코드**—이전 PHP 버전(7.4, 7.3, 7.2) 및 관련 라이브러리에 대한 지원이 제거되었습니다.<!-- MCLOUD-9278 - -->
+- ![수정 아이콘](../../assets/fix.svg) **업그레이드된 Monolog 버전**—Monolog 3.6에 대한 지원이 추가되었습니다.<!-- MCLOUD-12855 - -->
+- ![수정 아이콘](../../assets/fix.svg) **Application Server용 패치**—GraphQL Application Server의 알려진 문제를 해결합니다. 특히 버전 2.4.7의 `CatalogGraphQl\\Model\\Config\\AttributeReader`에는 오래된 특성 구성에 따라 응답을 검색하는 GraphQL 요청을 초래할 수 있는 버그가 포함되어 있습니다.<!-- ACPT-1876 -->
+
+## v1.0.27
 
 릴리스 날짜: 2024년 5월 21일
 

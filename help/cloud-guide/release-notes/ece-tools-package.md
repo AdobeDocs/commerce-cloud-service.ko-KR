@@ -2,11 +2,11 @@
 title: ECE-Tools 릴리스 노트
 description: ECE-Tools 패키지에 대한 최신 개선 사항 목록을 참조하십시오.
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-05-21T00:00:00Z
+last-substantial-update: 2024-10-07T00:00:00Z
 exl-id: a464b940-c56e-4a7c-9948-559539e25361
-source-git-commit: 923e2114270df22e134e0676ac97f84d770bb226
+source-git-commit: 30eafa856aaa57bb2fd2ce26e3be2a69aee726e2
 workflow-type: tm+mt
-source-wordcount: '2929'
+source-wordcount: '2990'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,16 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v2002.1.19 {#latest}
+## v2002.2.0 {#latest}
+
+릴리스 날짜: 2024년 10월 7일
+
+- ![새 아이콘](../../assets/new.svg) **MariaDB 11.4** MariaDB 11.4에 대한 지원이 추가되었습니다.
+- ![수정 아이콘](../../assets/fix.svg) **리팩터링된 코드**-이전 PHP 버전 7.4, 7.3, 7.2 및 관련 라이브러리에 대한 지원이 제거되었습니다.<!-- MCLOUD-9278 -->
+- ![고정 아이콘](../../assets/fix.svg) **모노로그 버전을 업그레이드함** - 모노로그 3.6.<!-- MCLOUD-12855 -->에 대한 지원이 추가됨
+- ![수정 아이콘](../../assets/fix.svg) **RabbitMQ, MariaDB 및 PHP용 유효성 검사기**-잘못된 버전의 서비스에 대한 잘못된 메시지를 생성한 유효성 검사기를 수정했습니다.
+
+## v2002.1.19
 
 릴리스 날짜: 2024년 5월 21일
 
@@ -40,7 +49,7 @@ ht-degree: 0%
 릴리스 날짜: 2024년 4월 8일
 
 - ![새 아이콘](../../assets/new.svg) **PHP** — PHP 8.3에 대한 지원을 추가했습니다.
-- ![수정 아이콘](../../assets/fix.svg) 유효성 검사기 - EOL 유효성 검사기를 업데이트했습니다.
+- ![수정 아이콘](../../assets/fix.svg) **검사기** - EOL 검사기를 업데이트했습니다.
 
 ## v2002.1.17
 

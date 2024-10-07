@@ -3,9 +3,9 @@ title: Commerce용 클라우드 구성 요소
 description: 클라우드 구성 요소 패키지에 대한 최신 개선 사항 목록을 참조하십시오.
 recommendations: noDisplay, catalog
 exl-id: b4e2508a-3558-4fa8-bae0-3eb76c7b2775
-source-git-commit: c02dfd2709cdc63ac1630edaa8c89cad5f737ea1
+source-git-commit: 30eafa856aaa57bb2fd2ce26e3be2a69aee726e2
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '590'
 ht-degree: 0%
 
 ---
@@ -23,11 +23,18 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v1.0.14 {#latest}
+## v1.1.0 {#latest}
+
+릴리스 날짜: 2024년 10월 7일
+
+- ![수정 아이콘](../../assets/fix.svg) **리팩터링된 코드**—이전 PHP 버전 7.4, 7.3, 7.2 및 관련 라이브러리에 대한 지원이 제거되었습니다.<!-- MCLOUD-9278 - -->
+- ![수정 아이콘](../../assets/fix.svg) **업그레이드된 Monolog 버전**—Monolog 3.6에 대한 지원이 추가되었습니다.<!-- MCLOUD-12855 - -->
+
+## v1.0.14
 
 릴리스 날짜: 2024년 4월 8일
 
-- ![새 아이콘](../../assets/new.svg) **PHP** — PHP 8.3에 대한 지원을 추가했습니다.
+- ![새 아이콘](../../assets/new.svg) **PHP**—PHP 8.3에 대한 지원을 추가했습니다.
 
 ## v1.0.13
 
@@ -121,4 +128,4 @@ ht-degree: 0%
 
 [`magento/magento-cloud-components`](https://github.com/magento/magento-cloud-components) 패키지의 첫 번째 릴리스이며, 이 릴리스는 `ece-tools` 패키지 버전 2002.0.20 이상에 대한 새 종속성입니다.
 
-- ![새 아이콘](../../assets/new.svg) 정규 표현식 패턴을 사용하여 **WARM_UP_PAGES** 환경 변수를 구성하여 단일 페이지, 여러 도메인 및 여러 페이지를 캐시하는 기능이 추가되었습니다. [Post 배포 변수](../environment/variables-post-deploy.md#warm_up_pages)을(를) 참조하십시오.<!--MAGECLOUD-3258-->
+- ![새 아이콘](../../assets/new.svg) 정규 표현식 패턴을 사용하여 **WARM_UP_PAGES** 환경 변수를 구성하여 단일 페이지, 여러 도메인 및 여러 페이지를 캐시하는 기능이 추가되었습니다. [사후 배포 변수](../environment/variables-post-deploy.md#warm_up_pages)을(를) 참조하십시오.<!--MAGECLOUD-3258-->
