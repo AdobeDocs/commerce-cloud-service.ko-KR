@@ -1,7 +1,7 @@
 ---
-source-git-commit: 762ce3cb6268401b0f5fae5b2280a870aa9c83a5
+source-git-commit: a87039d2e96e39d6d8d19673c5e0d52de8b844a4
 workflow-type: tm+mt
-source-wordcount: '857'
+source-wordcount: '879'
 ht-degree: 0%
 
 ---
@@ -43,11 +43,12 @@ ht-degree: 0%
 ## Pro 서비스 지원 {#pro-update-service}
 
 >[!TIP]
+>
 >Pro 프로젝트의 경우 `Staging` 및 `Production` 환경에서만 [서비스](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/service/services-yaml.html)를 설치하거나 업데이트하려면 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)해야 합니다.
 >
 >필요한 서비스 변경 사항을 표시하고 업데이트된 `.magento.app.yaml` 및 `services.yaml` 파일을 포함하고 티켓에 PHP 버전을 명시하십시오. PHP 버전, 확장, 환경 설정에 대한 셀프 서비스 변경 내용은 _응용 프로그램 구성_&#x200B;의 [PHP 설정](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/php-settings.html)을 참조하십시오.
 >
->_live_ 프로덕션 환경(**Pro만 해당**)을 변경하는 경우 클라우드 인프라 팀이 리소스를 마샬링하고 보안 업그레이드를 수행할 수 있는 충분한 시간을 허용하기 위해 최소 48시간 알림을 제공해야 합니다. 고시 기간에는 주말이 포함되지 않습니다. 예를 들어, 월요일에 서비스 업그레이드를 수행하려면 이전 수요일까지 요청을 제출해야 합니다.
+>라이브 프로덕션 환경(**Pro 전용**)을 변경하려면 최소 48시간 이상 알림이 필요합니다. 이를 통해 클라우드 인프라 팀은 리소스를 마샬링하고 보안 업그레이드를 수행할 수 있는 충분한 시간을 확보할 수 있습니다. 공지 기간은 인프라 팀이 요청을 승인하고 주말을 제외하고 업그레이드 일정을 잡을 때 시작됩니다. 예를 들어 월요일에 서비스 업그레이드를 완료하려면 예약된 업그레이드에 대한 승인을 수요일까지 받아야 합니다. 최대 수요 기간 동안 요청을 처리하는 데 더 많은 시간이 걸릴 수 있습니다.
 
 ## Pro 백업 {#pro-backups}
 
