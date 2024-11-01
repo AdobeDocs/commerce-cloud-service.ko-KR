@@ -3,7 +3,7 @@ title: 저장소 구성 모범 사례
 description: 클라우드 인프라에서 Adobe Commerce에 스토어를 구성하는 모범 사례에 대해 알아보십시오.
 feature: Cloud, Best Practices
 exl-id: 01f528bd-74c2-42e7-8e77-7e6f57a40ef4
-source-git-commit: 5b0a691a4355f5eda31d42cd3da9925439dfb510
+source-git-commit: 196efa316b9998c1980412ad96577d7ce42d4aec
 workflow-type: tm+mt
 source-wordcount: '1087'
 ht-degree: 0%
@@ -58,7 +58,7 @@ Advanced Pricing을 편집하고 컨텐츠 스테이징을 갱신하려면
 
 다음은 1차 주문 전용 할인에 대한 가격 규칙을 생성하는 예를 제공합니다. 이 할인에 대해 다음과 같은 작업을 수행할 수 있습니다.
 
-* 다음 조건을 사용하여 [고객 세그먼트](https://docs.magento.com/user-guide/marketing/customer-segment-price-rule.html)로 가격 규칙을 만듭니다. 총 주문 수는 1보다 작습니다.
+* 다음 조건을 사용하여 [고객 세그먼트](https://experienceleague.adobe.com/en/docs/commerce-admin/customers/segments/customer-segment-price-rule)로 가격 규칙을 만듭니다. 총 주문 수는 1보다 작습니다.
 * 이 고객 세그먼트를 장바구니 규칙에 조건으로 추가
 * 선택 사항 - 집중 구매를 위해 특정 SKU 또는 제품 범주에 할인을 적용하는 조건 및 규칙을 추가합니다.
 

@@ -3,9 +3,9 @@ title: Fastly 서비스 구성
 description: Adobe Commerce 프로젝트에 대한 Fastly 서비스를 설정하고 구성하는 방법에 대해 알아봅니다.
 feature: Cloud, Configuration, Iaas, Cache, Security
 exl-id: c53ff3bd-3df2-45fb-933e-d3b29f7edf4e
-source-git-commit: 8a0523f1714b6ea41887e99b5c31294cf5e5255e
+source-git-commit: 196efa316b9998c1980412ad96577d7ce42d4aec
 workflow-type: tm+mt
-source-wordcount: '1961'
+source-wordcount: '1960'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 클라우드 인프라 스테이징 및 프로덕션 환경의 Adobe Commerce에는 Fastly가 필요합니다.
 
-Fastly는 Vannish와 함께 작동하여 빠른 캐싱 기능과 정적 자산에 대한 [CDN(Content Delivery Network](https://glossary.magento.com/content-delivery-network))을 제공합니다. 또한 Fastly는 사이트 및 클라우드 인프라를 보호하기 위한 WAF(Web Application Firewall)를 제공합니다. 악성 트래픽 및 공격으로부터 사이트 및 클라우드 인프라를 보호하려면 들어오는 모든 사이트 트래픽을 Fastly를 통해 라우팅합니다.
+Fastly는 Vannish와 함께 작동하여 정적 에셋에 대한 빠른 캐싱 기능과 CDN(Content Delivery Network)을 제공합니다. 또한 Fastly는 사이트 및 클라우드 인프라를 보호하기 위한 웹 애플리케이션 방화벽(WAF)을 제공합니다. 악성 트래픽 및 공격으로부터 사이트 및 클라우드 인프라를 보호하려면 들어오는 모든 사이트 트래픽을 Fastly를 통해 라우팅합니다.
 
 >[!NOTE]
 >
@@ -64,7 +64,7 @@ Fastly는 Vannish와 함께 작동하여 빠른 캐싱 기능과 정적 자산�
 
 >[!NOTE]
 >
->스테이징 또는 프로덕션 환경에 대한 Fastly 자격 증명을 찾을 수 없는 경우 Adobe CTA(Customer Technical Advisor)에 문의하십시오.
+>스테이징 또는 프로덕션 환경에 대한 Fastly 자격 증명을 찾을 수 없는 경우 Adobe 고객 기술 관리자(CTA)에게 문의하십시오.
 
 ## Fastly 캐싱 활성화
 

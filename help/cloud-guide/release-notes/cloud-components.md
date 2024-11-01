@@ -3,7 +3,7 @@ title: Commerce용 클라우드 구성 요소
 description: 클라우드 구성 요소 패키지에 대한 최신 개선 사항 목록을 참조하십시오.
 recommendations: noDisplay, catalog
 exl-id: b4e2508a-3558-4fa8-bae0-3eb76c7b2775
-source-git-commit: 30eafa856aaa57bb2fd2ce26e3be2a69aee726e2
+source-git-commit: 196efa316b9998c1980412ad96577d7ce42d4aec
 workflow-type: tm+mt
 source-wordcount: '590'
 ht-degree: 0%
@@ -46,7 +46,7 @@ ht-degree: 0%
 
 릴리스 날짜: 2022년 9월 13일
 
-- ![수정 아이콘](../../assets/fix.svg) **준비 시 오류**—페이지 가시성이 관리자에서 [**개별적으로 표시되지 않음**](https://docs.magento.com/user-guide/system/data-attributes-product.html#simple-product-csv-file-structure)(으)로 설정되어 배포 로그에 `ERROR: Warming up failed: <link to page>` 오류가 발생하는 경우 [준비](../environment/variables-post-deploy.md#warm_up_pages)를 시도하는 문제를 해결했습니다.<!-- MCLOUD-9134 -->
+- ![수정 아이콘](../../assets/fix.svg) **준비 시 오류**—페이지 가시성이 관리자에서 [**개별적으로 표시되지 않음**](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/data-transfer/data-attributes-product#simple-product-csv-file-structure)(으)로 설정되어 배포 로그에 `ERROR: Warming up failed: <link to page>` 오류가 발생하는 경우 [준비](../environment/variables-post-deploy.md#warm_up_pages)를 시도하는 문제를 해결했습니다.<!-- MCLOUD-9134 -->
 
 ## v1.0.11
 

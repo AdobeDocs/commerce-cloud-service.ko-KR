@@ -2,7 +2,7 @@
 title: 사이트 시작
 description: 사이트 시작 준비를 시작하는 방법에 대해 알아봅니다.
 exl-id: a7b3f260-b76e-4220-b521-699548a9928a
-source-git-commit: 1253d8357fd2554050d1775fefbc420a2097db5f
+source-git-commit: 196efa316b9998c1980412ad96577d7ce42d4aec
 workflow-type: tm+mt
 source-wordcount: '902'
 ht-degree: 0%
@@ -43,7 +43,7 @@ Adobe Commerce on cloud infrastructure 구독의 일부로, Adobe은 Let&#39;s E
 
 >[!NOTE]
 >
->Let&#39;s Encrypt 인증서를 사용하는 대신 회사에 대해 고유한 확장 유효성 검사 SSL 인증서를 배포하려면 CTA에 문의하거나 [Adobe Commerce 지원 티켓 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)하십시오.
+>Let&#39;s Encrypt 인증서를 사용하는 대신 회사에 대해 고유한 확장 유효성 검사 SSL 인증서를 배포하려면 CTA 또는 [Adobe Commerce 지원 티켓 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)에 문의하십시오.
 
 ## 보안 검색 도구 설정
 
@@ -65,7 +65,7 @@ Security Scan Tool을 사용하면 스토어 웹 사이트를 정기적으로 �
 
 - 보안 업데이트 및 사이트별 알림 수신
 
-보안 검색 도구 설정 및 사용에 대한 자세한 내용은 [사용 안내서](https://docs.magento.com/user-guide/magento/security-scan.html)를 참조하세요. 일반적으로 UAT(사용자 승인 테스트)를 시작할 때 이 도구를 사용하기 시작합니다.
+보안 검색 도구 설정 및 사용에 대한 자세한 내용은 [사용 안내서](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-scan)를 참조하세요. 일반적으로 UAT(사용자 승인 테스트)를 시작할 때 이 도구를 사용하기 시작합니다.
 
 검색하는 각 사이트는 Security Scan 탭을 통해 등록해야 합니다. 등록 프로세스 중에 면책조항에 동의해야 스캔을 시작할 수 있습니다. 각 검사가 완료되면 사용자에게 알림을 수신하도록 예약과 인증을 모두 제어합니다. 특정 반복 날짜 및 시간에 대한 검사를 예약하거나 필요에 따라 요청 시 검사를 실행할 수 있습니다.
 

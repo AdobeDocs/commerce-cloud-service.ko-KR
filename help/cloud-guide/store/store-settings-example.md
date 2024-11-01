@@ -2,9 +2,9 @@
 title: 시스템별 설정 관리의 예
 description: 클라우드 인프라 환경의 모든 Adobe Commerce에서 스토어 구성 설정을 관리하고 동기화하는 방법에 대한 예를 참조하십시오.
 hidefromtoc: true
-source-git-commit: 13e76d3e9829155995acbb72d947be3041579298
+source-git-commit: 196efa316b9998c1980412ad96577d7ce42d4aec
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: '864'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 예를 들어 다음 설정을 지정할 수 있습니다.
 
-* 통합 환경에서 [locale](https://glossary.magento.com/locale) 및 정적 파일 최적화 설정 사용 안 함
+* 통합 환경에서 로케일 및 정적 파일 최적화 설정 비활성화
 * 스테이징 및 프로덕션 환경에서 정적 파일 최적화 활성화
 * 각각에 대한 특정 자격 증명을 사용하여 스테이징 및 프로덕션에서 Fastly 구성
 
@@ -56,7 +56,7 @@ _정적 파일 최적화_&#x200B;는 JavaScript 및 CSS(Cascading Style Sheet)�
    ![로케일 변경](../../assets/locale-options.png)
 
 1. **구성 저장**&#x200B;을 클릭합니다.
-1. 메시지가 표시되면 [캐시를 플러시](https://docs.magento.com/user-guide/system/cache-management.html)합니다.
+1. 메시지가 표시되면 [캐시를 플러시](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management)합니다.
 1. 관리자에서 로그아웃합니다.
 
 ## 값을 내보내고 config.php를 로컬 시스템으로 전송합니다.
@@ -159,7 +159,7 @@ git add app/etc/config.php && git commit -m "Add system-specific configuration" 
 1. 오른쪽 창에서 **JavaScript 설정**&#x200B;을 확장합니다.
 1. **JavaScript 파일 병합** 목록에서 **예**&#x200B;를 클릭합니다.
 1. **구성 저장**&#x200B;을 클릭합니다.
-1. 메시지가 표시되면 [캐시를 플러시](https://docs.magento.com/user-guide/system/cache-management.html)합니다.
+1. 메시지가 표시되면 [캐시를 플러시](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management)합니다.
 1. 관리자에서 로그아웃합니다.
 
 dump 명령을 다시 실행하면 새 구성이 파일에 추가됩니다.

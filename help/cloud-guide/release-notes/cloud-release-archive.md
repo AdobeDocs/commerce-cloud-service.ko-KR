@@ -5,7 +5,7 @@ hide: true
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: 96663d2f-ef00-4490-ad2e-06e8041b228e
-source-git-commit: 8a0523f1714b6ea41887e99b5c31294cf5e5255e
+source-git-commit: 196efa316b9998c1980412ad96577d7ce42d4aec
 workflow-type: tm+mt
 source-wordcount: '7147'
 ht-degree: 0%
@@ -28,7 +28,7 @@ ht-degree: 0%
 
    - ![새 아이콘](../../assets/new.svg) `magento/magento-cloud-patches` v1.0.0 패키지에 대한 종속성을 추가하도록 `ece-tools` 패키지의 `composer.json` 파일을 업데이트했습니다.
 
-   - ![수정 아이콘](../../assets/fix.svg) 버전 2.3.2-p2 이상부터 보안 전용 릴리스 위에 패치 집합을 적용할 때 `ece-tools` 패치 적용 프로세스가 중단되는 문제를 해결했습니다. 이 문제는 [보안 전용 패치](https://devdocs.magento.com/guides/v2.3/release-notes/bk-release-notes.html#security-only-patches).<!--MAGECLOUD-4661-->에 대해 채택된 새 버전 관리 체계에서 도입되었습니다.
+   - ![수정 아이콘](../../assets/fix.svg) 버전 2.3.2-p2 이상부터 보안 전용 릴리스 위에 패치 집합을 적용할 때 `ece-tools` 패치 적용 프로세스가 중단되는 문제를 해결했습니다. 이 문제는 [보안 전용 패치](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/security-patches/overview).<!--MAGECLOUD-4661-->에 대해 채택된 새 버전 관리 체계에서 도입되었습니다.
 
 - ![수정 아이콘](../../assets/fix.svg) **패치 및 중요 수정 사항**-다음 패치 및 중요 수정 사항을 적용하려면 클라우드 환경을 `ece-tools` 버전 2002.0.22로 업데이트하십시오. 이러한 패치는 `magento/magento-cloud-patches` v1.0.0 패키지에 포함되어 있습니다.
 
@@ -72,7 +72,7 @@ ht-degree: 0%
 
 - ![새 아이콘](../../assets/new.svg) RabitMQ 버전 3.8에 대한 지원이 추가되었습니다.<!-- MAGECLOUD-4674-->
 
-- ![새 아이콘](../../assets/new.svg) 새 Adobe Commerce 2.3.3 및 2.2.10 릴리스에 대해 지원되는 버전을 반영하도록 서비스 호환성에 대한 대화형 유효성 검사를 업데이트했습니다. 권장 버전은 _설치 안내서_&#x200B;의 [시스템 요구 사항](https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html)을 참조하십시오.<!-- MAGECLOUD-4018 -->
+- ![새 아이콘](../../assets/new.svg) 새 Adobe Commerce 2.3.3 및 2.2.10 릴리스에 대해 지원되는 버전을 반영하도록 서비스 호환성에 대한 대화형 유효성 검사를 업데이트했습니다. 권장 버전은 _설치 안내서_&#x200B;의 [시스템 요구 사항](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)을 참조하십시오.<!-- MAGECLOUD-4018 -->
 
 - ![수정 아이콘](../../assets/fix.svg) 배포 단계의 cron 작업 관리 프로세스에서 이미 완료된 cron 작업을 중지하려고 할 때 이 문제가 오류가 아님을 확인하는 로그 메시지가 반환되었습니다. 로그 수준을 `INFO`에서 `DEBUG`.<!-- MAGECLOUD-3653-->(으)로 변경했습니다.
 
@@ -88,11 +88,11 @@ ht-degree: 0%
 
 - ![새 아이콘](../../assets/new.svg) **도커 업데이트**—
 
-   - ![새 아이콘](../../assets/new.svg) 이제 Docker 환경에서 `ece-tools` 패키지를 사용하여 기능 테스트를 수행할 수 있습니다. [응용 프로그램 테스트](https://devdocs.magento.com/cloud/docker/docker-test-magecloud-pkg-code.html).<!-- MAGECLOUD-3129/3684 -->를 참조하세요.
+   - ![새 아이콘](../../assets/new.svg) 이제 Docker 환경에서 `ece-tools` 패키지를 사용하여 기능 테스트를 수행할 수 있습니다. [응용 프로그램 테스트](https://developer.adobe.com/commerce/cloud-tools/docker/test/code-testing/).<!-- MAGECLOUD-3129/3684 -->를 참조하세요.
 
-   - ![새 아이콘](../../assets/new.svg) `.magento.app.yaml` 파일을 사용하여 PHP 모듈을 구성할 수 있는 지원이 추가되었습니다. `.magento.app.yaml` 파일](https://devdocs.magento.com/cloud/project/magento-app-php-application.html#php-extensions)에 지정된 모든 [PHP 확장을 도커 PHP 컨테이너에서 사용할 수 있습니다.<!-- MAGECLOUD-3357 -->
+   - ![새 아이콘](../../assets/new.svg) `.magento.app.yaml` 파일을 사용하여 PHP 모듈을 구성할 수 있는 지원이 추가되었습니다. `.magento.app.yaml` 파일](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/app/php-settings#enable-extensions)에 지정된 모든 [PHP 확장을 도커 PHP 컨테이너에서 사용할 수 있습니다.<!-- MAGECLOUD-3357 -->
 
-   - ![새 아이콘](../../assets/new.svg) 도커 명령줄 환경을 개선하는 데 사용할 수 있는 새 명령이 있습니다. Docker 참조의 [`bin/magento-docker` 섹션을 참조하십시오](https://devdocs.magento.com/cloud/docker/docker-quick-reference.html#magento-cloud-docker-cli).<!-- MAGECLOUD-3569 -->
+   - ![새 아이콘](../../assets/new.svg) 도커 명령줄 환경을 개선하는 데 사용할 수 있는 새 명령이 있습니다. Docker 참조의 [`bin/magento-docker` 섹션을 참조하십시오](https://developer.adobe.com/commerce/cloud-tools/docker/quick-reference/#cloud-docker-cli).<!-- MAGECLOUD-3569 -->
 
    - ![새 아이콘](../../assets/new.svg) 로컬 호스트와 도커 간의 개발 중에 Mutagen.io를 사용하여 파일을 동기화하는 기능을 추가했습니다.<!-- MAGECLOUD-3559 -->
 
@@ -126,7 +126,7 @@ ht-degree: 0%
 
 - ![수정 아이콘](../../assets/fix.svg) 데이터베이스에 기본 URL이 없는 경우 배포 오류가 발생하는 문제를 해결했습니다.<!-- MAGECLOUD-3075 -->
 
-- ![새 아이콘](../../assets/new.svg) 환경 서비스, 경로 또는 변수를 표시하는 `ece-tools` 패키지에 새 **`env:config:show`명령**&#x200B;을 추가했습니다. [서비스, 경로 및 변수](https://devdocs.magento.com/cloud/reference/ece-tools-reference.html#services-routes-and-variables)를 참조하세요. [Vladimir Kerkhoff가 제출한 기능](https://github.com/magento/ece-tools/pull/486).<!-- MAGECLOUD-3451 -->
+- ![새 아이콘](../../assets/new.svg) 환경 서비스, 경로 또는 변수를 표시하는 `ece-tools` 패키지에 새 **`env:config:show`명령**&#x200B;을 추가했습니다. [서비스, 경로 및 변수](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/dev-tools/ece-tools/package-overview#services-routes-and-variables)를 참조하세요. [Vladimir Kerkhoff가 제출한 기능](https://github.com/magento/ece-tools/pull/486).<!-- MAGECLOUD-3451 -->
 
 - ![수정 아이콘](../../assets/fix.svg) 셸 리팩터링 후 개발 `ece-tools`에서 Adobe Commerce 2.2.6 또는 이전 버전을 설치하려고 할 때 심각한 오류가 발생하는 문제를 해결했습니다.<!-- MAGECLOUD-3665 -->
 
@@ -144,17 +144,17 @@ ht-degree: 0%
 
 - ![새 아이콘](../../assets/new.svg) **도커 업데이트**—
 
-   - ![새 아이콘](../../assets/new.svg) 이제 도커 환경에서는 .magento.app.yaml 파일의 [crons 속성에 정의된 cron 구성을 지원합니다](https://devdocs.magento.com/cloud/project/magento-app-properties.html#crons).<!-- MAGECLOUD-3150 -->
+   - ![새 아이콘](../../assets/new.svg) 이제 도커 환경에서는 .magento.app.yaml 파일의 [crons 속성에 정의된 cron 구성을 지원합니다](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/app/properties/crons-property).<!-- MAGECLOUD-3150 -->
 
-   - ![새 아이콘](../../assets/new.svg) **새 도커 컨테이너**—HTTPS에서 바니시 SSL 종료를 용이하게 하기 위해 [TLS 종료 프록시 컨테이너](https://devdocs.magento.com/cloud/docker/docker-containers-service.html#varnish-container)를 추가했습니다.<!-- MAGECLOUD-2890 -->
+   - ![새 아이콘](../../assets/new.svg) **새 도커 컨테이너**—HTTPS에서 바니시 SSL 종료를 용이하게 하기 위해 [TLS 종료 프록시 컨테이너](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service/#varnish-container)를 추가했습니다.<!-- MAGECLOUD-2890 -->
 
    - ![새 아이콘](../../assets/new.svg) **새 도커 이미지**—Gulp 및 기타 기능(예: Jasmine JS 단위 테스트)을 지원하도록 Node.js 이미지를 추가했습니다.<!-- MAGECLOUD-3345 -->
 
-   - ![새 아이콘](../../assets/new.svg) **도커 빌드 모드**—이제 [프로덕션 모드 또는 개발자 모드](https://devdocs.magento.com/cloud/docker/docker-launch.html#set-the-launch-mode)에서 도커 환경을 시작하도록 선택할 수 있습니다. 개발자 모드는 전체 쓰기 가능한 파일 시스템 권한으로 활성 개발을 지원합니다.<!-- MAGECLOUD-3152/3511 -->
+   - ![새 아이콘](../../assets/new.svg) **도커 빌드 모드**—이제 [프로덕션 모드 또는 개발자 모드](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/#launch-mode)에서 도커 환경을 시작하도록 선택할 수 있습니다. 개발자 모드는 전체 쓰기 가능한 파일 시스템 권한으로 활성 개발을 지원합니다.<!-- MAGECLOUD-3152/3511 -->
 
-   - ![수정 아이콘](../../assets/fix.svg) 사용할 수 없는 서비스에 대해 캐시가 구성된 경우 `Name or service not known` 오류로 인해 도커 배포가 실패하는 문제를 해결했습니다. 이제 [`.magento/services.yaml` 파일](https://devdocs.magento.com/cloud/project/services.html)에서 서비스를 제거할 수 있습니다. Docker 구성 생성기가 `docker/config.php.dist` 파일의 서비스를 자동으로 업데이트합니다.<!-- MAGECLOUD-3369 -->
+   - ![수정 아이콘](../../assets/fix.svg) 사용할 수 없는 서비스에 대해 캐시가 구성된 경우 `Name or service not known` 오류로 인해 도커 배포가 실패하는 문제를 해결했습니다. 이제 [`.magento/services.yaml` 파일](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/service/services-yaml)에서 서비스를 제거할 수 있습니다. Docker 구성 생성기가 `docker/config.php.dist` 파일의 서비스를 자동으로 업데이트합니다.<!-- MAGECLOUD-3369 -->
 
-   - ![새 아이콘](../../assets/new.svg) 서비스 호환성을 위해 대화형 유효성 검사를 추가했습니다. 이제 요청된 서비스가 Adobe Commerce 버전 또는 다른 서비스와 호환되지 않으면 _대화형 모드_&#x200B;에서 사용자에게 메시지와 계속할 수 있는 선택을 묻는 메시지가 표시됩니다. 도커에 사용할 수 있는 [서비스 버전](https://devdocs.magento.com/cloud/docker/docker-containers.html#service-containers)을 참조하세요. CICD를 위해 상호 작용을 건너뛰려면 `-n` 옵션을 사용하십시오.<!-- MAGECLOUD-3251 -->
+   - ![새 아이콘](../../assets/new.svg) 서비스 호환성을 위해 대화형 유효성 검사를 추가했습니다. 이제 요청된 서비스가 Adobe Commerce 버전 또는 다른 서비스와 호환되지 않으면 _대화형 모드_&#x200B;에서 사용자에게 메시지와 계속할 수 있는 선택을 묻는 메시지가 표시됩니다. 도커에 사용할 수 있는 [서비스 버전](https://developer.adobe.com/commerce/cloud-tools/docker/containers/#service-containers)을 참조하세요. CICD를 위해 상호 작용을 건너뛰려면 `-n` 옵션을 사용하십시오.<!-- MAGECLOUD-3251 -->
 
    - ![수정 아이콘](../../assets/fix.svg) 기존 덤프를 지운 도커 구성 `db-dump` 명령의 문제를 해결했습니다.<!-- MAGECLOUD-3366 -->
 
@@ -212,19 +212,19 @@ ht-degree: 0%
 
    - `sendmail` 서비스를 사용하여 도커 환경에서 메일을 보낼 수 있습니다.<!-- MAGECLOUD-2907 -->
 
-   - Cloud Docker 환경에서 디버깅하도록 [Xdebug를 구성](https://devdocs.magento.com/cloud/docker/docker-development-debug.html)하는 기능이 추가되었습니다.<!-- MAGECLOUD-2891 -->
+   - Cloud Docker 환경에서 디버깅하도록 [Xdebug를 구성](https://developer.adobe.com/commerce/cloud-tools/docker/test/configure-xdebug/)하는 기능이 추가되었습니다.<!-- MAGECLOUD-2891 -->
 
    - `docker-compose.yml` 파일을 생성할 때 웹 서비스 권한 문제를 해결했습니다.<!-- MAGECLOUD-2883 -->
 
-- ![새 아이콘](../../assets/new.svg) **업그레이드 개선 사항** - Adobe Commerce v2.3으로 업그레이드하기 전에 `composer.json` 파일의 `autoload` 속성에 필요한 구성 변경 사항이 포함되어 있는지 확인하는 유효성 검사가 추가되었습니다. [버전 업그레이드](https://devdocs.magento.com/cloud/project/project-upgrade.html).<!-- MAGECLOUD-2392 -->를 참조하십시오.
+- ![새 아이콘](../../assets/new.svg) **업그레이드 개선 사항** - Adobe Commerce v2.3으로 업그레이드하기 전에 `composer.json` 파일의 `autoload` 속성에 필요한 구성 변경 사항이 포함되어 있는지 확인하는 유효성 검사가 추가되었습니다. [버전 업그레이드](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/upgrade/commerce-version).<!-- MAGECLOUD-2392 -->를 참조하십시오.
 
-- ![새 아이콘](../../assets/new.svg) 이제 정적 콘텐츠 배포의 압축 프로세스에 기본적으로 생성되거나 사용자 지정된 모든 자산이 포함되며 [`build:transfer` 섹션의 시작 부분에서 빌드 단계](https://devdocs.magento.com/cloud/project/magento-app-properties.html#hooks)에 발생합니다. 이전에는 압축 프로세스가 사용자 지정 축소와 정적 에셋의 번들링을 적용하기 전에 발생했습니다. [Tryzens Limited에서 Rafael Garcia Lepper가 제출한 수정 사항](https://github.com/magento/ece-tools/pull/413).<!-- MAGECLOUD-3104 -->
+- ![새 아이콘](../../assets/new.svg) 이제 정적 콘텐츠 배포의 압축 프로세스에 기본적으로 생성되거나 사용자 지정된 모든 자산이 포함되며 [`build:transfer` 섹션의 시작 부분에서 빌드 단계](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/app/properties/hooks-property)에 발생합니다. 이전에는 압축 프로세스가 사용자 지정 축소와 정적 에셋의 번들링을 적용하기 전에 발생했습니다. [Tryzens Limited에서 Rafael Garcia Lepper가 제출한 수정 사항](https://github.com/magento/ece-tools/pull/413).<!-- MAGECLOUD-3104 -->
 
 - ![수정 아이콘](../../assets/fix.svg) 추가 데이터베이스 및 서비스 관계를 구성한 후 바로 배포하는 동안 발생한 데이터베이스 연결 오류를 수정했습니다. 또한 이 수정 사항은 Starter용 Commerce 보고의 구성 프로세스 중에 발생한 문제를 해결합니다. Starter의 경우 이 업그레이드는 Commerce 보고를 사용하기 위한 &quot;필수 항목&quot;입니다.<!-- MAGECLOUD-3035 -->
 
 - ![수정 아이콘](../../assets/fix.svg) 배포 프로세스가 실패하는 데이터베이스 구성의 유효성 검사 문제를 해결했습니다.<!-- MAGECLOUD-3003 -->
 
-- ![수정 아이콘](../../assets/fix.svg) [PHP 상수](https://devdocs.magento.com/cloud/project/magento-env-yaml.html#php-constants)와 함께 사용할 적절한 버전의 `symfony/yaml` 패키지로 제약 조건을 업데이트했습니다. 3.2 이전 버전의 `symfony/yaml` 패키지를 사용하는 경우 상수 구문 분석이 작동하지 않습니다. [Vladimir Kerkhoff가 제출한 수정 내용](https://github.com/magento/ece-tools/pull/404).<!-- MAGECLOUD-2956 -->
+- ![수정 아이콘](../../assets/fix.svg) [PHP 상수](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/env/configure-env-yaml#php-constants)와 함께 사용할 적절한 버전의 `symfony/yaml` 패키지로 제약 조건을 업데이트했습니다. 3.2 이전 버전의 `symfony/yaml` 패키지를 사용하는 경우 상수 구문 분석이 작동하지 않습니다. [Vladimir Kerkhoff가 제출한 수정 내용](https://github.com/magento/ece-tools/pull/404).<!-- MAGECLOUD-2956 -->
 
 - ![새 아이콘](../../assets/new.svg) **환경 구성 확인**—PHP 버전을 확인하고 최신 권장 버전을 사용하지 않는 사용자에게 경고하는 유효성 검사가 추가되었습니다.<!--MAGECLOUD-2903-->
 
@@ -258,7 +258,7 @@ ht-degree: 0%
 
    - **관리자 변수**—<!-- MAGECLOUD-2573/MAGECLOUD-2848 -->
 
-      - 환경 변수를 사용하여 관리자 사용자의 자격 증명을 관리할 때의 보안이 개선되었습니다. 업그레이드 중에 더 이상 ADMIN_EMAIL, ADMIN_USERNAME 및 ADMIN_PASSWORD 환경 변수를 사용하여 관리자 자격 증명을 재정의할 수 없습니다. 관리 패널에 액세스할 수 없는 경우 _암호 찾기_ 기능 또는 `admin:user:create` CLI 명령을 사용하여 새 관리 사용자를 만드십시오. [관리자 패널 액세스](https://devdocs.magento.com/cloud/onboarding/onboarding-tasks.html#admin)를 참조하세요.
+      - 환경 변수를 사용하여 관리자 사용자의 자격 증명을 관리할 때의 보안이 개선되었습니다. 업그레이드 중에 더 이상 ADMIN_EMAIL, ADMIN_USERNAME 및 ADMIN_PASSWORD 환경 변수를 사용하여 관리자 자격 증명을 재정의할 수 없습니다. 관리 패널에 액세스할 수 없는 경우 _암호 찾기_ 기능 또는 `admin:user:create` CLI 명령을 사용하여 새 관리 사용자를 만드십시오. [관리자 패널 액세스](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/start/onboarding#admin)를 참조하세요.
 
       - 패치를 업그레이드하거나 적용할 때 ADMIN_EMAIL이 더 이상 필요하지 않습니다.
 
@@ -266,11 +266,11 @@ ht-degree: 0%
 
 - ![새 아이콘](../../assets/new.svg) **도커 업데이트**—
 
-   - 이제 [도커 환경을 빌드](https://devdocs.magento.com/cloud/docker/docker-config.html)할 때 도커 생성기가 `.magento.app.yaml` 및 `.magento/services.yaml` 구성 파일에 지정된 서비스를 사용합니다. 빌드 매개 변수를 사용하여 다른 서비스 버전을 선택할 수 있습니다.<!-- MAGECLOUD-2888 -->
+   - 이제 [도커 환경을 빌드](https://developer.adobe.com/commerce/cloud-tools/docker/configure/)할 때 도커 생성기가 `.magento.app.yaml` 및 `.magento/services.yaml` 구성 파일에 지정된 서비스를 사용합니다. 빌드 매개 변수를 사용하여 다른 서비스 버전을 선택할 수 있습니다.<!-- MAGECLOUD-2888 -->
 
-   - PHP 7.2 이미지 추가—클라우드 도커에서 PHP 7.2에 대한 지원을 추가했습니다. 사용 중인 Adobe Commerce 버전과 호환되는 PHP 버전을 지정하는 `docker:build --php` 옵션을 포함하도록 [Launch Docker 구성](https://devdocs.magento.com/cloud/docker/docker-config.html)을 업데이트했습니다.<!-- MAGECLOUD-2799 -->
+   - PHP 7.2 이미지 추가—클라우드 도커에서 PHP 7.2에 대한 지원을 추가했습니다. 사용 중인 Adobe Commerce 버전과 호환되는 PHP 버전을 지정하는 `docker:build --php` 옵션을 포함하도록 [Launch Docker 구성](https://developer.adobe.com/commerce/cloud-tools/docker/configure/)을 업데이트했습니다.<!-- MAGECLOUD-2799 -->
 
-   - PHP-CLI 이미지를 기반으로 [Cron 컨테이너](https://devdocs.magento.com/cloud/docker/docker-containers-cli.html#cron-container)을 추가했습니다.<!-- MAGECLOUD-2565 -->
+   - PHP-CLI 이미지를 기반으로 [Cron 컨테이너](https://developer.adobe.com/commerce/cloud-tools/docker/containers/cli/#cron-container)을 추가했습니다.<!-- MAGECLOUD-2565 -->
 
    - 도커 빌드에 다음 서비스를 추가했습니다.
 
@@ -280,7 +280,7 @@ ht-degree: 0%
 
       - Redis 3.2 및 4.0<!-- MAGECLOUD-2886 -->
 
-- ![새 아이콘](../../assets/new.svg) **PHP 상수로 구성**—`.magento.env.yaml` 구성 파일에서 [PHP 상수](https://devdocs.magento.com/cloud/project/magento-env-yaml.html#php-constants)에 대한 지원을 추가했습니다.<!-- MAGECLOUD- 2575 -->
+- ![새 아이콘](../../assets/new.svg) **PHP 상수로 구성**—`.magento.env.yaml` 구성 파일에서 [PHP 상수](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/env/configure-env-yaml#php-constants)에 대한 지원을 추가했습니다.<!-- MAGECLOUD- 2575 -->
 
 - ![새 아이콘](../../assets/new.svg) **새 환경 변수**—기본적으로 프로덕션 환경에만 Google Analytics이 사용됩니다. [ENABLE_ANALYTICS_ANALYTICS 환경 변수](../environment/variables-deploy.md#enable_google_analytics)을(를) 사용하여 스테이징 및 통합 환경에서 Google AnalyticsGOOGLE 을 활성화할 수 있습니다.<!--MAGECLOUD-2879-->
 
@@ -334,23 +334,23 @@ ht-degree: 0%
 
 - ![새 아이콘](../../assets/new.svg) **가동 중지 시간 없이 배포 사용**—이제 Adobe Commerce on cloud infrastructure에서 배포 중 필요한 데이터베이스 변경 요청을 요청하고 배포가 완료되는 즉시 변경 사항을 적용합니다. 요청이 손실되지 않도록 최대 5분 동안 대기할 수 있습니다. 클라우드에서 배포 가동 중단을 줄이기 위한 [정적 콘텐츠 배포 옵션](https://support.magento.com/hc/en-us/articles/360004861194-Static-content-deployment-options-to-reduce-deployment-downtime-on-Cloud)을 참조하세요.<!--MAGECLOUD-2169-->
 
-- ![새 아이콘](../../assets/new.svg) **클라우드용 Docker 작성**—[Docker 설정 및 구성](https://devdocs.magento.com/cloud/docker/docker-config.html) 프로세스를 다음과 같이 개선했습니다.
+- ![새 아이콘](../../assets/new.svg) **클라우드용 Docker 작성**—[Docker 설정 및 구성](https://developer.adobe.com/commerce/cloud-tools/docker/configure/) 프로세스를 다음과 같이 개선했습니다.
 
-   - 환경 구성을 단순화하기 위해 PHP 구성 파일을 Docker ENV 형식으로 변환하는 명령—`docker:config:convert`을(를) 추가했습니다. 이제 PHP 구성 파일을 Docker 디렉토리에 복사하고 Docker ENV 파일로 변환합니다. [Launch Docker](https://devdocs.magento.com/cloud/docker/docker-config.html).<!--MAGECLOUD-2359--> 보기
+   - 환경 구성을 단순화하기 위해 PHP 구성 파일을 Docker ENV 형식으로 변환하는 명령—`docker:config:convert`을(를) 추가했습니다. 이제 PHP 구성 파일을 Docker 디렉토리에 복사하고 Docker ENV 파일로 변환합니다. [Launch Docker](https://developer.adobe.com/commerce/cloud-tools/docker/configure/).<!--MAGECLOUD-2359--> 보기
 
-   - 이제 Adobe Commerce on cloud infrastructure 설치 프로세스에서 읽기 전용 및 읽기-쓰기 파일 시스템에 모두 배포를 지원하여 클라우드 파일 시스템을 보다 면밀하게 에뮬레이션할 수 있습니다. [도커 구성](https://devdocs.magento.com/cloud/docker/docker-config.html)을 참조하세요.&lt;!—MAGECLOUD—2357—>
+   - 이제 Adobe Commerce on cloud infrastructure 설치 프로세스에서 읽기 전용 및 읽기-쓰기 파일 시스템에 모두 배포를 지원하여 클라우드 파일 시스템을 보다 면밀하게 에뮬레이션할 수 있습니다. [도커 구성](https://developer.adobe.com/commerce/cloud-tools/docker/configure/)을 참조하세요.&lt;!—MAGECLOUD—2357—>
 
    - **Redis 서비스 지원** - Docker 컨테이너에 배포되고 Docker 설치에서 작동하도록 자동으로 구성된 Redis 이미지가 추가되었습니다.&lt;!—MAGECLOUD—2442—>
 
-   - 이제 Cloud Docker [데이터베이스 컨테이너](https://devdocs.magento.com/cloud/docker/docker-containers-service.html#database-container)를 사용할 때 DB 덤프 기능을 사용할 수 있습니다. 또한 `docker/mnt` 디렉터리를 사용하여 호스트 컴퓨터와 컨테이너 간에 [파일을 공유](https://devdocs.magento.com/cloud/docker/docker-containers.html#sharing-data-between-host-machine-and-container)할 수 있습니다.<!-- MAGECLOUD-2577 -->
+   - 이제 Cloud Docker [데이터베이스 컨테이너](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service/#database-container)를 사용할 때 DB 덤프 기능을 사용할 수 있습니다. 또한 `docker/mnt` 디렉터리를 사용하여 호스트 컴퓨터와 컨테이너 간에 [파일을 공유](https://developer.adobe.com/commerce/cloud-tools/docker/containers/#sharing-data-between-host-machine-and-container)할 수 있습니다.<!-- MAGECLOUD-2577 -->
 
-   - **바니시 서비스 지원**— 도커 컨테이너에 자동으로 배포되는 바니시 이미지가 추가되었습니다. 배포 후 Adobe Commerce 모범 사례에 따라 Vannish를 수동으로 구성할 수 있습니다. [바니시 구성 및 사용](https://devdocs.magento.com/guides/v2.3/config-guide/varnish/config-varnish.html)을 참조하세요.&lt;!—MAGECLOUD—2358—>
+   - **바니시 서비스 지원**— 도커 컨테이너에 자동으로 배포되는 바니시 이미지가 추가되었습니다. 배포 후 Adobe Commerce 모범 사례에 따라 Vannish를 수동으로 구성할 수 있습니다. [바니시 구성 및 사용](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cache/varnish/config-varnish)을 참조하세요.&lt;!—MAGECLOUD—2358—>
 
    - 보안 사이트 액세스 - Adobe Commerce 스토어 및 관리 패널에 액세스하기 위해 SSL 지원이 추가되었습니다.&lt;!—MAGECLOUD—2360—>
 
-- ![수정 아이콘](../../assets/fix.svg) **클라우드 인프라 확장 기능 지원의 Adobe Commerce 개선**—클라우드 인프라 Adobe Commerce의 guzzlehttp/guzzle 패키지에 대한 최소 버전 요구 사항이 [composer.json 파일](https://devdocs.magento.com/cloud/reference/cloud-composer.html)에서 버전 6.2로 다운그레이드되어 `ece-tools` 패키지가 더 많은 확장과 호환됩니다.<!--MAGECLOUD-2205-->
+- ![수정 아이콘](../../assets/fix.svg) **클라우드 인프라 확장 기능 지원의 Adobe Commerce 개선**—클라우드 인프라 Adobe Commerce의 guzzlehttp/guzzle 패키지에 대한 최소 버전 요구 사항이 [composer.json 파일](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/overview)에서 버전 6.2로 다운그레이드되어 `ece-tools` 패키지가 더 많은 확장과 호환됩니다.<!--MAGECLOUD-2205-->
 
-- ![새 아이콘](../../assets/new.svg) **빌드 단계 동안 Adobe Commerce 응용 프로그램에 사용자 지정 변경 내용 적용** - 배포를 위해 응용 프로그램을 패키징하기 전에 후크를 사용하여 생성된 정적 콘텐츠에 사용자 지정 변경 내용을 적용할 수 있도록 빌드 단계를 두 개의 별도 프로세스로 분할합니다. _build:generate_ 프로세스는 코드를 생성하고 패치를 적용하며 정적 콘텐츠를 생성합니다. _build:transfer_ 프로세스에서 생성된 코드와 정적 콘텐츠를 최종 대상으로 전송합니다. [응용 프로그램 후크](https://devdocs.magento.com/cloud/project/magento-app-properties.html#hooks).<!--MAGECLOUD-2363-->를 참조하십시오.
+- ![새 아이콘](../../assets/new.svg) **빌드 단계 동안 Adobe Commerce 응용 프로그램에 사용자 지정 변경 내용 적용** - 배포를 위해 응용 프로그램을 패키징하기 전에 후크를 사용하여 생성된 정적 콘텐츠에 사용자 지정 변경 내용을 적용할 수 있도록 빌드 단계를 두 개의 별도 프로세스로 분할합니다. _build:generate_ 프로세스는 코드를 생성하고 패치를 적용하며 정적 콘텐츠를 생성합니다. _build:transfer_ 프로세스에서 생성된 코드와 정적 콘텐츠를 최종 대상으로 전송합니다. [응용 프로그램 후크](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/app/properties/hooks-property).<!--MAGECLOUD-2363-->를 참조하십시오.
 
 - ![아이콘 수정](../../assets/fix.svg) **환경 구성 확인** - 클라우드 인프라에서 Adobe Commerce을 빌드하고 배포하기 전에 버전 비호환성 및 구성 오류에 대해 고객에게 경고하기 위해 환경 구성의 유효성 검사를 개선했습니다.
 
@@ -358,7 +358,7 @@ ht-degree: 0%
 
    - 사용자에게 Elasticsearch 구성 문제에 대해 경고하기 위한 Elasticsearch 호환성 검사를 추가했습니다. 이제 서버의 Elasticsearch 서비스 버전이 Adobe Commerce과 호환되지 않는 경우 배포가 실패합니다. 이전에는 Elasticsearch 버전이 호환되지 않더라도 배포가 성공하여 사이트 배포 후 제품 카탈로그 문제가 발생했습니다.<!--MAGECLOUD-2389-->
 
-     [지원 티켓을 제출](https://devdocs.magento.com/cloud/trouble/trouble.html)하여 Elasticsearch을 호환 가능한 버전으로 업그레이드하거나 Adobe Commerce 구성을 변경하여 Elasticsearch PHP 클라이언트의 호환 가능한 버전을 지정하여 비호환성을 해결할 수 있습니다.
+     [지원 티켓을 제출](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/deploy/best-practices)하여 Elasticsearch을 호환 가능한 버전으로 업그레이드하거나 Adobe Commerce 구성을 변경하여 Elasticsearch PHP 클라이언트의 호환 가능한 버전을 지정하여 비호환성을 해결할 수 있습니다.
 
       - Adobe Commerce 버전 2.1.x에서 2.2.2로 업그레이드하는 경우 Elasticsearch을 버전 2.4로 업그레이드하십시오.
 
@@ -394,7 +394,7 @@ ht-degree: 0%
 
 - ![수정 아이콘](../../assets/fix.svg) 배포 프로세스 중에 압축된 파일을 참조할 때 `not overwritten` 및 `no such file or directory` 오류가 발생하는 [정적 콘텐츠 압축 프로세스](../environment/variables-intro.md)(`gzip`) 문제를 해결했습니다.<!-- MAGECLOUD-2182-->
 
-- ![수정 아이콘](../../assets/fix.svg) 저장소 로캘이 지정되지 않은 경우 덤프 프로세스 중에 `php ./vendor/bin/ece-tools config:dump` 명령이 `config.php` 파일에서 중복 섹션을 제거하지 못하는 문제를 해결했습니다. 이제 구성 파일을 환경 간에 쉽게 이동할 수 있습니다. `ece-tools` v2002.0.13으로 업데이트한 후 개선된 `config:dump` 명령을 사용하여 이전 `config.php` 파일을 다시 생성합니다. 저장소 설정에 대한 [구성 관리](https://devdocs.magento.com/cloud/live/sens-data-over.html)를 참조하십시오.<!--MAGECLOUD-2444-->
+- ![수정 아이콘](../../assets/fix.svg) 저장소 로캘이 지정되지 않은 경우 덤프 프로세스 중에 `php ./vendor/bin/ece-tools config:dump` 명령이 `config.php` 파일에서 중복 섹션을 제거하지 못하는 문제를 해결했습니다. 이제 구성 파일을 환경 간에 쉽게 이동할 수 있습니다. `ece-tools` v2002.0.13으로 업데이트한 후 개선된 `config:dump` 명령을 사용하여 이전 `config.php` 파일을 다시 생성합니다. 저장소 설정에 대한 [구성 관리](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure-store/store-settings)를 참조하십시오.<!--MAGECLOUD-2444-->
 
 - ![수정 아이콘](../../assets/fix.svg) `.magento/routes.yaml` 파일의 경로 구성이 [apex](https://blog.cloudflare.com/zone-apex-naked-domain-root-domain-cname-supp/) 도메인에서 `www` 도메인으로 리디렉션되는 경우 배포 단계에서 오류가 발생하는 문제를 해결했습니다.<!--MAGECLOUD-2556-->
 
@@ -404,7 +404,7 @@ ht-degree: 0%
 
 ## v2002.0.12
 
-- ![새 아이콘](../../assets/new.svg) **클라우드용 Docker 구성**—Cloud `ece-tools` 저장소에서 [Docker 구성](https://devdocs.magento.com/cloud/docker/docker-config.html) 구성을 생성하는 명령—`docker:build`이 추가되었습니다.<!-- MAGECLOUD-2250 -->
+- ![새 아이콘](../../assets/new.svg) **클라우드용 Docker 구성**—Cloud `ece-tools` 저장소에서 [Docker 구성](https://developer.adobe.com/commerce/cloud-tools/docker/configure/) 구성을 생성하는 명령—`docker:build`이 추가되었습니다.<!-- MAGECLOUD-2250 -->
 
 - ![새 아이콘](../../assets/new.svg) **로케일 변경**—이제 구성 내보내기 및 가져오기 프로세스를 수행하지 않고도 스토어 로케일을 변경할 수 있습니다. 응용 프로그램이 프로덕션에 있고 SCD_ON_DEMAND가 활성화되어 있는 동안 저장소 및 관리자 로케일 옵션을 사용할 수 있습니다.<!-- MAGECLOUD-2019 -->
 
@@ -490,7 +490,7 @@ ht-degree: 0%
 
    - **새 환경 변수**—요청한 경우 정적 콘텐츠를 생성하기 위해 `SCD_ON_DEMAND` 전역 환경 변수를 추가했습니다.<!-- MAGECLOUD-1738 -->
 
-   - **Post-deploy hook**—캐시를 지우고 캐시를 미리 로드(warms)하는 `.magento.app.yaml` 파일에 대해 `post_deploy` 후크를 추가했습니다. _후_ 컨테이너가 연결을 수락하기 시작합니다. [!DNL Cloud Console]의 스테이징 및 프로덕션 환경이 포함된 Pro 프로젝트와 시작 프로젝트에만 사용할 수 있습니다. 필수는 아니지만 `SCD_ON_DEMAND` 환경 변수와 함께 작동합니다.<!-- MAGECLOUD-1788 -->
+   - **배포 후 후크**—캐시를 지우고 캐시를 미리 로드(warms)하는 `.magento.app.yaml` 파일에 대해 `post_deploy` 후크를 추가했습니다. _후_ 컨테이너가 연결을 수락하기 시작합니다. [!DNL Cloud Console]의 스테이징 및 프로덕션 환경이 포함된 Pro 프로젝트와 시작 프로젝트에만 사용할 수 있습니다. 필수는 아니지만 `SCD_ON_DEMAND` 환경 변수와 함께 작동합니다.<!-- MAGECLOUD-1788 -->
 
 - ![새 아이콘](../../assets/new.svg) **최적화**—배포 속도를 개선하고 파일 시스템의 로드를 줄이기 위해 배포 중 파일 이동 또는 복사를 최적화했습니다.<!-- MAGECLOUD-1842 -->
 
@@ -504,7 +504,7 @@ ht-degree: 0%
 
    - 요청한 경우 정적 콘텐츠를 생성할 `SCD_ON_DEMAND`—_전역_ 환경 변수입니다.<!-- MAGECLOUD-1738 -->
 
-   - `WARM_UP_PAGES` - 캐시를 미리 로드하는 데 사용할 페이지를 나열할 수 있습니다. 새 [Post 배포 변수](../environment/variables-post-deploy.md)에서 사용할 수 있습니다.
+   - `WARM_UP_PAGES` - 캐시를 미리 로드하는 데 사용할 페이지를 나열할 수 있습니다. 새 [사후 배포 변수](../environment/variables-post-deploy.md)에서 사용할 수 있습니다.
 
 - ![수정 아이콘](../../assets/fix.svg) 로컬로 적용된 패치가 인스턴스에서 배포를 중단하는 문제를 해결했습니다. 이제 ECE-Tools는 패치가 적용되었음을 감지할 수 있습니다.<!-- MAGECLOUD-982 -->
 
@@ -562,7 +562,7 @@ ht-degree: 0%
 
 - **새 cron 명령**—이제 [`cron:unlock`](https://support.magento.com/hc/en-us/articles/360033099451) 명령을 사용하여 중단된 모든 cron 작업을 중지하고 다시 시작하는 대신 특정 cron 작업의 잠금을 해제할 수 있습니다. 2.1.<!-- MAGECLOUD-1367 -->에서 사용할 수 없음
 
-- **통합 구성 파일**—이제 [`.magento.env.yaml`](https://devdocs.magento.com/cloud/project/magento-env-yaml.html) 파일을 사용하여 빌드 및 배포 단계를 구성할 수 있습니다.<!-- MAGECLOUD-1369 -->
+- **통합 구성 파일**—이제 [`.magento.env.yaml`](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/env/configure-env-yaml) 파일을 사용하여 빌드 및 배포 단계를 구성할 수 있습니다.<!-- MAGECLOUD-1369 -->
 
 - **구성 파일 백업**—배포 프로세스가 이제 배포 후 `app/etc/env.php` 및 `app/etc/config.php` 구성 파일의 백업을 자동으로 만듭니다. 백업에서 이러한 구성 파일을 복원하기 위해 [새 CLI 명령](https://support.magento.com/hc/en-us/articles/360033182871)도 추가했습니다.<!-- MAGECLOUD-1372 -->
 
@@ -624,11 +624,11 @@ ht-degree: 0%
 
    - [정적 콘텐츠 배포 성능](../deploy/static-content.md)
 
-   - [배포 프로세스](https://devdocs.magento.com/cloud/reference/discover-deploy.html)
+   - [배포 프로세스](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/deploy/best-practices)
 
-- **구성 관리**—이제 빌드 단계 중에 `app/etc/config.php` 파일이 없는 경우 Git 저장소에 자동으로 생성됩니다. 자동 생성된 파일에는 모듈 및 확장 목록만 포함되어 있습니다. 파일이 이미 있으면 빌드 단계는 정상적으로 계속됩니다. 나중에 [구성 관리](../store/store-settings.md)를 수행하면 명령이 추가 단계를 수행하지 않고 파일을 업데이트합니다. 자세한 내용은 [배포 프로세스](https://devdocs.magento.com/cloud/reference/discover-deploy.html)를 참조하세요.
+- **구성 관리**—이제 빌드 단계 중에 `app/etc/config.php` 파일이 없는 경우 Git 저장소에 자동으로 생성됩니다. 자동 생성된 파일에는 모듈 및 확장 목록만 포함되어 있습니다. 파일이 이미 있으면 빌드 단계는 정상적으로 계속됩니다. 나중에 [구성 관리](../store/store-settings.md)를 수행하면 명령이 추가 단계를 수행하지 않고 파일을 업데이트합니다. 자세한 내용은 [배포 프로세스](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/deploy/best-practices)를 참조하세요.
 
-- **데이터베이스 덤프**—모든 환경에서 데이터베이스 덤프를 만들기 위한 `magento/ece-tools` CLI 명령을 추가했습니다. Pro 계획 프로덕션 환경의 경우 이 명령은 세 개의 고가용성 노드 중 하나에서만 덤프하므로 덤프 중에 다른 노드에 기록된 프로덕션 데이터는 복사되지 않을 수 있습니다. 프로덕션 환경에서 데이터베이스 덤프를 수행하기 전에 애플리케이션을 유지 관리 모드로 설정하는 것이 좋습니다. 자세한 내용은 [백업 관리](https://devdocs.magento.com/cloud/project/project-webint-snap.html#db-dump)를 참조하십시오.
+- **데이터베이스 덤프**—모든 환경에서 데이터베이스 덤프를 만들기 위한 `magento/ece-tools` CLI 명령을 추가했습니다. Pro 계획 프로덕션 환경의 경우 이 명령은 세 개의 고가용성 노드 중 하나에서만 덤프하므로 덤프 중에 다른 노드에 기록된 프로덕션 데이터는 복사되지 않을 수 있습니다. 프로덕션 환경에서 데이터베이스 덤프를 수행하기 전에 애플리케이션을 유지 관리 모드로 설정하는 것이 좋습니다. 자세한 내용은 [백업 관리](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/storage/snapshots)를 참조하십시오.
 
 - **크론 간격 제한 해제**—us-3, eu-3 및 ap-3 지역에 제공된 모든 환경의 기본 크론 간격은 1분입니다. 다른 모든 영역의 기본 크론 간격은 Pro 통합 환경의 경우 5분, Pro 스테이징 및 프로덕션 환경의 경우 1분입니다. 기존 cron 작업을 수정하려면 `.magento.app.yaml`에서 설정을 편집하거나 프로덕션/스테이징 환경에 대한 지원 티켓을 만드십시오. 자세한 내용은 [cron 작업 설정](../application/crons-property.md#set-up-cron-jobs)을 참조하세요.
 
@@ -672,7 +672,7 @@ ht-degree: 0%
 
 **새로운 기능:**
 
-- 클라우드 인프라의 Adobe Commerce은 이제 범위 및 [정적 콘텐츠 배포 전략](https://devdocs.magento.com/guides/v2.3/config-guide/cli/config-cli-subcommands-static-deploy-strategies.html)을 지원합니다. 정적 콘텐츠 배포 전략에 대해 기본 설정이 `quick`인 `–s` 매개 변수를 추가했습니다. 환경 변수 [SCD_STRATEGY](../environment/variables-deploy.md)을(를) 사용하여 빌드 및 배포 작업에서 이러한 전략을 사용자 지정하고 사용할 수 있습니다. 이 변수는 `standard`, `quick` 또는 `compact` 옵션을 지원합니다. `compact`을(를) 선택하면 `STATIC_CONTENT_THREADS` 값을 `1`(으)로 재정의하므로 특히 프로덕션 환경에서 배포가 느려질 수 있습니다. 2.1.<!--- MAGECLOUD-1057 -->에서 사용할 수 없음
+- 클라우드 인프라의 Adobe Commerce은 이제 범위 및 [정적 콘텐츠 배포 전략](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy)을 지원합니다. 정적 콘텐츠 배포 전략에 대해 기본 설정이 `quick`인 `–s` 매개 변수를 추가했습니다. 환경 변수 [SCD_STRATEGY](../environment/variables-deploy.md)을(를) 사용하여 빌드 및 배포 작업에서 이러한 전략을 사용자 지정하고 사용할 수 있습니다. 이 변수는 `standard`, `quick` 또는 `compact` 옵션을 지원합니다. `compact`을(를) 선택하면 `STATIC_CONTENT_THREADS` 값을 `1`(으)로 재정의하므로 특히 프로덕션 환경에서 배포가 느려질 수 있습니다. 2.1.<!--- MAGECLOUD-1057 -->에서 사용할 수 없음
 
 - 빌드 및 배포 작업을 캡처하고 컴파일하기 위해 환경에 로그 파일을 만들었습니다. `var/log/cloud.log` 파일이 루트 응용 프로그램 디렉터리에 있습니다.<!--- MAGECLOUD-1014 & MAGECLOUD-1023 -->
 

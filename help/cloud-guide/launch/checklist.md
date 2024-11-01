@@ -2,7 +2,7 @@
 title: 시작 체크리스트
 description: 사이트 실행에 대한 체크리스트 항목을 검토합니다.
 exl-id: 4525742e-18c5-40d1-975d-00ba3f3a51a0
-source-git-commit: 5b0a691a4355f5eda31d42cd3da9925439dfb510
+source-git-commit: 196efa316b9998c1980412ad96577d7ce42d4aec
 workflow-type: tm+mt
 source-wordcount: '1104'
 ht-degree: 0%
@@ -105,7 +105,7 @@ Adobe은 각 환경에 대해 Let&#39;s Encrypt SSL/TLS 인증서를 제공합�
 
 - [발신 이메일 테스트 완료](../project/outgoing-emails.md)
 
-- [관리자 자격 증명 및 기본 관리자 URL에 대한 보안 구성](https://docs.magento.com/user-guide/stores/security-admin.html)
+- [관리자 자격 증명 및 기본 관리자 URL에 대한 보안 구성](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-admin)
 
 - [웹에 대한 모든 이미지 최적화](../cdn/fastly-image-optimization.md)
 
@@ -137,13 +137,13 @@ Adobe은 각 환경에 대해 Let&#39;s Encrypt SSL/TLS 인증서를 제공합�
 
 - [보안 검사 설정](overview.md#set-up-the-security-scan-tool)
 
-- [관리 사용자에 대한 보안 구성](https://docs.magento.com/user-guide/stores/security-admin.html)
+- [관리 사용자에 대한 보안 구성](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-admin)
 
-- [관리 URL에 대한 보안 구성](https://docs.magento.com/user-guide/stores/store-urls-custom-admin.html)
+- [관리자 URL에 대한 보안 구성]https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls#use-a-custom-admin-url)
 
 - [Adobe Commerce on cloud infrastructure 프로젝트에서 더 이상 존재하지 않는 사용자 제거](../project/user-access.md)
 
-- [이중 인증 구성](https://devdocs.magento.com/guides/v2.4/security/two-factor-authentication.html)
+- [이중 인증 구성](https://developer.adobe.com/commerce/testing/functional-testing-framework/two-factor-authentication/)
 
 ## 성능 모니터링
 

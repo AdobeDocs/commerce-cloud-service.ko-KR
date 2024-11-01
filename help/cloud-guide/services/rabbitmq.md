@@ -3,16 +3,16 @@ title: RabbitMQ 서비스 설정
 description: RabbitMQ 서비스를 사용하여 클라우드 인프라에서 Adobe Commerce에 대한 메시지 대기열을 관리하는 방법을 알아봅니다.
 feature: Cloud, Services
 exl-id: 85794b8f-2260-4a6e-b5a6-a1b4c356594e
-source-git-commit: adcfbb7217c70122a4003a66d1bec1a623fbf11a
+source-git-commit: 196efa316b9998c1980412ad96577d7ce42d4aec
 workflow-type: tm+mt
-source-wordcount: '399'
+source-wordcount: '398'
 ht-degree: 0%
 
 ---
 
 # [!DNL RabbitMQ] 서비스 설정
 
-[MQF(메시지 큐 프레임워크)](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html)은(는) [모듈](https://glossary.magento.com/module)이(가) 메시지를 큐에 게시할 수 있도록 하는 Adobe Commerce 내의 시스템입니다. 또한 비동기적으로 메시지를 수신하는 소비자도 정의합니다.
+[MQF(메시지 큐 프레임워크)](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html)은(는) [모듈](https://experienceleague.adobe.com/en/docs/commerce-operations/operational-playbook/glossary#module)이(가) 메시지를 큐에 게시할 수 있도록 하는 Adobe Commerce 내의 시스템입니다. 또한 비동기적으로 메시지를 수신하는 소비자도 정의합니다.
 
 MQF는 [RabbitMQ](https://www.rabbitmq.com/)을(를) 메시징 브로커로 사용하여 메시지를 보내고 받는 확장 가능한 플랫폼을 제공합니다. 게재되지 않은 메시지를 저장하는 메커니즘도 포함됩니다. [!DNL RabbitMQ]은(는) AMQP(고급 메시지 대기열 프로토콜) 0.9.1 사양을 기반으로 합니다.
 
@@ -144,4 +144,4 @@ PHP 컨테이너에 로그인하면 대기열을 관리하는 데 사용할 수 
 
 ### PHP 응용 프로그램에서 연결
 
-PHP 응용 프로그램을 사용하여 RabbitMQ에 연결하려면 소스 트리에 PHP [라이브러리](https://glossary.magento.com/library)를 추가하십시오.
+PHP 애플리케이션을 사용하여 RabbitMQ에 연결하려면 소스 트리에 PHP 라이브러리를 추가합니다.

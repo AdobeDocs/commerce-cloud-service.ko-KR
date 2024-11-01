@@ -4,9 +4,9 @@ description: Cloud Patches 패키지에 대한 최신 개선 사항 목록을 �
 recommendations: noDisplay, catalog
 last-substantial-update: 2024-10-07T00:00:00Z
 exl-id: ae6b511b-a37d-4776-9a5e-ad7d9f9f6611
-source-git-commit: 30eafa856aaa57bb2fd2ce26e3be2a69aee726e2
+source-git-commit: 196efa316b9998c1980412ad96577d7ce42d4aec
 workflow-type: tm+mt
-source-wordcount: '2275'
+source-wordcount: '2256'
 ht-degree: 0%
 
 ---
@@ -154,7 +154,7 @@ Adobe Commerce 2.3.3-p1 이상 버전용 주요 패치:
 
 Adobe Commerce 2.4.3 및 2.3.7-p1용 중요 패치:
 
-- **API 속도 제한 문제**—이 패치는 배열에 있는 항목이 20개가 넘는 요청을 웹 API에서 처리하지 못하게 하는 기본 속도 제한을 수정합니다. 이 패치는 속도 제한의 기본값을 높입니다. Adobe Commerce [2.4.3 릴리스 노트](https://devdocs.magento.com/guides/v2.4/release-notes/commerce-2-4-3.html#apply-mc-43048__set_rate_limits__243patch-to-address-issue-with-api-rate-limiting) 및 [2.3.7 릴리스 노트](https://devdocs.magento.com/guides/v2.3/release-notes/2-3-7-p1.html#apply-mc-43048__set_rate_limits__237-p1patch-to-address-issue-with-api-rate-limiting)를 참조하십시오.<!-- MC-43048 -->
+- **API 속도 제한 문제**—이 패치는 배열에 있는 항목이 20개가 넘는 요청을 웹 API에서 처리하지 못하게 하는 기본 속도 제한을 수정합니다. 이 패치는 속도 제한의 기본값을 높입니다. Adobe Commerce [2.4.3 릴리스 정보](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/adobe-commerce/2-4-3#apply-mc-43048__set_rate_limits__243patch-to-address-issue-with-api-rate-limiting).<!-- MC-43048 -->를 참조하세요.
 
 ## v1.0.11
 
@@ -222,7 +222,7 @@ Adobe Commerce 2.4.3 및 2.3.7-p1용 중요 패치:
 
 릴리스 날짜: 2020년 6월 26일
 
-- **Redis 성능 개선 사항** - Adobe Commerce 버전 2.3.3 및 2.3.4에 Redis 최적화 기능을 추가합니다. 이러한 수정 사항은 Adobe Commerce 버전 2.3.5 릴리스에 포함되어 있습니다. _Adobe Commerce 2.3.5 릴리스 노트_&#x200B;에서 [성능 향상](https://devdocs.magento.com/guides/v2.3/release-notes/release-notes-2-3-5-commerce.html#performance-boosts)을 참조하십시오.<!--MCLOUD-5771-->
+- **Redis 성능 개선 사항** - Adobe Commerce 버전 2.3.3 및 2.3.4에 Redis 최적화 기능을 추가합니다. 이러한 수정 사항은 Adobe Commerce 버전 2.3.5 릴리스에 포함되어 있습니다.<!--MCLOUD-5771-->
 
 - **New Relic log enricher** - Commerce 버전 1.0.4의 클라우드 구성 요소에 도입된 New Relic 로깅 기능에 대한 개선 사항을 지원하는 데 필요한 Monolog ProcessorInterface를 추가합니다. 이 패치는 Adobe Commerce 2.1.x를 배포하는 데 필요합니다. 패치가 적용되지 않으면 `di:compile` 프로세스 중에 빌드가 실패합니다.<!--MCLOUD-6029-->
 
