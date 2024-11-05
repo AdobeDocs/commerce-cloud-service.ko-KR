@@ -4,9 +4,9 @@ description: Cloud Patches 패키지에 대한 최신 개선 사항 목록을 �
 recommendations: noDisplay, catalog
 last-substantial-update: 2024-10-07T00:00:00Z
 exl-id: ae6b511b-a37d-4776-9a5e-ad7d9f9f6611
-source-git-commit: 196efa316b9998c1980412ad96577d7ce42d4aec
+source-git-commit: a91898c0117e91946e69151a1ad5b654f99c13df
 workflow-type: tm+mt
-source-wordcount: '2256'
+source-wordcount: '2313'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,19 @@ Commerce용 클라우드 패치 패키지는 ECE-Tools 패키지에 종속되며
 
 <!--Add release notes below-->
 
-## v1.1.0 {#latest}
+## v1.1.2 {#latest}
+
+릴리스 날짜: 2024년 11월 5일
+
+- ![수정 아이콘](../../assets/fix.svg) **Commerce 2.4.4에서 2.4.7**&#x200B;에 대한 패치 추가—이 업데이트는 B2B 모듈을 사용할 때 Adobe Commerce에 대한 중요한 [CVE-2024-45115](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb24-73) 취약점을 수정합니다.<!-- MCLOUD-12980 - -->
+
+## v1.1.1
+
+릴리스 날짜: 2024년 11월 5일
+
+- ![수정 아이콘](../../assets/fix.svg) **Commerce 2.4.4에서 2.4.7**&#x200B;에 대한 패치가 추가되었습니다. 이 업데이트는 중요한 [CVE-2024-34102](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb24-40-revised-to-include-isolated-patch-for-cve-2024-34102?lang=en) CosmicSting 취약성을 패치합니다.<!-- MCLOUD-12980 - -->
+
+## v1.1.0
 
 릴리스 날짜: 2024년 10월 7일
 
