@@ -3,7 +3,7 @@ title: 로그 보기 및 관리
 description: 클라우드 인프라에서 사용할 수 있는 로그 파일의 유형과 찾을 수 있는 위치를 파악합니다.
 last-substantial-update: 2023-05-23T00:00:00Z
 exl-id: d7f63dab-23bf-4b95-b58c-3ef9b46979d4
-source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
+source-git-commit: 633e5e75ae23a933d15a0faedae22092797d5d0b
 workflow-type: tm+mt
 source-wordcount: '1056'
 ht-degree: 0%
@@ -208,7 +208,7 @@ Pro 스테이징 및 프로덕션 환경의 경우 배포, 사후 배포 및 Cro
 
 ### 보관된 로그 파일
 
-애플리케이션 로그는 하루에 한 번 압축되고 아카이빙되며 1년 동안 보관됩니다. `Number of Days Ago + 1`에 해당하는 고유 ID를 사용하여 압축 로그 이름을 지정합니다. 예를 들어 Pro 프로덕션 환경에서는 과거 21일 동안의 PHP 액세스 로그가 다음과 같이 저장되고 이름이 지정됩니다.
+응용 프로그램 로그는 하루에 한 번 압축 및 보관되며 **30일** 동안 보관됩니다. `Number of Days Ago + 1`에 해당하는 고유 ID를 사용하여 압축 로그 이름을 지정합니다. 예를 들어 Pro 프로덕션 환경에서는 과거 21일 동안의 PHP 액세스 로그가 다음과 같이 저장되고 이름이 지정됩니다.
 
 ```
 /var/log/platform/<project-ID>/php.access.log.22.gz
@@ -242,4 +242,4 @@ Pro 스테이징 및 프로덕션 환경의 경우 배포, 사후 배포 및 Cro
 
 Pro 프로덕션 및 스테이징 환경에서 프로젝트와 통합된 [New Relic 로그 관리](../monitor/log-management.md)를 사용하여 클라우드 인프라 프로젝트에서 Adobe Commerce과 연결된 모든 로그의 집계된 로그 데이터를 관리합니다.
 
-New Relic 로그 애플리케이션은 클라우드 인프라 프로덕션 및 스테이징 환경에서 Adobe Commerce의 문제를 해결하고 모니터링하는 중앙 집중식 로그 관리 대시보드를 제공합니다. 또한 대시보드는 Fastly CDN, 이미지 최적화 및 WAF(Web Application Firewall) 서비스의 로그 데이터에 대한 액세스를 제공합니다. [New Relic 서비스](../monitor/new-relic-service.md)를 참조하세요.
+New Relic 로그 애플리케이션은 클라우드 인프라 프로덕션 및 스테이징 환경에서 Adobe Commerce의 문제를 해결하고 모니터링하는 중앙 집중식 로그 관리 대시보드를 제공합니다. 또한 대시보드는 Fastly CDN, 이미지 최적화 및 웹 애플리케이션 방화벽(WAF) 서비스에 대한 로그 데이터에 대한 액세스를 제공합니다. [New Relic 서비스](../monitor/new-relic-service.md)를 참조하세요.
