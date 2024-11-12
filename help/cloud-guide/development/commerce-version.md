@@ -3,9 +3,9 @@ title: Commerce 버전 업그레이드
 description: 클라우드 인프라 프로젝트에서 Adobe Commerce 버전을 업그레이드하는 방법에 대해 알아봅니다.
 feature: Cloud, Upgrade
 exl-id: 87821007-4979-4a20-940b-aa3c82c192d8
-source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
+source-git-commit: 8851db6ee962bf1a65b31d344e2bd71065e9340d
 workflow-type: tm+mt
-source-wordcount: '1439'
+source-wordcount: '1547'
 ht-degree: 0%
 
 ---
@@ -286,6 +286,19 @@ Adobe Commerce 코드 베이스를 최신 버전으로 업그레이드할 수 �
    ```bash
    composer update
    ```
+
+1. 현재 적용된 패치를 검토합니다.
+
+   - `m2-hotfixes` 디렉터리에 패치가 설치되어 있는 경우 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)하고 Adobe Commerce 지원 팀과 함께 새 버전에 적용할 수 있는 패치를 확인하십시오. `m2-hotfixes` 디렉터리에서 적용할 수 없는 패치를 제거합니다.
+
+   - `.magento.env.yaml` 파일에 [품질 패치]가 적용된 경우 새 버전에 계속 적용할 수 있는지 확인하십시오. `.magento.env.yaml` 파일의 `QUALITY_PATCHES` 섹션에서 적용할 수 없는 패치를 제거합니다.
+
+   **메서드 1**: [품질 패치 릴리스 정보에서 해당 버전을 확인](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/release-notes)
+
+   **메서드 2**: [사용 가능한 패치와 상태 보기](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
+
+   **메서드 3**: [패치 검색](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=en)
+
 
 1. 코드 변경 사항을 추가, 커밋 및 푸시합니다.
 
