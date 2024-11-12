@@ -2,9 +2,9 @@
 title: SendGrid 이메일 서비스
 description: 클라우드 인프라의 Adobe Commerce용 SendGrid 이메일 서비스와 DNS 구성을 테스트하는 방법에 대해 알아봅니다.
 exl-id: 30d3c780-603d-4cde-ab65-44f73c04f34d
-source-git-commit: b5c8dc062a940e9e202d9bd4cca6901b07109e07
+source-git-commit: d07447fa8390794c3d019d513f23321fe02e41a1
 workflow-type: tm+mt
-source-wordcount: '1273'
+source-wordcount: '1317'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ SendGrid SMTP 프록시는 수신 이메일을 수신하기 위한 범용 이메
 
 >[!TIP]
 >
->[온보딩 UI](https://cloud.magento.com)에서 계정에 대한 SendGrid 세부 정보를 찾아 **프로젝트 세부 정보** > **호스팅 정보** 탭을 선택할 수 있습니다.
+>게재 기능 및 도메인 확인과 관련된 문제를 방지하기 위해 저장소 > 구성 > 일반으로 이동하여 관리자에서 적절한 저장소 이메일 주소를 구성했는지 확인하십시오. **[!UICONTROL Use Default]**&#x200B;의 선택을 취소하고 기본값을 소유하고 있는 도메인으로 바꾸어야 합니다. gmail.com 및 outlook.com 같은 공개/공유 도메인 이메일 서비스는 Sendgrid를 통해 이메일을 보낼 때 발신자 이메일 주소로 구성하지 않아야 합니다.
 
 ## 이메일 활성화 또는 비활성화
 
