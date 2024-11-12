@@ -4,9 +4,9 @@ description: 클라우드 계정에 액세스하고 클라우드 인프라 프�
 role: Admin
 recommendations: noDisplay, catalog
 exl-id: c6b768d7-d835-4a8d-aad9-1c0324f7570d
-source-git-commit: abe9aa36b907be8bdfdf42e6f28f1e1eac68fecf
+source-git-commit: f989dc126e1a19f4a69bfdaee70cee151a300c85
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '492'
 ht-degree: 0%
 
 ---
@@ -17,41 +17,15 @@ Adobe이 클라우드 인프라 구독에서 Commerce을 활성화하면 라이�
 
 라이선스 소유자는 Adobe Commerce on cloud infrastructure 계정에 대한 결제 및 기타 비즈니스 관련 거래를 관리하는 비즈니스 또는 금융 조직의 사용자입니다. 이 사람은 Adobe과의 연락 창구 역할을 합니다. 계정에서 라이선스 소유자를 변경해야 하는 경우 Adobe 계정 팀에 문의해야 합니다.
 
-실시간 배포를 위한 사이트 개발을 시작할 수 있도록 프로젝트를 빠르게 온보딩하려면 필요한 설정 및 [!DNL onboarding] 작업을 완료해야 합니다. 일반적으로 라이선스 소유자는 관리자 액세스 권한을 확보하고 설정, 사용자 지정 및 개발 작업에 도움이 되는 기술 관리자 사용자를 만들어 프로세스를 시작합니다.
+실시간 배포를 위한 사이트 개발을 시작할 수 있도록 프로젝트를 빠르게 온보딩하려면 필요한 설정 및 [!DNL onboarding] 작업을 완료해야 합니다. 일반적으로 라이선스 소유자는 관리자 액세스 권한을 확보하고 설정, 사용자 지정 및 개발 작업에 도움이 되는 관리자 사용자를 만들어 프로세스를 시작합니다.
 
 ## 클라우드 계정에 등록
 
 클라우드 인프라 계정에 Adobe Commerce이 없는 경우 [판매]에 문의하십시오. 등록하면 Adobe이 계정을 만들고 프로젝트 인터페이스에 액세스하는 방법에 대한 지침을 제공하는 시작 이메일을 보냅니다. 이메일에는 계정에 로그인하여 초기 프로젝트 설정을 완료할 수 있는 링크가 포함되어 있습니다.
 
-### 클라우드 [!DNL Onboarding] UI
-
-([!DNL Onboarding] UI)의 클라우드 인프라에 대한 Adobe Commerce 프로젝트 페이지에서는 프로젝트 및 서비스를 설정하고, 액세스를 결정하고, 개발을 시작하기 위한 시작 체크리스트를 제공합니다. OBUI에서 다음을 수행할 수 있습니다.
-
-- 프로젝트 및 분기를 관리할 수 있는 슈퍼 사용자인 기술 관리자 추가
-- [!DNL Cloud Console]에 대한 링크를 포함하여 프로젝트 환경에 액세스합니다
-- 추가 테스트에 대한 링크를 포함하여 UAT(빠른 사용자 승인 테스트) 체크리스트를 완료합니다
-
-**프로젝트 페이지를 열려면**:
-
-1. [Adobe Commerce 고객 계정](https://account.magento.com/customer/account/login)에 로그인합니다.
-
-1. _내 계정_ 페이지에서 **[!UICONTROL Commerce]** 탭을 클릭하여 계정의 프로젝트를 확인합니다.
-
-1. [프로젝트 섹션](https://cloud.magento.com/cloud/project/)에서 **프로젝트 페이지 보기**&#x200B;를 클릭합니다.
-
-1. 프로젝트 이름을 클릭하고 클라우드 프로젝트 페이지([!DNL Onboarding] UI)를 엽니다.
-
-   ![OBUI 프로젝트 페이지](../assets/onboarding-ui.png)
-
-   포털을 탐색하여 프로젝트 계획, 코드 개발 및 UAT 및 사이트 시작 준비를 시작하는 데 도움이 되는 정보 및 옵션을 선택하십시오.
-
 ## 프로젝트 액세스 및 사용자 추가
 
 라이선스 소유자는 사용자 계정을 추가하여 코드에 대한 액세스를 제공하고, 분기를 관리하며, 티켓을 입력하고, 환경을 지원할 수 있습니다. 이러한 사용자 계정에는 사내 개발, 컨설턴트 및 솔루션 전문가가 포함될 수 있습니다.
-
-일반적으로 라이선스 소유자는 _기술 관리자_&#x200B;만 만듭니다. 기술 관리자는 개발자를 위한 사용자 계정을 만들고, 환경 권한을 설정하고, 모든 분기 및 환경을 관리하기 위해 관리자 액세스 권한이 있는 사용자 계정이 필요합니다. 기술 관리자는 개발자, 컨설턴트, [Adobe 솔루션 파트너](https://business.adobe.com/products/magento/partners.html) 또는 본인일 수 있습니다.
-
-`magento-cloud` CLI를 사용하여 프로젝트 포털, [!DNL Cloud Console] 또는 명령줄을 통해 기술 관리자를 만들 수 있습니다.
 
 ### 사용자 등록
 
@@ -64,18 +38,6 @@ Adobe이 클라우드 인프라 구독에서 Commerce을 활성화하면 라이�
 ### [!DNL Cloud Console]
 
 [[!DNL Cloud Console]](cloud-console.md)을(를) 사용하여 프로젝트를 관리하고 사용자 계정을 추가하고 저장소 개발을 시작할 수 있습니다. 라이선스 소유자, 기술 관리자 사용자 및 개발자는 [!DNL Cloud Console]을(를) 사용하여 모든 환경 및 분기, 환경 변수, 환경 설정 및 경로를 관리할 수 있습니다.
-
-**[!DNL Cloud Console]**&#x200B;에 액세스하려면:
-
-1. [내 계정](https://account.magento.com/customer/account/login)에 로그인합니다.
-
-1. _내 계정_ 페이지에서 **[!UICONTROL Commerce]** 탭을 클릭하여 계정의 프로젝트를 확인합니다.
-
-1. **프로젝트** 탭을 클릭하고 프로젝트를 선택합니다.
-
-1. **인프라 액세스**&#x200B;를 클릭한 다음 **프로젝트 액세스(Web UI)**&#x200B;를 클릭합니다.
-
-   ![클라우드 프로젝트 포털](../assets/obui-project-access.png)
 
 ## Adobe 상태에 등록
 
