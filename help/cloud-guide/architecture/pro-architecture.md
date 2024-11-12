@@ -4,9 +4,9 @@ description: Pro 아키텍처에서 지원하는 환경에 대해 알아봅니�
 feature: Cloud, Auto Scaling, Iaas, Paas, Storage
 topic: Architecture
 exl-id: d10d5760-44da-4ffe-b4b7-093406d8b702
-source-git-commit: 66b1f86c8c674d0de4e2895e328a5a850eadf903
+source-git-commit: a1e7674b99d7e289531268e1a298f61344c7bd8f
 workflow-type: tm+mt
-source-wordcount: '1559'
+source-wordcount: '1573'
 ht-degree: 0%
 
 ---
@@ -67,6 +67,11 @@ Pro 프로젝트에서 `master` 분기는 프로덕션 환경과 함께 활성 P
 통합 환경에서 최상의 성능을 얻으려면 다음 모범 사례를 따르십시오.
 
 - 카탈로그 크기 제한 - 참고로 샘플 데이터에는 약 2,048개의 제품이 포함되어 있습니다. 카탈로그 크기를 약 4,000~5,000개의 제품으로 줄여 보십시오.
+카탈로그의 제품 수를 확인하려면 다음 MySQL 쿼리를 실행합니다.
+
+  ```sql
+  select distinct count(entity_id) from catalog_product_entity;
+  ```
 
 - 고객 그룹 수 감소 - 고객 그룹이 너무 많으면 색인화 성능 및 전체 성능에 영향을 줄 수 있습니다.
 
