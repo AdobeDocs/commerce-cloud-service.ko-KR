@@ -3,7 +3,7 @@ title: Pro 프로젝트 워크플로
 description: Pro 개발 및 배포 워크플로우를 사용하는 방법을 알아봅니다.
 feature: Cloud, Iaas, Paas
 exl-id: 103e90d5-2ef2-4fef-845c-439344666b00
-source-git-commit: 08f43a3b0a50cdb2a5e8a45bd2e2448bc6dbca2b
+source-git-commit: c6d4128792e688485e021bad75d9814a9f4d3b4f
 workflow-type: tm+mt
 source-wordcount: '782'
 ht-degree: 0%
@@ -91,6 +91,8 @@ Pro 프로젝트에는 글로벌 `master` 분기와 세 개의 기본 환경이 
 스테이징은 모든 서비스와 설정을 가능한 한 프로덕션 환경에 가깝게 제공하는 사전 프로덕션 환경입니다. 모든 서비스에서 철저한 테스트를 수행할 수 있도록 항상 코드 변경 내용을 `integration` 환경에서 `staging` 환경으로 푸시하십시오. 스테이징 환경을 처음 사용하는 경우 [Fastly CDN](../cdn/fastly.md) 및 [New Relic](../monitor/new-relic-service.md)과 같은 서비스를 구성해야 합니다. 샌드박스 또는 테스트 자격 증명을 사용하여 결제 게이트웨이, 배송, 알림 및 기타 중요한 서비스를 구성합니다.
 
 스토어에서 프로덕션 환경이 준비되었다고 판단될 때까지 모든 서비스를 철저히 테스트하고, 성능 테스트 도구를 확인하고, 관리자 및 고객으로서 UAT 테스트를 수행하는 것이 가장 좋습니다. [스토어 배포](../deploy/staging-production.md)를 참조하세요.
+
+{{second-staging}}
 
 ### 프로덕션에 병합
 

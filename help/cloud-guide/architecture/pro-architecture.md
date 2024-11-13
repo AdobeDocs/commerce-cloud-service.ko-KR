@@ -4,7 +4,7 @@ description: Pro 아키텍처에서 지원하는 환경에 대해 알아봅니�
 feature: Cloud, Auto Scaling, Iaas, Paas, Storage
 topic: Architecture
 exl-id: d10d5760-44da-4ffe-b4b7-093406d8b702
-source-git-commit: a1e7674b99d7e289531268e1a298f61344c7bd8f
+source-git-commit: 18f4da5c6e7e5c483f5cf64e977b3fb3fd28bbb0
 workflow-type: tm+mt
 source-wordcount: '1573'
 ht-degree: 0%
@@ -120,6 +120,8 @@ Pro 프로젝트에서 `master` 분기는 프로덕션 환경과 함께 활성 P
 - 프로덕션 사이트를 시작한 후 주로 스테이징 환경을 사용하여 프로덕션에 중요한 버그 수정을 위한 패치를 테스트합니다.
 
 - `staging` 분기에서 분기를 만들 수 없습니다. 대신 `integration` 분기에서 `staging` 분기로 코드 변경 내용을 푸시합니다.
+
+{{second-staging}}
 
 ### 프로덕션 환경
 

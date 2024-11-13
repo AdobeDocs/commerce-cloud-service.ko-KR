@@ -1,7 +1,7 @@
 ---
-source-git-commit: a87039d2e96e39d6d8d19673c5e0d52de8b844a4
+source-git-commit: 63b966c1562318dc43dd42641e6f607f5438137b
 workflow-type: tm+mt
-source-wordcount: '879'
+source-wordcount: '907'
 ht-degree: 0%
 
 ---
@@ -81,6 +81,12 @@ ht-degree: 0%
 >[!NOTE]
 >
 >[!DNL ECE-Tools] 2002.1.0 이상 버전에서는 시나리오 기반 배포 기능을 사용하여 Adobe Commerce on cloud infrastructure 프로젝트의 빌드, 배포 및 배포 후 프로세스를 사용자 지정할 수 있습니다. [시나리오 기반 배포](/help/cloud-guide/deploy/scenario-based.md)를 참조하세요.
+
+## 두 번째 스테이징 {#second-staging}
+
+>[!NOTE]
+>
+>일부 프로젝트는 보다 정교한 개발 워크플로우를 요구합니다. 이러한 요구를 지원하기 위해 Adobe은 클라우드 인프라에 추가 기능 옵션으로 [추가 스테이징 환경](/help/cloud-guide/test/second-staging.md)을 제공합니다.
 
 ## 서비스 지침 {#service-instruction}
 

@@ -2,7 +2,7 @@
 title: 스테이징 및 프로덕션 테스트
 description: 스테이징 및 프로덕션 환경에서 테스트하는 방법을 알아봅니다.
 exl-id: 5b762d59-04c5-4e89-a637-719141759158
-source-git-commit: 1253d8357fd2554050d1775fefbc420a2097db5f
+source-git-commit: c6d4128792e688485e021bad75d9814a9f4d3b4f
 workflow-type: tm+mt
 source-wordcount: '1329'
 ht-degree: 0%
@@ -12,6 +12,8 @@ ht-degree: 0%
 # 스테이징 및 프로덕션 테스트
 
 코드, 파일 및 데이터를 스테이징 또는 프로덕션으로 성공적으로 마이그레이션한 후 환경 URL을 사용하여 사이트 및 스토어를 테스트합니다. 다음은 로그 확인, Fastly 구성 테스트, UAT(사용자 수락 테스트) 등에 대한 정보를 제공합니다.
+
+{{second-staging}}
 
 ## 로그 파일
 
