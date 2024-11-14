@@ -2,9 +2,9 @@
 title: 클라우드 인프라의 Commerce
 description: 클라우드 인프라에서 Commerce을 구축, 배포 및 관리하는 방법에 대해 알아봅니다.
 exl-id: c0accd55-95ac-49d9-b6f4-0da19b82c28f
-source-git-commit: eace5d84fa0915489bf562ccf79fde04f6b9d083
+source-git-commit: 6ac23cbcf7ab48d09b494ebe8c7136518d213c4e
 workflow-type: tm+mt
-source-wordcount: '224'
+source-wordcount: '236'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,10 @@ ht-degree: 0%
 - 온라인 판매 및 소매를 위한 확장 가능하고 안전한 환경을 제공하는 Amazon Web Services(AWS) 호스팅.
 
 ![클라우드의 이점](../assets/CloudBenefits.svg)
+
+>[!NOTE]
+>
+>보안에 대한 자세한 내용은 [보안 시작 검사 목록](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/launch/checklist#security-configuration)을 참조하세요.
 
 [기술 스택](architecture/tech-stack.md)을 자세히 보거나 [Commerce용 클라우드 아키텍처](architecture/cloud-architecture.md)의 특정 기능 및 지원 제품에 대해 자세히 알아보십시오.
 
