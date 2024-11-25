@@ -2,9 +2,9 @@
 title: 클라우드 인프라의 Commerce
 description: 클라우드 인프라에서 Commerce을 구축, 배포 및 관리하는 방법에 대해 알아봅니다.
 exl-id: c0accd55-95ac-49d9-b6f4-0da19b82c28f
-source-git-commit: 6ac23cbcf7ab48d09b494ebe8c7136518d213c4e
+source-git-commit: 5f00b20e599b7ba26e483a238d05d99daf1dd1b8
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '293'
 ht-degree: 0%
 
 ---
@@ -32,6 +32,26 @@ ht-degree: 0%
 <div id="recs-overview-body-4"></div>
 <div id="recs-overview-body-5"></div>
 <div id="recs-overview-body-6"></div>
+
+## 클라우드 영역
+
+다음 섹션에서는 클라우드 인프라에서 Adobe Commerce에 사용할 수 있는 다양한 AWS 및 Azure 지역에 대한 세부 정보를 제공합니다.
+
+## AWS 지역
+
+![AWS 지역을 보여 주는 다이어그램](../assets/aws-regions.svg){zoomable="yes"}
+
+>[!NOTE]
+>
+> 중국과 러시아에만 온프레미스.
+
+## Azure 지역
+
+![Azure 지역을 보여 주는 다이어그램](../assets/azure-regions.svg){zoomable="yes"}
+
+>[!NOTE]
+>
+> 중국과 러시아에만 온프레미스. 통합 환경이 필요한 모든 판매자는 미국 지역을 사용해야 합니다.
 
 ## Adobe Commerce 설명서
 
