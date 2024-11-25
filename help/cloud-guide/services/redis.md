@@ -3,9 +3,9 @@ title: Redis 서비스 설정
 description: 클라우드 인프라에서 Adobe Commerce을 위한 백엔드 캐시 솔루션으로서 Redis를 설정하고 최적화하는 방법에 대해 알아봅니다.
 feature: Cloud, Cache, Services
 exl-id: d6971875-d302-495a-ad10-a81c507c2bc9
-source-git-commit: c39332d352f6dcb6f92c312a6ef1b74319d37aa3
+source-git-commit: 38c29e3a2cee1658bb73922f0f56fdfa84af5a6f
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '245'
 ht-degree: 0%
 
 ---
@@ -131,7 +131,5 @@ Redis 문제 해결에 대한 도움말은 다음 Adobe Commerce 지원 문서�
 
 - [문제 지연 관리자 로그인 또는 체크 아웃](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/redis-issue-delay-magento-admin-login-or-checkout.html)
 - [확장된 Redis 캐시 구현 Adobe Commerce 2.3.5+](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-service-configuration.html)
-- [MDVA-30102: Redis 캐시가 가득 참](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/patches/v1-0-6/mdva-30102-magento-patch-redis-cache-getting-full.html)
 - [Adobe Commerce에 대한 관리 경고: 메모리 경고 Redis](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-on-magento-commerce-redis-memory-warning-alert.html)
 - [Adobe Commerce에 대한 관리 경고: 메모리 위험 경고 준비](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-on-magento-commerce-redis-memory-critical-alert.html)
-- [Redis 문제 해결사](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/redis-troubleshooter.html)

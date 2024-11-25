@@ -3,9 +3,9 @@ title: Elasticsearch 서비스 설정
 description: 클라우드 인프라에서 Adobe Commerce에 대한 Elasticsearch 서비스를 활성화하는 방법을 알아봅니다.
 feature: Cloud, Search, Services
 exl-id: ac559cbb-342a-4756-ade5-49eba4827965
-source-git-commit: c39332d352f6dcb6f92c312a6ef1b74319d37aa3
+source-git-commit: 38c29e3a2cee1658bb73922f0f56fdfa84af5a6f
 workflow-type: tm+mt
-source-wordcount: '798'
+source-wordcount: '788'
 ht-degree: 0%
 
 ---
@@ -266,6 +266,5 @@ Elastic Suite를 설정할 때 `ELASTICSUITE_CONFIGURATION` 배포 변수에 구
 Elasticsearch 문제 해결에 대한 도움말은 다음 Adobe Commerce 지원 문서를 참조하십시오.
 
 - [Elasticsearch 5가 구성되어 있지만 검색 페이지가 &quot;필드 데이터를 사용할 수 없습니다...&quot; 오류](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-5-is-configured-but-search-page-does-not-load-with-fielddata-is-disabled...-error.html)
-- Elasticsearch 6.x를 사용하면 [카탈로그 페이지 매김이 작동하지 않습니다](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/catalog-pagination-doesn-t-work-when-elasticsearch-6.x-is-used.html)
 - Adobe Commerce 문제 해결사의 [Elasticsearch](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-in-magento-troubleshooter.html)
 - [Elasticsearch 인덱스 상태가 `yellow` 또는 `red`](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-index-status-is-yellow-or-red.html)입니다.

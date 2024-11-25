@@ -4,9 +4,9 @@ description: New Relic 대시보드에 액세스하고 Adobe Commerce on cloud i
 feature: Cloud, Observability
 topic: Performance
 exl-id: 8d1e2ad6-14d0-4754-9703-960d93e135a9
-source-git-commit: eace5d84fa0915489bf562ccf79fde04f6b9d083
+source-git-commit: 38c29e3a2cee1658bb73922f0f56fdfa84af5a6f
 workflow-type: tm+mt
-source-wordcount: '844'
+source-wordcount: '833'
 ht-degree: 0%
 
 ---
@@ -85,11 +85,11 @@ Adobe은 성능 지표를 추적하기 위해 _Adobe Commerce에 대한 관리 �
 
 Adobe Commerce에 대한 관리 경고 정책에 포함된 경고를 수정하지 마십시오. Adobe은 시간이 지남에 따라 이 정책의 경고 조건을 업데이트하고 개선하여 정책에 추가하는 모든 사용자 지정 사항을 덮어씁니다.
 
-기존 경고를 수정하는 대신 경고 정책을 만들 수 있습니다. 그런 다음 경고 조건을 새 정책에 복사합니다. _New Relic_ 설명서에서 [정책 또는 조건 업데이트](https://docs.newrelic.com/docs/alerts-applied-intelligence/new-relic-alerts/alert-policies/update-or-disable-policies-conditions/)를 참조하십시오.
+기존 경고를 수정하는 대신 경고 정책을 만들 수 있습니다. 그런 다음 경고 조건을 새 정책에 복사합니다.
 
 >[!TIP]
 >
->경고, 경고 정책 및 워크플로에 대한 자세한 내용은 _New Relic_ 설명서의 [경고 소개](https://docs.newrelic.com/docs/alerts-applied-intelligence/new-relic-alerts/learn-alerts/alerts-concepts-workflow/)를 참조하십시오.
+>경고, 경고 정책 및 워크플로에 대한 자세한 내용은 _New Relic_ 설명서의 [경고 소개](https://docs.newrelic.com/docs/alerts/overview/)를 참조하십시오.
 
 ## 알림에 대한 워크플로우 설정
 

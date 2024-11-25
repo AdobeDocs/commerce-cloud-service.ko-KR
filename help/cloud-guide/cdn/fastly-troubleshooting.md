@@ -3,7 +3,7 @@ title: Fastly 문제 해결
 description: Adobe Commerce용 Fastly CDN 모듈 및 서비스의 문제를 해결하고 관리하는 방법에 대해 알아봅니다.
 feature: Cloud, Configuration, Cache, Services
 exl-id: e4c47035-cbad-4838-8d44-fa5eaaac42d1
-source-git-commit: e066e9c7e1a6010c9d316f66f1632e28a0c40652
+source-git-commit: 38c29e3a2cee1658bb73922f0f56fdfa84af5a6f
 workflow-type: tm+mt
 source-wordcount: '1834'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Pro 프로덕션 및 스테이징 환경에서 [New Relic 로그](../monitor/log
 log {"syslog"} req.service_id {" my_logging_endpoint_name :: "}
 ```
 
-프로덕션 및 스테이징 환경에 동일한 VCL을 사용할 수 있습니다. [vcl_log를 구성하는 방법](https://support.fastly.com/hc/en-us/community/posts/360040447172-How-to-configure-vcl-log)을 참조하세요.
+프로덕션 및 스테이징 환경에 동일한 VCL을 사용할 수 있습니다. _Fastly 설명서_&#x200B;에서 [`vcl_log`](https://www.fastly.com/documentation/reference/vcl/subroutines/log/)을(를) 참조하세요.
 
 ## 사이트 성능, 제거 및 캐시 문제
 
