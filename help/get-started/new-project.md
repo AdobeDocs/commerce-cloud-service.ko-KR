@@ -4,9 +4,9 @@ description: 클라우드 인프라 프로젝트에서 Adobe Commerce을 프로�
 recommendations: noDisplay, catalog
 role: Admin
 exl-id: cfb354b0-c255-4b6e-94aa-c5a6bf7230d6
-source-git-commit: da1dec76b9389244f9d5a65428e09f1bc897fa5f
+source-git-commit: 269681efb9925d78ffb608ecbef657be740b5531
 workflow-type: tm+mt
-source-wordcount: '756'
+source-wordcount: '751'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ _Cloud Infrastructure의 Commerce_ 안내서에서 [디스크 공간 관리](../
 
 Adobe Commerce on cloud infrastructure Pro 프로젝트를 위해 Amazon Web Services(AWS) 또는 Microsoft Azure를 IaaS(Infrastructure as a Service) 기반으로 선택합니다. 각 서비스 제공업체는 여러 지역에서 작동하며 여러 가용 영역을 제공합니다. 위치에 편리한 지역을 선택하고 지연 시간 및 높은 비용을 줄일 수 있습니다.
 
-_구현 플레이북_&#x200B;에서 [Adobe Commerce 클라우드 지역 지도](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/infrastructure/cloud/regions.html)를 참조하십시오.
+[Adobe Commerce 클라우드 지역 지도](../cloud-guide/overview.md)를 참조하세요.
 
 ## 연결 서비스
 

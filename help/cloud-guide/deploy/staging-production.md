@@ -3,7 +3,7 @@ title: 스테이징 및 프로덕션에 배포
 description: 추가 테스트를 위해 클라우드 인프라 코드에서 Adobe Commerce을 스테이징 및 프로덕션 환경에 배포하는 방법에 대해 알아봅니다.
 feature: Cloud, Console, Deploy, SCD, Storage
 exl-id: 4b82289f-ee04-4b14-a0ed-7a8a19fc6a6a
-source-git-commit: ae7eb6a0c3de773377c8e1efb5ce2e92c06506bd
+source-git-commit: 269681efb9925d78ffb608ecbef657be740b5531
 workflow-type: tm+mt
 source-wordcount: '1310'
 ht-degree: 0%
@@ -140,7 +140,7 @@ Cloud CLI는 코드를 배포하는 명령을 제공합니다. 프로젝트에 �
 
 ## 정적 파일 마이그레이션
 
-[정적 파일](https://experienceleague.adobe.com/docs/commerce-operations/operational-playbook/glossary.html)이(가) `mounts`에 저장되어 있습니다. 로컬 환경과 같은 소스 마운트 위치에서 대상 마운트 위치로 파일을 마이그레이션하는 방법에는 두 가지가 있습니다. Adobe 두 방법 모두 `rsync` 유틸리티를 사용하지만 로컬 환경과 원격 환경 간에 파일을 이동할 때는 `magento-cloud` CLI를 사용하는 것이 좋습니다. 또한 Adobe은 원격 원본에서 다른 원격 위치로 파일을 이동할 때 `rsync` 메서드를 사용하는 것이 좋습니다.
+[정적 파일](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary)이(가) `mounts`에 저장되어 있습니다. 로컬 환경과 같은 소스 마운트 위치에서 대상 마운트 위치로 파일을 마이그레이션하는 방법에는 두 가지가 있습니다. Adobe 두 방법 모두 `rsync` 유틸리티를 사용하지만 로컬 환경과 원격 환경 간에 파일을 이동할 때는 `magento-cloud` CLI를 사용하는 것이 좋습니다. 또한 Adobe은 원격 원본에서 다른 원격 위치로 파일을 이동할 때 `rsync` 메서드를 사용하는 것이 좋습니다.
 
 ### CLI를 사용하여 파일 마이그레이션
 

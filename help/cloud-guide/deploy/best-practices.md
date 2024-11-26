@@ -3,7 +3,7 @@ title: 배포 모범 사례
 description: 클라우드 인프라에 Adobe Commerce을 배포하기 위한 모범 사례를 살펴보십시오.
 feature: Cloud, Deploy, Best Practices
 exl-id: bac3ca83-0eee-4fda-9a5c-a84ab25a837a
-source-git-commit: eace5d84fa0915489bf562ccf79fde04f6b9d083
+source-git-commit: 269681efb9925d78ffb608ecbef657be740b5531
 workflow-type: tm+mt
 source-wordcount: '1904'
 ht-degree: 0%
@@ -118,7 +118,7 @@ ht-degree: 0%
 이 단계에서는 코드 베이스를 빌드하고 `.magento.app.yaml`의 `build` 섹션에서 후크를 실행합니다. 기본 빌드 후크는 `php ./vendor/bin/ece-tools` 명령이며 다음을 수행합니다.
 
 - `vendor/magento/ece-patches`에 패치를 적용하고 `m2-hotfixes`에 프로젝트별 선택적 패치를 적용합니다.
-- `bin/magento setup:di:compile`을(를) 사용하여 코드와 [종속성 삽입](https://experienceleague.adobe.com/docs/commerce-operations/operational-playbook/glossary.html) 구성(즉, `generated/code` 및 `generated/metapackage`을(를) 포함하는 `generated/` 디렉터리)을 다시 생성합니다.
+- `bin/magento setup:di:compile`을(를) 사용하여 코드와 [종속성 삽입](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary) 구성(즉, `generated/code` 및 `generated/metapackage`을(를) 포함하는 `generated/` 디렉터리)을 다시 생성합니다.
 - [`app/etc/config.php`](../store/store-settings.md) 파일이 코드 베이스에 있는지 확인합니다. Adobe Commerce은 빌드 단계에서 이 파일을 감지하지 못하고 모듈 및 확장 목록이 포함된 경우 이 파일을 자동으로 생성합니다. 존재하는 경우 빌드 단계는 정상적으로 계속되고 GZIP을 사용하여 정적 파일을 압축하고 배포하므로 배포 단계에서 다운타임이 줄어듭니다. 파일 압축 사용자 지정 또는 비활성화에 대한 자세한 내용은 [빌드 옵션](../environment/variables-build.md)을 참조하세요.
 
 >[!WARNING]
@@ -145,7 +145,7 @@ ht-degree: 0%
 
 ### 4단계: 슬러그 및 클러스터 배포
 
-응용 프로그램 및 모든 [백엔드](https://experienceleague.adobe.com/docs/commerce-operations/operational-playbook/glossary.html) 서비스가 다음과 같이 프로비저닝됩니다.
+응용 프로그램 및 모든 [백엔드](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary) 서비스가 다음과 같이 프로비저닝됩니다.
 
 - 웹 서버, OpenSearch, [!DNL RabbitMQ]과(와) 같은 컨테이너에 각 서비스를 탑재합니다.
 - 읽기-쓰기 파일 시스템(고가용성 분산 스토리지 그리드에 마운트) 마운트
@@ -183,7 +183,7 @@ ht-degree: 0%
 >
 >배포 스크립트는 `.magento` 디렉터리의 구성 파일에 정의된 값을 사용한 다음, 스크립트는 디렉터리와 해당 내용을 삭제합니다. 로컬 개발 환경은 영향을 받지 않습니다.
 
-### Post-deployment: 라우팅 구성
+### 배포 후: 라우팅 구성
 
 배포가 실행되는 동안 프로세스는 시작 지점에서 60초 동안 들어오는 트래픽을 중지하고 웹 트래픽이 새로 만든 클러스터에 도달하도록 라우팅을 다시 구성합니다.
 
