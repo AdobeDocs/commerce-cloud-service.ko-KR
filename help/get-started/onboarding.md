@@ -1,5 +1,5 @@
 ---
-title: '[!DNL Onboarding] - Commerce'
+title: Commerce에 [!DNL Onboarding]
 description: 클라우드 계정에 액세스하고 클라우드 인프라 프로젝트에서 Adobe Commerce을 설정합니다.
 role: Admin
 recommendations: noDisplay, catalog

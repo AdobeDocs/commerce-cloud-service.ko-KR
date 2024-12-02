@@ -1,5 +1,5 @@
 ---
-title: " [!DNL Cloud Console]을(를) 사용하여 분기 관리"
+title: ' [!DNL Cloud Console](으)로 분기 관리'
 description: ' [!DNL Cloud Console]을(를) 사용하여 클라우드 인프라에서 Adobe Commerce의 환경 분기를 관리하는 방법을 알아봅니다.'
 role: Developer
 feature: Cloud, Install
