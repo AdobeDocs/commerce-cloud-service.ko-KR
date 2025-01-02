@@ -3,9 +3,9 @@ title: 로그 보기 및 관리
 description: 클라우드 인프라에서 사용할 수 있는 로그 파일의 유형과 찾을 수 있는 위치를 파악합니다.
 last-substantial-update: 2023-05-23T00:00:00Z
 exl-id: d7f63dab-23bf-4b95-b58c-3ef9b46979d4
-source-git-commit: 633e5e75ae23a933d15a0faedae22092797d5d0b
+source-git-commit: 564a569c37ab8ec53f8a12bc105106a621251b10
 workflow-type: tm+mt
-source-wordcount: '1056'
+source-wordcount: '1083'
 ht-degree: 0%
 
 ---
@@ -76,7 +76,18 @@ ssh 1.ent-project-environment-id@ssh.region.magento.cloud "cat var/log/cron.log"
 
 >[!TIP]
 >
->Pro 스태이징 및 프로덕션 환경의 경우, 고정된 파일 이름의 로그 파일에 대해 자동 로그 회전, 압축 및 제거를 사용할 수 있습니다. 각 로그 파일 유형에는 회전 패턴과 수명이 있습니다. 스타터 환경에는 로그 회전이 없습니다. 환경의 로그 회전 및 압축된 로그 수명에 대한 전체 세부 정보는 `/etc/logrotate.conf` 및 `/etc/logrotate.d/<various>`에서 찾을 수 있습니다. Pro 통합 환경에서는 로그 순환을 구성할 수 없습니다. Pro 통합의 경우 사용자 지정 솔루션/스크립트를 구현하고 필요에 따라 스크립트를 실행하도록 [cron을 구성](../application/crons-property.md)해야 합니다.
+>Pro 스태이징 및 Pro 프로덕션 환경의 경우, 고정된 파일 이름의 로그 파일에 대해 자동 로그 회전, 압축 및 제거가 활성화됩니다. 각 로그 파일 유형에는 회전 패턴과 수명이 있습니다.
+>환경의 로그 회전 및 압축된 로그 수명에 대한 전체 세부 정보는 `/etc/logrotate.conf` 및 `/etc/logrotate.d/<various>`에서 찾을 수 있습니다.
+>Pro 스테이징 및 Pro 프로덕션 환경의 경우 [Adobe Commerce 지원 티켓을 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)하여 로그 순환 구성의 변경을 요청해야 합니다.
+
+>[!TIP]
+>
+>Pro 통합 환경에서는 로그 순환을 구성할 수 없습니다.
+>Pro 통합의 경우 사용자 지정 솔루션/스크립트를 구현하고 필요에 따라 스크립트를 실행하도록 [cron을 구성](../application/crons-property.md)해야 합니다.
+
+>[!NOTE]
+>
+>스타터 프로젝트 환경에는 로그 순환이 없습니다.
 
 ## 로그 작성 및 배포
 
