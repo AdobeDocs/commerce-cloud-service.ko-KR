@@ -3,9 +3,9 @@ title: 웹 애플리케이션 방화벽(WAF)
 description: Fastly WAF 서비스가 Adobe Commerce 네트워크 또는 사이트를 손상시키기 전에 악의적인 요청 트래픽을 탐지하고 로그하고 차단하는 방법에 대해 알아봅니다.
 feature: Cloud, Configuration, Security
 exl-id: 40bfe983-7f32-4155-ae77-7cd18866f6e2
-source-git-commit: 48ac1759fc052175e01998703e7f4ee5eaac5224
+source-git-commit: fff4abf396b2c4a5b445c23c10608f54af059815
 workflow-type: tm+mt
-source-wordcount: '888'
+source-wordcount: '930'
 ht-degree: 0%
 
 ---
@@ -51,6 +51,11 @@ WAF 서비스가 활성화되면 WAF 규칙과 비교하여 모든 웹 및 관�
 책임자로부터 이 오류 응답 페이지를 사용자 지정할 수 있습니다. [WAF 응답 페이지 사용자 지정](fastly-custom-response.md#customize-the-waf-error-page)을 참조하세요.
 
 Adobe Commerce 관리 페이지 또는 상점 첫 화면에서 합법적인 URL 요청에 대한 응답으로 `403 Forbidden` 오류 페이지를 반환하는 경우 [Adobe Commerce 지원 티켓](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)을 제출하십시오. 오류 응답 페이지에서 참조 ID를 복사하여 티켓 설명에 붙여넣습니다.
+
+New Relic을 사용하여 특정 요청에 대한 WAF 응답을 식별하려면 다음을 참조하십시오.
+
+- `Agent_response` - WAF 응답 코드를 나타냅니다(`200`은(는) 양호, `406`은(는) 차단됨).
+- `sigsci` 태그 - 요청의 특성에 따라 특정 signal sciences 태그에 요청을 태깅합니다.
 
 ## WAF 유지 관리 및 업데이트
 
